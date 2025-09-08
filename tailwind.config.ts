@@ -66,7 +66,7 @@ export default {
       backgroundImage: {
         'wine-plum': 'var(--gradient-wine-plum)',
         'card-gradient': 'var(--gradient-card)',
-        'gold-gradient': 'var(--gradient-gold)',
+        'magenta-gradient': 'var(--gradient-magenta)',
       },
       boxShadow: {
         'photo-box': 'var(--shadow-photo-box)',
