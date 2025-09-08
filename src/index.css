@@ -2,41 +2,59 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Sophisticated wine and plum design system inspired by vintage photo storage */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Rich wine to plum gradient backgrounds */
+    --background: 345 45% 8%;
+    --foreground: 45 85% 92%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* Photo box inspired cards */
+    --card: 345 35% 12%;
+    --card-foreground: 45 75% 88%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 345 40% 10%;
+    --popover-foreground: 45 80% 90%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Luxurious wine red primary */
+    --primary: 345 55% 25%;
+    --primary-foreground: 45 90% 95%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Rich plum secondary */
+    --secondary: 315 45% 18%;
+    --secondary-foreground: 45 85% 92%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted plum tones */
+    --muted: 330 35% 15%;
+    --muted-foreground: 45 45% 65%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Gold accent inspired by the ring */
+    --accent: 45 85% 55%;
+    --accent-foreground: 345 45% 8%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 45 90% 95%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Subtle borders for photo box effect */
+    --border: 330 25% 20%;
+    --input: 330 30% 18%;
+    --ring: 45 85% 55%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Custom gradient variables */
+    --gradient-wine-plum: linear-gradient(135deg, hsl(345 45% 8%) 0%, hsl(315 45% 12%) 50%, hsl(285 40% 10%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(345 35% 14%) 0%, hsl(330 35% 12%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(45 85% 65%) 0%, hsl(35 75% 55%) 100%);
+    
+    /* Photo box shadows */
+    --shadow-photo-box: 0 8px 25px -5px hsl(345 45% 5% / 0.4), 0 0 0 1px hsl(330 25% 20% / 0.3);
+    --shadow-photo-box-hover: 0 12px 35px -5px hsl(345 45% 5% / 0.6), 0 0 0 1px hsl(45 85% 55% / 0.2);
+    
+    /* Smooth transitions */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --sidebar-background: 0 0% 98%;
 
@@ -56,41 +74,46 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Dark mode maintains the same wine-plum aesthetic but deeper */
+    --background: 345 50% 6%;
+    --foreground: 45 90% 95%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 345 40% 10%;
+    --card-foreground: 45 85% 90%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 345 45% 8%;
+    --popover-foreground: 45 85% 92%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 345 60% 22%;
+    --primary-foreground: 45 95% 98%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 315 50% 15%;
+    --secondary-foreground: 45 90% 95%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 330 40% 12%;
+    --muted-foreground: 45 50% 70%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 45 90% 60%;
+    --accent-foreground: 345 50% 6%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 80% 50%;
+    --destructive-foreground: 45 90% 95%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 330 30% 18%;
+    --input: 330 35% 16%;
+    --ring: 45 90% 60%;
+    --sidebar-background: 345 45% 8%;
+    --sidebar-foreground: 45 85% 90%;
+    --sidebar-primary: 345 55% 25%;
+    --sidebar-primary-foreground: 45 90% 95%;
+    --sidebar-accent: 330 35% 15%;
+    --sidebar-accent-foreground: 45 85% 90%;
+    --sidebar-border: 330 25% 20%;
+    --sidebar-ring: 45 85% 55%;
+
+    /* Enhanced dark mode gradients */
+    --gradient-wine-plum: linear-gradient(135deg, hsl(345 50% 6%) 0%, hsl(315 50% 10%) 50%, hsl(285 45% 8%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(345 40% 12%) 0%, hsl(330 40% 10%) 100%);
   }
 }
 

@@ -63,6 +63,19 @@ export default {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      backgroundImage: {
+        'wine-plum': 'var(--gradient-wine-plum)',
+        'card-gradient': 'var(--gradient-card)',
+        'gold-gradient': 'var(--gradient-gold)',
+      },
+      boxShadow: {
+        'photo-box': 'var(--shadow-photo-box)',
+        'photo-box-hover': 'var(--shadow-photo-box-hover)',
+      },
+      transitionTimingFunction: {
+        'smooth': 'var(--transition-smooth)',
+        'bounce': 'var(--transition-bounce)',
+      },
       keyframes: {
         "accordion-down": {
           from: {
