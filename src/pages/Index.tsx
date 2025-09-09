@@ -7,6 +7,14 @@ const Index = () => {
       {/* Hero Section */}
       <header className="relative py-20 px-8">
         <div className="max-w-6xl mx-auto text-center">
+          <div className="mb-12">
+            <img 
+              src="/lovable-uploads/5072e676-89f2-44ad-8012-8f68f7e6730e.png" 
+              alt="Original penguin painting with vibrant purple and magenta tones, surrounded by art supplies on a desk" 
+              className="w-full max-w-3xl mx-auto rounded-lg shadow-2xl transform hover:scale-105 transition-transform duration-300"
+            />
+          </div>
+          
           <h1 className="text-6xl font-bold text-foreground mb-6 tracking-tight">
             Vintage <span className="text-accent">Collections</span>
           </h1>
