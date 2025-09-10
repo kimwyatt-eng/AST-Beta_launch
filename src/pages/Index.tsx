@@ -150,24 +150,15 @@ export default function ArtistsHome() {
         <div className="rounded-2xl border border-white/10 bg-white/5 p-8 md:p-10 shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-center">Join the Beta</h2>
           <p className="mt-3 text-center text-white/80">
-            Spots are limited while we finish core features. Email us and we'll send setup steps and early access perks.
+            Spots are limited while we finish core features. Sign up and we'll send setup steps and early access perks.
           </p>
 
-          {/* Email callouts */}
-          <div className="mt-6 text-center">
-            <a
-              href="mailto:info@artsupplytracker.com?subject=Beta%20Signup&body=Hi%20ArtSupplyTracker%2C%0A%0AI'd%20like%20to%20join%20the%20beta.%20Here's%20a%20bit%20about%20my%20art%3A%20%5Bmedium%2Flevel%5D.%0A%0AThanks!"
-              className="inline-flex items-center justify-center rounded-xl bg-teal-400 text-[#2B0F22] px-5 py-3 text-lg font-semibold shadow-lg hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-teal-300"
-            >
-              Email info@artsupplytracker.com
-            </a>
-            <p className="mt-2 text-sm text-white/70">
-              Or email us directly at <a className="underline decoration-teal-300 underline-offset-4" href="mailto:info@artsupplytracker.com">info@artsupplytracker.com</a>
-            </p>
-          </div>
-
-          {/* Optional inline form that opens mail client with prefill */}
+          {/* Beta form */}
           <BetaForm />
+
+          <p className="mt-4 text-center text-sm text-white/70">
+            Prefer email? Contact us at <a className="underline decoration-teal-300 underline-offset-4" href="mailto:info@artsupplytracker.com">info@artsupplytracker.com</a>
+          </p>
         </div>
       </section>
 
