@@ -141,6 +141,69 @@ const Investors = () => {
         </div>
       </section>
 
+      {/* Planned Features */}
+      <section className="px-8 py-20">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-center text-foreground mb-12">
+            Planned & <span className="text-accent">Future Features</span>
+          </h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="space-y-4">
+              <Card className="bg-card/50 backdrop-blur-sm border-border/50">
+                <CardContent className="p-4">
+                  <p className="text-muted-foreground">Paid featured artists on Inspiration Page (videos/blog demos with supply lists)</p>
+                </CardContent>
+              </Card>
+              
+              <Card className="bg-card/50 backdrop-blur-sm border-border/50">
+                <CardContent className="p-4">
+                  <p className="text-muted-foreground">Artist Relief Fund (help replace lost supplies)</p>
+                </CardContent>
+              </Card>
+              
+              <Card className="bg-card/50 backdrop-blur-sm border-border/50">
+                <CardContent className="p-4">
+                  <p className="text-muted-foreground">CRM for art sales (online, gallery, in-person)</p>
+                </CardContent>
+              </Card>
+              
+              <Card className="bg-card/50 backdrop-blur-sm border-border/50">
+                <CardContent className="p-4">
+                  <p className="text-muted-foreground">Music app integration</p>
+                </CardContent>
+              </Card>
+            </div>
+            
+            <div className="space-y-4">
+              <Card className="bg-card/50 backdrop-blur-sm border-border/50">
+                <CardContent className="p-4">
+                  <p className="text-muted-foreground">Smart home compatibility</p>
+                </CardContent>
+              </Card>
+              
+              <Card className="bg-card/50 backdrop-blur-sm border-border/50">
+                <CardContent className="p-4">
+                  <p className="text-muted-foreground">Accessibility + wellness features (ASL, stress detection)</p>
+                </CardContent>
+              </Card>
+              
+              <Card className="bg-card/50 backdrop-blur-sm border-border/50">
+                <CardContent className="p-4">
+                  <p className="text-muted-foreground">Portfolio management (if demand grows)</p>
+                </CardContent>
+              </Card>
+              
+              <Card className="bg-card/50 backdrop-blur-sm border-border/50">
+                <CardContent className="p-4">
+                  <p className="text-muted-foreground">New artist community platform (modern forum replacement)</p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Future Expansions */}
       <section className="px-8 py-20">
         <div className="max-w-6xl mx-auto">
