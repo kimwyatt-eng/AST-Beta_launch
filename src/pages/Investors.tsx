@@ -18,7 +18,7 @@ const Investors = () => {
             <span className="text-accent">Investment</span> Opportunity
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-12 leading-relaxed">
-            Ethical AI platform serving the global creative community with modular expansion potential.
+            ArtSupplyTracker is the first ethical AI platform designed for creative communities, with a modular foundation that expands into multiple billion-dollar verticals.
           </p>
         </div>
       </header>
@@ -26,180 +26,188 @@ const Investors = () => {
       {/* Market Opportunity */}
       <section className="px-8 py-20">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div>
-              <h2 className="text-3xl font-bold text-foreground mb-8 flex items-center gap-3">
-                <TrendingUp className="w-8 h-8 text-accent" />
-                Market Opportunity
-              </h2>
-              <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                The global art supply market in 2025 is worth billions. Artists worldwide struggle with managing supplies, costs, and sales — ArtSupplyTracker solves this with an ethical AI assistant.
-              </p>
-              
-              <Card className="bg-card/50 backdrop-blur-sm border-border/50">
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold text-foreground mb-4">Market Pain Points</h3>
-                  <ul className="space-y-2 text-muted-foreground">
-                    <li>• Supply inventory chaos and waste</li>
-                    <li>• Lack of project cost tracking</li>
-                    <li>• Insurance claim difficulties</li>
-                    <li>• Inefficient purchasing decisions</li>
-                    <li>• Poor market trend visibility</li>
-                  </ul>
-                </CardContent>
-              </Card>
-            </div>
-            
-            <div>
-              <h2 className="text-3xl font-bold text-foreground mb-8 flex items-center gap-3">
-                <Target className="w-8 h-8 text-accent" />
-                Why Invest
-              </h2>
-              
-              <div className="space-y-4">
-                <Card className="bg-card/50 backdrop-blur-sm border-border/50">
-                  <CardContent className="p-4">
-                    <h4 className="font-semibold text-foreground mb-2">Mass Market Reach</h4>
-                    <p className="text-muted-foreground text-sm">Millions of artists worldwide need supply management solutions</p>
-                  </CardContent>
-                </Card>
+          <h2 className="text-3xl font-bold text-foreground mb-8 flex items-center gap-3">
+            <TrendingUp className="w-8 h-8 text-accent" />
+            Market Opportunity
+          </h2>
+          <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+            The global art supply market is worth billions annually and is highly fragmented. Artists and studios worldwide struggle with:
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
+            <Card className="bg-card/50 backdrop-blur-sm border-border/50">
+              <CardContent className="p-6 text-center">
+                <p className="text-muted-foreground">Tracking and replacing supplies</p>
+              </CardContent>
+            </Card>
+            <Card className="bg-card/50 backdrop-blur-sm border-border/50">
+              <CardContent className="p-6 text-center">
+                <p className="text-muted-foreground">Managing project costs</p>
+              </CardContent>
+            </Card>
+            <Card className="bg-card/50 backdrop-blur-sm border-border/50">
+              <CardContent className="p-6 text-center">
+                <p className="text-muted-foreground">Navigating insurance claims</p>
+              </CardContent>
+            </Card>
+            <Card className="bg-card/50 backdrop-blur-sm border-border/50">
+              <CardContent className="p-6 text-center">
+                <p className="text-muted-foreground">Making informed purchasing decisions</p>
+              </CardContent>
+            </Card>
+          </div>
 
-                <Card className="bg-card/50 backdrop-blur-sm border-border/50">
-                  <CardContent className="p-4">
-                    <h4 className="font-semibold text-foreground mb-2">Ethical AI Advantage</h4>
-                    <p className="text-muted-foreground text-sm">Never trained on user data - competitive moat in privacy-conscious market</p>
-                  </CardContent>
-                </Card>
+          <p className="text-lg text-muted-foreground text-center">
+            ArtSupplyTracker solves these pain points with an AI-powered studio assistant built on trust, privacy, and usability.
+          </p>
+        </div>
+      </section>
 
-                <Card className="bg-card/50 backdrop-blur-sm border-border/50">
-                  <CardContent className="p-4">
-                    <h4 className="font-semibold text-foreground mb-2">Multiple Revenue Streams</h4>
-                    <p className="text-muted-foreground text-sm">Affiliate, ads, premium features, ethical data partnerships</p>
-                  </CardContent>
-                </Card>
+      {/* Why Invest */}
+      <section className="px-8 py-20 bg-card/20">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-foreground mb-12 flex items-center justify-center gap-3">
+            <Target className="w-8 h-8 text-accent" />
+            Why Invest
+          </h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Card className="bg-card/50 backdrop-blur-sm border-border/50">
+              <CardContent className="p-8">
+                <h3 className="text-xl font-semibold text-foreground mb-4">Mass Market Reach</h3>
+                <p className="text-muted-foreground">Millions of creators worldwide face the same challenges — our solution addresses a universal need.</p>
+              </CardContent>
+            </Card>
 
-                <Card className="bg-card/50 backdrop-blur-sm border-border/50">
-                  <CardContent className="p-4">
-                    <h4 className="font-semibold text-foreground mb-2">Modular Platform</h4>
-                    <p className="text-muted-foreground text-sm">Core technology enables rapid expansion to adjacent markets</p>
-                  </CardContent>
-                </Card>
-              </div>
-            </div>
+            <Card className="bg-card/50 backdrop-blur-sm border-border/50">
+              <CardContent className="p-8">
+                <h3 className="text-xl font-semibold text-foreground mb-4">Unique Ethical AI Advantage</h3>
+                <p className="text-muted-foreground">We never train on user creative IP and only share anonymized insights. This trust-first model is a durable competitive moat in a privacy-conscious era.</p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-card/50 backdrop-blur-sm border-border/50">
+              <CardContent className="p-8">
+                <h3 className="text-xl font-semibold text-foreground mb-4">Multiple Revenue Streams</h3>
+                <p className="text-muted-foreground">Affiliate sales, advertising, premium features, and anonymized market insights — all diversified for resilience.</p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-card/50 backdrop-blur-sm border-border/50">
+              <CardContent className="p-8">
+                <h3 className="text-xl font-semibold text-foreground mb-4">Defensible Modular Platform</h3>
+                <p className="text-muted-foreground">Our core tech scales across adjacent industries (garage/workshops, holiday decorators, musicians, etc.), multiplying market size without rebuilding infrastructure.</p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-card/50 backdrop-blur-sm border-border/50">
+              <CardContent className="p-8">
+                <h3 className="text-xl font-semibold text-foreground mb-4">Early Community Traction</h3>
+                <p className="text-muted-foreground">Artists are already signing up as beta users and partners, positioning us for rapid adoption at launch.</p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
 
-      {/* Next Product */}
-      <section className="px-8 py-20 bg-card/20">
+      {/* Next Modular Application */}
+      <section className="px-8 py-20">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center text-foreground mb-12">
-            Next Modular <span className="text-accent">Application</span>
+          <h2 className="text-3xl font-bold text-center text-foreground mb-4">
+            Next Modular Application: <span className="text-accent">Garage Helper</span>
           </h2>
+          <p className="text-lg text-muted-foreground text-center mb-12">
+            The first expansion beyond artists targets a larger, higher-spending market.
+          </p>
           
-          <Card className="bg-card/50 backdrop-blur-sm border-border/50 max-w-4xl mx-auto">
-            <CardHeader className="text-center">
-              <CardTitle className="flex items-center justify-center gap-3 text-2xl">
-                <Wrench className="w-8 h-8 text-accent" />
-                Garage Helper
-              </CardTitle>
-              <CardDescription className="text-lg">
-                Primary Revenue Driver - Larger market, higher spending users
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="p-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div>
-                  <h4 className="text-lg font-semibold text-foreground mb-4">Target Market</h4>
-                  <ul className="text-muted-foreground space-y-2">
-                    <li>• Home mechanics</li>
-                    <li>• Small auto shops</li>
-                    <li>• Handymen & contractors</li>
-                    <li>• Landscapers & gardeners</li>
-                  </ul>
-                </div>
-                
-                <div>
-                  <h4 className="text-lg font-semibold text-foreground mb-4">Core Features</h4>
-                  <ul className="text-muted-foreground space-y-2">
-                    <li>• Hands-free AI assistant</li>
-                    <li>• Tool inventory management</li>
-                    <li>• Project cost tracking</li>
-                    <li>• Insurance documentation</li>
-                    <li>• Event support (car shows)</li>
-                  </ul>
-                </div>
-              </div>
-              
-              <div className="mt-8 text-center">
-                <Badge variant="secondary" className="text-lg px-4 py-2">
-                  Relief Fund for Tool Replacement
-                </Badge>
-              </div>
-            </CardContent>
-          </Card>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <Card className="bg-card/50 backdrop-blur-sm border-border/50">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-3 text-xl">
+                  <Target className="w-6 h-6 text-accent" />
+                  Target Segments
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="text-muted-foreground space-y-3">
+                  <li>• Home mechanics</li>
+                  <li>• Small auto shops</li>
+                  <li>• Contractors & handymen</li>
+                  <li>• Landscapers & gardeners</li>
+                </ul>
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-card/50 backdrop-blur-sm border-border/50">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-3 text-xl">
+                  <Wrench className="w-6 h-6 text-accent" />
+                  Core Features
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="text-muted-foreground space-y-3">
+                  <li>• Voice-controlled AI assistant</li>
+                  <li>• Tool & supply inventory management</li>
+                  <li>• Project cost tracking</li>
+                  <li>• Insurance-ready documentation</li>
+                  <li>• Event support (car shows, workshops)</li>
+                </ul>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="text-center mt-12">
+            <p className="text-lg text-muted-foreground">
+              Garage Helper becomes the primary revenue driver with a broader user base and more monetizable data.
+            </p>
+          </div>
         </div>
       </section>
 
       {/* Planned Features */}
-      <section className="px-8 py-20">
+      <section className="px-8 py-20 bg-card/20">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-center text-foreground mb-12">
             Planned & <span className="text-accent">Future Features</span>
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="space-y-4">
-              <Card className="bg-card/50 backdrop-blur-sm border-border/50">
-                <CardContent className="p-4">
-                  <p className="text-muted-foreground">Paid featured artists on Inspiration Page (videos/blog demos with supply lists)</p>
-                </CardContent>
-              </Card>
-              
-              <Card className="bg-card/50 backdrop-blur-sm border-border/50">
-                <CardContent className="p-4">
-                  <p className="text-muted-foreground">Artist Relief Fund (help replace lost supplies)</p>
-                </CardContent>
-              </Card>
-              
-              <Card className="bg-card/50 backdrop-blur-sm border-border/50">
-                <CardContent className="p-4">
-                  <p className="text-muted-foreground">CRM for art sales (online, gallery, in-person)</p>
-                </CardContent>
-              </Card>
-              
-              <Card className="bg-card/50 backdrop-blur-sm border-border/50">
-                <CardContent className="p-4">
-                  <p className="text-muted-foreground">Music app integration</p>
-                </CardContent>
-              </Card>
-            </div>
+            <Card className="bg-card/50 backdrop-blur-sm border-border/50">
+              <CardContent className="p-6">
+                <p className="text-muted-foreground">Paid featured artist & partner showcases</p>
+              </CardContent>
+            </Card>
             
-            <div className="space-y-4">
-              <Card className="bg-card/50 backdrop-blur-sm border-border/50">
-                <CardContent className="p-4">
-                  <p className="text-muted-foreground">Smart home compatibility</p>
-                </CardContent>
-              </Card>
-              
-              <Card className="bg-card/50 backdrop-blur-sm border-border/50">
-                <CardContent className="p-4">
-                  <p className="text-muted-foreground">Accessibility + wellness features (ASL, stress detection)</p>
-                </CardContent>
-              </Card>
-              
-              <Card className="bg-card/50 backdrop-blur-sm border-border/50">
-                <CardContent className="p-4">
-                  <p className="text-muted-foreground">Portfolio management (if demand grows)</p>
-                </CardContent>
-              </Card>
-              
-              <Card className="bg-card/50 backdrop-blur-sm border-border/50">
-                <CardContent className="p-4">
-                  <p className="text-muted-foreground">New artist community platform (modern forum replacement)</p>
-                </CardContent>
-              </Card>
-            </div>
+            <Card className="bg-card/50 backdrop-blur-sm border-border/50">
+              <CardContent className="p-6">
+                <p className="text-muted-foreground">Artist & tool relief funds (insurance-like support)</p>
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-card/50 backdrop-blur-sm border-border/50">
+              <CardContent className="p-6">
+                <p className="text-muted-foreground">CRM tools for art & project sales</p>
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-card/50 backdrop-blur-sm border-border/50">
+              <CardContent className="p-6">
+                <p className="text-muted-foreground">Music & smart home integration</p>
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-card/50 backdrop-blur-sm border-border/50">
+              <CardContent className="p-6">
+                <p className="text-muted-foreground">Accessibility & wellness features (stress detection, ASL support)</p>
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-card/50 backdrop-blur-sm border-border/50">
+              <CardContent className="p-6">
+                <p className="text-muted-foreground">Modern community platform for creatives</p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
@@ -213,23 +221,23 @@ const Investors = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card className="bg-card/50 backdrop-blur-sm border-border/50 hover:bg-card/70 transition-all duration-300">
-              <CardContent className="p-6 text-center">
+              <CardContent className="p-8 text-center">
                 <h3 className="text-xl font-semibold text-foreground mb-4">Home Holiday Decorators</h3>
-                <p className="text-muted-foreground">Seasonal decoration inventory and project management for enthusiasts and professionals.</p>
+                <p className="text-muted-foreground">Seasonal inventory & project management</p>
               </CardContent>
             </Card>
 
             <Card className="bg-card/50 backdrop-blur-sm border-border/50 hover:bg-card/70 transition-all duration-300">
-              <CardContent className="p-6 text-center">
+              <CardContent className="p-8 text-center">
                 <h3 className="text-xl font-semibold text-foreground mb-4">Musicians</h3>
-                <p className="text-muted-foreground">Equipment tracking, maintenance schedules, and gig management for performers and studios.</p>
+                <p className="text-muted-foreground">Gear tracking, maintenance, gig scheduling</p>
               </CardContent>
             </Card>
 
             <Card className="bg-card/50 backdrop-blur-sm border-border/50 hover:bg-card/70 transition-all duration-300">
-              <CardContent className="p-6 text-center">
+              <CardContent className="p-8 text-center">
                 <h3 className="text-xl font-semibold text-foreground mb-4">Makeup Artists</h3>
-                <p className="text-muted-foreground">Product inventory, client management, and hygiene compliance for beauty professionals.</p>
+                <p className="text-muted-foreground">Product inventory, client management, hygiene compliance</p>
               </CardContent>
             </Card>
           </div>
@@ -238,41 +246,37 @@ const Investors = () => {
 
       {/* Trusty App Promise */}
       <section className="px-8 py-20 bg-card/20">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-foreground mb-8 flex items-center justify-center gap-3">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-center text-foreground mb-8 flex items-center justify-center gap-3">
             <Shield className="w-8 h-8 text-accent" />
-            🔒 The <span className="text-accent">Trusty App</span> Promise
+            The <span className="text-accent">Trusty App</span> Promise
           </h2>
-          <p className="text-lg text-muted-foreground mb-8">
-            Our ethical framework applies to all current and future applications
+          <p className="text-lg text-muted-foreground text-center mb-12">
+            We operate on a privacy-first, artist-friendly ethical framework:
           </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <Card className="bg-card/50 backdrop-blur-sm border-border/50">
               <CardContent className="p-6">
-                <h3 className="font-semibold text-foreground mb-2">Never train AI on creative work or IP</h3>
-                <p className="text-muted-foreground">Protecting user intellectual property builds trust and reduces legal risk</p>
+                <p className="text-muted-foreground">Never train AI on creative work or IP</p>
               </CardContent>
             </Card>
 
             <Card className="bg-card/50 backdrop-blur-sm border-border/50">
               <CardContent className="p-6">
-                <h3 className="font-semibold text-foreground mb-2">Never sell personally identifiable info</h3>
-                <p className="text-muted-foreground">Privacy-first approach differentiates us in data-hungry market</p>
+                <p className="text-muted-foreground">Never sell personally identifiable info</p>
               </CardContent>
             </Card>
 
             <Card className="bg-card/50 backdrop-blur-sm border-border/50">
               <CardContent className="p-6">
-                <h3 className="font-semibold text-foreground mb-2">Only anonymized, regional insights shared</h3>
-                <p className="text-muted-foreground">Valuable market data without compromising individual privacy</p>
+                <p className="text-muted-foreground">Share only anonymized, regional insights</p>
               </CardContent>
             </Card>
 
             <Card className="bg-card/50 backdrop-blur-sm border-border/50">
               <CardContent className="p-6">
-                <h3 className="font-semibold text-foreground mb-2">Regular software audits for ethical assurance</h3>
-                <p className="text-muted-foreground">Proactive compliance reduces regulatory risk and builds credibility</p>
+                <p className="text-muted-foreground">Regular third-party audits for ethical compliance</p>
               </CardContent>
             </Card>
           </div>
@@ -288,14 +292,9 @@ const Investors = () => {
           <p className="text-xl text-muted-foreground mb-8">
             Be part of building ethical AI solutions for creative communities worldwide.
           </p>
-          
-          <Button 
-            size="lg"
-            onClick={() => window.location.href = 'mailto:investor@artsupplytracker.com'}
-            className="bg-magenta-gradient hover:bg-accent/90 text-accent-foreground font-semibold px-8 py-4 text-lg transition-all duration-300 hover:scale-105 shadow-lg"
-          >
-            📩 Investor Contact
-          </Button>
+          <p className="text-lg text-muted-foreground mb-8">
+            Investor contact is partner@artsupplytracker.com
+          </p>
         </div>
       </section>
 
