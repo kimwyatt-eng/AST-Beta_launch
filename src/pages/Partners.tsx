@@ -27,18 +27,6 @@ const Partners = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <Card className="bg-card/50 backdrop-blur-sm border-border/50 hover:bg-card/70 transition-all duration-300">
               <CardContent className="p-8 text-center">
-                <h3 className="text-xl font-semibold text-foreground mb-4">Affiliate Sales</h3>
-                <p className="text-muted-foreground mb-6">Earn commissions on supply recommendations to our engaged artist community.</p>
-                <ul className="text-sm text-muted-foreground text-left space-y-2">
-                  <li>• Competitive commission rates</li>
-                  <li>• Real-time tracking dashboard</li>
-                  <li>• Monthly payouts</li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-card/50 backdrop-blur-sm border-border/50 hover:bg-card/70 transition-all duration-300">
-              <CardContent className="p-8 text-center">
                 <h3 className="text-xl font-semibold text-foreground mb-4">Advertising</h3>
                 <p className="text-muted-foreground mb-6">Promote your products directly to artists actively seeking supplies.</p>
                 <ul className="text-sm text-muted-foreground text-left space-y-2">
