@@ -60,6 +60,19 @@ const Partners = () => {
                 </ul>
               </CardContent>
             </Card>
+
+            <Card className="bg-card/50 backdrop-blur-sm border-border/50 hover:bg-card/70 transition-all duration-300">
+              <CardContent className="p-8 text-center">
+                <h3 className="text-xl font-semibold text-foreground mb-4">Early Product Testing & Feedback</h3>
+                <p className="text-muted-foreground mb-6">Connect directly with artists as early testers and get authentic insights to guide product decisions.</p>
+                <ul className="text-sm text-muted-foreground text-left space-y-2">
+                  <li>• Beta testing with engaged creators</li>
+                  <li>• Direct product feedback loops</li>
+                  <li>• Faster iteration and refinement</li>
+                  <li>• Build loyalty by co-creating with artists</li>
+                </ul>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
