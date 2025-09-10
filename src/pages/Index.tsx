@@ -5,45 +5,34 @@ export default function ArtistsHome() {
     <main className="min-h-screen w-full bg-[#2B0F22] text-white">
       {/* Hero */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-          <div>
-            <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight">
-              ArtSupplyTracker
-              <span className="block text-teal-300">Know what you have. Create more. Waste less.</span>
-            </h1>
-            <p className="mt-4 text-lg text-white/80 max-w-xl">
-              A studio hub that tracks supplies, manages projects, and protects your art—private by design.
-            </p>
+        <div className="text-center">
+          <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight">
+            ArtSupplyTracker
+            <span className="block text-teal-300">Know what you have. Create more. Waste less.</span>
+          </h1>
+          <p className="mt-4 text-lg text-white/80 max-w-xl mx-auto">
+            A studio hub that tracks supplies, manages projects, and protects your art—private by design.
+          </p>
 
-            {/* CTAs */}
-            <div className="mt-6 flex flex-col sm:flex-row gap-3 sm:gap-4">
-              <a
-                href="#beta"
-                className="inline-flex items-center justify-center rounded-xl bg-teal-400 text-[#2B0F22] px-6 py-3 text-lg font-semibold shadow-lg hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-teal-300"
-              >
-                Join the Beta
-              </a>
-              <a
-                href="#how"
-                className="inline-flex items-center justify-center rounded-xl border border-white/15 bg-white/5 px-6 py-3 text-lg font-medium hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/20"
-              >
-                See how it works
-              </a>
-            </div>
-
-            <div className="mt-4 space-y-1 text-white/70 text-sm">
-              <p>"Hands-free because artists' hands are full."</p>
-              <p>"Secure because your art deserves protection."</p>
-            </div>
+          {/* CTAs */}
+          <div className="mt-6 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+            <a
+              href="#beta"
+              className="inline-flex items-center justify-center rounded-xl bg-teal-400 text-[#2B0F22] px-6 py-3 text-lg font-semibold shadow-lg hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-teal-300"
+            >
+              Join the Beta
+            </a>
+            <a
+              href="#how"
+              className="inline-flex items-center justify-center rounded-xl border border-white/15 bg-white/5 px-6 py-3 text-lg font-medium hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/20"
+            >
+              See how it works
+            </a>
           </div>
 
-          {/* Placeholder hero image */}
-          <div className="relative rounded-2xl border border-white/10 bg-white/5 aspect-video md:aspect-[4/3] shadow-[0_10px_30px_rgba(0,0,0,0.35)] overflow-hidden">
-            <img
-              src="/hero-studio-mock.png"
-              alt="Dashboard mockup showing inventory, projects, and alerts"
-              className="w-full h-full object-cover"
-            />
+          <div className="mt-4 space-y-1 text-white/70 text-sm">
+            <p>"Hands-free because artists' hands are full."</p>
+            <p>"Secure because your art deserves protection."</p>
           </div>
         </div>
       </section>
