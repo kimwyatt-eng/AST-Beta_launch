@@ -14,6 +14,14 @@ export default function ArtistsHome() {
             A studio hub that tracks supplies, manages projects, and protects your art—private by design.
           </p>
 
+          {/* Beta Coming Soon Sign */}
+          <div className="mt-8 mb-8 mx-auto max-w-md">
+            <div className="rounded-2xl border border-teal-400/50 bg-teal-400/10 p-8 shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
+              <h2 className="text-3xl font-bold text-teal-300 mb-2">Beta Coming Soon!</h2>
+              <p className="text-white/80">Be among the first to experience the future of art supply management.</p>
+            </div>
+          </div>
+
           {/* CTAs */}
           <div className="mt-6 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
             <a
