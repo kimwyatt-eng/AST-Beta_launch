@@ -1,13 +1,16 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import Navigation from "@/components/Navigation";
 import trustAppBadge from "@/assets/trust-app-badge.png";
 import emotionalSafetyShield from "@/assets/emotional-safety-shield.png";
-import { Palette, Shield, Users, TrendingUp, Mic, Camera, Wrench } from "lucide-react";
+import { Palette, Shield, Mic, Camera, TrendingUp } from "lucide-react";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-wine-plum">
+      <Navigation />
+      
       {/* Hero Section */}
       <header className="relative py-20 px-8">
         <div className="max-w-6xl mx-auto text-center">
@@ -26,29 +29,13 @@ const Index = () => {
             "Software for artists, made by an artist."
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex justify-center">
             <Button 
               size="lg" 
               className="bg-magenta-gradient hover:bg-accent/90 text-accent-foreground font-semibold px-8 py-4 text-lg transition-all duration-300 hover:scale-105 shadow-lg"
               onClick={() => window.location.href = 'mailto:info@artsupplytracker.com'}
             >
               Sign up for Beta
-            </Button>
-            <Button 
-              variant="outline"
-              size="lg" 
-              className="border-accent/50 text-accent hover:bg-accent/10 px-8 py-4 text-lg transition-all duration-300"
-              onClick={() => window.location.href = 'mailto:partner@artsupplytracker.com'}
-            >
-              Partner with Us
-            </Button>
-            <Button 
-              variant="secondary"
-              size="lg" 
-              className="px-8 py-4 text-lg transition-all duration-300"
-              onClick={() => window.location.href = 'mailto:investor@artsupplytracker.com'}
-            >
-              Investor Info
             </Button>
           </div>
         </div>
@@ -186,55 +173,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Partner Opportunities */}
-      <section className="px-8 py-20">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center text-foreground mb-12">
-            Partner <span className="text-accent">Opportunities</span>
-          </h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <Card className="bg-card/50 backdrop-blur-sm border-border/50 hover:bg-card/70 transition-all duration-300">
-              <CardContent className="p-6 text-center">
-                <h3 className="font-semibold text-foreground mb-2">Affiliate Sales</h3>
-                <p className="text-muted-foreground">Earn commissions on supply recommendations</p>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-card/50 backdrop-blur-sm border-border/50 hover:bg-card/70 transition-all duration-300">
-              <CardContent className="p-6 text-center">
-                <h3 className="font-semibold text-foreground mb-2">Advertising</h3>
-                <p className="text-muted-foreground">Promote your products to our artist community</p>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-card/50 backdrop-blur-sm border-border/50 hover:bg-card/70 transition-all duration-300">
-              <CardContent className="p-6 text-center">
-                <h3 className="font-semibold text-foreground mb-2">Featured Content</h3>
-                <p className="text-muted-foreground">Showcase on our Inspiration Page</p>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-card/50 backdrop-blur-sm border-border/50 hover:bg-card/70 transition-all duration-300">
-              <CardContent className="p-6 text-center">
-                <h3 className="font-semibold text-foreground mb-2">Data Partnerships</h3>
-                <p className="text-muted-foreground">Ethical insights into art supply trends</p>
-              </CardContent>
-            </Card>
-          </div>
-
-          <div className="text-center mt-12">
-            <Button 
-              size="lg"
-              onClick={() => window.location.href = 'mailto:partner@artsupplytracker.com'}
-              className="bg-magenta-gradient hover:bg-accent/90 text-accent-foreground font-semibold px-8 py-4 text-lg transition-all duration-300 hover:scale-105 shadow-lg"
-            >
-              📩 Partner Signup
-            </Button>
-          </div>
-        </div>
-      </section>
-
       {/* Future Features */}
       <section className="px-8 py-20 bg-card/20">
         <div className="max-w-6xl mx-auto">
@@ -294,73 +232,6 @@ const Index = () => {
                 </CardContent>
               </Card>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Investor Section */}
-      <section className="px-8 py-20">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center text-foreground mb-12">
-            <span className="text-accent">Investor</span> Information
-          </h2>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div>
-              <h3 className="text-2xl font-semibold text-foreground mb-6">Market Opportunity</h3>
-              <p className="text-muted-foreground mb-6 leading-relaxed">
-                The global art supply market in 2025 is worth billions. Artists worldwide struggle with managing supplies, costs, and sales — ArtSupplyTracker solves this with an ethical AI assistant.
-              </p>
-              
-              <h4 className="text-xl font-semibold text-foreground mb-4">Why Invest</h4>
-              <ul className="space-y-2 text-muted-foreground">
-                <li>• Mass market reach</li>
-                <li>• Ethical AI, never trained on user data</li>
-                <li>• Transparent data model (only anonymized trends)</li>
-                <li>• Revenue streams: affiliate, ads, premium features, data partnerships</li>
-                <li>• Modular core platform for expansion</li>
-              </ul>
-            </div>
-            
-            <div>
-              <Card className="bg-card/50 backdrop-blur-sm border-border/50">
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
-                    <Wrench className="w-6 h-6 text-accent" />
-                    Next Modular App
-                  </CardTitle>
-                  <CardDescription className="text-lg font-semibold">Garage Helper</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground mb-4">
-                    Target: home mechanics, small shops, handymen, landscapers, gardeners
-                  </p>
-                  <p className="text-muted-foreground mb-4">
-                    Features: hands-free AI, inventory, projects, insurance lists, cost tracking, event support (car shows)
-                  </p>
-                  <Badge variant="secondary">Primary Revenue Driver</Badge>
-                </CardContent>
-              </Card>
-              
-              <div className="mt-6">
-                <h4 className="text-lg font-semibold text-foreground mb-3">Future Expansions</h4>
-                <div className="space-y-2 text-muted-foreground">
-                  <p>• Home Holiday Decorators</p>
-                  <p>• Musicians</p>
-                  <p>• Makeup Artists</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="text-center mt-12">
-            <Button 
-              size="lg"
-              onClick={() => window.location.href = 'mailto:investor@artsupplytracker.com'}
-              className="bg-magenta-gradient hover:bg-accent/90 text-accent-foreground font-semibold px-8 py-4 text-lg transition-all duration-300 hover:scale-105 shadow-lg"
-            >
-              📩 Investor Contact
-            </Button>
           </div>
         </div>
       </section>
