@@ -41,6 +41,14 @@ const Navigation = () => {
             >
               Investors
             </Button>
+            <Button 
+              variant={location.pathname === "/founders" ? "default" : "ghost"}
+              onClick={() => navigate("/founders")}
+              size="sm"
+              className="text-xs sm:text-sm"
+            >
+              Founders
+            </Button>
           </div>
         </div>
       </div>
