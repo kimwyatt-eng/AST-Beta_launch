@@ -16,7 +16,7 @@ const Navigation = () => {
             Art<span className="text-accent">Supply</span>Tracker
           </h1>
           
-          <div className="flex gap-2 sm:gap-4">
+          <div className="flex flex-wrap gap-1 sm:gap-2">
             <Button 
               variant={location.pathname === "/" ? "default" : "ghost"}
               onClick={() => navigate("/")}
@@ -48,6 +48,14 @@ const Navigation = () => {
               className="text-xs sm:text-sm"
             >
               Founders
+            </Button>
+            <Button 
+              variant={location.pathname === "/privacy" ? "default" : "ghost"}
+              onClick={() => navigate("/privacy")}
+              size="sm"
+              className="text-xs sm:text-sm"
+            >
+              Privacy
             </Button>
           </div>
         </div>
