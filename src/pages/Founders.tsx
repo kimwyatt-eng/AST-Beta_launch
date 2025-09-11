@@ -99,7 +99,7 @@ export default function FoundersPage() {
             name="Kim"
             role="Founder"
             blurb="Artist. Builder. Focused on privacy friendly AI for real studios."
-            img="/kim.jpg"
+            img="/lovable-uploads/dcaf6633-ea32-439a-9096-962488059176.png"
           />
           <TeamCard
             name="Adrian"
