@@ -111,7 +111,7 @@ export default function FoundersPage() {
             name="Randolph"
             role="Marketing & Reach"
             blurb="Leading partner conversions and expanding our community worldwide."
-            img="/randolph.jpg"
+            img="/lovable-uploads/25808746-eef4-4c29-8d03-3700454cf455.png"
           />
         </div>
       </section>
