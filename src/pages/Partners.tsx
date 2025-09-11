@@ -11,13 +11,32 @@ const Partners = () => {
       
       {/* Hero Section */}
       <header className="relative py-20 px-8">
-        <div className="max-w-6xl mx-auto text-center">
-          <h1 className="text-5xl font-bold text-foreground mb-6 tracking-tight">
-            Partner <span className="text-accent">Opportunities</span>
-          </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-12 leading-relaxed">
-            Join our ecosystem and grow your business alongside passionate artists who trust our platform.
-          </p>
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left Content */}
+            <div>
+              <h1 className="text-5xl font-bold text-foreground mb-6 tracking-tight">
+                Partner <span className="text-accent">Opportunities</span>
+              </h1>
+              <p className="text-xl text-muted-foreground mb-12 leading-relaxed">
+                Join our ecosystem and grow your business alongside passionate artists who trust our platform.
+              </p>
+            </div>
+            
+            {/* Right Image */}
+            <div className="relative">
+              <div className="relative rounded-2xl border border-white/10 bg-white/5 overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
+                <img
+                  src="/lovable-uploads/3c30e14f-7693-45f9-8179-ae6ecab21eb0.png"
+                  alt="AI-generated artistic composition showing a face made of various art supplies and tools"
+                  className="w-full h-auto"
+                />
+                <div className="absolute top-4 right-4 bg-black/50 backdrop-blur-sm rounded-full px-3 py-1">
+                  <span className="text-xs text-white/80">AI Generated</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </header>
 
