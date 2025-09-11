@@ -48,11 +48,11 @@ export default function ArtistsHome() {
           </div>
 
           {/* Hero Image */}
-          <div className="relative rounded-2xl border border-white/10 bg-white/5 aspect-[4/3] max-w-md mx-auto shadow-[0_10px_30px_rgba(0,0,0,0.35)] overflow-hidden">
+          <div className="relative rounded-2xl border border-white/10 bg-white/5 max-w-lg mx-auto shadow-[0_10px_30px_rgba(0,0,0,0.35)] overflow-hidden">
             <img
-              src="/lovable-uploads/e5571ed7-d427-4865-a6fe-91500f2aa822.png"
+              src="/lovable-uploads/21139444-30a4-45ca-9e34-870df019d49c.png"
               alt="Artist's penguin painting in progress with art supplies and brushes around the canvas"
-              className="w-full h-full object-cover"
+              className="w-full h-auto"
             />
           </div>
         </div>
