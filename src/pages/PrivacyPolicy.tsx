@@ -1,24 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Navigation from "@/components/Navigation";
 
 export default function PrivacyPolicy() {
   return (
     <main className="min-h-screen w-full bg-[#2B0F22] text-white">
-      {/* Navigation */}
-      <nav className="border-b border-white/10">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4">
-          <div className="flex items-center justify-between">
-            <Link to="/" className="text-xl font-bold text-teal-300">
-              ArtSupplyTracker
-            </Link>
-            <div className="flex space-x-6 text-sm">
-              <Link to="/" className="text-white/80 hover:text-white">Home</Link>
-              <Link to="/partners" className="text-white/80 hover:text-white">Partners</Link>
-              <Link to="/investors" className="text-white/80 hover:text-white">Investors</Link>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <Navigation />
 
       {/* Hero */}
       <section className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-16">
