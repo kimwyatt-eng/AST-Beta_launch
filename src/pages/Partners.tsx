@@ -27,13 +27,10 @@ const Partners = () => {
             <div className="relative">
               <div className="relative rounded-2xl border border-white/10 bg-white/5 overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
                 <img
-                  src="/lovable-uploads/8b4e5a3c-0d36-4e08-95a2-77cd36e58c1b.png"
-                  alt="AI-generated artistic composition showing a face made of various art supplies and tools"
+                  src="/lovable-uploads/f9cc1339-d87e-4cf5-957b-ab39fd938b1d.png"
+                  alt="Organized colored pencils in a professional art supply case"
                   className="w-full h-auto"
                 />
-                <div className="absolute top-4 right-4 bg-black/50 backdrop-blur-sm rounded-full px-3 py-1">
-                  <span className="text-xs text-white/80">AI Generated</span>
-                </div>
               </div>
             </div>
           </div>
