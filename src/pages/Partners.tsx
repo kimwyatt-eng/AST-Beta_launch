@@ -29,7 +29,7 @@ const Partners = () => {
                 <img
                   src="/lovable-uploads/f9cc1339-d87e-4cf5-957b-ab39fd938b1d.png"
                   alt="Organized colored pencils in a professional art supply case"
-                  className="w-full h-auto"
+                  className="w-1/2 h-auto mx-auto"
                 />
               </div>
             </div>
