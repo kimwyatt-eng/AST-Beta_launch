@@ -27,7 +27,7 @@ const Partners = () => {
             <div className="relative">
               <div className="relative rounded-2xl border border-white/10 bg-white/5 overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
                 <img
-                  src="/lovable-uploads/3c30e14f-7693-45f9-8179-ae6ecab21eb0.png"
+                  src="/lovable-uploads/8b4e5a3c-0d36-4e08-95a2-77cd36e58c1b.png"
                   alt="AI-generated artistic composition showing a face made of various art supplies and tools"
                   className="w-full h-auto"
                 />
