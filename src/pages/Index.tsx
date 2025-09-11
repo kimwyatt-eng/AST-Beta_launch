@@ -7,42 +7,53 @@ export default function ArtistsHome() {
       <Navigation />
       {/* Hero */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight">
-            ArtSupplyTracker
-            <span className="block text-teal-300">Know what you have. Create more. Waste less.</span>
-          </h1>
-          <p className="mt-4 text-lg text-white/80 max-w-xl mx-auto">
-            A studio hub that tracks supplies, manages projects, and protects your art—private by design.
-          </p>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="text-center lg:text-left">
+            <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight">
+              ArtSupplyTracker
+              <span className="block text-teal-300">Know what you have. Create more. Waste less.</span>
+            </h1>
+            <p className="mt-4 text-lg text-white/80 max-w-xl lg:mx-0 mx-auto">
+              A studio hub that tracks supplies, manages projects, and protects your art—private by design.
+            </p>
 
-          {/* Beta Coming Soon Sign */}
-          <div className="mt-8 mb-8 mx-auto max-w-md">
-            <div className="rounded-2xl border border-teal-400/50 bg-teal-400/10 p-8 shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
-              <h2 className="text-3xl font-bold text-teal-300 mb-2">Beta Coming Friday September 12, 2025!</h2>
-              <p className="text-white/80">Be among the first to experience the future of art supply management.</p>
+            {/* Beta Coming Soon Sign */}
+            <div className="mt-8 mb-8 mx-auto lg:mx-0 max-w-md">
+              <div className="rounded-2xl border border-teal-400/50 bg-teal-400/10 p-6 shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
+                <h2 className="text-2xl md:text-3xl font-bold text-teal-300 mb-2">Beta Coming Friday September 12, 2025!</h2>
+                <p className="text-white/80">Be among the first to experience the future of art supply management.</p>
+              </div>
+            </div>
+
+            {/* CTAs */}
+            <div className="mt-6 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
+              <a
+                href="#beta"
+                className="inline-flex items-center justify-center rounded-xl bg-teal-400 text-[#2B0F22] px-6 py-3 text-lg font-semibold shadow-lg hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-teal-300"
+              >
+                Join the Beta
+              </a>
+              <a
+                href="#how"
+                className="inline-flex items-center justify-center rounded-xl border border-white/15 bg-white/5 px-6 py-3 text-lg font-medium hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/20"
+              >
+                See how it works
+              </a>
+            </div>
+
+            <div className="mt-4 space-y-1 text-white/70 text-sm">
+              <p>"Hands-free because artists' hands are full."</p>
+              <p>"Secure because your art deserves protection."</p>
             </div>
           </div>
 
-          {/* CTAs */}
-          <div className="mt-6 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-            <a
-              href="#beta"
-              className="inline-flex items-center justify-center rounded-xl bg-teal-400 text-[#2B0F22] px-6 py-3 text-lg font-semibold shadow-lg hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-teal-300"
-            >
-              Join the Beta
-            </a>
-            <a
-              href="#how"
-              className="inline-flex items-center justify-center rounded-xl border border-white/15 bg-white/5 px-6 py-3 text-lg font-medium hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/20"
-            >
-              See how it works
-            </a>
-          </div>
-
-          <div className="mt-4 space-y-1 text-white/70 text-sm">
-            <p>"Hands-free because artists' hands are full."</p>
-            <p>"Secure because your art deserves protection."</p>
+          {/* Hero Image */}
+          <div className="relative rounded-2xl border border-white/10 bg-white/5 aspect-square shadow-[0_10px_30px_rgba(0,0,0,0.35)] overflow-hidden">
+            <img
+              src="/lovable-uploads/753887f0-96e6-434b-956d-2ed805fa4078.png"
+              alt="Artist's penguin painting in progress with art supplies"
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
       </section>
