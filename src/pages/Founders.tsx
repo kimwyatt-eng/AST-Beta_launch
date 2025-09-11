@@ -36,19 +36,13 @@ export default function FoundersPage() {
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Why I am building this</h2>
           <div className="mt-4 space-y-4 text-white/85 leading-relaxed">
             <p>
-              I am Kim. I am an artist and a builder. During a move I lost a whole case of my paintings and two or three
-              of my easels. It was devastating. The loss was financial. It was also emotional. I realized how vulnerable
-              artists are when tools and work are not tracked and protected.
+              I'm Kim — an artist and a builder. During a move, I lost a case of my paintings and several easels. It wasn't just a financial hit; it felt like losing part of myself. That moment made me realize how vulnerable artists are when our tools and artwork aren't tracked or protected.
             </p>
             <p>
-              I wanted a simple way to know what I have, where it is, and what it costs to replace. I wanted insurance
-              paperwork to take minutes, not days. I also wanted software that respects creative privacy. No scraping.
-              No training on my art.
+              I created ArtSupplyTracker so artists could always know what they own, where it is, and what it's worth. Insurance paperwork should take minutes, not days. And creative privacy should be a given — no scraping, no training on your art.
             </p>
             <p>
-              ArtSupplyTracker started as a weekend project. It grew into a studio hub that tracks supplies, connects
-              them to projects, and keeps creators focused on making art. The goal is simple. Help artists create more
-              and waste less while keeping ownership and privacy intact.
+              What began as a weekend project is now a studio hub that organizes supplies, connects them to projects, and keeps creators focused on making art. My mission is simple: help artists create more and waste less, while keeping ownership and privacy intact.
             </p>
           </div>
         </div>
