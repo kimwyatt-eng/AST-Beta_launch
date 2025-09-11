@@ -50,10 +50,13 @@ export default function ArtistsHome() {
           {/* Hero Image */}
           <div className="relative rounded-2xl border border-white/10 bg-white/5 max-w-lg mx-auto shadow-[0_10px_30px_rgba(0,0,0,0.35)] overflow-hidden">
             <img
-              src="/lovable-uploads/21139444-30a4-45ca-9e34-870df019d49c.png"
-              alt="Artist's penguin painting in progress with art supplies and brushes around the canvas"
+              src="/lovable-uploads/f9c72150-b66e-4483-bd6c-312223cea32e.png"
+              alt="AI-generated artistic composition showing a face made of various art supplies and creative tools"
               className="w-full h-auto"
             />
+            <div className="absolute top-4 right-4 bg-black/50 backdrop-blur-sm rounded-full px-3 py-1">
+              <span className="text-xs text-white/80">AI Generated</span>
+            </div>
           </div>
         </div>
       </section>
