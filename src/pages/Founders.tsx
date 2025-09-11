@@ -110,7 +110,7 @@ export default function FoundersPage() {
           <TeamCard
             name="Randolph"
             role="Marketing & Reach"
-            blurb="Expanding our community and connecting with artists worldwide."
+            blurb="Leading partner conversions and expanding our community worldwide."
             img="/randolph.jpg"
           />
         </div>
