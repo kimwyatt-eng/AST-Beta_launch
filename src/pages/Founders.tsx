@@ -94,7 +94,7 @@ export default function FoundersPage() {
       {/* Team */}
       <section className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-12">
         <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Meet the team</h2>
-        <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
           <TeamCard
             name="Kim"
             role="Founder"
@@ -106,6 +106,12 @@ export default function FoundersPage() {
             role="Design and outreach"
             blurb="Helping with community, design, and early partner conversations."
             img="/adrian.jpg"
+          />
+          <TeamCard
+            name="Randolph"
+            role="Marketing & Reach"
+            blurb="Expanding our community and connecting with artists worldwide."
+            img="/randolph.jpg"
           />
         </div>
       </section>
