@@ -22,8 +22,8 @@ export default function FoundersPage() {
           {/* Photo placeholder */}
           <div className="relative rounded-2xl border border-white/10 bg-white/5 aspect-video md:aspect-[4/3] shadow-[0_10px_30px_rgba(0,0,0,0.35)] overflow-hidden">
             <img
-              src="/founder-studio.jpg"
-              alt="Founder in the studio with canvases and tools"
+              src="/lovable-uploads/39a249e5-4c02-4229-a32c-70f17d3c7904.png"
+              alt="Snapshot of founder's colored pencil drawing in progress - landscape scene with figures and mountains"
               className="w-full h-full object-cover"
             />
           </div>
