@@ -105,7 +105,7 @@ export default function FoundersPage() {
             name="Adrian"
             role="Design and outreach"
             blurb="Helping with community, design, and early partner conversations."
-            img="/adrian.jpg"
+            img="/lovable-uploads/f602c152-6995-4745-a992-dc2dcc23debb.png"
           />
           <TeamCard
             name="Randolph"
