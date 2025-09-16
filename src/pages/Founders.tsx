@@ -15,7 +15,7 @@ export default function FoundersPage() {
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <a href="#story" className="inline-flex items-center justify-center rounded-xl bg-teal-400 text-[#2B0F22] px-6 py-3 text-lg font-semibold shadow-lg hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-teal-300">Read the story</a>
-              <a href="mailto:info@artsupplytracker.com" className="inline-flex items-center justify-center rounded-xl border border-white/15 bg-white/5 px-6 py-3 text-lg font-medium hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/20">Contact the founder</a>
+              <a href="mailto:info@artsupplytracker.app" className="inline-flex items-center justify-center rounded-xl border border-white/15 bg-white/5 px-6 py-3 text-lg font-medium hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/20">Contact the founder</a>
             </div>
           </div>
 
@@ -119,10 +119,10 @@ export default function FoundersPage() {
           <h3 className="text-2xl md:text-3xl font-bold">Join us in shaping better tools for creators</h3>
           <p className="mt-2 text-white/80">Questions or press. Email the founder.</p>
           <a
-            href="mailto:info@artsupplytracker.com"
+            href="mailto:info@artsupplytracker.app"
             className="mt-4 inline-flex items-center justify-center rounded-xl bg-teal-400 text-[#2B0F22] px-6 py-3 text-lg font-semibold shadow-lg hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-teal-300"
           >
-            info@artsupplytracker.com
+            info@artsupplytracker.app
           </a>
         </div>
       </section>
@@ -131,7 +131,7 @@ export default function FoundersPage() {
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-8 text-sm text-white/70 flex flex-col md:flex-row items-center justify-between gap-3">
           <p>© 2025 ArtSupplyTracker. Software for artists. Made by an artist.</p>
           <p>
-            Contact: <a href="mailto:info@artsupplytracker.com" className="text-teal-300 underline underline-offset-4">info@artsupplytracker.com</a>
+            Contact: <a href="mailto:info@artsupplytracker.app" className="text-teal-300 underline underline-offset-4">info@artsupplytracker.app</a>
           </p>
         </div>
       </footer>
