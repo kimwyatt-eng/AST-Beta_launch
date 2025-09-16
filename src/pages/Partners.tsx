@@ -137,7 +137,7 @@ const Partners = () => {
           
           <Button 
             size="lg"
-            onClick={() => window.location.href = 'mailto:partners@artsupplytracker.app'}
+            onClick={() => window.location.href = 'mailto:partner@artsupplytracker.app'}
             className="bg-magenta-gradient hover:bg-accent/90 text-accent-foreground font-semibold px-8 py-4 text-lg transition-all duration-300 hover:scale-105 shadow-lg"
           >
             📩 Partner Signup
