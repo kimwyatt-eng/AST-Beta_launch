@@ -170,7 +170,7 @@ export default function ArtistsHome() {
           <BetaForm />
 
           <p className="mt-4 text-center text-sm text-white/70">
-            Prefer email? Contact us at <a className="underline decoration-teal-300 underline-offset-4" href="mailto:info@artsupplytracker.app">info@artsupplytracker.app</a>
+            Prefer email? Contact us at <a className="underline decoration-teal-300 underline-offset-4" href="mailto:info@artsupplytracker.com">info@artsupplytracker.com</a>
           </p>
         </div>
       </section>
@@ -196,7 +196,7 @@ export default function ArtistsHome() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 text-sm text-white/70 flex flex-col md:flex-row items-center justify-between gap-3">
           <p>© 2025 ArtSupplyTracker. Software for artists, made by an artist.</p>
           <p>
-            Contact: <a href="mailto:info@artsupplytracker.app" className="text-teal-300 underline underline-offset-4">info@artsupplytracker.app</a>
+            Contact: <a href="mailto:info@artsupplytracker.com" className="text-teal-300 underline underline-offset-4">info@artsupplytracker.com</a>
           </p>
         </div>
       </footer>
@@ -223,7 +223,7 @@ function BetaForm() {
     const email = encodeURIComponent(String(data.get("email") || ""));
     const medium = encodeURIComponent(String(data.get("medium") || ""));
     const body = `Hi ArtSupplyTracker,%0A%0AI'd like to join the beta.%0AName: ${name}%0AEmail: ${email}%0AMy art/medium: ${medium}%0A%0AThanks!`;
-    window.location.href = `mailto:info@artsupplytracker.app?subject=Beta%20Signup&body=${body}`;
+    window.location.href = `mailto:info@artsupplytracker.com?subject=Beta%20Signup&body=${body}`;
   }
 
   return (
