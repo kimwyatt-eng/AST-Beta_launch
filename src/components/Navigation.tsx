@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useLocation, useNavigate } from "react-router-dom";
+import logo from "@/assets/logo.png";
 
 const Navigation = () => {
   const location = useLocation();
@@ -9,12 +10,12 @@ const Navigation = () => {
     <nav className="bg-background/80 backdrop-blur-sm border-b border-border/50 sticky top-0 z-50">
       <div className="max-w-6xl mx-auto px-4 py-4">
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-0">
-          <h1 
-            className="text-xl sm:text-2xl font-bold text-foreground cursor-pointer hover:text-accent transition-colors"
+          <img 
+            src={logo} 
+            alt="ArtSupply Tracker Logo" 
+            className="h-12 sm:h-14 cursor-pointer hover:opacity-80 transition-opacity"
             onClick={() => navigate("/")}
-          >
-            Art<span className="text-accent">Supply</span>Tracker
-          </h1>
+          />
           
           <div className="flex flex-wrap gap-1 sm:gap-2">
             <Button 
