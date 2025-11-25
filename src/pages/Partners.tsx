@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import trustBadges from "@/assets/trust-badges.png";
+import coppertonePony from "@/assets/coppertone-pony.jpg";
 
 const Partners = () => {
   return (
@@ -12,7 +13,16 @@ const Partners = () => {
       <header className="relative py-20 px-8">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Left Content */}
+            {/* Left Image */}
+            <div className="relative rounded-2xl border border-white/10 bg-white/5 overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
+              <img
+                src={coppertonePony}
+                alt="Beautiful artistic pony painting with decorative copper and warm tones"
+                className="w-full h-auto"
+              />
+            </div>
+            
+            {/* Right Content */}
             <div>
               <h1 className="text-5xl font-bold text-foreground mb-6 tracking-tight">
                 Partner <span className="text-accent">Opportunities</span>
@@ -23,17 +33,6 @@ const Partners = () => {
               <p className="text-lg text-muted-foreground">
                 Contact us at <a href="mailto:partner@artsupplytracker.com" className="text-accent font-semibold hover:underline">partner@artsupplytracker.com</a>
               </p>
-            </div>
-            
-            {/* Trust Badges */}
-            <div className="flex justify-center lg:justify-end">
-              <div className="rounded-2xl border-4 border-pink-400/40 bg-pink-400/5 p-8 shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
-                <img 
-                  src={trustBadges} 
-                  alt="A Trusty App & Emotional Safety Shield – Modular trust and protection featuring shield emblems protected by a stylized owl symbolizing wisdom and vigilance" 
-                  className="h-80 opacity-90"
-                />
-              </div>
             </div>
           </div>
         </div>
