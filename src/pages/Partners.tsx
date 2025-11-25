@@ -1,8 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
-import trustAppBadge from "@/assets/trust-app-badge.png";
-import emotionalSafetyShield from "@/assets/emotional-safety-shield.png";
+import trustBadges from "@/assets/trust-badges.png";
 
 const Partners = () => {
   return (
@@ -144,9 +143,12 @@ const Partners = () => {
       </section>
 
       {/* Trust Badges */}
-      <div className="flex justify-center gap-8 py-8">
-        <img src={trustAppBadge} alt="Trust App Badge" className="h-16 opacity-70" />
-        <img src={emotionalSafetyShield} alt="Emotional Safety Shield" className="h-16 opacity-70" />
+      <div className="flex justify-center py-8">
+        <img 
+          src={trustBadges} 
+          alt="A Trusty App & Emotional Safety Shield – Modular trust and protection featuring shield emblems protected by a stylized owl symbolizing wisdom and vigilance" 
+          className="h-32 opacity-80"
+        />
       </div>
     </div>
   );
