@@ -14,10 +14,10 @@ const Partners = () => {
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left Image */}
-            <div className="relative rounded-2xl border-4 border-pink-400/40 bg-pink-400/5 p-4 overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
+            <div className="relative rounded-2xl border-4 border-yellow-600/50 bg-yellow-600/5 p-4 overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
               <img
                 src={coppertonePony}
-                alt="Beautiful artistic pony painting with decorative copper and warm tones"
+                alt="Still Life With Horse – Vibrant watercolor painting by Kim Wyatt capturing expressive florals and subtle equine presence in a warm, layered composition"
                 className="w-full h-auto rounded-lg"
               />
             </div>
