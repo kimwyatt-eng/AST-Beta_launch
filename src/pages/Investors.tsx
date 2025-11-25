@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import Navigation from "@/components/Navigation";
 import trustBadges from "@/assets/trust-badges.png";
+import stillLifeHorse from "@/assets/still-life-horse.jpg";
 import { TrendingUp, Target, Wrench, Shield } from "lucide-react";
 
 const Investors = () => {
@@ -24,13 +25,13 @@ const Investors = () => {
               </p>
             </div>
             
-            {/* Trust Badges */}
+            {/* Right Image - Still Life With Horse */}
             <div className="flex justify-center lg:justify-end">
-              <div className="rounded-2xl border-4 border-pink-400/40 bg-pink-400/5 p-8 shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
+              <div className="rounded-2xl border-4 border-yellow-600/50 bg-yellow-600/5 p-4 shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
                 <img 
-                  src={trustBadges} 
-                  alt="A Trusty App & Emotional Safety Shield – Modular trust and protection featuring shield emblems protected by a stylized owl symbolizing wisdom and vigilance" 
-                  className="h-80 opacity-90"
+                  src={stillLifeHorse} 
+                  alt="Still Life With Horse – Vibrant watercolor painting by Kim Wyatt capturing expressive florals and subtle equine presence in a warm, layered composition" 
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
             </div>
