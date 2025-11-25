@@ -21,7 +21,8 @@ export default function ArtistsHome() {
             <div className="mt-8 mb-8 mx-auto lg:mx-0 max-w-md">
               <div className="rounded-2xl border border-teal-400/50 bg-teal-400/10 p-6 shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
                 <h2 className="text-2xl md:text-3xl font-bold text-teal-300 mb-2">Beta Coming Soon!</h2>
-                <p className="text-white/80">Sign up now to be among the first to experience inventory & project management tools. Made for Artists by Artists.</p>
+                <p className="text-white/80 mb-3">Sign up now to be among the first to experience inventory & project management tools. Made for Artists by Artists.</p>
+                <a href="#beta" className="text-teal-300 font-semibold hover:underline">Join the beta →</a>
               </div>
             </div>
 
