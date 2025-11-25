@@ -140,14 +140,6 @@ const Partners = () => {
           <p className="text-lg text-muted-foreground mb-8">
             Contact us at <a href="mailto:partner@artsupplytracker.com" className="text-accent font-semibold hover:underline">partner@artsupplytracker.com</a>
           </p>
-          
-          <Button 
-            size="lg"
-            onClick={() => window.location.href = 'mailto:partner@artsupplytracker.com'}
-            className="bg-magenta-gradient hover:bg-accent/90 text-accent-foreground font-semibold px-8 py-4 text-lg transition-all duration-300 hover:scale-105 shadow-lg"
-          >
-            📩 Partner Signup
-          </Button>
         </div>
       </section>
 
