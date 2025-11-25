@@ -50,11 +50,11 @@ export default function ArtistsHome() {
           </div>
 
           {/* Hero Image */}
-          <div className="relative rounded-2xl border border-white/10 bg-white/5 max-w-lg mx-auto shadow-[0_10px_30px_rgba(0,0,0,0.35)] overflow-hidden">
+          <div className="relative rounded-2xl border-4 border-yellow-600/50 bg-yellow-600/5 p-4 max-w-lg mx-auto shadow-[0_10px_30px_rgba(0,0,0,0.35)] overflow-hidden">
             <img
               src="/lovable-uploads/0a0c4ad7-bfce-44cb-80f2-c9b188f50ea5.png"
               alt="Beautiful penguin painting in progress surrounded by art supplies and brushes"
-              className="w-full h-auto"
+              className="w-full h-auto rounded-lg"
             />
           </div>
         </div>
