@@ -14,11 +14,11 @@ const Partners = () => {
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left Image */}
-            <div className="relative rounded-2xl border border-white/10 bg-white/5 overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
+            <div className="relative rounded-2xl border-4 border-pink-400/40 bg-pink-400/5 p-4 overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
               <img
                 src={coppertonePony}
                 alt="Beautiful artistic pony painting with decorative copper and warm tones"
-                className="w-full h-auto"
+                className="w-full h-auto rounded-lg"
               />
             </div>
             
