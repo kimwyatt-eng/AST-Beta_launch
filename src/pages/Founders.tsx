@@ -133,11 +133,13 @@ export default function FoundersPage() {
       <footer className="border-t border-white/10 bg-[#230C1C]">
         {/* Trust Badges */}
         <div className="flex justify-center py-8">
-          <img 
-            src={trustBadges} 
-            alt="A Trusty App & Emotional Safety Shield – Modular trust and protection featuring shield emblems protected by a stylized owl symbolizing wisdom and vigilance" 
-            className="h-48 opacity-80"
-          />
+          <div className="rounded-2xl border-4 border-pink-400/40 bg-pink-400/5 p-8 shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
+            <img 
+              src={trustBadges} 
+              alt="A Trusty App & Emotional Safety Shield – Modular trust and protection featuring shield emblems protected by a stylized owl symbolizing wisdom and vigilance" 
+              className="h-48 opacity-80"
+            />
+          </div>
         </div>
         
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-8 text-sm text-white/70 flex flex-col md:flex-row items-center justify-between gap-3">
