@@ -23,7 +23,7 @@ export default function PrivacyPolicy() {
           
           {/* Right Image - Trust Badges */}
           <div className="flex justify-center lg:justify-end">
-            <div className="rounded-2xl border-4 border-pink-400/40 bg-pink-400/5 p-8 shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
+            <div className="rounded-2xl border-4 border-yellow-600/50 bg-yellow-600/5 p-8 shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
               <img 
                 src={trustBadges} 
                 alt="A Trusty App & Emotional Safety Shield – Modular trust and protection featuring shield emblems protected by a stylized owl symbolizing wisdom and vigilance" 
