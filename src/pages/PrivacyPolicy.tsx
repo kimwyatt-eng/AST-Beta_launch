@@ -9,13 +9,29 @@ export default function PrivacyPolicy() {
       <Navigation />
 
       {/* Hero */}
-      <section className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-16">
-        <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight">Privacy Policy</h1>
-        <p className="mt-3 text-lg text-white/80 max-w-3xl">
-          ArtSupplyTracker is built by artists, for artists. We respect your creative work and your privacy. This
-          page summarizes our current practices and serves as temporary copy until our full legal policy is published.
-        </p>
-        <p className="mt-2 text-sm text-white/60">Last updated: {new Date().toLocaleDateString()}</p>
+      <section className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Left Content */}
+          <div>
+            <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight">Privacy Policy</h1>
+            <p className="mt-3 text-lg text-white/80">
+              ArtSupplyTracker is built by artists, for artists. We respect your creative work and your privacy. This
+              page summarizes our current practices and serves as temporary copy until our full legal policy is published.
+            </p>
+            <p className="mt-2 text-sm text-white/60">Last updated: {new Date().toLocaleDateString()}</p>
+          </div>
+          
+          {/* Right Image - Trust Badges */}
+          <div className="flex justify-center lg:justify-end">
+            <div className="rounded-2xl border-4 border-pink-400/40 bg-pink-400/5 p-8 shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
+              <img 
+                src={trustBadges} 
+                alt="A Trusty App & Emotional Safety Shield – Modular trust and protection featuring shield emblems protected by a stylized owl symbolizing wisdom and vigilance" 
+                className="h-64 opacity-90"
+              />
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* Trusty App Promise */}
