@@ -21,6 +21,9 @@ const Partners = () => {
               <p className="text-xl text-muted-foreground mb-12 leading-relaxed">
                 Join our ecosystem and grow your business alongside passionate artists who trust our platform.
               </p>
+              <p className="text-lg text-muted-foreground">
+                Contact us at <a href="mailto:partners@artsupplytracker.com" className="text-accent font-semibold hover:underline">partners@artsupplytracker.com</a>
+              </p>
             </div>
             
             {/* Right Image */}
