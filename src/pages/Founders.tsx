@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import trustBadges from "@/assets/trust-badges.png";
+import gossipHorses from "@/assets/gossip-horses.jpg";
 
 export default function FoundersPage() {
   return (
@@ -20,15 +21,13 @@ export default function FoundersPage() {
             </div>
           </div>
 
-          {/* Trust Badges */}
-          <div className="flex justify-center lg:justify-end">
-            <div className="rounded-2xl border-4 border-pink-400/40 bg-pink-400/5 p-8 shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
-              <img 
-                src={trustBadges} 
-                alt="A Trusty App & Emotional Safety Shield – Modular trust and protection featuring shield emblems protected by a stylized owl symbolizing wisdom and vigilance" 
-                className="h-80 opacity-90"
-              />
-            </div>
+          {/* Hero Image - Gossip Painting */}
+          <div className="relative rounded-2xl border-4 border-yellow-600/50 bg-yellow-600/5 p-4 shadow-[0_10px_30px_rgba(0,0,0,0.35)] overflow-hidden">
+            <img
+              src={gossipHorses}
+              alt="Gossip – Acrylic painting of three stylized horse heads in bold red, blue, and pink tones on dark background by Kim Wyatt"
+              className="w-full h-auto rounded-lg"
+            />
           </div>
         </div>
       </section>
