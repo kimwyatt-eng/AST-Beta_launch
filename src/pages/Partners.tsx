@@ -17,7 +17,7 @@ const Partners = () => {
             <div className="relative rounded-2xl border-4 border-yellow-600/50 bg-yellow-600/5 p-4 overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
               <img
                 src={coppertonePony}
-                alt="Still Life With Horse – Vibrant watercolor painting by Kim Wyatt capturing expressive florals and subtle equine presence in a warm, layered composition"
+                alt="Coppertone Pony – Stylized acrylic painting of a bowed horse with patterned mane in warm tones on blue background by Kim Wyatt"
                 className="w-full h-auto rounded-lg"
               />
             </div>
