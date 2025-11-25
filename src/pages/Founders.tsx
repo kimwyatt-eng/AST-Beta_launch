@@ -7,7 +7,7 @@ export default function FoundersPage() {
       <Navigation />
       {/* Hero */}
       <section className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight">Built by artists. For artists.</h1>
             <p className="mt-4 text-lg text-white/80 max-w-xl">
@@ -20,13 +20,15 @@ export default function FoundersPage() {
             </div>
           </div>
 
-          {/* Photo placeholder */}
-          <div className="relative rounded-2xl border border-white/10 bg-white/5 aspect-video md:aspect-[4/3] shadow-[0_10px_30px_rgba(0,0,0,0.35)] overflow-hidden">
-            <img
-              src="/lovable-uploads/39a249e5-4c02-4229-a32c-70f17d3c7904.png"
-              alt="Snapshot of founder's colored pencil drawing in progress - landscape scene with figures and mountains"
-              className="w-full h-full object-cover"
-            />
+          {/* Trust Badges */}
+          <div className="flex justify-center lg:justify-end">
+            <div className="rounded-2xl border-4 border-pink-400/40 bg-pink-400/5 p-8 shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
+              <img 
+                src={trustBadges} 
+                alt="A Trusty App & Emotional Safety Shield – Modular trust and protection featuring shield emblems protected by a stylized owl symbolizing wisdom and vigilance" 
+                className="h-80 opacity-90"
+              />
+            </div>
           </div>
         </div>
       </section>

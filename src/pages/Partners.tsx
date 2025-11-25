@@ -25,13 +25,13 @@ const Partners = () => {
               </p>
             </div>
             
-            {/* Right Image */}
-            <div className="relative">
-              <div className="relative rounded-2xl border border-white/10 bg-white/5 overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
-                <img
-                  src="/lovable-uploads/f9cc1339-d87e-4cf5-957b-ab39fd938b1d.png"
-                  alt="Organized colored pencils in a professional art supply case"
-                  className="w-1/2 h-auto mx-auto"
+            {/* Trust Badges */}
+            <div className="flex justify-center lg:justify-end">
+              <div className="rounded-2xl border-4 border-pink-400/40 bg-pink-400/5 p-8 shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
+                <img 
+                  src={trustBadges} 
+                  alt="A Trusty App & Emotional Safety Shield – Modular trust and protection featuring shield emblems protected by a stylized owl symbolizing wisdom and vigilance" 
+                  className="h-80 opacity-90"
                 />
               </div>
             </div>

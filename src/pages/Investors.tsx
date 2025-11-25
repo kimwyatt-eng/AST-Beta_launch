@@ -12,13 +12,29 @@ const Investors = () => {
       
       {/* Hero Section */}
       <header className="relative py-20 px-8">
-        <div className="max-w-6xl mx-auto text-center">
-          <h1 className="text-5xl font-bold text-foreground mb-6 tracking-tight">
-            <span className="text-accent">Investment</span> Opportunity
-          </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-12 leading-relaxed">
-            ArtSupplyTracker is the first ethical AI platform designed for creative communities, with a modular foundation that expands into multiple billion-dollar verticals.
-          </p>
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left Content */}
+            <div className="text-center lg:text-left">
+              <h1 className="text-5xl font-bold text-foreground mb-6 tracking-tight">
+                <span className="text-accent">Investment</span> Opportunity
+              </h1>
+              <p className="text-xl text-muted-foreground mb-12 leading-relaxed">
+                ArtSupplyTracker is the first ethical AI platform designed for creative communities, with a modular foundation that expands into multiple billion-dollar verticals.
+              </p>
+            </div>
+            
+            {/* Trust Badges */}
+            <div className="flex justify-center lg:justify-end">
+              <div className="rounded-2xl border-4 border-pink-400/40 bg-pink-400/5 p-8 shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
+                <img 
+                  src={trustBadges} 
+                  alt="A Trusty App & Emotional Safety Shield – Modular trust and protection featuring shield emblems protected by a stylized owl symbolizing wisdom and vigilance" 
+                  className="h-80 opacity-90"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </header>
 
