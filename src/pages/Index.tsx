@@ -170,7 +170,7 @@ export default function ArtistsHome() {
           <BetaForm />
 
           <p className="mt-4 text-center text-sm text-white/70">
-            Prefer email? Contact us at <a className="underline decoration-teal-300 underline-offset-4" href="mailto:info@artsupplytracker.com">info@artsupplytracker.com</a>
+            Prefer email? Contact us at <a className="text-teal-300 font-semibold hover:underline" href="mailto:info@artsupplytracker.com">info@artsupplytracker.com</a>
           </p>
         </div>
       </section>
@@ -196,7 +196,7 @@ export default function ArtistsHome() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 text-sm text-white/70 flex flex-col md:flex-row items-center justify-between gap-3">
           <p>© 2025 ArtSupplyTracker. Software for artists, made by an artist.</p>
           <p>
-            Contact: <a href="mailto:info@artsupplytracker.com" className="text-teal-300 underline underline-offset-4">info@artsupplytracker.com</a>
+            Contact: <a href="mailto:info@artsupplytracker.com" className="text-teal-300 font-semibold hover:underline">info@artsupplytracker.com</a>
           </p>
         </div>
       </footer>
