@@ -302,7 +302,7 @@ const Investors = () => {
         <img 
           src={trustBadges} 
           alt="A Trusty App & Emotional Safety Shield – Modular trust and protection featuring shield emblems protected by a stylized owl symbolizing wisdom and vigilance" 
-          className="h-24 opacity-80"
+          className="h-48 opacity-80"
         />
       </div>
     </div>
