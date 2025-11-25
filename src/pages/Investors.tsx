@@ -293,7 +293,7 @@ const Investors = () => {
             Be part of building ethical AI solutions for creative communities worldwide.
           </p>
           <p className="text-lg text-muted-foreground mb-8">
-            Investor contact is investors@artsupplytracker.com
+            Investor contact is <span className="text-accent font-semibold">investors@artsupplytracker.com</span>
           </p>
         </div>
       </section>
