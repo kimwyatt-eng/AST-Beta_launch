@@ -1,6 +1,7 @@
 import React from "react";
 import Navigation from "@/components/Navigation";
 import trustBadges from "@/assets/trust-badges.png";
+import SignupForm from "@/components/SignupForm";
 
 export default function ArtistsHome() {
   return (
@@ -18,22 +19,13 @@ export default function ArtistsHome() {
               A studio hub that tracks supplies, manages projects, and protects your art—private by design.
             </p>
 
-            {/* Beta Coming Soon Sign */}
-            <div className="mt-8 mb-8 mx-auto lg:mx-0 max-w-md">
-              <div className="rounded-2xl border border-teal-400/50 bg-teal-400/10 p-6 shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
-                <h2 className="text-2xl md:text-3xl font-bold text-teal-300 mb-2">Beta Coming Soon!</h2>
-                <p className="text-white/80 mb-3">Sign up now to be among the first to experience inventory & project management tools. Made for Artists by Artists.</p>
-                <a href="#beta" className="text-teal-300 font-semibold hover:underline">Join the beta →</a>
-              </div>
-            </div>
-
             {/* CTAs */}
             <div className="mt-6 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
               <a
-                href="#beta"
+                href="#signup"
                 className="inline-flex items-center justify-center rounded-xl bg-teal-400 text-[#2B0F22] px-6 py-3 text-lg font-semibold shadow-lg hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-teal-300"
               >
-                Join the Beta
+                Sign Up for Updates
               </a>
               <a
                 href="#how"
@@ -160,21 +152,9 @@ export default function ArtistsHome() {
         </div>
       </section>
 
-      {/* Beta Signup */}
-      <section id="beta" className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-14">
-        <div className="rounded-2xl border border-white/10 bg-white/5 p-8 md:p-10 shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-center">Join the Beta</h2>
-          <p className="mt-3 text-center text-white/80">
-            Spots are limited while we finish core features. Sign up and we'll send setup steps and early access perks.
-          </p>
-
-          {/* Beta form */}
-          <BetaForm />
-
-          <p className="mt-4 text-center text-sm text-white/70">
-            Prefer email? Contact us at <a className="text-teal-300 font-semibold hover:underline" href="mailto:info@artsupplytracker.com">info@artsupplytracker.com</a>
-          </p>
-        </div>
+      {/* Signup */}
+      <section id="signup" className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-14">
+        <SignupForm />
       </section>
 
       {/* Trusty App Promise */}
@@ -223,58 +203,5 @@ function Card({ title, body }: { title: string; body: string }) {
       <h3 className="text-xl font-semibold">{title}</h3>
       <p className="mt-2 text-white/80">{body}</p>
     </div>
-  );
-}
-
-function BetaForm() {
-  // Pure client-side: craft a mailto on submit. Replace later with API.
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    const form = e.currentTarget as HTMLFormElement;
-    const data = new FormData(form);
-    const name = encodeURIComponent(String(data.get("name") || ""));
-    const email = encodeURIComponent(String(data.get("email") || ""));
-    const medium = encodeURIComponent(String(data.get("medium") || ""));
-    const body = `Hi ArtSupplyTracker,%0A%0AI'd like to join the beta.%0AName: ${name}%0AEmail: ${email}%0AMy art/medium: ${medium}%0A%0AThanks!`;
-    window.location.href = `mailto:info@artsupplytracker.com?subject=Beta%20Signup&body=${body}`;
-  }
-
-  return (
-    <form onSubmit={handleSubmit} className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-3">
-      <input
-        type="text"
-        name="name"
-        placeholder="Your name"
-        aria-label="Your name"
-        className="rounded-xl border border-white/15 bg-white/10 px-4 py-3 placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-teal-300"
-        required
-      />
-      <input
-        type="email"
-        name="email"
-        placeholder="Your email"
-        aria-label="Your email"
-        className="rounded-xl border border-white/15 bg-white/10 px-4 py-3 placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-teal-300"
-        required
-      />
-      <input
-        type="text"
-        name="medium"
-        placeholder="Your art/medium"
-        aria-label="Your art or medium"
-        className="rounded-xl border border-white/15 bg-white/10 px-4 py-3 placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-teal-300"
-      />
-      <div className="md:col-span-3 flex items-center justify-center md:justify-end">
-        <button
-          type="submit"
-          className="inline-flex items-center justify-center rounded-xl bg-teal-400 text-[#2B0F22] px-6 py-3 text-lg font-semibold shadow-lg hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-teal-300"
-        >
-          Email my beta request
-        </button>
-      </div>
-      <p className="md:col-span-3 text-center md:text-right text-xs text-white/60">
-        We'll only email about the beta. No spam.
-      </p>
-    </form>
   );
 }
