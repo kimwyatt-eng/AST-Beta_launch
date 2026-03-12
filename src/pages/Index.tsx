@@ -152,21 +152,9 @@ export default function ArtistsHome() {
         </div>
       </section>
 
-      {/* Beta Signup */}
-      <section id="beta" className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-14">
-        <div className="rounded-2xl border border-white/10 bg-white/5 p-8 md:p-10 shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-center">Join the Beta</h2>
-          <p className="mt-3 text-center text-white/80">
-            Spots are limited while we finish core features. Sign up and we'll send setup steps and early access perks.
-          </p>
-
-          {/* Beta form */}
-          <BetaForm />
-
-          <p className="mt-4 text-center text-sm text-white/70">
-            Prefer email? Contact us at <a className="text-teal-300 font-semibold hover:underline" href="mailto:info@artsupplytracker.com">info@artsupplytracker.com</a>
-          </p>
-        </div>
+      {/* Signup */}
+      <section id="signup" className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-14">
+        <SignupForm />
       </section>
 
       {/* Trusty App Promise */}
