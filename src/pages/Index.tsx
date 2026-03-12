@@ -1,6 +1,7 @@
 import React from "react";
 import Navigation from "@/components/Navigation";
 import trustBadges from "@/assets/trust-badges.png";
+import SignupForm from "@/components/SignupForm";
 
 export default function ArtistsHome() {
   return (
