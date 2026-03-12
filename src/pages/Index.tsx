@@ -19,22 +19,13 @@ export default function ArtistsHome() {
               A studio hub that tracks supplies, manages projects, and protects your art—private by design.
             </p>
 
-            {/* Beta Coming Soon Sign */}
-            <div className="mt-8 mb-8 mx-auto lg:mx-0 max-w-md">
-              <div className="rounded-2xl border border-teal-400/50 bg-teal-400/10 p-6 shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
-                <h2 className="text-2xl md:text-3xl font-bold text-teal-300 mb-2">Beta Coming Soon!</h2>
-                <p className="text-white/80 mb-3">Sign up now to be among the first to experience inventory & project management tools. Made for Artists by Artists.</p>
-                <a href="#beta" className="text-teal-300 font-semibold hover:underline">Join the beta →</a>
-              </div>
-            </div>
-
             {/* CTAs */}
             <div className="mt-6 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
               <a
-                href="#beta"
+                href="#signup"
                 className="inline-flex items-center justify-center rounded-xl bg-teal-400 text-[#2B0F22] px-6 py-3 text-lg font-semibold shadow-lg hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-teal-300"
               >
-                Join the Beta
+                Sign Up for Updates
               </a>
               <a
                 href="#how"
