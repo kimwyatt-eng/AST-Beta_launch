@@ -91,7 +91,7 @@ export default function SignupForm() {
             disabled={loading}
             className="inline-flex items-center justify-center rounded-xl bg-teal-400 text-[#2B0F22] px-6 py-3 text-lg font-semibold shadow-lg hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-teal-300 disabled:opacity-60"
           >
-            {loading ? "Signing up…" : "Sign Up"}
+            {loading ? "Joining…" : "Join Beta"}
           </button>
         </div>
         <p className="md:col-span-2 text-center md:text-right text-xs text-white/60">
