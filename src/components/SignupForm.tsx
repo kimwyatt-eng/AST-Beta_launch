@@ -53,8 +53,8 @@ export default function SignupForm() {
   if (success) {
     return (
       <div className="rounded-2xl border border-teal-400/50 bg-teal-400/10 p-8 text-center shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
-        <h3 className="text-2xl font-bold text-teal-300 mb-2">You're in! 🎨</h3>
-        <p className="text-white/80">Check your inbox for a welcome email from ArtSupplyTracker.</p>
+        <h3 className="text-2xl font-bold text-teal-300 mb-2">Welcome to the Beta! 🎨</h3>
+        <p className="text-white/80">You're on the list! We'll send you early access details and tips on how to use ArtSupplyTracker before launch.</p>
       </div>
     );
   }
