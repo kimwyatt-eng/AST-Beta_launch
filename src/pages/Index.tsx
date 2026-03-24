@@ -25,7 +25,7 @@ export default function ArtistsHome() {
                 href="#signup"
                 className="inline-flex items-center justify-center rounded-xl bg-teal-400 text-[#2B0F22] px-6 py-3 text-lg font-semibold shadow-lg hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-teal-300"
               >
-                Sign Up for Updates
+                Join the Beta
               </a>
               <a
                 href="#how"
