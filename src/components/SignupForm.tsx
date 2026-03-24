@@ -39,7 +39,7 @@ export default function SignupForm() {
 
       setSuccess(true);
       form.reset();
-      toast({ title: "You're signed up! Check your inbox for a welcome email." });
+      toast({ title: "You're in the beta! Check your inbox for a welcome email." });
     } catch (err: any) {
       toast({
         title: err?.message || "Something went wrong. Please try again.",
