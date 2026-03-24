@@ -38,7 +38,7 @@ export const SignupEmail = ({
           <Link href={siteUrl} style={link}>
             <strong>{siteName}</strong>
           </Link>
-          !
+          — the studio hub that tracks supplies, manages projects, and protects your art.
         </Text>
         <Text style={text}>
           Please confirm your email address (
