@@ -39,7 +39,7 @@ export default function SignupForm() {
 
       setSuccess(true);
       form.reset();
-      toast({ title: "You're signed up! Check your inbox for a welcome email." });
+      toast({ title: "You're in the beta! Check your inbox for a welcome email." });
     } catch (err: any) {
       toast({
         title: err?.message || "Something went wrong. Please try again.",
@@ -53,17 +53,17 @@ export default function SignupForm() {
   if (success) {
     return (
       <div className="rounded-2xl border border-teal-400/50 bg-teal-400/10 p-8 text-center shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
-        <h3 className="text-2xl font-bold text-teal-300 mb-2">You're in! 🎨</h3>
-        <p className="text-white/80">Check your inbox for a welcome email from ArtSupplyTracker.</p>
+        <h3 className="text-2xl font-bold text-teal-300 mb-2">Welcome to the Beta! 🎨</h3>
+        <p className="text-white/80">You're on the list! We'll send you early access details and tips on how to use ArtSupplyTracker before launch.</p>
       </div>
     );
   }
 
   return (
     <div className="rounded-2xl border border-white/10 bg-white/5 p-8 md:p-10 shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
-      <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-center">Stay in the Loop</h2>
+      <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-center">Join the Beta</h2>
       <p className="mt-3 text-center text-white/80">
-        Sign up for updates as we build the studio hub artists deserve.
+        Be among the first artists to try ArtSupplyTracker. Sign up for early access and updates.
       </p>
 
       <form onSubmit={handleSubmit} className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -91,7 +91,7 @@ export default function SignupForm() {
             disabled={loading}
             className="inline-flex items-center justify-center rounded-xl bg-teal-400 text-[#2B0F22] px-6 py-3 text-lg font-semibold shadow-lg hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-teal-300 disabled:opacity-60"
           >
-            {loading ? "Signing up…" : "Sign Up"}
+            {loading ? "Joining…" : "Join Beta"}
           </button>
         </div>
         <p className="md:col-span-2 text-center md:text-right text-xs text-white/60">

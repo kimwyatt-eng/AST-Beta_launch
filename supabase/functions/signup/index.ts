@@ -62,15 +62,15 @@ Deno.serve(async (req) => {
         body: JSON.stringify({
           from: "ArtSupplyTracker <info@artsupplytracker.com>",
           to: [email.trim().toLowerCase()],
-          subject: "Welcome to ArtSupplyTracker!",
+          subject: "Welcome to the ArtSupplyTracker Beta!",
           html: `
             <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; background: #ffffff; padding: 40px;">
-              <h1 style="color: #2B0F22; font-size: 28px;">Welcome, ${name.trim()}!</h1>
+              <h1 style="color: #2B0F22; font-size: 28px;">Welcome to the Beta, ${name.trim()}!</h1>
               <p style="color: #444; font-size: 16px; line-height: 1.6;">
-                Thanks for signing up for ArtSupplyTracker — the studio hub that tracks supplies, manages projects, and protects your art.
+                You're officially on the list for early access to ArtSupplyTracker — the studio hub that tracks supplies, manages projects, and protects your art.
               </p>
               <p style="color: #444; font-size: 16px; line-height: 1.6;">
-                We'll keep you posted as we roll out new features. Your privacy and creative work are always protected.
+                We'll send you updates on how to use the app as we get closer to launch, so you'll be ready to hit the ground running.
               </p>
               <div style="margin-top: 30px; padding: 20px; background: #f0fdfa; border-radius: 12px; border-left: 4px solid #2dd4bf;">
                 <p style="color: #2B0F22; font-weight: bold; margin: 0;">Made for artists, by artists.</p>
