@@ -61,9 +61,9 @@ export default function SignupForm() {
 
   return (
     <div className="rounded-2xl border border-white/10 bg-white/5 p-8 md:p-10 shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
-      <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-center">Stay in the Loop</h2>
+      <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-center">Join the Beta</h2>
       <p className="mt-3 text-center text-white/80">
-        Sign up for updates as we build the studio hub artists deserve.
+        Be among the first artists to try ArtSupplyTracker. Sign up for early access and updates.
       </p>
 
       <form onSubmit={handleSubmit} className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-3">
