@@ -8,6 +8,7 @@ import Partners from "./pages/Partners";
 import Investors from "./pages/Investors";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import FoundersPage from "./pages/Founders";
+import Unsubscribe from "./pages/Unsubscribe";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/investors" element={<Investors />} />
           <Route path="/founders" element={<FoundersPage />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
+          <Route path="/unsubscribe" element={<Unsubscribe />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
