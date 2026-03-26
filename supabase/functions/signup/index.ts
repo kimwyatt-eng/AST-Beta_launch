@@ -37,11 +37,11 @@ Deno.serve(async (req) => {
     const trimmedName = name.trim();
     const trimmedEmail = email.trim().toLowerCase();
 
-    const { data: inserted, error: dbError } = await supabase
+    const signupId = crypto.randomUUID();
+
+    const { error: dbError } = await supabase
       .from("signups")
-      .insert({ name: trimmedName, email: trimmedEmail })
-      .select("id")
-      .single();
+      .insert({ id: signupId, name: trimmedName, email: trimmedEmail });
 
     if (dbError) {
       if (dbError.code === "23505") {
@@ -53,15 +53,19 @@ Deno.serve(async (req) => {
       throw dbError;
     }
 
-    // Send welcome email via transactional email system
-    await supabase.functions.invoke("send-transactional-email", {
-      body: {
-        templateName: "beta-welcome",
-        recipientEmail: trimmedEmail,
-        idempotencyKey: `beta-welcome-${inserted.id}`,
-        templateData: { name: trimmedName },
-      },
-    });
+    // Send welcome email via transactional email system (non-blocking)
+    try {
+      await supabase.functions.invoke("send-transactional-email", {
+        body: {
+          templateName: "beta-welcome",
+          recipientEmail: trimmedEmail,
+          idempotencyKey: `beta-welcome-${signupId}`,
+          templateData: { name: trimmedName },
+        },
+      });
+    } catch (emailErr) {
+      console.error("Welcome email failed (non-fatal):", emailErr);
+    }
 
     return new Response(
       JSON.stringify({ success: true }),
