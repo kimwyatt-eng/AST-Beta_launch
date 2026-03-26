@@ -8,6 +8,7 @@ import Partners from "./pages/Partners";
 import Investors from "./pages/Investors";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import FoundersPage from "./pages/Founders";
+import Unsubscribe from "./pages/Unsubscribe";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
