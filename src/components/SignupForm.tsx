@@ -101,8 +101,8 @@ export default function SignupForm() {
 
       <p className="mt-4 text-center text-sm text-white/70">
         Prefer email? Contact us at{" "}
-        <a className="text-teal-300 font-semibold hover:underline" href="mailto:info@artsupplytracker.com">
-          info@artsupplytracker.com
+        <a className="text-teal-300 font-semibold hover:underline" href="mailto:info@notify.artsupplytracker.com">
+          info@notify.artsupplytracker.com
         </a>
       </p>
     </div>
