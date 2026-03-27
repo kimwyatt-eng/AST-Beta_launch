@@ -189,7 +189,7 @@ export default function ArtistsHome() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 text-sm text-white/70 flex flex-col md:flex-row items-center justify-between gap-3">
           <p>© 2025 ArtSupplyTracker. Software for artists, made by an artist.</p>
           <p>
-            Contact: <a href="mailto:info@artsupplytracker.com" className="text-teal-300 font-semibold hover:underline">info@artsupplytracker.com</a>
+            Contact: <a href="mailto:info@notify.artsupplytracker.com" className="text-teal-300 font-semibold hover:underline">info@notify.artsupplytracker.com</a>
           </p>
         </div>
       </footer>
