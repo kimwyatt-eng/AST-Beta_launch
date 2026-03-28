@@ -65,7 +65,7 @@ export const template = {
     inquiryType: 'partner',
     senderName: 'Jane Doe',
     senderEmail: 'jane@example.com',
-    senderMessage: 'Hi, I'd love to explore a partnership opportunity.',
+    senderMessage: "Hi, I'd love to explore a partnership opportunity.",
   },
 } satisfies TemplateEntry
 
