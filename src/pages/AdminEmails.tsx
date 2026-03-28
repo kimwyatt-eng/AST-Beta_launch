@@ -19,7 +19,8 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { Mail, AlertTriangle, CheckCircle, Ban, ChevronLeft, ChevronRight, Lock, ArrowLeft } from "lucide-react";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Mail, AlertTriangle, CheckCircle, Ban, ChevronLeft, ChevronRight, Lock, ArrowLeft, MessageSquare } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 type TimeRange = "24h" | "7d" | "30d" | "custom";
@@ -42,6 +43,15 @@ interface LogEntry {
   message_id: string;
 }
 
+interface Submission {
+  id: string;
+  name: string;
+  email: string;
+  inquiry_type: string;
+  message: string;
+  created_at: string;
+}
+
 const statusBadge = (status: string) => {
   switch (status) {
     case "sent":
@@ -58,6 +68,17 @@ const statusBadge = (status: string) => {
       return <Badge className="bg-blue-600/20 text-blue-400 border-blue-600/30">Pending</Badge>;
     default:
       return <Badge variant="outline">{status}</Badge>;
+  }
+};
+
+const inquiryBadge = (type: string) => {
+  switch (type) {
+    case "partner":
+      return <Badge className="bg-violet-600/20 text-violet-400 border-violet-600/30">Partner</Badge>;
+    case "investor":
+      return <Badge className="bg-sky-600/20 text-sky-400 border-sky-600/30">Investor</Badge>;
+    default:
+      return <Badge variant="outline">{type}</Badge>;
   }
 };
 
@@ -82,6 +103,7 @@ const AdminEmails = () => {
   const [authed, setAuthed] = useState(false);
   const [authError, setAuthError] = useState("");
   const [loading, setLoading] = useState(false);
+  const [activeTab, setActiveTab] = useState("emails");
 
   const [timeRange, setTimeRange] = useState<TimeRange>("7d");
   const [customStart, setCustomStart] = useState("");
@@ -95,6 +117,9 @@ const AdminEmails = () => {
   const [logs, setLogs] = useState<LogEntry[]>([]);
   const [totalLogs, setTotalLogs] = useState(0);
 
+  const [submissions, setSubmissions] = useState<Submission[]>([]);
+  const [submissionsPage, setSubmissionsPage] = useState(0);
+
   const storedPw = typeof window !== "undefined" ? sessionStorage.getItem("admin_pw") : null;
 
   useEffect(() => {
@@ -104,16 +129,10 @@ const AdminEmails = () => {
     }
   }, [storedPw]);
 
-  const apiCall = useCallback(
+  const apiFetch = useCallback(
     async (resource: string, params: Record<string, string> = {}) => {
       const pw = password || storedPw || "";
       const searchParams = new URLSearchParams({ resource, ...params });
-      const { data, error } = await supabase.functions.invoke("admin-dashboard", {
-        headers: { "x-admin-password": pw },
-        body: null,
-        method: "GET",
-      });
-      // supabase.functions.invoke doesn't support GET params well, use fetch directly
       const url = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/admin-dashboard?${searchParams}`;
       const res = await fetch(url, {
         headers: {
@@ -151,7 +170,7 @@ const AdminEmails = () => {
     }
   };
 
-  const fetchData = useCallback(async () => {
+  const fetchEmailData = useCallback(async () => {
     setLoading(true);
     try {
       const range =
@@ -160,8 +179,8 @@ const AdminEmails = () => {
           : getDateRange(timeRange);
 
       const [statsData, logsData] = await Promise.all([
-        apiCall("stats", { start: range.start, end: range.end }),
-        apiCall("logs", {
+        apiFetch("stats", { start: range.start, end: range.end }),
+        apiFetch("logs", {
           start: range.start,
           end: range.end,
           page: String(page),
@@ -179,11 +198,27 @@ const AdminEmails = () => {
     } finally {
       setLoading(false);
     }
-  }, [apiCall, timeRange, customStart, customEnd, templateFilter, statusFilter, page]);
+  }, [apiFetch, timeRange, customStart, customEnd, templateFilter, statusFilter, page]);
+
+  const fetchSubmissions = useCallback(async () => {
+    setLoading(true);
+    try {
+      const data = await apiFetch("submissions", { page: String(submissionsPage) });
+      setSubmissions(data.submissions || []);
+    } catch (err) {
+      console.error(err);
+    } finally {
+      setLoading(false);
+    }
+  }, [apiFetch, submissionsPage]);
 
   useEffect(() => {
-    if (authed) fetchData();
-  }, [authed, fetchData]);
+    if (authed && activeTab === "emails") fetchEmailData();
+  }, [authed, activeTab, fetchEmailData]);
+
+  useEffect(() => {
+    if (authed && activeTab === "submissions") fetchSubmissions();
+  }, [authed, activeTab, fetchSubmissions]);
 
   if (!authed) {
     return (
@@ -225,169 +260,217 @@ const AdminEmails = () => {
               <ArrowLeft className="h-4 w-4" />
             </Button>
             <div>
-              <h1 className="text-2xl font-bold">Email Dashboard</h1>
-              <p className="text-sm text-muted-foreground">Monitor email delivery and contact submissions</p>
+              <h1 className="text-2xl font-bold">Admin Dashboard</h1>
+              <p className="text-sm text-muted-foreground">Monitor emails and contact submissions</p>
             </div>
           </div>
-          <Button variant="outline" size="sm" onClick={fetchData} disabled={loading}>
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={() => (activeTab === "emails" ? fetchEmailData() : fetchSubmissions())}
+            disabled={loading}
+          >
             {loading ? "Refreshing…" : "Refresh"}
           </Button>
         </div>
 
-        {/* Time Range */}
-        <div className="flex flex-wrap gap-2 items-center">
-          {(["24h", "7d", "30d", "custom"] as TimeRange[]).map((r) => (
-            <Button
-              key={r}
-              size="sm"
-              variant={timeRange === r ? "default" : "outline"}
-              onClick={() => {
-                setTimeRange(r);
-                setPage(0);
-              }}
-            >
-              {r === "24h" ? "Last 24h" : r === "7d" ? "Last 7 days" : r === "30d" ? "Last 30 days" : "Custom"}
-            </Button>
-          ))}
-          {timeRange === "custom" && (
-            <div className="flex gap-2 items-center">
-              <Input type="date" value={customStart} onChange={(e) => setCustomStart(e.target.value)} className="w-36 h-8" />
-              <span className="text-muted-foreground text-sm">to</span>
-              <Input type="date" value={customEnd} onChange={(e) => setCustomEnd(e.target.value)} className="w-36 h-8" />
-            </div>
-          )}
-        </div>
+        <Tabs value={activeTab} onValueChange={(v) => setActiveTab(v)}>
+          <TabsList>
+            <TabsTrigger value="emails" className="gap-1.5">
+              <Mail className="h-4 w-4" /> Emails
+            </TabsTrigger>
+            <TabsTrigger value="submissions" className="gap-1.5">
+              <MessageSquare className="h-4 w-4" /> Submissions
+            </TabsTrigger>
+          </TabsList>
 
-        {/* Stats Cards */}
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
-          <Card className="border-border bg-card">
-            <CardContent className="p-4 flex items-center gap-3">
-              <Mail className="h-5 w-5 text-primary" />
-              <div>
-                <p className="text-2xl font-bold">{stats.total}</p>
-                <p className="text-xs text-muted-foreground">Total</p>
-              </div>
-            </CardContent>
-          </Card>
-          <Card className="border-border bg-card">
-            <CardContent className="p-4 flex items-center gap-3">
-              <CheckCircle className="h-5 w-5 text-emerald-400" />
-              <div>
-                <p className="text-2xl font-bold">{stats.sent}</p>
-                <p className="text-xs text-muted-foreground">Sent</p>
-              </div>
-            </CardContent>
-          </Card>
-          <Card className="border-border bg-card">
-            <CardContent className="p-4 flex items-center gap-3">
-              <AlertTriangle className="h-5 w-5 text-red-400" />
-              <div>
-                <p className="text-2xl font-bold">{stats.failed}</p>
-                <p className="text-xs text-muted-foreground">Failed</p>
-              </div>
-            </CardContent>
-          </Card>
-          <Card className="border-border bg-card">
-            <CardContent className="p-4 flex items-center gap-3">
-              <Ban className="h-5 w-5 text-amber-400" />
-              <div>
-                <p className="text-2xl font-bold">{stats.suppressed}</p>
-                <p className="text-xs text-muted-foreground">Suppressed</p>
-              </div>
-            </CardContent>
-          </Card>
-          <Card className="border-border bg-card">
-            <CardContent className="p-4 flex items-center gap-3">
-              <AlertTriangle className="h-5 w-5 text-orange-400" />
-              <div>
-                <p className="text-2xl font-bold">{stats.bounced}</p>
-                <p className="text-xs text-muted-foreground">Bounced</p>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-
-        {/* Filters */}
-        <div className="flex flex-wrap gap-3">
-          <Select value={templateFilter} onValueChange={(v) => { setTemplateFilter(v); setPage(0); }}>
-            <SelectTrigger className="w-56">
-              <SelectValue placeholder="All templates" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="all">All templates</SelectItem>
-              {templates.map((t) => (
-                <SelectItem key={t} value={t}>{t}</SelectItem>
+          {/* ── Emails Tab ── */}
+          <TabsContent value="emails" className="space-y-6">
+            {/* Time Range */}
+            <div className="flex flex-wrap gap-2 items-center">
+              {(["24h", "7d", "30d", "custom"] as TimeRange[]).map((r) => (
+                <Button
+                  key={r}
+                  size="sm"
+                  variant={timeRange === r ? "default" : "outline"}
+                  onClick={() => { setTimeRange(r); setPage(0); }}
+                >
+                  {r === "24h" ? "Last 24h" : r === "7d" ? "Last 7 days" : r === "30d" ? "Last 30 days" : "Custom"}
+                </Button>
               ))}
-            </SelectContent>
-          </Select>
-          <Select value={statusFilter} onValueChange={(v) => { setStatusFilter(v); setPage(0); }}>
-            <SelectTrigger className="w-40">
-              <SelectValue placeholder="All statuses" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="all">All statuses</SelectItem>
-              <SelectItem value="sent">Sent</SelectItem>
-              <SelectItem value="failed">Failed</SelectItem>
-              <SelectItem value="suppressed">Suppressed</SelectItem>
-              <SelectItem value="bounced">Bounced</SelectItem>
-            </SelectContent>
-          </Select>
-        </div>
-
-        {/* Email Log Table */}
-        <Card className="border-border bg-card overflow-hidden">
-          <div className="overflow-x-auto">
-            <Table>
-              <TableHeader>
-                <TableRow>
-                  <TableHead>Template</TableHead>
-                  <TableHead>Recipient</TableHead>
-                  <TableHead>Status</TableHead>
-                  <TableHead>Timestamp</TableHead>
-                  <TableHead>Error</TableHead>
-                </TableRow>
-              </TableHeader>
-              <TableBody>
-                {logs.length === 0 ? (
-                  <TableRow>
-                    <TableCell colSpan={5} className="text-center text-muted-foreground py-8">
-                      No emails found for this time range
-                    </TableCell>
-                  </TableRow>
-                ) : (
-                  logs.map((log) => (
-                    <TableRow key={log.id}>
-                      <TableCell className="font-mono text-xs">{log.template_name}</TableCell>
-                      <TableCell className="text-sm">{log.recipient_email}</TableCell>
-                      <TableCell>{statusBadge(log.status)}</TableCell>
-                      <TableCell className="text-xs text-muted-foreground whitespace-nowrap">
-                        {new Date(log.created_at).toLocaleString()}
-                      </TableCell>
-                      <TableCell className="text-xs text-destructive max-w-48 truncate">
-                        {log.error_message || "—"}
-                      </TableCell>
-                    </TableRow>
-                  ))
-                )}
-              </TableBody>
-            </Table>
-          </div>
-          {totalPages > 1 && (
-            <div className="flex items-center justify-between px-4 py-3 border-t border-border">
-              <p className="text-sm text-muted-foreground">
-                Page {page + 1} of {totalPages} ({totalLogs} emails)
-              </p>
-              <div className="flex gap-2">
-                <Button size="sm" variant="outline" disabled={page === 0} onClick={() => setPage(page - 1)}>
-                  <ChevronLeft className="h-4 w-4" />
-                </Button>
-                <Button size="sm" variant="outline" disabled={page >= totalPages - 1} onClick={() => setPage(page + 1)}>
-                  <ChevronRight className="h-4 w-4" />
-                </Button>
-              </div>
+              {timeRange === "custom" && (
+                <div className="flex gap-2 items-center">
+                  <Input type="date" value={customStart} onChange={(e) => setCustomStart(e.target.value)} className="w-36 h-8" />
+                  <span className="text-muted-foreground text-sm">to</span>
+                  <Input type="date" value={customEnd} onChange={(e) => setCustomEnd(e.target.value)} className="w-36 h-8" />
+                </div>
+              )}
             </div>
-          )}
-        </Card>
+
+            {/* Stats Cards */}
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
+              <Card className="border-border bg-card">
+                <CardContent className="p-4 flex items-center gap-3">
+                  <Mail className="h-5 w-5 text-primary" />
+                  <div><p className="text-2xl font-bold">{stats.total}</p><p className="text-xs text-muted-foreground">Total</p></div>
+                </CardContent>
+              </Card>
+              <Card className="border-border bg-card">
+                <CardContent className="p-4 flex items-center gap-3">
+                  <CheckCircle className="h-5 w-5 text-emerald-400" />
+                  <div><p className="text-2xl font-bold">{stats.sent}</p><p className="text-xs text-muted-foreground">Sent</p></div>
+                </CardContent>
+              </Card>
+              <Card className="border-border bg-card">
+                <CardContent className="p-4 flex items-center gap-3">
+                  <AlertTriangle className="h-5 w-5 text-red-400" />
+                  <div><p className="text-2xl font-bold">{stats.failed}</p><p className="text-xs text-muted-foreground">Failed</p></div>
+                </CardContent>
+              </Card>
+              <Card className="border-border bg-card">
+                <CardContent className="p-4 flex items-center gap-3">
+                  <Ban className="h-5 w-5 text-amber-400" />
+                  <div><p className="text-2xl font-bold">{stats.suppressed}</p><p className="text-xs text-muted-foreground">Suppressed</p></div>
+                </CardContent>
+              </Card>
+              <Card className="border-border bg-card">
+                <CardContent className="p-4 flex items-center gap-3">
+                  <AlertTriangle className="h-5 w-5 text-orange-400" />
+                  <div><p className="text-2xl font-bold">{stats.bounced}</p><p className="text-xs text-muted-foreground">Bounced</p></div>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Filters */}
+            <div className="flex flex-wrap gap-3">
+              <Select value={templateFilter} onValueChange={(v) => { setTemplateFilter(v); setPage(0); }}>
+                <SelectTrigger className="w-56"><SelectValue placeholder="All templates" /></SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="all">All templates</SelectItem>
+                  {templates.map((t) => (<SelectItem key={t} value={t}>{t}</SelectItem>))}
+                </SelectContent>
+              </Select>
+              <Select value={statusFilter} onValueChange={(v) => { setStatusFilter(v); setPage(0); }}>
+                <SelectTrigger className="w-40"><SelectValue placeholder="All statuses" /></SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="all">All statuses</SelectItem>
+                  <SelectItem value="sent">Sent</SelectItem>
+                  <SelectItem value="failed">Failed</SelectItem>
+                  <SelectItem value="suppressed">Suppressed</SelectItem>
+                  <SelectItem value="bounced">Bounced</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+
+            {/* Email Log Table */}
+            <Card className="border-border bg-card overflow-hidden">
+              <div className="overflow-x-auto">
+                <Table>
+                  <TableHeader>
+                    <TableRow>
+                      <TableHead>Template</TableHead>
+                      <TableHead>Recipient</TableHead>
+                      <TableHead>Status</TableHead>
+                      <TableHead>Timestamp</TableHead>
+                      <TableHead>Error</TableHead>
+                    </TableRow>
+                  </TableHeader>
+                  <TableBody>
+                    {logs.length === 0 ? (
+                      <TableRow>
+                        <TableCell colSpan={5} className="text-center text-muted-foreground py-8">
+                          No emails found for this time range
+                        </TableCell>
+                      </TableRow>
+                    ) : (
+                      logs.map((log) => (
+                        <TableRow key={log.id}>
+                          <TableCell className="font-mono text-xs">{log.template_name}</TableCell>
+                          <TableCell className="text-sm">{log.recipient_email}</TableCell>
+                          <TableCell>{statusBadge(log.status)}</TableCell>
+                          <TableCell className="text-xs text-muted-foreground whitespace-nowrap">
+                            {new Date(log.created_at).toLocaleString()}
+                          </TableCell>
+                          <TableCell className="text-xs text-destructive max-w-48 truncate">
+                            {log.error_message || "—"}
+                          </TableCell>
+                        </TableRow>
+                      ))
+                    )}
+                  </TableBody>
+                </Table>
+              </div>
+              {totalPages > 1 && (
+                <div className="flex items-center justify-between px-4 py-3 border-t border-border">
+                  <p className="text-sm text-muted-foreground">
+                    Page {page + 1} of {totalPages} ({totalLogs} emails)
+                  </p>
+                  <div className="flex gap-2">
+                    <Button size="sm" variant="outline" disabled={page === 0} onClick={() => setPage(page - 1)}>
+                      <ChevronLeft className="h-4 w-4" />
+                    </Button>
+                    <Button size="sm" variant="outline" disabled={page >= totalPages - 1} onClick={() => setPage(page + 1)}>
+                      <ChevronRight className="h-4 w-4" />
+                    </Button>
+                  </div>
+                </div>
+              )}
+            </Card>
+          </TabsContent>
+
+          {/* ── Submissions Tab ── */}
+          <TabsContent value="submissions" className="space-y-6">
+            <Card className="border-border bg-card overflow-hidden">
+              <div className="overflow-x-auto">
+                <Table>
+                  <TableHeader>
+                    <TableRow>
+                      <TableHead>Name</TableHead>
+                      <TableHead>Email</TableHead>
+                      <TableHead>Type</TableHead>
+                      <TableHead>Message</TableHead>
+                      <TableHead>Date</TableHead>
+                    </TableRow>
+                  </TableHeader>
+                  <TableBody>
+                    {submissions.length === 0 ? (
+                      <TableRow>
+                        <TableCell colSpan={5} className="text-center text-muted-foreground py-8">
+                          No submissions yet
+                        </TableCell>
+                      </TableRow>
+                    ) : (
+                      submissions.map((s) => (
+                        <TableRow key={s.id}>
+                          <TableCell className="font-medium text-sm">{s.name}</TableCell>
+                          <TableCell className="text-sm">{s.email}</TableCell>
+                          <TableCell>{inquiryBadge(s.inquiry_type)}</TableCell>
+                          <TableCell className="text-sm max-w-xs truncate">{s.message}</TableCell>
+                          <TableCell className="text-xs text-muted-foreground whitespace-nowrap">
+                            {new Date(s.created_at).toLocaleString()}
+                          </TableCell>
+                        </TableRow>
+                      ))
+                    )}
+                  </TableBody>
+                </Table>
+              </div>
+              {submissions.length >= 50 && (
+                <div className="flex items-center justify-between px-4 py-3 border-t border-border">
+                  <p className="text-sm text-muted-foreground">Page {submissionsPage + 1}</p>
+                  <div className="flex gap-2">
+                    <Button size="sm" variant="outline" disabled={submissionsPage === 0} onClick={() => setSubmissionsPage(submissionsPage - 1)}>
+                      <ChevronLeft className="h-4 w-4" />
+                    </Button>
+                    <Button size="sm" variant="outline" onClick={() => setSubmissionsPage(submissionsPage + 1)}>
+                      <ChevronRight className="h-4 w-4" />
+                    </Button>
+                  </div>
+                </div>
+              )}
+            </Card>
+          </TabsContent>
+        </Tabs>
       </div>
     </div>
   );
