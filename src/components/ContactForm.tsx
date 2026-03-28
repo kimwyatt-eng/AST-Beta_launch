@@ -63,6 +63,20 @@ const ContactForm = ({ inquiryType }: ContactFormProps) => {
         },
       });
 
+      await supabase.functions.invoke("send-transactional-email", {
+        body: {
+          templateName: "inquiry-owner-notification",
+          recipientEmail: "Kim.wyatt@artsupplytracker.com",
+          idempotencyKey: `inquiry-owner-notification-${id}`,
+          templateData: {
+            inquiryType,
+            senderName: trimmedName,
+            senderEmail: trimmedEmail,
+            senderMessage: trimmedMessage,
+          },
+        },
+      });
+
       setIsSubmitted(true);
       toast({ title: "Message sent!", description: "We'll be in touch soon." });
     } catch (err) {
