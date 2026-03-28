@@ -1,7 +1,6 @@
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
+import ContactForm from "@/components/ContactForm";
 import trustBadges from "@/assets/trust-badges.png";
 import stillLifeHorse from "@/assets/still-life-horse.jpg";
 import { TrendingUp, Target, Wrench, Shield } from "lucide-react";
@@ -301,16 +300,14 @@ const Investors = () => {
 
       {/* CTA Section */}
       <section className="px-8 py-20">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-foreground mb-6">
+        <div className="max-w-xl mx-auto">
+          <h2 className="text-3xl font-bold text-foreground mb-6 text-center">
             Join Our Growth Story
           </h2>
-          <p className="text-xl text-muted-foreground mb-8">
+          <p className="text-xl text-muted-foreground mb-8 text-center">
             Be part of building ethical AI solutions for creative communities worldwide.
           </p>
-          <p className="text-lg text-muted-foreground mb-8">
-            Investor contact is <span className="text-accent font-semibold">investors@artsupplytracker.com</span>
-          </p>
+          <ContactForm inquiryType="investor" />
         </div>
       </section>
 

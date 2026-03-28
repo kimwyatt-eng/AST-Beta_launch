@@ -1,6 +1,6 @@
-import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
+import ContactForm from "@/components/ContactForm";
 import trustBadges from "@/assets/trust-badges.png";
 import coppertonePony from "@/assets/coppertone-pony.jpg";
 
@@ -27,11 +27,8 @@ const Partners = () => {
               <h1 className="text-5xl font-bold text-foreground mb-6 tracking-tight">
                 Partner <span className="text-accent">Opportunities</span>
               </h1>
-              <p className="text-xl text-muted-foreground mb-12 leading-relaxed">
+              <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
                 Join our ecosystem and grow your business alongside passionate artists who trust our platform.
-              </p>
-              <p className="text-lg text-muted-foreground">
-                Contact us at <a href="mailto:partner@artsupplytracker.com" className="text-accent font-semibold hover:underline">partner@artsupplytracker.com</a>
               </p>
             </div>
           </div>
@@ -128,16 +125,14 @@ const Partners = () => {
 
       {/* CTA Section */}
       <section className="px-8 py-20">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-foreground mb-6">
+        <div className="max-w-xl mx-auto">
+          <h2 className="text-3xl font-bold text-foreground mb-6 text-center">
             Ready to Partner with Us?
           </h2>
-          <p className="text-xl text-muted-foreground mb-8">
+          <p className="text-xl text-muted-foreground mb-8 text-center">
             Let's discuss how we can grow together in the creative community.
           </p>
-          <p className="text-lg text-muted-foreground mb-8">
-            Contact us at <a href="mailto:partner@artsupplytracker.com" className="text-accent font-semibold hover:underline">partner@artsupplytracker.com</a>
-          </p>
+          <ContactForm inquiryType="partner" />
         </div>
       </section>
 
