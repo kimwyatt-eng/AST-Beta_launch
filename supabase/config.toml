@@ -15,3 +15,5 @@ project_id = "cvdxxnvgdmddkxkmymup"
     verify_jwt = false
   [functions.handle-email-suppression]
     verify_jwt = false
+  [functions.admin-dashboard]
+    verify_jwt = false
