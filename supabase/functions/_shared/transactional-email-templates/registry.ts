@@ -13,10 +13,12 @@ import { template as betaWelcome } from './beta-welcome.tsx'
 import { template as partnerInquiryConfirmation } from './partner-inquiry-confirmation.tsx'
 import { template as investorInquiryConfirmation } from './investor-inquiry-confirmation.tsx'
 import { template as inquiryOwnerNotification } from './inquiry-owner-notification.tsx'
+import { template as signupOwnerNotification } from './signup-owner-notification.tsx'
 
 export const TEMPLATES: Record<string, TemplateEntry> = {
   'beta-welcome': betaWelcome,
   'partner-inquiry-confirmation': partnerInquiryConfirmation,
   'investor-inquiry-confirmation': investorInquiryConfirmation,
   'inquiry-owner-notification': inquiryOwnerNotification,
+  'signup-owner-notification': signupOwnerNotification,
 }

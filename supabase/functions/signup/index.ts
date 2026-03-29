@@ -53,18 +53,28 @@ Deno.serve(async (req) => {
       throw dbError;
     }
 
-    // Send welcome email via transactional email system (non-blocking)
+    // Send welcome email and owner notification (non-blocking)
     try {
-      await supabase.functions.invoke("send-transactional-email", {
-        body: {
-          templateName: "beta-welcome",
-          recipientEmail: trimmedEmail,
-          idempotencyKey: `beta-welcome-${signupId}`,
-          templateData: { name: trimmedName },
-        },
-      });
+      await Promise.all([
+        supabase.functions.invoke("send-transactional-email", {
+          body: {
+            templateName: "beta-welcome",
+            recipientEmail: trimmedEmail,
+            idempotencyKey: `beta-welcome-${signupId}`,
+            templateData: { name: trimmedName },
+          },
+        }),
+        supabase.functions.invoke("send-transactional-email", {
+          body: {
+            templateName: "signup-owner-notification",
+            recipientEmail: "Kim.wyatt@artsupplytracker.com",
+            idempotencyKey: `signup-notify-${signupId}`,
+            templateData: { name: trimmedName, email: trimmedEmail },
+          },
+        }),
+      ]);
     } catch (emailErr) {
-      console.error("Welcome email failed (non-fatal):", emailErr);
+      console.error("Signup emails failed (non-fatal):", emailErr);
     }
 
     return new Response(
