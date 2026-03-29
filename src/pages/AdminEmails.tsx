@@ -20,7 +20,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Mail, AlertTriangle, CheckCircle, Ban, ChevronLeft, ChevronRight, Lock, ArrowLeft, MessageSquare } from "lucide-react";
+import { Mail, AlertTriangle, CheckCircle, Ban, ChevronLeft, ChevronRight, Lock, ArrowLeft, MessageSquare, Users } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 type TimeRange = "24h" | "7d" | "30d" | "custom";
@@ -49,6 +49,13 @@ interface Submission {
   email: string;
   inquiry_type: string;
   message: string;
+  created_at: string;
+}
+
+interface Signup {
+  id: string;
+  name: string;
+  email: string;
   created_at: string;
 }
 
@@ -119,6 +126,10 @@ const AdminEmails = () => {
 
   const [submissions, setSubmissions] = useState<Submission[]>([]);
   const [submissionsPage, setSubmissionsPage] = useState(0);
+
+  const [signups, setSignups] = useState<Signup[]>([]);
+  const [signupsPage, setSignupsPage] = useState(0);
+  const [signupsTotal, setSignupsTotal] = useState(0);
 
   const storedPw = typeof window !== "undefined" ? sessionStorage.getItem("admin_pw") : null;
 
@@ -212,6 +223,19 @@ const AdminEmails = () => {
     }
   }, [apiFetch, submissionsPage]);
 
+  const fetchSignups = useCallback(async () => {
+    setLoading(true);
+    try {
+      const data = await apiFetch("signups", { page: String(signupsPage) });
+      setSignups(data.signups || []);
+      setSignupsTotal(data.total || 0);
+    } catch (err) {
+      console.error(err);
+    } finally {
+      setLoading(false);
+    }
+  }, [apiFetch, signupsPage]);
+
   useEffect(() => {
     if (authed && activeTab === "emails") fetchEmailData();
   }, [authed, activeTab, fetchEmailData]);
@@ -219,6 +243,10 @@ const AdminEmails = () => {
   useEffect(() => {
     if (authed && activeTab === "submissions") fetchSubmissions();
   }, [authed, activeTab, fetchSubmissions]);
+
+  useEffect(() => {
+    if (authed && activeTab === "signups") fetchSignups();
+  }, [authed, activeTab, fetchSignups]);
 
   if (!authed) {
     return (
@@ -267,7 +295,7 @@ const AdminEmails = () => {
           <Button
             variant="outline"
             size="sm"
-            onClick={() => (activeTab === "emails" ? fetchEmailData() : fetchSubmissions())}
+            onClick={() => activeTab === "emails" ? fetchEmailData() : activeTab === "submissions" ? fetchSubmissions() : fetchSignups()}
             disabled={loading}
           >
             {loading ? "Refreshing…" : "Refresh"}
@@ -281,6 +309,9 @@ const AdminEmails = () => {
             </TabsTrigger>
             <TabsTrigger value="submissions" className="gap-1.5">
               <MessageSquare className="h-4 w-4" /> Submissions
+            </TabsTrigger>
+            <TabsTrigger value="signups" className="gap-1.5">
+              <Users className="h-4 w-4" /> Signups
             </TabsTrigger>
           </TabsList>
 
@@ -463,6 +494,65 @@ const AdminEmails = () => {
                       <ChevronLeft className="h-4 w-4" />
                     </Button>
                     <Button size="sm" variant="outline" onClick={() => setSubmissionsPage(submissionsPage + 1)}>
+                      <ChevronRight className="h-4 w-4" />
+                    </Button>
+                  </div>
+                </div>
+              )}
+            </Card>
+          </TabsContent>
+
+          {/* ── Signups Tab ── */}
+          <TabsContent value="signups" className="space-y-6">
+            <div className="flex items-center gap-3">
+              <Card className="border-border bg-card">
+                <CardContent className="p-4 flex items-center gap-3">
+                  <Users className="h-5 w-5 text-teal-400" />
+                  <div><p className="text-2xl font-bold">{signupsTotal}</p><p className="text-xs text-muted-foreground">Total Signups</p></div>
+                </CardContent>
+              </Card>
+            </div>
+            <Card className="border-border bg-card overflow-hidden">
+              <div className="overflow-x-auto">
+                <Table>
+                  <TableHeader>
+                    <TableRow>
+                      <TableHead>Name</TableHead>
+                      <TableHead>Email</TableHead>
+                      <TableHead>Date</TableHead>
+                    </TableRow>
+                  </TableHeader>
+                  <TableBody>
+                    {signups.length === 0 ? (
+                      <TableRow>
+                        <TableCell colSpan={3} className="text-center text-muted-foreground py-8">
+                          No signups yet
+                        </TableCell>
+                      </TableRow>
+                    ) : (
+                      signups.map((s) => (
+                        <TableRow key={s.id}>
+                          <TableCell className="font-medium text-sm">{s.name}</TableCell>
+                          <TableCell className="text-sm">{s.email}</TableCell>
+                          <TableCell className="text-xs text-muted-foreground whitespace-nowrap">
+                            {new Date(s.created_at).toLocaleString()}
+                          </TableCell>
+                        </TableRow>
+                      ))
+                    )}
+                  </TableBody>
+                </Table>
+              </div>
+              {Math.ceil(signupsTotal / 50) > 1 && (
+                <div className="flex items-center justify-between px-4 py-3 border-t border-border">
+                  <p className="text-sm text-muted-foreground">
+                    Page {signupsPage + 1} of {Math.ceil(signupsTotal / 50)} ({signupsTotal} signups)
+                  </p>
+                  <div className="flex gap-2">
+                    <Button size="sm" variant="outline" disabled={signupsPage === 0} onClick={() => setSignupsPage(signupsPage - 1)}>
+                      <ChevronLeft className="h-4 w-4" />
+                    </Button>
+                    <Button size="sm" variant="outline" disabled={signupsPage >= Math.ceil(signupsTotal / 50) - 1} onClick={() => setSignupsPage(signupsPage + 1)}>
                       <ChevronRight className="h-4 w-4" />
                     </Button>
                   </div>

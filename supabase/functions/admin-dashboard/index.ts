@@ -139,6 +139,24 @@ Deno.serve(async (req) => {
       );
     }
 
+    if (resource === "signups") {
+      let query = supabase
+        .from("signups")
+        .select("*", { count: "exact" })
+        .order("created_at", { ascending: false });
+
+      if (start) query = query.gte("created_at", start);
+      if (end) query = query.lte("created_at", end);
+
+      const { data, error, count } = await query.range(page * pageSize, (page + 1) * pageSize - 1);
+      if (error) throw error;
+
+      return new Response(
+        JSON.stringify({ signups: data, total: count || 0, page, pageSize }),
+        { headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
+    }
+
     return new Response(JSON.stringify({ error: "Unknown resource" }), {
       status: 400,
       headers: { ...corsHeaders, "Content-Type": "application/json" },
