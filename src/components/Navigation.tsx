@@ -10,7 +10,7 @@ const Navigation = () => {
       <div className="max-w-6xl mx-auto px-4 py-4">
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-0">
           <h1 
-            className="text-xl sm:text-2xl font-bold text-periwinkle cursor-pointer hover:text-accent transition-colors"
+            className="text-xl sm:text-2xl font-bold text-secondary cursor-pointer hover:text-accent transition-colors"
             onClick={() => navigate("/")}
           >
             Art<span className="text-accent">Supply</span>Tracker
