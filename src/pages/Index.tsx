@@ -2,6 +2,9 @@ import React from "react";
 import Navigation from "@/components/Navigation";
 import trustBadges from "@/assets/trust-badges.png";
 import SignupForm from "@/components/SignupForm";
+import mockupDashboard from "@/assets/mockup-dashboard-dark.png";
+import mockupInventory from "@/assets/mockup-inventory.jpg";
+import mockupProject from "@/assets/mockup-project.jpg";
 
 export default function ArtistsHome() {
   return (
@@ -149,6 +152,38 @@ export default function ArtistsHome() {
             <h3 className="text-xl font-semibold">Export</h3>
             <p className="mt-2 text-white/80">CSV · PDF insurance report · Project pack lists</p>
           </div>
+        </div>
+      </section>
+
+      {/* Sneak Peek */}
+      <section id="sneak-peek" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
+        <div className="text-center max-w-2xl mx-auto">
+          <span className="inline-block rounded-full border border-teal-300/40 bg-teal-300/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-teal-300">
+            Sneak Peek
+          </span>
+          <h2 className="mt-3 text-3xl md:text-4xl font-bold tracking-tight">A taste of the studio</h2>
+          <p className="mt-3 text-white/75">
+            Early concept mockups — not final UI, but a glimpse of the experience we're building.
+          </p>
+        </div>
+
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+          {[
+            { src: mockupDashboard, title: "Studio Dashboard", caption: "Palettes, supplies, and community at a glance.", alt: "Concept mockup of the ArtSupplyTracker studio dashboard with palettes and supply jars" },
+            { src: mockupInventory, title: "Inventory Overview", caption: "Search, low-stock alerts, and storage map.", alt: "Concept mockup of the ArtSupplyTracker inventory overview with stock levels and storage map" },
+            { src: mockupProject, title: "Project View", caption: "Tasks, current supplies, and session notes per artwork.", alt: "Concept mockup of the ArtSupplyTracker project view showing a Mountain Sunset painting with task list" },
+          ].map((m) => (
+            <figure
+              key={m.title}
+              className="rounded-2xl border-4 border-yellow-600/50 bg-yellow-600/5 p-3 shadow-[0_10px_30px_rgba(0,0,0,0.35)] overflow-hidden"
+            >
+              <img src={m.src} alt={m.alt} loading="lazy" className="w-full h-auto rounded-lg" />
+              <figcaption className="px-2 py-3">
+                <h3 className="text-lg font-semibold">{m.title}</h3>
+                <p className="mt-1 text-sm text-white/70">{m.caption}</p>
+              </figcaption>
+            </figure>
+          ))}
         </div>
       </section>
 
