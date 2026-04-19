@@ -34,14 +34,7 @@ const HeroSlideshow = () => {
       aria-roledescription="carousel"
       aria-label="ArtSupplyTracker concept mockup slideshow"
     >
-      <div className="relative w-full rounded-lg overflow-hidden bg-background/40">
-        {/* Sizer: first image sets natural height, others overlay */}
-        <img
-          src={slides[0].src}
-          alt=""
-          aria-hidden="true"
-          className="w-full h-auto invisible"
-        />
+      <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden bg-background/40">
         {slides.map((slide, i) => (
           <img
             key={slide.src}
