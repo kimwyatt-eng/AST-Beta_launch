@@ -1,5 +1,6 @@
 import React from "react";
 import Navigation from "@/components/Navigation";
+import HeroSlideshow from "@/components/HeroSlideshow";
 import trustBadges from "@/assets/trust-badges.png";
 import SignupForm from "@/components/SignupForm";
 import mockupDashboard from "@/assets/mockup-dashboard-dark.png";
