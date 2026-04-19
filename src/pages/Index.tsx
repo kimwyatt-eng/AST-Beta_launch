@@ -16,9 +16,9 @@ export default function ArtistsHome() {
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="text-center lg:text-left">
-            <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-primary">
+            <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-periwinkle">
               ArtSupplyTracker
-              <span className="block text-secondary">Know what you have. Create more. Waste less.</span>
+              <span className="block text-violet-light">Know what you have. Create more. Waste less.</span>
             </h1>
             <p className="mt-4 text-lg text-white/80 max-w-xl lg:mx-0 mx-auto">
               A studio hub that tracks supplies, manages projects, and protects your art—private by design.
