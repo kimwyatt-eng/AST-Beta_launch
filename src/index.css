@@ -6,51 +6,52 @@
 
 @layer base {
   :root {
-    /* Deep wine red to dark plum gradient backgrounds */
-    --background: 345 45% 8%;
-    --foreground: 320 25% 92%;
+    /* Deep dark charcoal background (#1A1C1E) */
+    --background: 210 9% 11%;
+    /* Off-white body text (#E1E2E5) */
+    --foreground: 220 6% 89%;
 
-    /* Photo box inspired cards */
-    --card: 340 35% 12%;
-    --card-foreground: 320 20% 88%;
+    /* Slightly lifted charcoal for cards */
+    --card: 210 9% 14%;
+    --card-foreground: 220 6% 89%;
 
-    --popover: 345 40% 10%;
-    --popover-foreground: 320 25% 90%;
+    --popover: 210 9% 12%;
+    --popover-foreground: 220 6% 89%;
 
-    /* Deep wine red primary */
-    --primary: 345 55% 25%;
-    --primary-foreground: 320 25% 95%;
+    /* Warm amber primary (#D98324) */
+    --primary: 30 73% 50%;
+    --primary-foreground: 210 9% 11%;
 
-    /* Rich magenta secondary */
-    --secondary: 315 45% 18%;
-    --secondary-foreground: 320 20% 92%;
+    /* Soft blue secondary (#4A90E2) */
+    --secondary: 211 72% 59%;
+    --secondary-foreground: 210 9% 11%;
 
-    /* Muted purple tones */
-    --muted: 330 35% 15%;
-    --muted-foreground: 320 15% 65%;
+    /* Muted charcoal tones */
+    --muted: 210 9% 18%;
+    --muted-foreground: 220 6% 65%;
 
-    /* Deep magenta accent instead of gold */
-    --accent: 315 65% 45%;
-    --accent-foreground: 320 25% 95%;
+    /* Warm amber accent */
+    --accent: 30 73% 50%;
+    --accent-foreground: 210 9% 11%;
 
     --destructive: 0 75% 55%;
-    --destructive-foreground: 320 25% 95%;
+    --destructive-foreground: 220 6% 95%;
 
-    /* Subtle borders for photo box effect */
-    --border: 330 25% 20%;
-    --input: 330 30% 18%;
-    --ring: 315 65% 45%;
+    /* Subtle borders against charcoal */
+    --border: 210 9% 22%;
+    --input: 210 9% 18%;
+    --ring: 30 73% 50%;
 
     --radius: 0.75rem;
 
-    /* Custom gradient variables - deep reds, magentas, purples only */
-    --gradient-wine-plum: linear-gradient(135deg, hsl(345 45% 8%) 0%, hsl(315 45% 12%) 50%, hsl(285 40% 10%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(340 35% 14%) 0%, hsl(320 35% 12%) 100%);
-    --gradient-magenta: linear-gradient(135deg, hsl(315 65% 45%) 0%, hsl(300 55% 35%) 100%);
+    /* Updated gradients - charcoal with amber warmth */
+    --gradient-wine-plum: linear-gradient(135deg, hsl(210 9% 11%) 0%, hsl(210 9% 9%) 50%, hsl(210 9% 7%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(210 9% 14%) 0%, hsl(210 9% 12%) 100%);
+    --gradient-magenta: linear-gradient(135deg, hsl(30 73% 50%) 0%, hsl(30 73% 40%) 100%);
     
     /* Photo box shadows */
-    --shadow-photo-box: 0 8px 25px -5px hsl(345 45% 5% / 0.4), 0 0 0 1px hsl(330 25% 20% / 0.3);
-    --shadow-photo-box-hover: 0 12px 35px -5px hsl(345 45% 5% / 0.6), 0 0 0 1px hsl(315 65% 45% / 0.2);
+    --shadow-photo-box: 0 8px 25px -5px hsl(210 9% 4% / 0.5), 0 0 0 1px hsl(210 9% 22% / 0.3);
+    --shadow-photo-box-hover: 0 12px 35px -5px hsl(210 9% 4% / 0.7), 0 0 0 1px hsl(30 73% 50% / 0.3);
     
     /* Smooth transitions */
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -74,47 +75,47 @@
   }
 
   .dark {
-    /* Dark mode maintains the same wine-magenta-purple aesthetic but deeper */
-    --background: 345 50% 6%;
-    --foreground: 320 30% 95%;
+    /* Dark mode mirrors root: charcoal + amber + soft blue */
+    --background: 210 9% 9%;
+    --foreground: 220 6% 91%;
 
-    --card: 340 40% 10%;
-    --card-foreground: 320 25% 90%;
+    --card: 210 9% 13%;
+    --card-foreground: 220 6% 90%;
 
-    --popover: 345 45% 8%;
-    --popover-foreground: 320 25% 92%;
+    --popover: 210 9% 11%;
+    --popover-foreground: 220 6% 91%;
 
-    --primary: 345 60% 22%;
-    --primary-foreground: 320 30% 98%;
+    --primary: 30 73% 52%;
+    --primary-foreground: 210 9% 9%;
 
-    --secondary: 315 50% 15%;
-    --secondary-foreground: 320 25% 95%;
+    --secondary: 211 72% 59%;
+    --secondary-foreground: 210 9% 9%;
 
-    --muted: 330 40% 12%;
-    --muted-foreground: 320 20% 70%;
+    --muted: 210 9% 16%;
+    --muted-foreground: 220 6% 70%;
 
-    --accent: 315 70% 50%;
-    --accent-foreground: 320 30% 98%;
+    --accent: 30 73% 52%;
+    --accent-foreground: 210 9% 9%;
 
     --destructive: 0 80% 50%;
-    --destructive-foreground: 320 25% 95%;
+    --destructive-foreground: 220 6% 95%;
 
-    --border: 330 30% 18%;
-    --input: 330 35% 16%;
-    --ring: 315 70% 50%;
-    --sidebar-background: 345 45% 8%;
-    --sidebar-foreground: 320 25% 90%;
-    --sidebar-primary: 345 55% 25%;
-    --sidebar-primary-foreground: 320 25% 95%;
-    --sidebar-accent: 330 35% 15%;
-    --sidebar-accent-foreground: 320 25% 90%;
-    --sidebar-border: 330 25% 20%;
-    --sidebar-ring: 315 65% 45%;
+    --border: 210 9% 20%;
+    --input: 210 9% 16%;
+    --ring: 30 73% 52%;
 
-    /* Enhanced dark mode gradients - deep reds, magentas, purples */
-    --gradient-wine-plum: linear-gradient(135deg, hsl(345 50% 6%) 0%, hsl(315 50% 10%) 50%, hsl(285 45% 8%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(340 40% 12%) 0%, hsl(320 40% 10%) 100%);
-    --gradient-magenta: linear-gradient(135deg, hsl(315 70% 50%) 0%, hsl(300 60% 40%) 100%);
+    --sidebar-background: 210 9% 11%;
+    --sidebar-foreground: 220 6% 90%;
+    --sidebar-primary: 30 73% 50%;
+    --sidebar-primary-foreground: 210 9% 9%;
+    --sidebar-accent: 210 9% 16%;
+    --sidebar-accent-foreground: 220 6% 90%;
+    --sidebar-border: 210 9% 20%;
+    --sidebar-ring: 30 73% 52%;
+
+    --gradient-wine-plum: linear-gradient(135deg, hsl(210 9% 9%) 0%, hsl(210 9% 7%) 50%, hsl(210 9% 6%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(210 9% 13%) 0%, hsl(210 9% 11%) 100%);
+    --gradient-magenta: linear-gradient(135deg, hsl(30 73% 52%) 0%, hsl(30 73% 42%) 100%);
   }
 }
 
