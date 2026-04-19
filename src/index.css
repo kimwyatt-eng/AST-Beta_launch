@@ -18,8 +18,8 @@
     --popover: 210 9% 12%;
     --popover-foreground: 220 6% 89%;
 
-    /* Soft salmon/coral primary */
-    --primary: 8 80% 68%;
+    /* Soft pink-coral primary */
+    --primary: 350 85% 72%;
     --primary-foreground: 210 9% 11%;
 
     /* Vibrant cobalt violet secondary (#9E66AB) */
@@ -35,8 +35,8 @@
     --muted: 210 9% 18%;
     --muted-foreground: 220 6% 65%;
 
-    /* Salmon/coral accent */
-    --accent: 8 80% 68%;
+    /* Pink-coral accent */
+    --accent: 350 85% 72%;
     --accent-foreground: 210 9% 11%;
 
     --destructive: 0 75% 55%;
@@ -45,18 +45,18 @@
     /* Subtle borders against charcoal */
     --border: 210 9% 22%;
     --input: 210 9% 18%;
-    --ring: 8 80% 68%;
+    --ring: 350 85% 72%;
 
     --radius: 0.75rem;
 
     /* Updated gradients - charcoal with coral warmth */
     --gradient-wine-plum: linear-gradient(135deg, hsl(210 9% 11%) 0%, hsl(210 9% 9%) 50%, hsl(210 9% 7%) 100%);
     --gradient-card: linear-gradient(145deg, hsl(210 9% 14%) 0%, hsl(210 9% 12%) 100%);
-    --gradient-magenta: linear-gradient(135deg, hsl(8 80% 68%) 0%, hsl(8 70% 58%) 100%);
+    --gradient-magenta: linear-gradient(135deg, hsl(350 85% 72%) 0%, hsl(350 75% 62%) 100%);
     
     /* Photo box shadows */
     --shadow-photo-box: 0 8px 25px -5px hsl(210 9% 4% / 0.5), 0 0 0 1px hsl(210 9% 22% / 0.3);
-    --shadow-photo-box-hover: 0 12px 35px -5px hsl(210 9% 4% / 0.7), 0 0 0 1px hsl(8 80% 68% / 0.3);
+    --shadow-photo-box-hover: 0 12px 35px -5px hsl(210 9% 4% / 0.7), 0 0 0 1px hsl(350 85% 72% / 0.3);
     
     /* Smooth transitions */
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -90,7 +90,7 @@
     --popover: 210 9% 11%;
     --popover-foreground: 220 6% 91%;
 
-    --primary: 8 80% 70%;
+    --primary: 350 85% 74%;
     --primary-foreground: 210 9% 9%;
 
     --secondary: 290 35% 62%;
@@ -102,7 +102,7 @@
     --muted: 210 9% 16%;
     --muted-foreground: 220 6% 70%;
 
-    --accent: 8 80% 70%;
+    --accent: 350 85% 74%;
     --accent-foreground: 210 9% 9%;
 
     --destructive: 0 80% 50%;
@@ -110,20 +110,20 @@
 
     --border: 210 9% 20%;
     --input: 210 9% 16%;
-    --ring: 8 80% 70%;
+    --ring: 350 85% 74%;
 
     --sidebar-background: 210 9% 11%;
     --sidebar-foreground: 220 6% 90%;
-    --sidebar-primary: 8 80% 68%;
+    --sidebar-primary: 350 85% 72%;
     --sidebar-primary-foreground: 210 9% 9%;
     --sidebar-accent: 210 9% 16%;
     --sidebar-accent-foreground: 220 6% 90%;
     --sidebar-border: 210 9% 20%;
-    --sidebar-ring: 8 80% 70%;
+    --sidebar-ring: 350 85% 74%;
 
     --gradient-wine-plum: linear-gradient(135deg, hsl(210 9% 9%) 0%, hsl(210 9% 7%) 50%, hsl(210 9% 6%) 100%);
     --gradient-card: linear-gradient(145deg, hsl(210 9% 13%) 0%, hsl(210 9% 11%) 100%);
-    --gradient-magenta: linear-gradient(135deg, hsl(8 80% 70%) 0%, hsl(8 70% 60%) 100%);
+    --gradient-magenta: linear-gradient(135deg, hsl(350 85% 74%) 0%, hsl(350 75% 64%) 100%);
   }
 }
 
