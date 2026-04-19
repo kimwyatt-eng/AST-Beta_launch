@@ -5,6 +5,8 @@ import SignupForm from "@/components/SignupForm";
 import mockupDashboard from "@/assets/mockup-dashboard-dark.png";
 import mockupInventory from "@/assets/mockup-inventory.jpg";
 import mockupProject from "@/assets/mockup-project.jpg";
+import mockupPaletteCreator from "@/assets/mockup-palette-creator.png";
+import mockupMercurialHarvest from "@/assets/mockup-mercurial-harvest.png";
 
 export default function ArtistsHome() {
   return (
@@ -167,11 +169,13 @@ export default function ArtistsHome() {
           </p>
         </div>
 
-        <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {[
             { src: mockupDashboard, title: "Studio Dashboard", caption: "Palettes, supplies, and community at a glance.", alt: "Concept mockup of the ArtSupplyTracker studio dashboard with palettes and supply jars" },
             { src: mockupInventory, title: "Inventory Overview", caption: "Search, low-stock alerts, and storage map.", alt: "Concept mockup of the ArtSupplyTracker inventory overview with stock levels and storage map" },
             { src: mockupProject, title: "Project View", caption: "Tasks, current supplies, and session notes per artwork.", alt: "Concept mockup of the ArtSupplyTracker project view showing a Mountain Sunset painting with task list" },
+            { src: mockupPaletteCreator, title: "Digital Palette Creator", caption: "Build palettes, browse history, and track community favorites.", alt: "Concept mockup of the ArtSupplyTracker digital palette creator with paint tubes, brushes, and pencils" },
+            { src: mockupMercurialHarvest, title: "Project: Mercurial Harvest", caption: "Per-project supply usage with timeline and working canvas preview.", alt: "Concept mockup of the ArtSupplyTracker project view for Mercurial Harvest showing supplies used and Gantt-style timeline" },
           ].map((m) => (
             <figure
               key={m.title}
