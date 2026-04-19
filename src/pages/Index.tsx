@@ -1,5 +1,6 @@
 import React from "react";
 import Navigation from "@/components/Navigation";
+import HeroSlideshow from "@/components/HeroSlideshow";
 import trustBadges from "@/assets/trust-badges.png";
 import SignupForm from "@/components/SignupForm";
 import mockupDashboard from "@/assets/mockup-dashboard-dark.png";
@@ -46,14 +47,8 @@ export default function ArtistsHome() {
             </div>
           </div>
 
-          {/* Hero Image */}
-          <div className="relative rounded-2xl border-4 border-primary/50 bg-primary/5 p-4 max-w-lg mx-auto shadow-[0_10px_30px_rgba(0,0,0,0.35)] overflow-hidden">
-            <img
-              src="/lovable-uploads/0a0c4ad7-bfce-44cb-80f2-c9b188f50ea5.png"
-              alt="Beautiful penguin painting in progress surrounded by art supplies and brushes"
-              className="w-full h-auto rounded-lg"
-            />
-          </div>
+          {/* Hero Slideshow */}
+          <HeroSlideshow />
         </div>
       </section>
 
