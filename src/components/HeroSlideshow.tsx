@@ -48,6 +48,23 @@ const HeroSlideshow = () => {
             aria-hidden={i !== index}
           />
         ))}
+
+        <button
+          type="button"
+          onClick={() => setIndex((i) => (i - 1 + slides.length) % slides.length)}
+          aria-label="Previous slide"
+          className="absolute left-2 sm:left-3 top-1/2 -translate-y-1/2 inline-flex h-9 w-9 sm:h-11 sm:w-11 items-center justify-center rounded-full bg-background/70 text-foreground backdrop-blur-sm border border-border hover:bg-secondary hover:text-secondary-foreground focus:outline-none focus:ring-2 focus:ring-ring transition-colors"
+        >
+          <ChevronLeft className="h-5 w-5 sm:h-6 sm:w-6" />
+        </button>
+        <button
+          type="button"
+          onClick={() => setIndex((i) => (i + 1) % slides.length)}
+          aria-label="Next slide"
+          className="absolute right-2 sm:right-3 top-1/2 -translate-y-1/2 inline-flex h-9 w-9 sm:h-11 sm:w-11 items-center justify-center rounded-full bg-background/70 text-foreground backdrop-blur-sm border border-border hover:bg-secondary hover:text-secondary-foreground focus:outline-none focus:ring-2 focus:ring-ring transition-colors"
+        >
+          <ChevronRight className="h-5 w-5 sm:h-6 sm:w-6" />
+        </button>
       </div>
 
       <div className="mt-4 flex justify-center gap-2">
