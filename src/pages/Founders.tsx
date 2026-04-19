@@ -4,25 +4,25 @@ import gossipHorses from "@/assets/gossip-horses.jpg";
 
 export default function FoundersPage() {
   return (
-    <main className="min-h-screen w-full bg-[#2B0F22] text-white">
+    <main className="min-h-screen w-full bg-background text-foreground">
       <Navigation />
       {/* Hero */}
       <section className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight">Built by artists. For artists.</h1>
-            <p className="mt-4 text-lg text-white/80 max-w-xl">
+            <p className="mt-4 text-lg text-foreground/80 max-w-xl">
               ArtSupplyTracker began in a real studio. I was tired of lost supplies, messy spreadsheets, and tools that
               did not respect creative privacy. I built the app I needed. Then I realized thousands of artists need it too.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
-              <a href="#story" className="inline-flex items-center justify-center rounded-xl bg-teal-400 text-[#2B0F22] px-6 py-3 text-lg font-semibold shadow-lg hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-teal-300">Read the story</a>
-              <a href="mailto:info@notify.artsupplytracker.com" className="inline-flex items-center justify-center rounded-xl border border-white/15 bg-white/5 px-6 py-3 text-lg font-medium hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/20">Contact the founder</a>
+              <a href="#story" className="inline-flex items-center justify-center rounded-xl bg-primary text-primary-foreground px-6 py-3 text-lg font-semibold shadow-lg hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-primary">Read the story</a>
+              <a href="mailto:info@notify.artsupplytracker.com" className="inline-flex items-center justify-center rounded-xl border border-white/15 bg-card px-6 py-3 text-lg font-medium hover:bg-muted focus:outline-none focus:ring-2 focus:ring-border">Contact the founder</a>
             </div>
           </div>
 
           {/* Hero Image - Gossip Painting */}
-          <div className="relative rounded-2xl border-4 border-yellow-600/50 bg-yellow-600/5 p-4 shadow-[0_10px_30px_rgba(0,0,0,0.35)] overflow-hidden">
+          <div className="relative rounded-2xl border-4 border-primary/50 bg-primary/5 p-4 shadow-[0_10px_30px_rgba(0,0,0,0.35)] overflow-hidden">
             <img
               src={gossipHorses}
               alt="Gossip – Acrylic painting of three stylized horse heads in bold red, blue, and pink tones on dark background by Kim Wyatt"
@@ -34,9 +34,9 @@ export default function FoundersPage() {
 
       {/* Story */}
       <section id="story" className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-8">
-        <div className="rounded-2xl border border-white/10 bg-white/5 p-8 md:p-10 shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
+        <div className="rounded-2xl border border-border bg-card p-8 md:p-10 shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Why I am building this</h2>
-          <div className="mt-4 space-y-4 text-white/85 leading-relaxed">
+          <div className="mt-4 space-y-4 text-foreground/85 leading-relaxed">
             <p>
               I'm Kim — an artist and a builder. During a move, I lost a case of my paintings and several easels. It wasn't just a financial hit; it felt like losing part of myself. That moment made me realize how vulnerable artists are when our tools and artwork aren't tracked or protected.
             </p>
@@ -117,22 +117,22 @@ export default function FoundersPage() {
 
       {/* CTA */}
       <section className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 pb-16">
-        <div className="rounded-2xl border border-white/10 bg-white/5 p-8 md:p-10 text-center">
+        <div className="rounded-2xl border border-border bg-card p-8 md:p-10 text-center">
           <h3 className="text-2xl md:text-3xl font-bold">Join us in shaping better tools for creators</h3>
-          <p className="mt-2 text-white/80">Questions or press. Email the founder.</p>
+          <p className="mt-2 text-foreground/80">Questions or press. Email the founder.</p>
           <a
             href="mailto:info@notify.artsupplytracker.com"
-            className="mt-4 inline-flex items-center justify-center rounded-xl bg-teal-400 text-[#2B0F22] px-6 py-3 text-lg font-semibold shadow-lg hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-teal-300"
+            className="mt-4 inline-flex items-center justify-center rounded-xl bg-primary text-primary-foreground px-6 py-3 text-lg font-semibold shadow-lg hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-primary"
           >
             info@notify.artsupplytracker.com
           </a>
         </div>
       </section>
 
-      <footer className="border-t border-white/10 bg-[#230C1C]">
+      <footer className="border-t border-border bg-card">
         {/* Trust Badges */}
         <div className="flex justify-center py-8">
-          <div className="rounded-2xl border-4 border-pink-400/40 bg-pink-400/5 p-8 shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
+          <div className="rounded-2xl border-4 border-secondary/40 bg-secondary/5 p-8 shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
             <img 
               src={trustBadges} 
               alt="A Trusty App & Emotional Safety Shield – Modular trust and protection featuring shield emblems protected by a stylized owl symbolizing wisdom and vigilance" 
@@ -141,10 +141,10 @@ export default function FoundersPage() {
           </div>
         </div>
         
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-8 text-sm text-white/70 flex flex-col md:flex-row items-center justify-between gap-3">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-8 text-sm text-muted-foreground flex flex-col md:flex-row items-center justify-between gap-3">
           <p>© 2025 ArtSupplyTracker. Software for artists. Made by an artist.</p>
           <p>
-            Contact: <a href="mailto:info@notify.artsupplytracker.com" className="text-teal-300 underline underline-offset-4">info@notify.artsupplytracker.com</a>
+            Contact: <a href="mailto:info@notify.artsupplytracker.com" className="text-secondary underline underline-offset-4">info@notify.artsupplytracker.com</a>
           </p>
         </div>
       </footer>
@@ -154,30 +154,30 @@ export default function FoundersPage() {
 
 function ValueCard({ title, body }: { title: string; body: string }) {
   return (
-    <div className="rounded-2xl border border-white/10 bg-white/5 p-6 shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
+    <div className="rounded-2xl border border-border bg-card p-6 shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
       <h3 className="text-xl font-semibold">{title}</h3>
-      <p className="mt-2 text-white/80">{body}</p>
+      <p className="mt-2 text-foreground/80">{body}</p>
     </div>
   );
 }
 
 function Milestone({ title, body }: { title: string; body: string }) {
   return (
-    <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
+    <div className="rounded-2xl border border-border bg-card p-6">
       <h3 className="text-xl font-semibold">{title}</h3>
-      <p className="mt-2 text-white/80">{body}</p>
+      <p className="mt-2 text-foreground/80">{body}</p>
     </div>
   );
 }
 
 function TeamCard({ name, role, blurb, img }: { name: string; role: string; blurb: string; img: string }) {
   return (
-    <div className="rounded-2xl border border-white/10 bg-white/5 p-6 flex items-center gap-5">
-      <img src={img} alt={`${name} headshot`} className="h-16 w-16 rounded-full object-cover border border-white/20" />
+    <div className="rounded-2xl border border-border bg-card p-6 flex items-center gap-5">
+      <img src={img} alt={`${name} headshot`} className="h-16 w-16 rounded-full object-cover border border-border" />
       <div>
         <h4 className="text-lg font-semibold">{name}</h4>
-        <p className="text-white/70 text-sm">{role}</p>
-        <p className="mt-2 text-white/80">{blurb}</p>
+        <p className="text-muted-foreground text-sm">{role}</p>
+        <p className="mt-2 text-foreground/80">{blurb}</p>
       </div>
     </div>
   );
