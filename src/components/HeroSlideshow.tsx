@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import mockupDashboard from "@/assets/mockup-dashboard-dark.png";
 import mockupInventory from "@/assets/mockup-inventory.jpg";
 import mockupProject from "@/assets/mockup-project.jpg";
