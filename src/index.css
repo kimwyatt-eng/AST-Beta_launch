@@ -26,6 +26,11 @@
     --secondary: 290 27% 54%;
     --secondary-foreground: 210 9% 11%;
 
+    /* Periwinkle blue for primary titles (#A6B1E1) */
+    --periwinkle: 230 50% 77%;
+    /* Light cobalt violet for hero tagline (#C8A2D1) */
+    --violet-light: 290 35% 73%;
+
     /* Muted charcoal tones */
     --muted: 210 9% 18%;
     --muted-foreground: 220 6% 65%;
@@ -90,6 +95,9 @@
 
     --secondary: 290 35% 62%;
     --secondary-foreground: 210 9% 9%;
+
+    --periwinkle: 230 55% 80%;
+    --violet-light: 290 40% 76%;
 
     --muted: 210 9% 16%;
     --muted-foreground: 220 6% 70%;
