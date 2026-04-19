@@ -14,7 +14,7 @@ export default function ArtistsHome() {
     <main className="min-h-screen w-full bg-background text-foreground">
       <Navigation />
       {/* Hero */}
-      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+      <section className="mx-auto max-w-7xl 2xl:max-w-[110rem] px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
           <div className="text-center lg:text-left lg:col-span-2">
             <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-periwinkle">
