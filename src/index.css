@@ -75,47 +75,47 @@
   }
 
   .dark {
-    /* Dark mode maintains the same wine-magenta-purple aesthetic but deeper */
-    --background: 345 50% 6%;
-    --foreground: 320 30% 95%;
+    /* Dark mode mirrors root: charcoal + amber + soft blue */
+    --background: 210 9% 9%;
+    --foreground: 220 6% 91%;
 
-    --card: 340 40% 10%;
-    --card-foreground: 320 25% 90%;
+    --card: 210 9% 13%;
+    --card-foreground: 220 6% 90%;
 
-    --popover: 345 45% 8%;
-    --popover-foreground: 320 25% 92%;
+    --popover: 210 9% 11%;
+    --popover-foreground: 220 6% 91%;
 
-    --primary: 345 60% 22%;
-    --primary-foreground: 320 30% 98%;
+    --primary: 30 73% 52%;
+    --primary-foreground: 210 9% 9%;
 
-    --secondary: 315 50% 15%;
-    --secondary-foreground: 320 25% 95%;
+    --secondary: 211 72% 59%;
+    --secondary-foreground: 210 9% 9%;
 
-    --muted: 330 40% 12%;
-    --muted-foreground: 320 20% 70%;
+    --muted: 210 9% 16%;
+    --muted-foreground: 220 6% 70%;
 
-    --accent: 315 70% 50%;
-    --accent-foreground: 320 30% 98%;
+    --accent: 30 73% 52%;
+    --accent-foreground: 210 9% 9%;
 
     --destructive: 0 80% 50%;
-    --destructive-foreground: 320 25% 95%;
+    --destructive-foreground: 220 6% 95%;
 
-    --border: 330 30% 18%;
-    --input: 330 35% 16%;
-    --ring: 315 70% 50%;
-    --sidebar-background: 345 45% 8%;
-    --sidebar-foreground: 320 25% 90%;
-    --sidebar-primary: 345 55% 25%;
-    --sidebar-primary-foreground: 320 25% 95%;
-    --sidebar-accent: 330 35% 15%;
-    --sidebar-accent-foreground: 320 25% 90%;
-    --sidebar-border: 330 25% 20%;
-    --sidebar-ring: 315 65% 45%;
+    --border: 210 9% 20%;
+    --input: 210 9% 16%;
+    --ring: 30 73% 52%;
 
-    /* Enhanced dark mode gradients - deep reds, magentas, purples */
-    --gradient-wine-plum: linear-gradient(135deg, hsl(345 50% 6%) 0%, hsl(315 50% 10%) 50%, hsl(285 45% 8%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(340 40% 12%) 0%, hsl(320 40% 10%) 100%);
-    --gradient-magenta: linear-gradient(135deg, hsl(315 70% 50%) 0%, hsl(300 60% 40%) 100%);
+    --sidebar-background: 210 9% 11%;
+    --sidebar-foreground: 220 6% 90%;
+    --sidebar-primary: 30 73% 50%;
+    --sidebar-primary-foreground: 210 9% 9%;
+    --sidebar-accent: 210 9% 16%;
+    --sidebar-accent-foreground: 220 6% 90%;
+    --sidebar-border: 210 9% 20%;
+    --sidebar-ring: 30 73% 52%;
+
+    --gradient-wine-plum: linear-gradient(135deg, hsl(210 9% 9%) 0%, hsl(210 9% 7%) 50%, hsl(210 9% 6%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(210 9% 13%) 0%, hsl(210 9% 11%) 100%);
+    --gradient-magenta: linear-gradient(135deg, hsl(30 73% 52%) 0%, hsl(30 73% 42%) 100%);
   }
 }
 
