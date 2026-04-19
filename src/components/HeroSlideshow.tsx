@@ -27,14 +27,21 @@ const HeroSlideshow = () => {
 
   return (
     <div
-      className="relative rounded-2xl border-4 border-primary/50 bg-primary/5 p-4 max-w-lg mx-auto shadow-[0_10px_30px_rgba(0,0,0,0.35)] overflow-hidden"
+      className="relative rounded-2xl border-4 border-primary/50 bg-primary/5 p-2 sm:p-4 w-full mx-auto shadow-[0_10px_30px_rgba(0,0,0,0.35)] overflow-hidden"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
       role="region"
       aria-roledescription="carousel"
       aria-label="ArtSupplyTracker concept mockup slideshow"
     >
-      <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden bg-background/40">
+      <div className="relative w-full rounded-lg overflow-hidden bg-background/40">
+        {/* Sizer: first image sets natural height, others overlay */}
+        <img
+          src={slides[0].src}
+          alt=""
+          aria-hidden="true"
+          className="w-full h-auto invisible"
+        />
         {slides.map((slide, i) => (
           <img
             key={slide.src}
