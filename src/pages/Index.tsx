@@ -10,15 +10,15 @@ import mockupMercurialHarvest from "@/assets/mockup-mercurial-harvest.png";
 
 export default function ArtistsHome() {
   return (
-    <main className="min-h-screen w-full bg-[#2B0F22] text-white">
+    <main className="min-h-screen w-full bg-background text-foreground">
       <Navigation />
       {/* Hero */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="text-center lg:text-left">
-            <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight">
+            <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-primary">
               ArtSupplyTracker
-              <span className="block text-teal-300">Know what you have. Create more. Waste less.</span>
+              <span className="block text-secondary">Know what you have. Create more. Waste less.</span>
             </h1>
             <p className="mt-4 text-lg text-white/80 max-w-xl lg:mx-0 mx-auto">
               A studio hub that tracks supplies, manages projects, and protects your art—private by design.
@@ -28,26 +28,26 @@ export default function ArtistsHome() {
             <div className="mt-6 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
               <a
                 href="#signup"
-                className="inline-flex items-center justify-center rounded-xl bg-teal-400 text-[#2B0F22] px-6 py-3 text-lg font-semibold shadow-lg hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-teal-300"
+                className="inline-flex items-center justify-center rounded-xl bg-primary text-primary-foreground px-6 py-3 text-lg font-semibold shadow-lg hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-ring"
               >
                 Join the Beta
               </a>
               <a
                 href="#how"
-                className="inline-flex items-center justify-center rounded-xl border border-white/15 bg-white/5 px-6 py-3 text-lg font-medium hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/20"
+                className="inline-flex items-center justify-center rounded-xl border border-border bg-card px-6 py-3 text-lg font-medium hover:bg-muted focus:outline-none focus:ring-2 focus:ring-ring"
               >
                 See how it works
               </a>
             </div>
 
-            <div className="mt-4 space-y-1 text-white/70 text-sm">
+            <div className="mt-4 space-y-1 text-muted-foreground text-sm">
               <p>"Hands-free because artists' hands are full."</p>
               <p>"Secure because your art deserves protection."</p>
             </div>
           </div>
 
           {/* Hero Image */}
-          <div className="relative rounded-2xl border-4 border-yellow-600/50 bg-yellow-600/5 p-4 max-w-lg mx-auto shadow-[0_10px_30px_rgba(0,0,0,0.35)] overflow-hidden">
+          <div className="relative rounded-2xl border-4 border-primary/50 bg-primary/5 p-4 max-w-lg mx-auto shadow-[0_10px_30px_rgba(0,0,0,0.35)] overflow-hidden">
             <img
               src="/lovable-uploads/0a0c4ad7-bfce-44cb-80f2-c9b188f50ea5.png"
               alt="Beautiful penguin painting in progress surrounded by art supplies and brushes"
@@ -83,15 +83,15 @@ export default function ArtistsHome() {
           ].map((s) => (
             <div
               key={s.title}
-              className="rounded-2xl border border-white/10 bg-white/5 p-6 shadow-[0_10px_30px_rgba(0,0,0,0.35)]"
+              className="rounded-2xl border border-border bg-card p-6 shadow-[0_10px_30px_rgba(0,0,0,0.35)]"
             >
               <div className="flex items-center gap-3">
-                <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-teal-400 text-[#2B0F22] font-bold">
+                <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-primary text-primary-foreground font-bold">
                   {s.num}
                 </span>
                 <h3 className="text-xl font-semibold">{s.title}</h3>
               </div>
-              <p className="mt-3 text-white/80">{s.body}</p>
+              <p className="mt-3 text-foreground/80">{s.body}</p>
             </div>
           ))}
         </div>
@@ -142,17 +142,17 @@ export default function ArtistsHome() {
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
         <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Integrations</h2>
         <div className="mt-4 grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
+          <div className="rounded-2xl border border-border bg-card p-6">
             <h3 className="text-xl font-semibold">Voice Assistants</h3>
-            <p className="mt-2 text-white/80">Alexa · Google Nest · Siri</p>
+            <p className="mt-2 text-foreground/80">Alexa · Google Nest · Siri</p>
           </div>
-          <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
+          <div className="rounded-2xl border border-border bg-card p-6">
             <h3 className="text-xl font-semibold">Add Supplies</h3>
-            <p className="mt-2 text-white/80">Email import · Photo/scan · Manual</p>
+            <p className="mt-2 text-foreground/80">Email import · Photo/scan · Manual</p>
           </div>
-          <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
+          <div className="rounded-2xl border border-border bg-card p-6">
             <h3 className="text-xl font-semibold">Export</h3>
-            <p className="mt-2 text-white/80">CSV · PDF insurance report · Project pack lists</p>
+            <p className="mt-2 text-foreground/80">CSV · PDF insurance report · Project pack lists</p>
           </div>
         </div>
       </section>
@@ -160,11 +160,11 @@ export default function ArtistsHome() {
       {/* Sneak Peek */}
       <section id="sneak-peek" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
         <div className="text-center max-w-2xl mx-auto">
-          <span className="inline-block rounded-full border border-teal-300/40 bg-teal-300/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-teal-300">
+          <span className="inline-block rounded-full border border-secondary/40 bg-secondary/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-secondary">
             Sneak Peek
           </span>
           <h2 className="mt-3 text-3xl md:text-4xl font-bold tracking-tight">A taste of the studio</h2>
-          <p className="mt-3 text-white/75">
+          <p className="mt-3 text-muted-foreground">
             Early concept mockups — not final UI, but a glimpse of the experience we're building.
           </p>
         </div>
@@ -179,12 +179,12 @@ export default function ArtistsHome() {
           ].map((m) => (
             <figure
               key={m.title}
-              className="rounded-2xl border-4 border-yellow-600/50 bg-yellow-600/5 p-3 shadow-[0_10px_30px_rgba(0,0,0,0.35)] overflow-hidden"
+              className="rounded-2xl border-4 border-primary/50 bg-primary/5 p-3 shadow-[0_10px_30px_rgba(0,0,0,0.35)] overflow-hidden"
             >
               <img src={m.src} alt={m.alt} loading="lazy" className="w-full h-auto rounded-lg" />
               <figcaption className="px-2 py-3">
                 <h3 className="text-lg font-semibold">{m.title}</h3>
-                <p className="mt-1 text-sm text-white/70">{m.caption}</p>
+                <p className="mt-1 text-sm text-muted-foreground">{m.caption}</p>
               </figcaption>
             </figure>
           ))}
@@ -198,25 +198,25 @@ export default function ArtistsHome() {
 
       {/* Trusty App Promise */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-16">
-        <div className="rounded-2xl border border-white/10 bg-white/5 p-8 md:p-10">
+        <div className="rounded-2xl border border-border bg-card p-8 md:p-10">
           <h2 className="text-2xl md:text-3xl font-bold tracking-tight">The Trusty App Promise</h2>
-          <ul className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-3 text-white/85 list-disc list-inside">
+          <ul className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-3 text-foreground/85 list-disc list-inside">
             <li><strong>Your art is yours.</strong> We never train AI on your creative work or IP.</li>
             <li><strong>Your privacy is safe.</strong> We never sell personally identifiable information.</li>
             <li><strong>Only anonymized insights.</strong> Shared externally = supply and region trends, never your creations.</li>
             <li><strong>Ethical AI.</strong> Regular third-party audits for safety and fairness.</li>
           </ul>
           <div className="mt-4">
-            <a href="/privacy" className="text-teal-300 underline underline-offset-4">Read the full policy</a>
+            <a href="/privacy" className="text-secondary underline underline-offset-4">Read the full policy</a>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-white/10 bg-[#230C1C]">
+      <footer className="border-t border-border bg-card">
         {/* Trust Badges */}
         <div className="flex justify-center py-8">
-          <div className="rounded-2xl border-4 border-pink-400/40 bg-pink-400/5 p-8 shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
+          <div className="rounded-2xl border-4 border-secondary/40 bg-secondary/5 p-8 shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
             <img 
               src={trustBadges} 
               alt="A Trusty App & Emotional Safety Shield – Modular trust and protection featuring shield emblems protected by a stylized owl symbolizing wisdom and vigilance" 
@@ -225,10 +225,10 @@ export default function ArtistsHome() {
           </div>
         </div>
         
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 text-sm text-white/70 flex flex-col md:flex-row items-center justify-between gap-3">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 text-sm text-muted-foreground flex flex-col md:flex-row items-center justify-between gap-3">
           <p>© 2025 ArtSupplyTracker. Software for artists, made by an artist.</p>
           <p>
-            Contact: <a href="mailto:info@notify.artsupplytracker.com" className="text-teal-300 font-semibold hover:underline">info@notify.artsupplytracker.com</a>
+            Contact: <a href="mailto:info@notify.artsupplytracker.com" className="text-secondary font-semibold hover:underline">info@notify.artsupplytracker.com</a>
           </p>
         </div>
       </footer>
@@ -238,9 +238,9 @@ export default function ArtistsHome() {
 
 function Card({ title, body }: { title: string; body: string }) {
   return (
-    <div className="rounded-2xl border border-white/10 bg-white/5 p-6 shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
+    <div className="rounded-2xl border border-border bg-card p-6 shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
       <h3 className="text-xl font-semibold">{title}</h3>
-      <p className="mt-2 text-white/80">{body}</p>
+      <p className="mt-2 text-foreground/80">{body}</p>
     </div>
   );
 }
