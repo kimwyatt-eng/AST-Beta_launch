@@ -21,7 +21,7 @@ const Navigation = () => {
               variant={location.pathname === "/" ? "default" : "ghost"}
               onClick={() => navigate("/")}
               size="sm"
-              className="text-xs sm:text-sm"
+              className={`text-xs sm:text-sm ${location.pathname !== "/" ? "text-periwinkle hover:text-periwinkle" : ""}`}
             >
               Artists
             </Button>
@@ -29,7 +29,7 @@ const Navigation = () => {
               variant={location.pathname === "/partners" ? "default" : "ghost"}
               onClick={() => navigate("/partners")}
               size="sm"
-              className="text-xs sm:text-sm"
+              className={`text-xs sm:text-sm ${location.pathname !== "/partners" ? "text-periwinkle hover:text-periwinkle" : ""}`}
             >
               Partners
             </Button>
@@ -37,7 +37,7 @@ const Navigation = () => {
               variant={location.pathname === "/investors" ? "default" : "ghost"}
               onClick={() => navigate("/investors")}
               size="sm"
-              className="text-xs sm:text-sm"
+              className={`text-xs sm:text-sm ${location.pathname !== "/investors" ? "text-periwinkle hover:text-periwinkle" : ""}`}
             >
               Investors
             </Button>
@@ -45,7 +45,7 @@ const Navigation = () => {
               variant={location.pathname === "/founders" ? "default" : "ghost"}
               onClick={() => navigate("/founders")}
               size="sm"
-              className="text-xs sm:text-sm"
+              className={`text-xs sm:text-sm ${location.pathname !== "/founders" ? "text-periwinkle hover:text-periwinkle" : ""}`}
             >
               Founders
             </Button>
@@ -53,7 +53,7 @@ const Navigation = () => {
               variant={location.pathname === "/privacy" ? "default" : "ghost"}
               onClick={() => navigate("/privacy")}
               size="sm"
-              className="text-xs sm:text-sm"
+              className={`text-xs sm:text-sm ${location.pathname !== "/privacy" ? "text-periwinkle hover:text-periwinkle" : ""}`}
             >
               Privacy
             </Button>
