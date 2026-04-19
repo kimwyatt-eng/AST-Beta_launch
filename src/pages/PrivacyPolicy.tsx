@@ -5,7 +5,7 @@ import trustBadges from "@/assets/trust-badges.png";
 
 export default function PrivacyPolicy() {
   return (
-    <main className="min-h-screen w-full bg-[#2B0F22] text-white">
+    <main className="min-h-screen w-full bg-background text-foreground">
       <Navigation />
 
       {/* Hero */}
