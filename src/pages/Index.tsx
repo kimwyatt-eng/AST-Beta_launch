@@ -219,7 +219,7 @@ export default function ArtistsHome() {
       <footer className="border-t border-border bg-card">
         {/* Trust Badges */}
         <div className="flex justify-center py-8">
-          <div className="ast-panel-magenta p-8">
+          <div className="ast-panel p-8">
             <img 
               src={trustBadges} 
               alt="A Trusty App & Emotional Safety Shield – Modular trust and protection featuring shield emblems protected by a stylized owl symbolizing wisdom and vigilance" 
