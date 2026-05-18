@@ -59,10 +59,6 @@
     --shadow-photo-box: 0 8px 25px -5px hsl(247 60% 2% / 0.6), 0 0 0 1px hsl(249 50% 20% / 0.4);
     --shadow-photo-box-hover: 0 12px 35px -5px hsl(247 60% 2% / 0.8), 0 0 0 1px hsl(350 85% 72% / 0.3);
     
-    /* Photo box shadows */
-    --shadow-photo-box: 0 8px 25px -5px hsl(210 9% 4% / 0.5), 0 0 0 1px hsl(210 9% 22% / 0.3);
-    --shadow-photo-box-hover: 0 12px 35px -5px hsl(210 9% 4% / 0.7), 0 0 0 1px hsl(350 85% 72% / 0.3);
-    
     /* Smooth transitions */
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
