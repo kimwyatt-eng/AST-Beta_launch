@@ -186,10 +186,8 @@
 
   /* Universal page-title gradient — applies to all h1/h2 + .gradient-title */
   .gradient-title,
-  main h1,
-  main h2,
-  header h1,
-  header h2 {
+  body h1,
+  body h2 {
     background: linear-gradient(90deg, #00E6FF 0%, #9B4DFF 55%, #FF2DAA 100%) !important;
     -webkit-background-clip: text !important;
     background-clip: text !important;
@@ -198,7 +196,7 @@
   }
 
   /* Keep icons (lucide) visible inside gradient titles */
-  main h1 svg, main h2 svg, header h1 svg, header h2 svg {
+  body h1 svg, body h2 svg {
     -webkit-text-fill-color: #00E6FF !important;
     color: #00E6FF !important;
     background: none !important;
