@@ -18,10 +18,10 @@ const Navigation = () => {
       <div className="max-w-6xl mx-auto px-4 py-4">
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-0">
           <h1
-            className="text-xl sm:text-2xl font-bold text-secondary cursor-pointer hover:text-periwinkle transition-colors"
+            className="text-xl sm:text-2xl font-bold cursor-pointer transition-opacity hover:opacity-80"
             onClick={() => navigate("/")}
           >
-            Art<span className="text-periwinkle">Supply</span>Tracker
+            <span className="logo-art">Art</span><span className="logo-supply">Supply</span><span className="logo-tracker">Tracker</span>
           </h1>
 
           <div className="flex flex-wrap gap-1 sm:gap-2">
