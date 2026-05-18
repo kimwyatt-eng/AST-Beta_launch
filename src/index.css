@@ -203,6 +203,53 @@
     transform: translateY(-1px);
   }
 
+  /* Secondary / outline button — cyan accent on translucent panel */
+  .ast-btn-secondary {
+    background: rgba(16, 11, 46, 0.7);
+    color: #F8F5FF;
+    border: 1.5px solid rgba(0, 230, 255, 0.65);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  }
+  .ast-btn-secondary:hover {
+    background: rgba(16, 11, 46, 0.85);
+    box-shadow: 0 0 0 1px rgba(0, 230, 255, 0.35), 0 8px 24px -10px rgba(0, 230, 255, 0.5);
+    transform: translateY(-1px);
+  }
+
+  /* Pill / tag — violet tint, magenta hairline */
+  .ast-pill {
+    background: rgba(124, 60, 255, 0.28);
+    color: #F8F5FF;
+    border: 1px solid rgba(255, 45, 170, 0.55);
+    border-radius: 9999px;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  /* Card border-only accent classes (composable on .ast-panel) */
+  .card-cyan    { border-color: rgba(0, 230, 255, 0.72); }
+  .card-violet  { border-color: rgba(124, 60, 255, 0.72); }
+  .card-magenta { border-color: rgba(255, 45, 170, 0.72); }
+  .card-yellow  { border-color: rgba(255, 230, 0, 0.72); }
+
+  /* Hover lift + magenta glow for any .ast-panel marked .ast-panel-hover */
+  .ast-panel-hover {
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  }
+  .ast-panel-hover:hover {
+    border-color: rgba(255, 45, 170, 0.78);
+    box-shadow: 0 0 0 1px rgba(255, 45, 170, 0.22), 0 12px 32px -10px rgba(255, 45, 170, 0.35);
+    transform: translateY(-2px);
+  }
+
+  /* Wordmark color split */
+  .logo-art     { color: #FF2DAA; }
+  .logo-supply  { color: #DCD6FF; }
+  .logo-tracker { color: #00E6FF; }
+
   .ast-panel {
     background: rgba(16, 11, 46, 0.86);
     border: 1.5px solid rgba(124, 60, 255, 0.65);
