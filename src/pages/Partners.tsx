@@ -39,7 +39,7 @@ const Partners = () => {
       <section className="px-8 py-20">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <Card className="rounded-2xl border border-border bg-card p-6 shadow-[0_10px_30px_rgba(0,0,0,0.35)] hover:bg-muted transition-all duration-300">
+            <Card className="ast-panel p-6 transition-all duration-300 hover:-translate-y-0.5">
               <CardContent className="p-8 text-center">
                 <h3 className="text-xl font-semibold text-foreground mb-4">Advertising</h3>
                 <p className="text-muted-foreground mb-6">Promote your products directly to artists actively seeking supplies.</p>
@@ -51,7 +51,7 @@ const Partners = () => {
               </CardContent>
             </Card>
 
-            <Card className="rounded-2xl border border-border bg-card p-6 shadow-[0_10px_30px_rgba(0,0,0,0.35)] hover:bg-muted transition-all duration-300">
+            <Card className="ast-panel p-6 transition-all duration-300 hover:-translate-y-0.5">
               <CardContent className="p-8 text-center">
                 <h3 className="text-xl font-semibold text-foreground mb-4">Featured Content</h3>
                 <p className="text-muted-foreground mb-6">Showcase your brand on our Inspiration Page with video demos and tutorials.</p>
@@ -63,7 +63,7 @@ const Partners = () => {
               </CardContent>
             </Card>
 
-            <Card className="rounded-2xl border border-border bg-card p-6 shadow-[0_10px_30px_rgba(0,0,0,0.35)] hover:bg-muted transition-all duration-300">
+            <Card className="ast-panel p-6 transition-all duration-300 hover:-translate-y-0.5">
               <CardContent className="p-8 text-center">
                 <h3 className="text-xl font-semibold text-foreground mb-4">Data Partnerships</h3>
                 <p className="text-muted-foreground mb-6">Access ethical, anonymized insights into art supply trends and market demand.</p>
@@ -75,7 +75,7 @@ const Partners = () => {
               </CardContent>
             </Card>
 
-            <Card className="rounded-2xl border border-border bg-card p-6 shadow-[0_10px_30px_rgba(0,0,0,0.35)] hover:bg-muted transition-all duration-300">
+            <Card className="ast-panel p-6 transition-all duration-300 hover:-translate-y-0.5">
               <CardContent className="p-8 text-center">
                 <h3 className="text-xl font-semibold text-foreground mb-4">Early Product Testing & Feedback</h3>
                 <p className="text-muted-foreground mb-6">Connect directly with artists as early testers and get authentic insights to guide product decisions.</p>
@@ -99,21 +99,21 @@ const Partners = () => {
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="rounded-2xl border border-border bg-card p-6 shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
+            <Card className="ast-panel p-6">
               <CardContent className="p-6">
                 <h3 className="text-xl font-semibold text-foreground mb-4">Engaged Community</h3>
                 <p className="text-muted-foreground">Our users are passionate artists who actively purchase supplies and trust our recommendations.</p>
               </CardContent>
             </Card>
 
-            <Card className="rounded-2xl border border-border bg-card p-6 shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
+            <Card className="ast-panel p-6">
               <CardContent className="p-6">
                 <h3 className="text-xl font-semibold text-foreground mb-4">Ethical Standards</h3>
                 <p className="text-muted-foreground">We maintain strict ethical guidelines and transparency in all our partnerships and data sharing.</p>
               </CardContent>
             </Card>
 
-            <Card className="rounded-2xl border border-border bg-card p-6 shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
+            <Card className="ast-panel p-6">
               <CardContent className="p-6">
                 <h3 className="text-xl font-semibold text-foreground mb-4">Growing Platform</h3>
                 <p className="text-muted-foreground">Join us early as we expand to new markets and develop additional creative industry solutions.</p>
@@ -138,7 +138,7 @@ const Partners = () => {
 
       {/* Trust Badges */}
       <div className="flex justify-center py-8">
-        <div className="rounded-2xl border-4 border-secondary/40 bg-secondary/5 p-8 shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
+        <div className="ast-panel-magenta p-8">
           <img 
             src={trustBadges} 
             alt="A Trusty App & Emotional Safety Shield – Modular trust and protection featuring shield emblems protected by a stylized owl symbolizing wisdom and vigilance" 

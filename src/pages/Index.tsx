@@ -82,7 +82,7 @@ export default function ArtistsHome() {
           ].map((s) => (
             <div
               key={s.title}
-              className="rounded-2xl border border-border bg-card p-6 shadow-[0_10px_30px_rgba(0,0,0,0.35)]"
+              className="ast-panel p-6"
             >
               <div className="flex items-center gap-3">
                 <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-primary text-primary-foreground font-bold">
@@ -141,15 +141,15 @@ export default function ArtistsHome() {
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
         <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Integrations</h2>
         <div className="mt-4 grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="rounded-2xl border border-border bg-card p-6">
+          <div className="ast-panel p-6">
             <h3 className="text-xl font-semibold">Voice Assistants</h3>
             <p className="mt-2 text-foreground/80">Alexa · Google Nest · Siri</p>
           </div>
-          <div className="rounded-2xl border border-border bg-card p-6">
+          <div className="ast-panel p-6">
             <h3 className="text-xl font-semibold">Add Supplies</h3>
             <p className="mt-2 text-foreground/80">Email import · Photo/scan · Manual</p>
           </div>
-          <div className="rounded-2xl border border-border bg-card p-6">
+          <div className="ast-panel p-6">
             <h3 className="text-xl font-semibold">Export</h3>
             <p className="mt-2 text-foreground/80">CSV · PDF insurance report · Project pack lists</p>
           </div>
@@ -197,7 +197,7 @@ export default function ArtistsHome() {
 
       {/* Trusty App Promise */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-16">
-        <div className="rounded-2xl border border-border bg-card p-8 md:p-10">
+        <div className="ast-panel p-8 md:p-10">
           <h2 className="text-2xl md:text-3xl font-bold tracking-tight">The Trusty App Promise</h2>
           <ul className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-3 text-foreground/85 list-disc list-inside">
             <li><strong>Your art is yours.</strong> We never train AI on your creative work or IP.</li>
@@ -215,7 +215,7 @@ export default function ArtistsHome() {
       <footer className="border-t border-border bg-card">
         {/* Trust Badges */}
         <div className="flex justify-center py-8">
-          <div className="rounded-2xl border-4 border-secondary/40 bg-secondary/5 p-8 shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
+          <div className="ast-panel-magenta p-8">
             <img 
               src={trustBadges} 
               alt="A Trusty App & Emotional Safety Shield – Modular trust and protection featuring shield emblems protected by a stylized owl symbolizing wisdom and vigilance" 
@@ -237,7 +237,7 @@ export default function ArtistsHome() {
 
 function Card({ title, body }: { title: string; body: string }) {
   return (
-    <div className="rounded-2xl border border-border bg-card p-6 shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
+    <div className="ast-panel p-6">
       <h3 className="text-xl font-semibold">{title}</h3>
       <p className="mt-2 text-foreground/80">{body}</p>
     </div>
