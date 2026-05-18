@@ -49,6 +49,16 @@ const HeroSlideshow = () => {
           />
         ))}
 
+        <a
+          href="https://artsupplytrackerstudio.netlify.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Try the ArtSupplyTracker demo (opens in new tab)"
+          className="absolute top-3 right-3 sm:top-4 sm:right-4 z-10 inline-flex items-center gap-1.5 rounded-full bg-secondary text-secondary-foreground px-3 py-1.5 text-xs sm:text-sm font-semibold shadow-lg hover:bg-secondary/90 focus:outline-none focus:ring-2 focus:ring-ring transition-colors"
+        >
+          Try the DEMO →
+        </a>
+
         <button
           type="button"
           onClick={() => setIndex((i) => (i - 1 + slides.length) % slides.length)}
