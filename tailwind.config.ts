@@ -42,6 +42,15 @@ export default {
         "text-secondary": "hsl(var(--text-secondary))",
         "text-muted-violet": "hsl(var(--text-muted-violet))",
         "text-dim": "hsl(var(--text-dim))",
+        ast: {
+          cyan: "hsl(var(--ast-cyan))",
+          blue: "hsl(var(--ast-blue))",
+          violet: "hsl(var(--ast-violet))",
+          ultraviolet: "hsl(var(--ast-ultraviolet))",
+          magenta: "hsl(var(--ast-magenta))",
+          pink: "hsl(var(--ast-pink))",
+          yellow: "hsl(var(--ast-yellow))",
+        },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
