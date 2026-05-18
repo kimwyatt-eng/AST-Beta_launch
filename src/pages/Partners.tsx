@@ -3,6 +3,7 @@ import Navigation from "@/components/Navigation";
 import ContactForm from "@/components/ContactForm";
 import trustBadges from "@/assets/trust-badges.png";
 import coppertonePony from "@/assets/coppertone-pony.jpg";
+import { panelClass, titleClass } from "@/lib/cardAccent";
 
 const Partners = () => {
   return (
