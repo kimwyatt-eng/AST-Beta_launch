@@ -17,19 +17,23 @@ export default function ArtistsHome() {
       <section className="mx-auto max-w-7xl 2xl:max-w-[110rem] px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
           <div className="text-center lg:text-left lg:col-span-2">
-            <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-periwinkle">
+            <p className="hero-kicker text-sm font-semibold uppercase tracking-[0.18em] mb-3">
               ArtSupplyTracker
-              <span className="block text-violet-light">Know what you have. Create more. Waste less.</span>
+            </p>
+            <h1 className="hero-title text-4xl md:text-5xl font-extrabold tracking-tight leading-[1.1]">
+              Know what you have.<br />
+              <span className="accent">Create more.</span><br />
+              Waste less.
             </h1>
-            <p className="mt-4 text-lg text-white/80 max-w-xl lg:mx-0 mx-auto">
-              A studio hub that tracks supplies, manages projects, and protects your art—private by design.
+            <p className="hero-body mt-5 text-lg max-w-xl lg:mx-0 mx-auto">
+              A private studio hub for tracking supplies, managing projects, and protecting your art.
             </p>
 
             {/* CTAs */}
             <div className="mt-6 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
               <a
                 href="#signup"
-                className="inline-flex items-center justify-center rounded-xl bg-primary text-primary-foreground px-6 py-3 text-lg font-semibold shadow-lg hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-ring"
+                className="ast-btn-primary inline-flex items-center justify-center rounded-xl px-6 py-3 text-lg font-semibold focus:outline-none focus:ring-2 focus:ring-ring"
               >
                 Join the Beta
               </a>
@@ -37,13 +41,13 @@ export default function ArtistsHome() {
                 href="https://artsupplytrackerstudio.netlify.app/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center rounded-xl border border-border bg-card px-6 py-3 text-lg font-medium hover:bg-muted focus:outline-none focus:ring-2 focus:ring-ring"
+                className="ast-btn-secondary inline-flex items-center justify-center rounded-xl px-6 py-3 text-lg font-medium focus:outline-none focus:ring-2 focus:ring-ring"
               >
                 See how it works
               </a>
             </div>
 
-            <div className="mt-4 space-y-1 text-muted-foreground text-sm">
+            <div className="mt-4 space-y-1 text-[#B7AFD8] text-sm">
               <p>"Hands-free because artists' hands are full."</p>
               <p>"Secure because your art deserves protection."</p>
             </div>
