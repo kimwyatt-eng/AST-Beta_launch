@@ -28,9 +28,10 @@ const Partners = () => {
               <h1 className="text-5xl font-bold text-foreground mb-6 tracking-tight">
                 Partner <span className="text-accent">Opportunities</span>
               </h1>
-              <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
+              <p className="ast-gradient-heading text-xl font-semibold mb-8 leading-relaxed">
                 Join our ecosystem and grow your business alongside passionate artists who trust our platform.
               </p>
+
             </div>
           </div>
         </div>
