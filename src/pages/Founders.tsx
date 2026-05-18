@@ -67,9 +67,9 @@ export default function FoundersPage() {
       <section className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-8">
         <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Vision and road map</h2>
         <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
-          <Milestone title="Now" body="ArtSupplyTracker for artists. Inventory. Projects. Price alerts. Insurance reports." />
-          <Milestone title="Next" body="Garage Helper for makers and shops. Larger market. More data to improve recommendations." />
-          <Milestone title="Future" body="A family of trustworthy tools for creative and hands on communities. One modular platform." />
+          <Milestone index={0} title="Now" body="ArtSupplyTracker for artists. Inventory. Projects. Price alerts. Insurance reports." />
+          <Milestone index={1} title="Next" body="Garage Helper for makers and shops. Larger market. More data to improve recommendations." />
+          <Milestone index={2} title="Future" body="A family of trustworthy tools for creative and hands on communities. One modular platform." />
         </div>
       </section>
 
