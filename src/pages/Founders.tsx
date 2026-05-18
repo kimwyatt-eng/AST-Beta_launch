@@ -17,8 +17,22 @@ export default function FoundersPage() {
               did not respect creative privacy. I built the app I needed. Then I realized thousands of artists need it too.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
-              <a href="#story" className="inline-flex items-center justify-center rounded-xl bg-primary text-primary-foreground px-6 py-3 text-lg font-semibold shadow-lg hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-primary">Read the story</a>
-              <a href="mailto:info@notify.artsupplytracker.com" className="inline-flex items-center justify-center rounded-xl border border-white/15 bg-card px-6 py-3 text-lg font-medium hover:bg-muted focus:outline-none focus:ring-2 focus:ring-border">Contact the founder</a>
+              <a
+                href="#story"
+                className="ast-btn-primary inline-flex items-center justify-center rounded-xl px-6 py-3 text-lg font-semibold focus:outline-none focus:ring-2 focus:ring-ring"
+              >
+                Read the story
+              </a>
+              <a
+                href="mailto:kim.wyatt@artsupplytracker.com"
+                className="inline-flex items-center justify-center rounded-xl px-6 py-3 text-lg font-semibold text-white focus:outline-none focus:ring-2 focus:ring-ring transition-transform hover:-translate-y-0.5"
+                style={{
+                  background: "linear-gradient(135deg, #7C3CFF 0%, #4D7CFF 50%, #00E6FF 100%)",
+                  boxShadow: "0 0 0 1px rgba(124,60,255,0.35), 0 8px 24px -10px rgba(0,230,255,0.5)",
+                }}
+              >
+                Contact the founder
+              </a>
             </div>
           </div>
 
