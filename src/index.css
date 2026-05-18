@@ -184,23 +184,21 @@
     color: transparent;
   }
 
-  /* Universal page-title gradient — applies to all h1/h2 + .gradient-title */
-  .gradient-title,
-  body h1,
-  body h2 {
-    background: linear-gradient(90deg, #00E6FF 0%, #9B4DFF 55%, #FF2DAA 100%) !important;
-    -webkit-background-clip: text !important;
-    background-clip: text !important;
-    color: transparent !important;
-    -webkit-text-fill-color: transparent !important;
+  /* Default heading color — crisp near-white, no automatic gradient */
+  h1, h2, h3 {
+    color: #F8F5FF;
   }
 
-  /* Keep icons (lucide) visible inside gradient titles */
-  body h1 svg, body h2 svg {
-    -webkit-text-fill-color: #00E6FF !important;
-    color: #00E6FF !important;
-    background: none !important;
+  /* Opt-in gradient heading accent */
+  .ast-gradient-heading,
+  .gradient-title {
+    background: linear-gradient(90deg, #00E6FF 0%, #7C3CFF 45%, #FF2DAA 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
   }
+
 
   /* Hero typography */
   .hero-kicker { color: #00E6FF; }
