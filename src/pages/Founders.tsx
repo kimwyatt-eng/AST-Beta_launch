@@ -29,6 +29,9 @@ export default function FoundersPage() {
               alt="How many artists does it take to code one app? — Studio scene of artists, photographers, and musicians collaborating around a monitor"
               className="w-full h-auto rounded-lg"
             />
+            <p className="mt-4 text-center text-lg md:text-xl font-semibold italic bg-gradient-to-r from-purple-500 via-fuchsia-500 to-pink-500 bg-clip-text text-transparent">
+              One artist with a tech support soul and lots of caffine
+            </p>
           </div>
         </div>
       </section>
