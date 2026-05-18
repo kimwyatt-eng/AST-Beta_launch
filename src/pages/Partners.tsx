@@ -40,9 +40,9 @@ const Partners = () => {
       <section className="px-8 py-20">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <Card className="ast-panel card-violet p-6 transition-all duration-300 hover:-translate-y-0.5">
+            <Card className={`${panelClass(0)} p-6 transition-all duration-300 hover:-translate-y-0.5`}>
               <CardContent className="p-8 text-center">
-                <h3 className="text-xl font-semibold title-violet mb-4">Advertising</h3>
+                <h3 className={`text-xl font-semibold ${titleClass(0)} mb-4`}>Advertising</h3>
                 <p className="text-muted-foreground mb-6">Promote your products directly to artists actively seeking supplies.</p>
                 <ul className="text-sm text-muted-foreground text-left space-y-2">
                   <li>• Targeted demographics</li>
@@ -52,9 +52,9 @@ const Partners = () => {
               </CardContent>
             </Card>
 
-            <Card className="ast-panel card-cyan p-6 transition-all duration-300 hover:-translate-y-0.5">
+            <Card className={`${panelClass(1)} p-6 transition-all duration-300 hover:-translate-y-0.5`}>
               <CardContent className="p-8 text-center">
-                <h3 className="text-xl font-semibold title-cyan mb-4">Featured Content</h3>
+                <h3 className={`text-xl font-semibold ${titleClass(1)} mb-4`}>Featured Content</h3>
                 <p className="text-muted-foreground mb-6">Showcase your brand on our Inspiration Page with video demos and tutorials.</p>
                 <ul className="text-sm text-muted-foreground text-left space-y-2">
                   <li>• Video demonstrations</li>
@@ -64,9 +64,9 @@ const Partners = () => {
               </CardContent>
             </Card>
 
-            <Card className="ast-panel card-magenta p-6 transition-all duration-300 hover:-translate-y-0.5">
+            <Card className={`${panelClass(2)} p-6 transition-all duration-300 hover:-translate-y-0.5`}>
               <CardContent className="p-8 text-center">
-                <h3 className="text-xl font-semibold title-magenta mb-4">Data Partnerships</h3>
+                <h3 className={`text-xl font-semibold ${titleClass(2)} mb-4`}>Data Partnerships</h3>
                 <p className="text-muted-foreground mb-6">Access ethical, anonymized insights into art supply trends and market demand.</p>
                 <ul className="text-sm text-muted-foreground text-left space-y-2">
                   <li>• Market trend reports</li>
@@ -76,9 +76,9 @@ const Partners = () => {
               </CardContent>
             </Card>
 
-            <Card className="ast-panel card-violet p-6 transition-all duration-300 hover:-translate-y-0.5">
+            <Card className={`${panelClass(3)} p-6 transition-all duration-300 hover:-translate-y-0.5`}>
               <CardContent className="p-8 text-center">
-                <h3 className="text-xl font-semibold title-violet mb-4">Early Product Testing & Feedback</h3>
+                <h3 className={`text-xl font-semibold ${titleClass(3)} mb-4`}>Early Product Testing & Feedback</h3>
                 <p className="text-muted-foreground mb-6">Connect directly with artists as early testers and get authentic insights to guide product decisions.</p>
                 <ul className="text-sm text-muted-foreground text-left space-y-2">
                   <li>• Beta testing with engaged creators</li>
@@ -100,23 +100,23 @@ const Partners = () => {
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="ast-panel card-cyan p-6">
+            <Card className={`${panelClass(4)} p-6`}>
               <CardContent className="p-6">
-                <h3 className="text-xl font-semibold title-cyan mb-4">Engaged Community</h3>
+                <h3 className={`text-xl font-semibold ${titleClass(4)} mb-4`}>Engaged Community</h3>
                 <p className="text-muted-foreground">Our users are passionate artists who actively purchase supplies and trust our recommendations.</p>
               </CardContent>
             </Card>
 
-            <Card className="ast-panel card-violet p-6">
+            <Card className={`${panelClass(5)} p-6`}>
               <CardContent className="p-6">
-                <h3 className="text-xl font-semibold title-violet mb-4">Ethical Standards</h3>
+                <h3 className={`text-xl font-semibold ${titleClass(5)} mb-4`}>Ethical Standards</h3>
                 <p className="text-muted-foreground">We maintain strict ethical guidelines and transparency in all our partnerships and data sharing.</p>
               </CardContent>
             </Card>
 
-            <Card className="ast-panel card-magenta p-6">
+            <Card className={`${panelClass(6)} p-6`}>
               <CardContent className="p-6">
-                <h3 className="text-xl font-semibold title-magenta mb-4">Growing Platform</h3>
+                <h3 className={`text-xl font-semibold ${titleClass(6)} mb-4`}>Growing Platform</h3>
                 <p className="text-muted-foreground">Join us early as we expand to new markets and develop additional creative industry solutions.</p>
               </CardContent>
             </Card>
