@@ -26,7 +26,7 @@ const Investors = () => {
             
             {/* Right Image - Still Life With Horse */}
             <div className="flex justify-center lg:justify-end">
-              <div className="rounded-2xl border-4 border-primary/50 bg-primary/5 p-4 shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
+              <div className="hero-media p-4">
                 <img 
                   src={stillLifeHorse} 
                   alt="Still Life With Horse – Vibrant watercolor painting by Kim Wyatt capturing expressive florals and subtle equine presence in a warm, layered composition" 
@@ -313,7 +313,7 @@ const Investors = () => {
 
       {/* Trust Badges */}
       <div className="flex justify-center py-8">
-        <div className="ast-panel-magenta p-8">
+        <div className="ast-panel p-8">
           <img 
             src={trustBadges} 
             alt="A Trusty App & Emotional Safety Shield – Modular trust and protection featuring shield emblems protected by a stylized owl symbolizing wisdom and vigilance" 

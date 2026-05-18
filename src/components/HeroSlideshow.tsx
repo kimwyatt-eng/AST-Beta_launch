@@ -36,7 +36,7 @@ const HeroSlideshow = () => {
 
   return (
     <div
-      className="relative rounded-2xl border-4 border-primary/50 bg-primary/5 p-2 sm:p-4 w-full mx-auto shadow-[0_10px_30px_rgba(0,0,0,0.35)] overflow-hidden"
+      className="hero-media relative p-2 sm:p-4 w-full mx-auto overflow-hidden"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
       role="region"

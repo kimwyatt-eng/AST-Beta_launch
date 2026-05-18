@@ -8,8 +8,8 @@
   :root {
     /* Near black violet background (#05040F = ast-bg-0) */
     --background: 247 60% 4%;
-    /* Off-white body text (#E1E2E5) */
-    --foreground: 220 6% 89%;
+    /* Off-white violet headings (#F8F5FF) */
+    --foreground: 258 100% 98%;
 
     /* Raised section background (#14103A = ast-bg-3) */
     --card: 249 57% 15%;
@@ -34,7 +34,7 @@
 
     /* Deep indigo-violet muted (#09061A = ast-bg-1) */
     --muted: 249 63% 6%;
-    --muted-foreground: 220 6% 65%;
+    --muted-foreground: 252 39% 77%;
 
     /* Pink-coral accent */
     --accent: 350 85% 72%;
@@ -165,7 +165,7 @@
   }
 
   body {
-    @apply text-foreground;
+    color: #DCD6FF;
     background:
       radial-gradient(circle at top right, rgba(124, 60, 255, 0.22), transparent 34%),
       radial-gradient(circle at top left, rgba(255, 45, 170, 0.12), transparent 28%),
@@ -176,6 +176,34 @@
 }
 
 @layer components {
+  /* Logo wordmark — single smooth horizontal gradient */
+  .logo {
+    background: linear-gradient(90deg, #F8F5FF 0%, #9B4DFF 45%, #00E6FF 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* Hero typography */
+  .hero-kicker { color: #00E6FF; }
+  .hero-title  { color: #F8F5FF; }
+  .hero-title .accent { color: #FF2DAA; }
+  .hero-title .accent-cyan { color: #00E6FF; }
+  .hero-body   { color: #DCD6FF; }
+
+  /* Hero media frame — violet by default, magenta only on hover */
+  .hero-media {
+    border: 1.5px solid rgba(124, 60, 255, 0.62);
+    box-shadow: 0 0 0 1px rgba(124, 60, 255, 0.16);
+    border-radius: 24px;
+    background: rgba(16, 11, 46, 0.7);
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  }
+  .hero-media:hover {
+    border-color: rgba(255, 45, 170, 0.68);
+    box-shadow: 0 0 0 1px rgba(255, 45, 170, 0.22);
+  }
+
   .ast-text-gradient {
     background: linear-gradient(
       90deg,
@@ -252,8 +280,8 @@
 
   .ast-panel {
     background: rgba(16, 11, 46, 0.86);
-    border: 1.5px solid rgba(124, 60, 255, 0.65);
-    box-shadow: 0 0 0 1px rgba(124, 60, 255, 0.18);
+    border: 1.5px solid rgba(124, 60, 255, 0.58);
+    box-shadow: 0 0 0 1px rgba(124, 60, 255, 0.16);
     border-radius: 24px;
   }
   .ast-panel-violet {
