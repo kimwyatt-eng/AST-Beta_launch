@@ -66,7 +66,7 @@ export default function PrivacyPolicy() {
 
       {/* Policy Sections */}
       <section className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-8 space-y-10">
-        <PolicyBlock title="Data We Collect (Limited & Transparent)">
+        <PolicyBlock index={0} title="Data We Collect (Limited & Transparent)">
           <ul className="list-disc list-inside space-y-2 text-foreground/85">
             <li>Basic account info (e.g., email, password). Optional: voiceprint ID for security.</li>
             <li>Supply inventory and project data you voluntarily add.</li>
@@ -74,7 +74,7 @@ export default function PrivacyPolicy() {
           </ul>
         </PolicyBlock>
 
-        <PolicyBlock title="How We Use Your Data">
+        <PolicyBlock index={1} title="How We Use Your Data">
           <ul className="list-disc list-inside space-y-2 text-foreground/85">
             <li>To provide core features like inventory tracking, price alerts, and project management.</li>
             <li>To generate insurance-ready reports at your request.</li>
@@ -82,7 +82,7 @@ export default function PrivacyPolicy() {
           </ul>
         </PolicyBlock>
 
-        <PolicyBlock title="Data We Don't Collect">
+        <PolicyBlock index={2} title="Data We Don't Collect">
           <ul className="list-disc list-inside space-y-2 text-foreground/85">
             <li>We don't scrape or use your creative works for AI training.</li>
             <li>We don't sell or rent personally identifiable information.</li>
@@ -90,7 +90,7 @@ export default function PrivacyPolicy() {
           </ul>
         </PolicyBlock>
 
-        <PolicyBlock title="Your Controls">
+        <PolicyBlock index={3} title="Your Controls">
           <ul className="list-disc list-inside space-y-2 text-foreground/85">
             <li>Export or delete your data at any time (email us to request while we finalize in‑app controls).</li>
             <li>Opt in or out of anonymized analytics.</li>
@@ -98,13 +98,13 @@ export default function PrivacyPolicy() {
           </ul>
         </PolicyBlock>
 
-        <PolicyBlock title="Data Retention">
+        <PolicyBlock index={4} title="Data Retention">
           <p className="text-foreground/85">
             We keep your data only as long as needed to provide the service or as required by law. If you close your account, we'll delete your personal data within 30 days (some anonymized usage data may be retained for product improvement).
           </p>
         </PolicyBlock>
 
-        <PolicyBlock title="Security Measures">
+        <PolicyBlock index={5} title="Security Measures">
           <ul className="list-disc list-inside space-y-2 text-foreground/85">
             <li>Industry-standard encryption for data in transit and at rest.</li>
             <li>Regular security audits and penetration testing.</li>
@@ -113,7 +113,7 @@ export default function PrivacyPolicy() {
           </ul>
         </PolicyBlock>
 
-        <PolicyBlock title="Contact & Updates">
+        <PolicyBlock index={6} title="Contact & Updates">
           <p className="text-foreground/85">
             Questions about this policy? Email us at{" "}
             <a href="mailto:info@notify.artsupplytracker.com" className="text-secondary underline underline-offset-4">
