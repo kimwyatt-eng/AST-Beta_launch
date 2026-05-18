@@ -84,16 +84,16 @@ export default function ArtistsHome() {
                 "Low-stock alerts, price drops, and insurance-ready records—handled.",
               num: 3,
             },
-          ].map((s) => (
+          ].map((s, i) => (
             <div
               key={s.title}
-              className="ast-panel p-6"
+              className={`${panelClass(i)} p-6`}
             >
               <div className="flex items-center gap-3">
                 <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-primary text-primary-foreground font-bold">
                   {s.num}
                 </span>
-                <h3 className="text-xl font-semibold">{s.title}</h3>
+                <h3 className={`text-xl font-semibold ${titleClass(i)}`}>{s.title}</h3>
               </div>
               <p className="mt-3 text-foreground/80">{s.body}</p>
             </div>
