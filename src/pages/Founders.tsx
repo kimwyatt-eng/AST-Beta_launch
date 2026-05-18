@@ -106,10 +106,10 @@ export default function FoundersPage() {
           <h3 className="text-2xl md:text-3xl font-bold">Join us in shaping better tools for creators</h3>
           <p className="mt-2 text-foreground/80">Questions or press. Email the founder.</p>
           <a
-            href="mailto:info@notify.artsupplytracker.com"
-            className="mt-4 inline-flex items-center justify-center rounded-xl bg-primary text-primary-foreground px-6 py-3 text-lg font-semibold shadow-lg hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-primary"
+            href="/#signup"
+            className="ast-btn-primary mt-4 inline-flex items-center justify-center rounded-xl px-6 py-3 text-lg font-semibold focus:outline-none focus:ring-2 focus:ring-ring"
           >
-            info@notify.artsupplytracker.com
+            Join the waitlist or beta
           </a>
         </div>
       </section>
