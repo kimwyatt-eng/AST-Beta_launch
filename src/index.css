@@ -114,7 +114,7 @@
   .dark {
     /* Dark mode mirrors root: violet night palette */
     --background: 247 60% 4%;
-    --foreground: 220 6% 91%;
+    --foreground: 250 100% 92%;
 
     --card: 249 57% 15%;
     --card-foreground: 220 6% 90%;
