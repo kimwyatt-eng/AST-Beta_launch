@@ -1,4 +1,5 @@
 import Navigation from "@/components/Navigation";
+import Seo from "@/components/Seo";
 import trustBadges from "@/assets/trust-badges.png";
 import foundersHero from "@/assets/founders-hero.png";
 import { panelClass, titleClass } from "@/lib/cardAccent";
@@ -6,11 +7,17 @@ import { panelClass, titleClass } from "@/lib/cardAccent";
 export default function FoundersPage() {
   return (
     <main className="min-h-screen w-full bg-background text-foreground">
+      <Seo
+        title="Founders — Built by artists, for artists | ArtSupplyTracker"
+        description="The story behind ArtSupplyTracker: a working artist building private, AI-respectful studio software. Meet the team and our mission."
+        path="/founders"
+      />
       <Navigation />
       {/* Hero */}
       <section className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
+
             <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight">Built by artists. For artists.</h1>
             <p className="mt-4 text-lg text-foreground/80 max-w-xl">
               ArtSupplyTracker began in a real studio. I was tired of lost supplies, messy spreadsheets, and tools that

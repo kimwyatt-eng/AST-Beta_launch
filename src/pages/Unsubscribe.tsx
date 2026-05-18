@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
+import Seo from "@/components/Seo";
 import { supabase } from "@/integrations/supabase/client";
 
 type Status = "loading" | "valid" | "already" | "invalid" | "success" | "error";
@@ -54,6 +55,12 @@ export default function Unsubscribe() {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-background px-4">
+      <Seo
+        title="Unsubscribe | ArtSupplyTracker"
+        description="Unsubscribe from ArtSupplyTracker emails."
+        path="/unsubscribe"
+        noindex
+      />
       <div className="max-w-md w-full ast-panel p-8 text-center shadow-lg">
         {status === "loading" && <p className="text-muted-foreground">Loading…</p>}
         {status === "invalid" && (
