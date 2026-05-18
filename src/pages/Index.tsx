@@ -146,16 +146,16 @@ export default function ArtistsHome() {
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
         <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Integrations</h2>
         <div className="mt-4 grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="ast-panel p-6">
-            <h3 className="text-xl font-semibold">Voice Assistants</h3>
+          <div className="ast-panel card-cyan p-6">
+            <h3 className="text-xl font-semibold title-cyan">Voice Assistants</h3>
             <p className="mt-2 text-foreground/80">Alexa · Google Nest · Siri</p>
           </div>
-          <div className="ast-panel p-6">
-            <h3 className="text-xl font-semibold">Add Supplies</h3>
+          <div className="ast-panel card-violet p-6">
+            <h3 className="text-xl font-semibold title-violet">Add Supplies</h3>
             <p className="mt-2 text-foreground/80">Email import · Photo/scan · Manual</p>
           </div>
-          <div className="ast-panel p-6">
-            <h3 className="text-xl font-semibold">Export</h3>
+          <div className="ast-panel card-magenta p-6">
+            <h3 className="text-xl font-semibold title-magenta">Export</h3>
             <p className="mt-2 text-foreground/80">CSV · PDF insurance report · Project pack lists</p>
           </div>
         </div>
