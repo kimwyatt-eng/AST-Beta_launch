@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import trustBadges from "@/assets/trust-badges.png";
 import gossipHorses from "@/assets/gossip-horses.jpg";
+import { panelClass, titleClass } from "@/lib/cardAccent";
 
 export default function FoundersPage() {
   return (
