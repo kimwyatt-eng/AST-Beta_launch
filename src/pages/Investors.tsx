@@ -321,7 +321,8 @@ const Investors = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="px-8 py-20">
+      <section id="investor-contact-form" className="px-8 py-20 scroll-mt-24">
+
         <div className="max-w-xl mx-auto">
           <h2 className="text-3xl font-bold text-foreground mb-6 text-center">
             Join Our Growth Story
