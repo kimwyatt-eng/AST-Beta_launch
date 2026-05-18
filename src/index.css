@@ -184,12 +184,29 @@
     color: transparent;
   }
 
-  /* Hero typography */
+  /* Hero typography — gradient headline, no white */
   .hero-kicker { color: #00E6FF; }
-  .hero-title  { color: #F8F5FF; }
-  .hero-title .accent { color: #FF2DAA; }
-  .hero-title .accent-cyan { color: #00E6FF; }
-  .hero-body   { color: #DCD6FF; }
+  .hero-title {
+    background: linear-gradient(90deg, #00E6FF 0%, #9B4DFF 55%, #FF2DAA 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .hero-title .accent      { -webkit-text-fill-color: #FF2DAA; color: #FF2DAA; }
+  .hero-title .accent-cyan { -webkit-text-fill-color: #00E6FF; color: #00E6FF; }
+  .hero-body   { color: #B7AFD8; }
+
+  /* Card/section title accents — pick by panel color */
+  .title-cyan    { color: #00E6FF; }
+  .title-magenta { color: #FF2DAA; }
+  .title-violet  { color: #C8B5FF; }
+  .title-yellow  { color: #FFE600; }
+  .title-gradient {
+    background: linear-gradient(90deg, #00E6FF 0%, #9B4DFF 55%, #FF2DAA 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
 
   /* Hero media frame — violet by default, magenta only on hover */
   .hero-media {
