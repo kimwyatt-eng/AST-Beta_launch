@@ -147,7 +147,7 @@ export default function ArtistsHome() {
         <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Integrations</h2>
         <div className="mt-4 grid grid-cols-1 md:grid-cols-3 gap-6">
           {[
-            { title: "Voice Assistants", body: "Alexa · Google Nest · Siri" },
+            { title: "Manage Art Work", body: "Link supplies, add photos, notes & locations" },
             { title: "Add Supplies", body: "Email import · Photo/scan · Manual" },
             { title: "Export", body: "CSV · PDF insurance report · Project pack lists" },
           ].map((it, i) => (
