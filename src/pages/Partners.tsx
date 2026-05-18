@@ -99,23 +99,23 @@ const Partners = () => {
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="ast-panel p-6">
+            <Card className="ast-panel card-cyan p-6">
               <CardContent className="p-6">
-                <h3 className="text-xl font-semibold text-foreground mb-4">Engaged Community</h3>
+                <h3 className="text-xl font-semibold title-cyan mb-4">Engaged Community</h3>
                 <p className="text-muted-foreground">Our users are passionate artists who actively purchase supplies and trust our recommendations.</p>
               </CardContent>
             </Card>
 
-            <Card className="ast-panel p-6">
+            <Card className="ast-panel card-violet p-6">
               <CardContent className="p-6">
-                <h3 className="text-xl font-semibold text-foreground mb-4">Ethical Standards</h3>
+                <h3 className="text-xl font-semibold title-violet mb-4">Ethical Standards</h3>
                 <p className="text-muted-foreground">We maintain strict ethical guidelines and transparency in all our partnerships and data sharing.</p>
               </CardContent>
             </Card>
 
-            <Card className="ast-panel p-6">
+            <Card className="ast-panel card-magenta p-6">
               <CardContent className="p-6">
-                <h3 className="text-xl font-semibold text-foreground mb-4">Growing Platform</h3>
+                <h3 className="text-xl font-semibold title-magenta mb-4">Growing Platform</h3>
                 <p className="text-muted-foreground">Join us early as we expand to new markets and develop additional creative industry solutions.</p>
               </CardContent>
             </Card>
