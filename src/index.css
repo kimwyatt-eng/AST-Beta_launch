@@ -8,8 +8,8 @@
   :root {
     /* Near black violet background (#05040F = ast-bg-0) */
     --background: 247 60% 4%;
-    /* Soft lavender headings (#DCD6FF) — no stark white */
-    --foreground: 250 100% 92%;
+    /* Soft lavender body — no white */
+    --foreground: 252 39% 77%;
 
     /* Raised section background (#14103A = ast-bg-3) */
     --card: 249 57% 15%;
@@ -114,7 +114,7 @@
   .dark {
     /* Dark mode mirrors root: violet night palette */
     --background: 247 60% 4%;
-    --foreground: 250 100% 92%;
+    --foreground: 252 39% 77%;
 
     --card: 249 57% 15%;
     --card-foreground: 220 6% 90%;
@@ -165,7 +165,7 @@
   }
 
   body {
-    color: #DCD6FF;
+    color: #B7AFD8;
     background:
       radial-gradient(circle at top right, rgba(124, 60, 255, 0.22), transparent 34%),
       radial-gradient(circle at top left, rgba(255, 45, 170, 0.12), transparent 28%),
@@ -178,13 +178,31 @@
 @layer components {
   /* Logo wordmark — single smooth horizontal gradient */
   .logo {
-    background: linear-gradient(90deg, #F8F5FF 0%, #9B4DFF 45%, #00E6FF 100%);
+    background: linear-gradient(90deg, #00E6FF 0%, #9B4DFF 55%, #FF2DAA 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
   }
 
-  /* Hero typography — gradient headline, no white */
+  /* Universal page-title gradient — applies to all h1/h2 + .gradient-title */
+  .gradient-title,
+  body h1,
+  body h2 {
+    background: linear-gradient(90deg, #00E6FF 0%, #9B4DFF 55%, #FF2DAA 100%) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    color: transparent !important;
+    -webkit-text-fill-color: transparent !important;
+  }
+
+  /* Keep icons (lucide) visible inside gradient titles */
+  body h1 svg, body h2 svg {
+    -webkit-text-fill-color: #00E6FF !important;
+    color: #00E6FF !important;
+    background: none !important;
+  }
+
+  /* Hero typography */
   .hero-kicker { color: #00E6FF; }
   .hero-title {
     background: linear-gradient(90deg, #00E6FF 0%, #9B4DFF 55%, #FF2DAA 100%);
@@ -192,8 +210,8 @@
     background-clip: text;
     color: transparent;
   }
-  .hero-title .accent      { -webkit-text-fill-color: #FF2DAA; color: #FF2DAA; }
-  .hero-title .accent-cyan { -webkit-text-fill-color: #00E6FF; color: #00E6FF; }
+  .hero-title .accent      { -webkit-text-fill-color: #FF2DAA !important; color: #FF2DAA !important; background: none !important; }
+  .hero-title .accent-cyan { -webkit-text-fill-color: #00E6FF !important; color: #00E6FF !important; background: none !important; }
   .hero-body   { color: #B7AFD8; }
 
   /* Card/section title accents — pick by panel color */
@@ -237,7 +255,7 @@
 
   .ast-btn-primary {
     background: linear-gradient(135deg, #FF2DAA 0%, #7C3CFF 100%);
-    color: #FFFFFF;
+    color: #DCD6FF;
     border: 1px solid rgba(255, 45, 170, 0.75);
     box-shadow: 0 0 0 1px rgba(255, 45, 170, 0.22), 0 6px 20px -8px rgba(124, 60, 255, 0.6);
     transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
@@ -251,7 +269,7 @@
   /* Secondary / outline button — cyan accent on translucent panel */
   .ast-btn-secondary {
     background: rgba(16, 11, 46, 0.7);
-    color: #F8F5FF;
+    color: #DCD6FF;
     border: 1.5px solid rgba(0, 230, 255, 0.65);
     transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
   }
@@ -264,7 +282,7 @@
   /* Pill / tag — violet tint, magenta hairline */
   .ast-pill {
     background: rgba(124, 60, 255, 0.28);
-    color: #F8F5FF;
+    color: #DCD6FF;
     border: 1px solid rgba(255, 45, 170, 0.55);
     border-radius: 9999px;
     padding: 0.25rem 0.75rem;

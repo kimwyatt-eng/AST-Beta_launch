@@ -54,7 +54,7 @@ export default function SignupForm() {
     return (
       <div className="rounded-2xl border border-teal-400/50 bg-teal-400/10 p-8 text-center shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
         <h3 className="text-2xl font-bold text-teal-300 mb-2">Welcome to the Beta! 🎨</h3>
-        <p className="text-white/80">You're on the list! We'll send you early access details and tips on how to use ArtSupplyTracker before launch.</p>
+        <p className="text-[#B7AFD8]">You're on the list! We'll send you early access details and tips on how to use ArtSupplyTracker before launch.</p>
       </div>
     );
   }
@@ -62,7 +62,7 @@ export default function SignupForm() {
   return (
     <div className="rounded-2xl border border-white/10 bg-white/5 p-8 md:p-10 shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
       <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-center">Join the Beta</h2>
-      <p className="mt-3 text-center text-white/80">
+      <p className="mt-3 text-center text-[#B7AFD8]">
         Be among the first artists to try ArtSupplyTracker. Sign up for early access and updates.
       </p>
 
@@ -94,12 +94,12 @@ export default function SignupForm() {
             {loading ? "Joining…" : "Join Beta"}
           </button>
         </div>
-        <p className="md:col-span-2 text-center md:text-right text-xs text-white/60">
+        <p className="md:col-span-2 text-center md:text-right text-xs text-[#8F86B6]">
           No spam. We respect your privacy.
         </p>
       </form>
 
-      <p className="mt-4 text-center text-sm text-white/70">
+      <p className="mt-4 text-center text-sm text-[#B7AFD8]">
         Prefer email? Contact us at{" "}
         <a className="text-teal-300 font-semibold hover:underline" href="mailto:info@notify.artsupplytracker.com">
           info@notify.artsupplytracker.com
