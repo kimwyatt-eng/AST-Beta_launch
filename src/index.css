@@ -81,49 +81,49 @@
   }
 
   .dark {
-    /* Dark mode mirrors root: charcoal + amber + soft blue */
-    --background: 210 9% 9%;
+    /* Dark mode mirrors root: violet night palette */
+    --background: 247 60% 4%;
     --foreground: 220 6% 91%;
 
-    --card: 210 9% 13%;
+    --card: 249 57% 15%;
     --card-foreground: 220 6% 90%;
 
-    --popover: 210 9% 11%;
+    --popover: 252 66% 9%;
     --popover-foreground: 220 6% 91%;
 
     --primary: 350 85% 74%;
-    --primary-foreground: 210 9% 9%;
+    --primary-foreground: 247 60% 4%;
 
     --secondary: 290 35% 62%;
-    --secondary-foreground: 210 9% 9%;
+    --secondary-foreground: 247 60% 4%;
 
     --periwinkle: 230 55% 80%;
     --violet-light: 290 40% 76%;
 
-    --muted: 210 9% 16%;
+    --muted: 249 63% 6%;
     --muted-foreground: 220 6% 70%;
 
     --accent: 350 85% 74%;
-    --accent-foreground: 210 9% 9%;
+    --accent-foreground: 247 60% 4%;
 
     --destructive: 0 80% 50%;
     --destructive-foreground: 220 6% 95%;
 
-    --border: 210 9% 20%;
-    --input: 210 9% 16%;
+    --border: 249 50% 20%;
+    --input: 249 57% 15%;
     --ring: 350 85% 74%;
 
-    --sidebar-background: 210 9% 11%;
+    --sidebar-background: 252 66% 9%;
     --sidebar-foreground: 220 6% 90%;
     --sidebar-primary: 350 85% 72%;
-    --sidebar-primary-foreground: 210 9% 9%;
-    --sidebar-accent: 210 9% 16%;
+    --sidebar-primary-foreground: 247 60% 4%;
+    --sidebar-accent: 249 57% 15%;
     --sidebar-accent-foreground: 220 6% 90%;
-    --sidebar-border: 210 9% 20%;
+    --sidebar-border: 249 50% 20%;
     --sidebar-ring: 350 85% 74%;
 
-    --gradient-wine-plum: linear-gradient(135deg, hsl(210 9% 9%) 0%, hsl(210 9% 7%) 50%, hsl(210 9% 6%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(210 9% 13%) 0%, hsl(210 9% 11%) 100%);
+    --gradient-wine-plum: linear-gradient(135deg, hsl(247 60% 4%) 0%, hsl(249 63% 6%) 50%, hsl(252 66% 9%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(249 57% 15%) 0%, hsl(252 66% 9%) 100%);
     --gradient-magenta: linear-gradient(135deg, hsl(350 85% 74%) 0%, hsl(350 75% 64%) 100%);
   }
 }
