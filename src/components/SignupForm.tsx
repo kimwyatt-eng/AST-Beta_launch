@@ -27,8 +27,24 @@ export default function SignupForm() {
         body: { name, email },
       });
 
+      // Non-2xx responses (e.g. 409 duplicate) — parse server message from the response body
       if (error) {
-        throw new Error(error.message || "Something went wrong");
+        let serverMessage: string | undefined;
+        try {
+          const ctxRes = (error as any)?.context?.response ?? (error as any)?.context;
+          if (ctxRes && typeof ctxRes.json === "function") {
+            const body = await ctxRes.clone().json();
+            serverMessage = body?.error;
+          }
+        } catch {
+          // ignore parse failures, fall back to default message
+        }
+        toast({
+          title: serverMessage || "Something went wrong. Please try again.",
+          variant: "destructive",
+        });
+        setLoading(false);
+        return;
       }
 
       if (res?.error) {
@@ -49,6 +65,7 @@ export default function SignupForm() {
       setLoading(false);
     }
   }
+
 
   if (success) {
     return (
