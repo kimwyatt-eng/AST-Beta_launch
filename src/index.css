@@ -156,6 +156,13 @@
 }
 
 @layer components {
+  .ast-text-gradient {
+    background: linear-gradient(90deg, #FF2DAA, #9B4DFF, #00E6FF);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
   .ast-panel {
     background: rgba(16, 11, 46, 0.86);
     border: 1.5px solid rgba(124, 60, 255, 0.65);
