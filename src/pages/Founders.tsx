@@ -77,24 +77,9 @@ export default function FoundersPage() {
       <section className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-12">
         <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Meet the team</h2>
         <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
-          <TeamCard
-            name="Kim"
-            role="Founder"
-            blurb="Artist. Builder. Focused on privacy friendly AI for real studios."
-            img="/lovable-uploads/1be9744e-772f-4fe7-8a6c-7a56c2b901f0.png"
-          />
-          <TeamCard
-            name="Adrian"
-            role="Design and outreach"
-            blurb="Helping with community, design, and early partner conversations."
-            img="/lovable-uploads/f602c152-6995-4745-a992-dc2dcc23debb.png"
-          />
-          <TeamCard
-            name="Randolph"
-            role="Marketing & Reach"
-            blurb="Leading partner conversions and expanding our community worldwide."
-            img="/lovable-uploads/25808746-eef4-4c29-8d03-3700454cf455.png"
-          />
+          <TeamCard index={0} name="Kim"      role="Founder"              blurb="Artist. Builder. Focused on privacy friendly AI for real studios." img="/lovable-uploads/1be9744e-772f-4fe7-8a6c-7a56c2b901f0.png" />
+          <TeamCard index={1} name="Adrian"   role="Design and outreach"  blurb="Helping with community, design, and early partner conversations." img="/lovable-uploads/f602c152-6995-4745-a992-dc2dcc23debb.png" />
+          <TeamCard index={2} name="Randolph" role="Marketing & Reach"    blurb="Leading partner conversions and expanding our community worldwide." img="/lovable-uploads/25808746-eef4-4c29-8d03-3700454cf455.png" />
         </div>
       </section>
 
