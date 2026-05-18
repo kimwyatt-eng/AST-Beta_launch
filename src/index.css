@@ -215,7 +215,7 @@
   /* Card/section title accents — pick by panel color */
   .title-cyan    { color: #00E6FF; }
   .title-magenta { color: #FF2DAA; }
-  .title-violet  { color: #C8B5FF; }
+  .title-violet  { color: #9B4DFF; }
   .title-yellow  { color: #FFE600; }
   .title-gradient {
     background: linear-gradient(90deg, #00E6FF 0%, #9B4DFF 55%, #FF2DAA 100%);
