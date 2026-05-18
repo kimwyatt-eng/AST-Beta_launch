@@ -8,8 +8,8 @@
   :root {
     /* Near black violet background (#05040F = ast-bg-0) */
     --background: 247 60% 4%;
-    /* Off-white violet headings (#F8F5FF) */
-    --foreground: 258 100% 98%;
+    /* Soft lavender headings (#DCD6FF) — no stark white */
+    --foreground: 250 100% 92%;
 
     /* Raised section background (#14103A = ast-bg-3) */
     --card: 249 57% 15%;
@@ -114,7 +114,7 @@
   .dark {
     /* Dark mode mirrors root: violet night palette */
     --background: 247 60% 4%;
-    --foreground: 220 6% 91%;
+    --foreground: 250 100% 92%;
 
     --card: 249 57% 15%;
     --card-foreground: 220 6% 90%;
@@ -184,12 +184,29 @@
     color: transparent;
   }
 
-  /* Hero typography */
+  /* Hero typography — gradient headline, no white */
   .hero-kicker { color: #00E6FF; }
-  .hero-title  { color: #F8F5FF; }
-  .hero-title .accent { color: #FF2DAA; }
-  .hero-title .accent-cyan { color: #00E6FF; }
-  .hero-body   { color: #DCD6FF; }
+  .hero-title {
+    background: linear-gradient(90deg, #00E6FF 0%, #9B4DFF 55%, #FF2DAA 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .hero-title .accent      { -webkit-text-fill-color: #FF2DAA; color: #FF2DAA; }
+  .hero-title .accent-cyan { -webkit-text-fill-color: #00E6FF; color: #00E6FF; }
+  .hero-body   { color: #B7AFD8; }
+
+  /* Card/section title accents — pick by panel color */
+  .title-cyan    { color: #00E6FF; }
+  .title-magenta { color: #FF2DAA; }
+  .title-violet  { color: #C8B5FF; }
+  .title-yellow  { color: #FFE600; }
+  .title-gradient {
+    background: linear-gradient(90deg, #00E6FF 0%, #9B4DFF 55%, #FF2DAA 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
 
   /* Hero media frame — violet by default, magenta only on hover */
   .hero-media {
