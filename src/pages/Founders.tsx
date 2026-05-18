@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import trustBadges from "@/assets/trust-badges.png";
 import gossipHorses from "@/assets/gossip-horses.jpg";
+import { panelClass, titleClass } from "@/lib/cardAccent";
 
 export default function FoundersPage() {
   return (
@@ -53,30 +54,12 @@ export default function FoundersPage() {
       {/* Mission and values */}
       <section className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-          <ValueCard
-            title="Privacy by design"
-            body="Your art and data stay yours. We never train AI on creative work or IP."
-          />
-          <ValueCard
-            title="Hands free creativity"
-            body="Voice control for busy hands. Alexa. Google Nest. Siri."
-          />
-          <ValueCard
-            title="Community driven"
-            body="Built with artist feedback from day one. Beta users shape the roadmap."
-          />
-          <ValueCard
-            title="Ethical AI"
-            body="Clear rules. Third party audits. Anonymized insights only."
-          />
-          <ValueCard
-            title="Emotional Safety Shield"
-            body="Supportive interactions. Sensible pacing. Opt outs when you need a break."
-          />
-          <ValueCard
-            title="Security first"
-            body="Voiceprint ID and 2FA options to protect your studio and records."
-          />
+          <ValueCard index={0} title="Privacy by design"        body="Your art and data stay yours. We never train AI on creative work or IP." />
+          <ValueCard index={1} title="Hands free creativity"    body="Voice control for busy hands. Alexa. Google Nest. Siri." />
+          <ValueCard index={2} title="Community driven"         body="Built with artist feedback from day one. Beta users shape the roadmap." />
+          <ValueCard index={3} title="Ethical AI"               body="Clear rules. Third party audits. Anonymized insights only." />
+          <ValueCard index={4} title="Emotional Safety Shield"  body="Supportive interactions. Sensible pacing. Opt outs when you need a break." />
+          <ValueCard index={5} title="Security first"           body="Voiceprint ID and 2FA options to protect your studio and records." />
         </div>
       </section>
 
@@ -84,9 +67,9 @@ export default function FoundersPage() {
       <section className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-8">
         <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Vision and road map</h2>
         <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
-          <Milestone title="Now" body="ArtSupplyTracker for artists. Inventory. Projects. Price alerts. Insurance reports." />
-          <Milestone title="Next" body="Garage Helper for makers and shops. Larger market. More data to improve recommendations." />
-          <Milestone title="Future" body="A family of trustworthy tools for creative and hands on communities. One modular platform." />
+          <Milestone index={0} title="Now" body="ArtSupplyTracker for artists. Inventory. Projects. Price alerts. Insurance reports." />
+          <Milestone index={1} title="Next" body="Garage Helper for makers and shops. Larger market. More data to improve recommendations." />
+          <Milestone index={2} title="Future" body="A family of trustworthy tools for creative and hands on communities. One modular platform." />
         </div>
       </section>
 
@@ -94,24 +77,9 @@ export default function FoundersPage() {
       <section className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-12">
         <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Meet the team</h2>
         <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
-          <TeamCard
-            name="Kim"
-            role="Founder"
-            blurb="Artist. Builder. Focused on privacy friendly AI for real studios."
-            img="/lovable-uploads/1be9744e-772f-4fe7-8a6c-7a56c2b901f0.png"
-          />
-          <TeamCard
-            name="Adrian"
-            role="Design and outreach"
-            blurb="Helping with community, design, and early partner conversations."
-            img="/lovable-uploads/f602c152-6995-4745-a992-dc2dcc23debb.png"
-          />
-          <TeamCard
-            name="Randolph"
-            role="Marketing & Reach"
-            blurb="Leading partner conversions and expanding our community worldwide."
-            img="/lovable-uploads/25808746-eef4-4c29-8d03-3700454cf455.png"
-          />
+          <TeamCard index={0} name="Kim"      role="Founder"              blurb="Artist. Builder. Focused on privacy friendly AI for real studios." img="/lovable-uploads/1be9744e-772f-4fe7-8a6c-7a56c2b901f0.png" />
+          <TeamCard index={1} name="Adrian"   role="Design and outreach"  blurb="Helping with community, design, and early partner conversations." img="/lovable-uploads/f602c152-6995-4745-a992-dc2dcc23debb.png" />
+          <TeamCard index={2} name="Randolph" role="Marketing & Reach"    blurb="Leading partner conversions and expanding our community worldwide." img="/lovable-uploads/25808746-eef4-4c29-8d03-3700454cf455.png" />
         </div>
       </section>
 
@@ -152,30 +120,30 @@ export default function FoundersPage() {
   );
 }
 
-function ValueCard({ title, body }: { title: string; body: string }) {
+function ValueCard({ title, body, index = 0 }: { title: string; body: string; index?: number }) {
   return (
-    <div className="ast-panel p-6">
-      <h3 className="text-xl font-semibold">{title}</h3>
+    <div className={`${panelClass(index)} p-6`}>
+      <h3 className={`text-xl font-semibold ${titleClass(index)}`}>{title}</h3>
       <p className="mt-2 text-foreground/80">{body}</p>
     </div>
   );
 }
 
-function Milestone({ title, body }: { title: string; body: string }) {
+function Milestone({ title, body, index = 0 }: { title: string; body: string; index?: number }) {
   return (
-    <div className="ast-panel p-6">
-      <h3 className="text-xl font-semibold">{title}</h3>
+    <div className={`${panelClass(index)} p-6`}>
+      <h3 className={`text-xl font-semibold ${titleClass(index)}`}>{title}</h3>
       <p className="mt-2 text-foreground/80">{body}</p>
     </div>
   );
 }
 
-function TeamCard({ name, role, blurb, img }: { name: string; role: string; blurb: string; img: string }) {
+function TeamCard({ name, role, blurb, img, index = 0 }: { name: string; role: string; blurb: string; img: string; index?: number }) {
   return (
-    <div className="ast-panel p-6 flex items-center gap-5">
+    <div className={`${panelClass(index)} p-6 flex items-center gap-5`}>
       <img src={img} alt={`${name} headshot`} className="h-16 w-16 rounded-full object-cover border border-border" />
       <div>
-        <h4 className="text-lg font-semibold">{name}</h4>
+        <h4 className={`text-lg font-semibold ${titleClass(index)}`}>{name}</h4>
         <p className="text-muted-foreground text-sm">{role}</p>
         <p className="mt-2 text-foreground/80">{blurb}</p>
       </div>

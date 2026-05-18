@@ -8,6 +8,7 @@ import mockupInventory from "@/assets/mockup-inventory.jpg";
 import mockupProject from "@/assets/mockup-project.jpg";
 import mockupPaletteCreator from "@/assets/mockup-palette-creator.png";
 import mockupMercurialHarvest from "@/assets/mockup-mercurial-harvest.png";
+import { panelClass, titleClass } from "@/lib/cardAccent";
 
 export default function ArtistsHome() {
   return (
@@ -83,16 +84,16 @@ export default function ArtistsHome() {
                 "Low-stock alerts, price drops, and insurance-ready records—handled.",
               num: 3,
             },
-          ].map((s) => (
+          ].map((s, i) => (
             <div
               key={s.title}
-              className="ast-panel p-6"
+              className={`${panelClass(i)} p-6`}
             >
               <div className="flex items-center gap-3">
                 <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-primary text-primary-foreground font-bold">
                   {s.num}
                 </span>
-                <h3 className="text-xl font-semibold">{s.title}</h3>
+                <h3 className={`text-xl font-semibold ${titleClass(i)}`}>{s.title}</h3>
               </div>
               <p className="mt-3 text-foreground/80">{s.body}</p>
             </div>
@@ -135,8 +136,8 @@ export default function ArtistsHome() {
               body:
                 "Voiceprint ID and 2FA protect your studio and personal data.",
             },
-          ].map((f) => (
-            <Card key={f.title} title={f.title} body={f.body} />
+          ].map((f, i) => (
+            <Card key={f.title} title={f.title} body={f.body} index={i} />
           ))}
         </div>
       </section>
@@ -145,16 +146,16 @@ export default function ArtistsHome() {
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
         <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Integrations</h2>
         <div className="mt-4 grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="ast-panel p-6">
-            <h3 className="text-xl font-semibold">Voice Assistants</h3>
+          <div className="ast-panel card-cyan p-6">
+            <h3 className="text-xl font-semibold title-cyan">Voice Assistants</h3>
             <p className="mt-2 text-foreground/80">Alexa · Google Nest · Siri</p>
           </div>
-          <div className="ast-panel p-6">
-            <h3 className="text-xl font-semibold">Add Supplies</h3>
+          <div className="ast-panel card-violet p-6">
+            <h3 className="text-xl font-semibold title-violet">Add Supplies</h3>
             <p className="mt-2 text-foreground/80">Email import · Photo/scan · Manual</p>
           </div>
-          <div className="ast-panel p-6">
-            <h3 className="text-xl font-semibold">Export</h3>
+          <div className="ast-panel card-magenta p-6">
+            <h3 className="text-xl font-semibold title-magenta">Export</h3>
             <p className="mt-2 text-foreground/80">CSV · PDF insurance report · Project pack lists</p>
           </div>
         </div>
@@ -239,10 +240,10 @@ export default function ArtistsHome() {
   );
 }
 
-function Card({ title, body }: { title: string; body: string }) {
+function Card({ title, body, index = 0 }: { title: string; body: string; index?: number }) {
   return (
-    <div className="ast-panel p-6">
-      <h3 className="text-xl font-semibold">{title}</h3>
+    <div className={`${panelClass(index)} p-6`}>
+      <h3 className={`text-xl font-semibold ${titleClass(index)}`}>{title}</h3>
       <p className="mt-2 text-foreground/80">{body}</p>
     </div>
   );
