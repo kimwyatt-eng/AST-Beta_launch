@@ -1,13 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
+import Seo from "@/components/Seo";
 import trustBadges from "@/assets/trust-badges.png";
 import { panelClass, titleClass } from "@/lib/cardAccent";
 
 export default function PrivacyPolicy() {
   return (
     <main className="min-h-screen w-full bg-background text-foreground">
+      <Seo
+        title="Privacy Policy | ArtSupplyTracker"
+        description="How ArtSupplyTracker handles your data. Your art and inventory stay yours — we never train AI on creative work."
+        path="/privacy"
+      />
       <Navigation />
+
 
       {/* Hero */}
       <section className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16">

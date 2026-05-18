@@ -1,5 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
+import Seo from "@/components/Seo";
 import ContactForm from "@/components/ContactForm";
 import trustBadges from "@/assets/trust-badges.png";
 import investorsHeroAd from "@/assets/investors-hero-ad.png";
@@ -13,7 +14,13 @@ const scrollToContactForm = (e: React.MouseEvent) => {
 const Investors = () => {
   return (
     <div className="min-h-screen bg-wine-plum">
+      <Seo
+        title="Investors — Private studio software for artists | ArtSupplyTracker"
+        description="ArtSupplyTracker is building privacy-first studio software for the global artist market. Learn about our vision, traction, and how to get in touch."
+        path="/investors"
+      />
       <Navigation />
+
       
       {/* Hero Section */}
       <header className="relative py-20 px-8">

@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
+import Seo from "@/components/Seo";
 import ContactForm from "@/components/ContactForm";
 import trustBadges from "@/assets/trust-badges.png";
 import partnersHeroAd from "@/assets/partners-hero-ad.png";
@@ -13,7 +14,13 @@ const scrollToContactForm = (e: React.MouseEvent) => {
 const Partners = () => {
   return (
     <div className="min-h-screen bg-wine-plum">
+      <Seo
+        title="Partners — Reach working artists | ArtSupplyTracker"
+        description="Partner with ArtSupplyTracker to reach engaged working artists. Brand collaborations, supplier integrations, and community programs."
+        path="/partners"
+      />
       <Navigation />
+
       
       {/* Hero Section */}
       <header className="relative py-20 px-8">

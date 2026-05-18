@@ -1,5 +1,6 @@
 import React from "react";
 import Navigation from "@/components/Navigation";
+import Seo from "@/components/Seo";
 import HeroSlideshow from "@/components/HeroSlideshow";
 import trustBadges from "@/assets/trust-badges.png";
 import SignupForm from "@/components/SignupForm";
@@ -13,7 +14,13 @@ import { panelClass, titleClass } from "@/lib/cardAccent";
 export default function ArtistsHome() {
   return (
     <main className="min-h-screen w-full bg-background text-foreground">
+      <Seo
+        title="ArtSupplyTracker — Track supplies, projects & protect your art"
+        description="Private studio software for artists. Track supplies, manage projects, and protect your art. No AI training on your work. Join the Beta."
+        path="/"
+      />
       <Navigation />
+
       {/* Hero */}
       <section className="mx-auto max-w-7xl 2xl:max-w-[110rem] px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
