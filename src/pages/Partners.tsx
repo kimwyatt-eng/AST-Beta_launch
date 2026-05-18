@@ -2,8 +2,13 @@ import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import ContactForm from "@/components/ContactForm";
 import trustBadges from "@/assets/trust-badges.png";
-import coppertonePony from "@/assets/coppertone-pony.jpg";
+import partnersHeroAd from "@/assets/partners-hero-ad.png";
 import { panelClass, titleClass } from "@/lib/cardAccent";
+
+const scrollToContactForm = (e: React.MouseEvent) => {
+  e.preventDefault();
+  document.getElementById("partner-contact-form")?.scrollIntoView({ behavior: "smooth", block: "start" });
+};
 
 const Partners = () => {
   return (
@@ -15,13 +20,18 @@ const Partners = () => {
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left Image */}
-            <div className="hero-media relative p-4 overflow-hidden">
+            <a
+              href="#partner-contact-form"
+              onClick={scrollToContactForm}
+              className="hero-media relative p-4 overflow-hidden block transition-transform duration-300 hover:-translate-y-0.5 hover:shadow-[0_20px_40px_-10px_rgba(124,60,255,0.5)] rounded-lg"
+              aria-label="Contact us to learn more about partnership opportunities"
+            >
               <img
-                src={coppertonePony}
-                alt="Coppertone Pony – Stylized acrylic painting of a bowed horse with patterned mane in warm tones on blue background by Kim Wyatt"
+                src={partnersHeroAd}
+                alt="Advertise in our app — reach thousands of artists in their creative workflow with relevant, non-intrusive placements"
                 className="w-full h-auto rounded-lg"
               />
-            </div>
+            </a>
             
             {/* Right Content */}
             <div>
@@ -126,7 +136,8 @@ const Partners = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="px-8 py-20">
+      <section id="partner-contact-form" className="px-8 py-20 scroll-mt-24">
+
         <div className="max-w-xl mx-auto">
           <h2 className="text-3xl font-bold text-foreground mb-6 text-center">
             Ready to Partner with Us?
