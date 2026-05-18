@@ -159,6 +159,17 @@ export default function ArtistsHome() {
         </div>
       </section>
 
+      {/* Artist-safe AI assistant */}
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
+        <div className="ast-panel card-violet p-6 md:p-8">
+          <h3 className="text-xl md:text-2xl font-semibold title-violet">
+            Artist-safe AI assistant
+          </h3>
+          <p className="mt-3 text-foreground/80">
+            The assistant helps artists organize supplies, projects, reminders, and studio notes without training on their artwork or creative IP. Artists get useful AI support without trading away their work.
+          </p>
+        </div>
+      </section>
 
       {/* Signup */}
       <section id="signup" className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-14">
