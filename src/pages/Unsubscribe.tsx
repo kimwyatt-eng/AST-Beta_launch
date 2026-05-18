@@ -54,7 +54,7 @@ export default function Unsubscribe() {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-background px-4">
-      <div className="max-w-md w-full rounded-2xl border border-border bg-card p-8 text-center shadow-lg">
+      <div className="max-w-md w-full ast-panel p-8 text-center shadow-lg">
         {status === "loading" && <p className="text-muted-foreground">Loading…</p>}
         {status === "invalid" && (
           <>

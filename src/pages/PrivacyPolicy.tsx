@@ -36,7 +36,7 @@ export default function PrivacyPolicy() {
 
       {/* Trusty App Promise */}
       <section className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 pb-6">
-        <div className="rounded-2xl border border-border bg-card p-8 md:p-10 shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
+        <div className="ast-panel p-8 md:p-10">
           <h2 className="text-2xl md:text-3xl font-bold tracking-tight">The Trusty App Promise</h2>
           <ul className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-3 text-foreground/85 list-disc list-inside">
             <li><strong>Your art is yours.</strong> We never train AI on your creative work or IP.</li>
@@ -49,7 +49,7 @@ export default function PrivacyPolicy() {
 
       {/* Emotional Safety Shield */}
       <section className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 pb-6">
-        <div className="rounded-2xl border border-border bg-card p-8 md:p-10 shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
+        <div className="ast-panel p-8 md:p-10">
           <h2 className="text-2xl md:text-3xl font-bold tracking-tight">Emotional Safety Shield</h2>
           <p className="mt-4 text-foreground/85">
             We understand that artists are vulnerable when sharing their creative process and supplies. Our Emotional Safety Shield ensures:
@@ -125,26 +125,26 @@ export default function PrivacyPolicy() {
 
       {/* Footer Navigation */}
       <section className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-12">
-        <div className="rounded-2xl border border-border bg-card p-8">
+        <div className="ast-panel p-8">
           <h3 className="text-xl font-semibold mb-4">Explore More</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <Link 
               to="/" 
-              className="block p-4 rounded-xl border border-border bg-card hover:bg-muted transition-colors"
+              className="block p-4 ast-panel hover:-translate-y-0.5 transition-all"
             >
               <h4 className="font-semibold text-secondary">Home</h4>
               <p className="text-sm text-muted-foreground mt-1">Learn about ArtSupplyTracker</p>
             </Link>
             <Link 
               to="/partners" 
-              className="block p-4 rounded-xl border border-border bg-card hover:bg-muted transition-colors"
+              className="block p-4 ast-panel hover:-translate-y-0.5 transition-all"
             >
               <h4 className="font-semibold text-secondary">Partners</h4>
               <p className="text-sm text-muted-foreground mt-1">Integration opportunities</p>
             </Link>
             <Link 
               to="/investors" 
-              className="block p-4 rounded-xl border border-border bg-card hover:bg-muted transition-colors"
+              className="block p-4 ast-panel hover:-translate-y-0.5 transition-all"
             >
               <h4 className="font-semibold text-secondary">Investors</h4>
               <p className="text-sm text-muted-foreground mt-1">Investment information</p>
@@ -157,7 +157,7 @@ export default function PrivacyPolicy() {
       <footer className="border-t border-border bg-card">
         {/* Trust Badges */}
         <div className="flex justify-center py-8">
-          <div className="rounded-2xl border-4 border-secondary/40 bg-secondary/5 p-8 shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
+          <div className="ast-panel-magenta p-8">
             <img 
               src={trustBadges} 
               alt="A Trusty App & Emotional Safety Shield – Modular trust and protection featuring shield emblems protected by a stylized owl symbolizing wisdom and vigilance" 
@@ -179,7 +179,7 @@ export default function PrivacyPolicy() {
 
 function PolicyBlock({ title, children }: { title: string; children: React.ReactNode }) {
   return (
-    <div className="rounded-2xl border border-border bg-card p-6 md:p-8 shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
+    <div className="ast-panel p-6 md:p-8">
       <h3 className="text-xl md:text-2xl font-semibold mb-4">{title}</h3>
       {children}
     </div>

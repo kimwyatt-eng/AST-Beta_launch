@@ -34,7 +34,7 @@ export default function FoundersPage() {
 
       {/* Story */}
       <section id="story" className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-8">
-        <div className="rounded-2xl border border-border bg-card p-8 md:p-10 shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
+        <div className="ast-panel p-8 md:p-10">
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Why I am building this</h2>
           <div className="mt-4 space-y-4 text-foreground/85 leading-relaxed">
             <p>
@@ -117,7 +117,7 @@ export default function FoundersPage() {
 
       {/* CTA */}
       <section className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 pb-16">
-        <div className="rounded-2xl border border-border bg-card p-8 md:p-10 text-center">
+        <div className="ast-panel p-8 md:p-10 text-center">
           <h3 className="text-2xl md:text-3xl font-bold">Join us in shaping better tools for creators</h3>
           <p className="mt-2 text-foreground/80">Questions or press. Email the founder.</p>
           <a
@@ -132,7 +132,7 @@ export default function FoundersPage() {
       <footer className="border-t border-border bg-card">
         {/* Trust Badges */}
         <div className="flex justify-center py-8">
-          <div className="rounded-2xl border-4 border-secondary/40 bg-secondary/5 p-8 shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
+          <div className="ast-panel-magenta p-8">
             <img 
               src={trustBadges} 
               alt="A Trusty App & Emotional Safety Shield – Modular trust and protection featuring shield emblems protected by a stylized owl symbolizing wisdom and vigilance" 
@@ -154,7 +154,7 @@ export default function FoundersPage() {
 
 function ValueCard({ title, body }: { title: string; body: string }) {
   return (
-    <div className="rounded-2xl border border-border bg-card p-6 shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
+    <div className="ast-panel p-6">
       <h3 className="text-xl font-semibold">{title}</h3>
       <p className="mt-2 text-foreground/80">{body}</p>
     </div>
@@ -163,7 +163,7 @@ function ValueCard({ title, body }: { title: string; body: string }) {
 
 function Milestone({ title, body }: { title: string; body: string }) {
   return (
-    <div className="rounded-2xl border border-border bg-card p-6">
+    <div className="ast-panel p-6">
       <h3 className="text-xl font-semibold">{title}</h3>
       <p className="mt-2 text-foreground/80">{body}</p>
     </div>
@@ -172,7 +172,7 @@ function Milestone({ title, body }: { title: string; body: string }) {
 
 function TeamCard({ name, role, blurb, img }: { name: string; role: string; blurb: string; img: string }) {
   return (
-    <div className="rounded-2xl border border-border bg-card p-6 flex items-center gap-5">
+    <div className="ast-panel p-6 flex items-center gap-5">
       <img src={img} alt={`${name} headshot`} className="h-16 w-16 rounded-full object-cover border border-border" />
       <div>
         <h4 className="text-lg font-semibold">{name}</h4>
