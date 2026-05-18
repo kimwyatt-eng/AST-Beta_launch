@@ -8,6 +8,7 @@ import mockupInventory from "@/assets/mockup-inventory.jpg";
 import mockupProject from "@/assets/mockup-project.jpg";
 import mockupPaletteCreator from "@/assets/mockup-palette-creator.png";
 import mockupMercurialHarvest from "@/assets/mockup-mercurial-harvest.png";
+import { panelClass, titleClass } from "@/lib/cardAccent";
 
 export default function ArtistsHome() {
   return (
