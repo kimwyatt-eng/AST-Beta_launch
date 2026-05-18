@@ -159,39 +159,6 @@ export default function ArtistsHome() {
         </div>
       </section>
 
-      {/* Sneak Peek */}
-      <section id="sneak-peek" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
-        <div className="text-center max-w-2xl mx-auto">
-          <span className="inline-block rounded-full border border-secondary/40 bg-secondary/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-secondary">
-            Sneak Peek
-          </span>
-          <h2 className="mt-3 text-3xl md:text-4xl font-bold tracking-tight">A taste of the studio</h2>
-          <p className="mt-3 text-muted-foreground">
-            Early concept mockups — not final UI, but a glimpse of the experience we're building.
-          </p>
-        </div>
-
-        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {[
-            { src: mockupDashboard, title: "Studio Dashboard", caption: "Palettes, supplies, and community at a glance.", alt: "Concept mockup of the ArtSupplyTracker studio dashboard with palettes and supply jars" },
-            { src: mockupInventory, title: "Inventory Overview", caption: "Search, low-stock alerts, and storage map.", alt: "Concept mockup of the ArtSupplyTracker inventory overview with stock levels and storage map" },
-            { src: mockupProject, title: "Project View", caption: "Tasks, current supplies, and session notes per artwork.", alt: "Concept mockup of the ArtSupplyTracker project view showing a Mountain Sunset painting with task list" },
-            { src: mockupPaletteCreator, title: "Digital Palette Creator", caption: "Build palettes, browse history, and track community favorites.", alt: "Concept mockup of the ArtSupplyTracker digital palette creator with paint tubes, brushes, and pencils" },
-            { src: mockupMercurialHarvest, title: "Project: Mercurial Harvest", caption: "Per-project supply usage with timeline and working canvas preview.", alt: "Concept mockup of the ArtSupplyTracker project view for Mercurial Harvest showing supplies used and Gantt-style timeline" },
-          ].map((m) => (
-            <figure
-              key={m.title}
-              className="hero-media p-3 overflow-hidden"
-            >
-              <img src={m.src} alt={m.alt} loading="lazy" className="w-full h-auto rounded-lg" />
-              <figcaption className="px-2 py-3">
-                <h3 className="text-lg font-semibold text-[#DCD6FF]">{m.title}</h3>
-                <p className="mt-1 text-sm text-[#B7AFD8]">{m.caption}</p>
-              </figcaption>
-            </figure>
-          ))}
-        </div>
-      </section>
 
       {/* Signup */}
       <section id="signup" className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-14">
