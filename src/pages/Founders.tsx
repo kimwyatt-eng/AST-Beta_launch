@@ -25,8 +25,8 @@ export default function FoundersPage() {
           {/* Hero Image - Gossip Painting */}
           <div className="hero-media relative p-4 overflow-hidden">
             <img
-              src={gossipHorses}
-              alt="Gossip – Acrylic painting of three stylized horse heads in bold red, blue, and pink tones on dark background by Kim Wyatt"
+              src={foundersHero}
+              alt="How many artists does it take to code one app? — Studio scene of artists, photographers, and musicians collaborating around a monitor"
               className="w-full h-auto rounded-lg"
             />
           </div>
