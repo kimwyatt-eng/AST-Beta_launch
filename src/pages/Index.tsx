@@ -185,7 +185,7 @@ export default function ArtistsHome() {
             >
               <img src={m.src} alt={m.alt} loading="lazy" className="w-full h-auto rounded-lg" />
               <figcaption className="px-2 py-3">
-                <h3 className="text-lg font-semibold text-[#F8F5FF]">{m.title}</h3>
+                <h3 className="text-lg font-semibold text-[#DCD6FF]">{m.title}</h3>
                 <p className="mt-1 text-sm text-[#B7AFD8]">{m.caption}</p>
               </figcaption>
             </figure>
