@@ -34,7 +34,9 @@ export default function ArtistsHome() {
                 Join the Beta
               </a>
               <a
-                href="#how"
+                href="https://artsupplytrackerstudio.netlify.app/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center rounded-xl border border-border bg-card px-6 py-3 text-lg font-medium hover:bg-muted focus:outline-none focus:ring-2 focus:ring-ring"
               >
                 See how it works
