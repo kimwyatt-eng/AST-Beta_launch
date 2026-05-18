@@ -50,10 +50,14 @@
 
     --radius: 0.75rem;
 
-    /* Updated gradients - charcoal with coral warmth */
-    --gradient-wine-plum: linear-gradient(135deg, hsl(210 9% 11%) 0%, hsl(210 9% 9%) 50%, hsl(210 9% 7%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(210 9% 14%) 0%, hsl(210 9% 12%) 100%);
+    /* Updated gradients - violet night palette */
+    --gradient-wine-plum: linear-gradient(135deg, hsl(247 60% 4%) 0%, hsl(249 63% 6%) 50%, hsl(252 66% 9%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(249 57% 15%) 0%, hsl(252 66% 9%) 100%);
     --gradient-magenta: linear-gradient(135deg, hsl(350 85% 72%) 0%, hsl(350 75% 62%) 100%);
+
+    /* Photo box shadows */
+    --shadow-photo-box: 0 8px 25px -5px hsl(247 60% 2% / 0.6), 0 0 0 1px hsl(249 50% 20% / 0.4);
+    --shadow-photo-box-hover: 0 12px 35px -5px hsl(247 60% 2% / 0.8), 0 0 0 1px hsl(350 85% 72% / 0.3);
     
     /* Photo box shadows */
     --shadow-photo-box: 0 8px 25px -5px hsl(210 9% 4% / 0.5), 0 0 0 1px hsl(210 9% 22% / 0.3);
