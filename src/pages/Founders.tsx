@@ -135,30 +135,30 @@ export default function FoundersPage() {
   );
 }
 
-function ValueCard({ title, body }: { title: string; body: string }) {
+function ValueCard({ title, body, index = 0 }: { title: string; body: string; index?: number }) {
   return (
-    <div className="ast-panel p-6">
-      <h3 className="text-xl font-semibold">{title}</h3>
+    <div className={`${panelClass(index)} p-6`}>
+      <h3 className={`text-xl font-semibold ${titleClass(index)}`}>{title}</h3>
       <p className="mt-2 text-foreground/80">{body}</p>
     </div>
   );
 }
 
-function Milestone({ title, body }: { title: string; body: string }) {
+function Milestone({ title, body, index = 0 }: { title: string; body: string; index?: number }) {
   return (
-    <div className="ast-panel p-6">
-      <h3 className="text-xl font-semibold">{title}</h3>
+    <div className={`${panelClass(index)} p-6`}>
+      <h3 className={`text-xl font-semibold ${titleClass(index)}`}>{title}</h3>
       <p className="mt-2 text-foreground/80">{body}</p>
     </div>
   );
 }
 
-function TeamCard({ name, role, blurb, img }: { name: string; role: string; blurb: string; img: string }) {
+function TeamCard({ name, role, blurb, img, index = 0 }: { name: string; role: string; blurb: string; img: string; index?: number }) {
   return (
-    <div className="ast-panel p-6 flex items-center gap-5">
+    <div className={`${panelClass(index)} p-6 flex items-center gap-5`}>
       <img src={img} alt={`${name} headshot`} className="h-16 w-16 rounded-full object-cover border border-border" />
       <div>
-        <h4 className="text-lg font-semibold">{name}</h4>
+        <h4 className={`text-lg font-semibold ${titleClass(index)}`}>{name}</h4>
         <p className="text-muted-foreground text-sm">{role}</p>
         <p className="mt-2 text-foreground/80">{blurb}</p>
       </div>
