@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import trustBadges from "@/assets/trust-badges.png";
+import { panelClass, titleClass } from "@/lib/cardAccent";
 
 export default function PrivacyPolicy() {
   return (
