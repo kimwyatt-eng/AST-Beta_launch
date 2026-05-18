@@ -182,12 +182,12 @@ export default function ArtistsHome() {
           ].map((m) => (
             <figure
               key={m.title}
-              className="rounded-2xl border-4 border-primary/50 bg-primary/5 p-3 shadow-[0_10px_30px_rgba(0,0,0,0.35)] overflow-hidden"
+              className="hero-media p-3 overflow-hidden"
             >
               <img src={m.src} alt={m.alt} loading="lazy" className="w-full h-auto rounded-lg" />
               <figcaption className="px-2 py-3">
-                <h3 className="text-lg font-semibold">{m.title}</h3>
-                <p className="mt-1 text-sm text-muted-foreground">{m.caption}</p>
+                <h3 className="text-lg font-semibold text-[#F8F5FF]">{m.title}</h3>
+                <p className="mt-1 text-sm text-[#B7AFD8]">{m.caption}</p>
               </figcaption>
             </figure>
           ))}
