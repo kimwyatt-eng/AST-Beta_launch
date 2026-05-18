@@ -184,12 +184,13 @@
     color: transparent;
   }
 
-  /* Default heading color — crisp near-white, no automatic gradient */
-  h1, h2, h3 {
+  /* Default heading color — crisp near-white */
+  h1, h3 {
     color: #F8F5FF;
   }
 
-  /* Opt-in gradient heading accent */
+  /* Section headings (h2) get the pigment gradient by default */
+  h2,
   .ast-gradient-heading,
   .gradient-title {
     background: linear-gradient(90deg, #00E6FF 0%, #7C3CFF 45%, #FF2DAA 100%);
@@ -198,6 +199,14 @@
     color: transparent;
     -webkit-text-fill-color: transparent;
   }
+
+  /* Opt-out: keep an h2 solid near-white */
+  h2.ast-heading-solid {
+    background: none;
+    -webkit-text-fill-color: #F8F5FF;
+    color: #F8F5FF;
+  }
+
 
 
   /* Hero typography */
