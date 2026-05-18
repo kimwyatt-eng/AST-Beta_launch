@@ -45,13 +45,16 @@ Deno.serve(async (req) => {
 
     if (dbError) {
       if (dbError.code === "23505") {
+        // Return 200 with an error payload so the client doesn't treat
+        // a duplicate signup as an HTTP/runtime error.
         return new Response(
           JSON.stringify({ error: "This email is already signed up!" }),
-          { status: 409, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+          { status: 200, headers: { ...corsHeaders, "Content-Type": "application/json" } }
         );
       }
       throw dbError;
     }
+
 
     // Send welcome email and owner notification (non-blocking)
     try {
