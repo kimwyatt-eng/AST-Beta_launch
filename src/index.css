@@ -154,3 +154,12 @@
     min-height: 100vh;
   }
 }
+
+@layer components {
+  .ast-panel {
+    background: rgba(16, 11, 46, 0.86);
+    border: 1.5px solid rgba(124, 60, 255, 0.65);
+    box-shadow: 0 0 0 1px rgba(124, 60, 255, 0.18);
+    border-radius: var(--radius);
+  }
+}
