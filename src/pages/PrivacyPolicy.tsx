@@ -178,10 +178,10 @@ export default function PrivacyPolicy() {
   );
 }
 
-function PolicyBlock({ title, children }: { title: string; children: React.ReactNode }) {
+function PolicyBlock({ title, children, index = 0 }: { title: string; children: React.ReactNode; index?: number }) {
   return (
-    <div className="ast-panel p-6 md:p-8">
-      <h3 className="text-xl md:text-2xl font-semibold mb-4">{title}</h3>
+    <div className={`${panelClass(index)} p-6 md:p-8`}>
+      <h3 className={`text-xl md:text-2xl font-semibold mb-4 ${titleClass(index)}`}>{title}</h3>
       {children}
     </div>
   );
