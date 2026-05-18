@@ -35,8 +35,8 @@ const Navigation = () => {
                   size="sm"
                   className={`text-xs sm:text-sm ${
                     isActive
-                      ? "text-white bg-white/5 hover:bg-white/10 hover:text-white"
-                      : "text-[#DCD6FF] hover:text-white"
+                      ? "text-[#00E6FF] bg-white/5 hover:bg-white/10 hover:text-[#00E6FF]"
+                      : "text-[#B7AFD8] hover:text-[#00E6FF]"
                   }`}
                 >
                   {item.label}
