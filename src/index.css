@@ -67,6 +67,20 @@
     --text-muted-violet: 252 39% 77%; /* #B7AFD8 */
     --text-dim: 249 25% 62%;         /* #8F86B6 */
 
+    /* Neon accent palette */
+    --ast-cyan: 186 100% 50%;        /* #00E6FF */
+    --ast-blue: 226 100% 59%;        /* #2E64FF */
+    --ast-violet: 259 100% 62%;      /* #7C3CFF */
+    --ast-ultraviolet: 266 100% 65%; /* #9B4DFF */
+    --ast-magenta: 323 100% 59%;     /* #FF2DAA */
+    --ast-pink: 332 100% 65%;        /* #FF4DA6 */
+    --ast-yellow: 54 100% 50%;       /* #FFE600 */
+
+    /* Re-skin shadcn primary to magenta-violet (no more salmon) */
+    --primary: 323 100% 59%;
+    --primary-foreground: 0 0% 100%;
+    --ring: 259 100% 62%;
+
     /* Updated gradients - violet night palette */
     --gradient-wine-plum: linear-gradient(135deg, hsl(247 60% 4%) 0%, hsl(249 63% 6%) 50%, hsl(252 66% 9%) 100%);
     --gradient-card: linear-gradient(145deg, hsl(249 57% 15%) 0%, hsl(252 66% 9%) 100%);
@@ -163,10 +177,30 @@
 
 @layer components {
   .ast-text-gradient {
-    background: linear-gradient(90deg, #FF2DAA, #9B4DFF, #00E6FF);
+    background: linear-gradient(
+      90deg,
+      #00E6FF 0%,
+      #4A69D6 28%,
+      #9B4DFF 55%,
+      #FF2DAA 82%,
+      #FF4DA6 100%
+    );
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+  }
+
+  .ast-btn-primary {
+    background: linear-gradient(135deg, #FF2DAA 0%, #7C3CFF 100%);
+    color: #FFFFFF;
+    border: 1px solid rgba(255, 45, 170, 0.75);
+    box-shadow: 0 0 0 1px rgba(255, 45, 170, 0.22), 0 6px 20px -8px rgba(124, 60, 255, 0.6);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+  }
+  .ast-btn-primary:hover {
+    filter: brightness(1.08);
+    box-shadow: 0 0 0 1px rgba(255, 45, 170, 0.35), 0 10px 28px -8px rgba(124, 60, 255, 0.75);
+    transform: translateY(-1px);
   }
 
   .ast-panel {
