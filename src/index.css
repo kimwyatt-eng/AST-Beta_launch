@@ -8,8 +8,8 @@
   :root {
     /* Near black violet background (#05040F = ast-bg-0) */
     --background: 247 60% 4%;
-    /* Off-white violet headings (#F8F5FF) */
-    --foreground: 258 100% 98%;
+    /* Soft lavender headings (#DCD6FF) — no stark white */
+    --foreground: 250 100% 92%;
 
     /* Raised section background (#14103A = ast-bg-3) */
     --card: 249 57% 15%;
