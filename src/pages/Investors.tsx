@@ -2,8 +2,13 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import ContactForm from "@/components/ContactForm";
 import trustBadges from "@/assets/trust-badges.png";
-import stillLifeHorse from "@/assets/still-life-horse.jpg";
+import investorsHeroAd from "@/assets/investors-hero-ad.png";
 import { TrendingUp, Target, Wrench, Shield } from "lucide-react";
+
+const scrollToContactForm = (e: React.MouseEvent) => {
+  e.preventDefault();
+  document.getElementById("investor-contact-form")?.scrollIntoView({ behavior: "smooth", block: "start" });
+};
 
 const Investors = () => {
   return (
