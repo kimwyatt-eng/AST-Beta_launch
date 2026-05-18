@@ -185,27 +185,30 @@
   }
 
   /* Default heading color — crisp near-white */
-  h1, h3 {
+  h3 {
     color: #F8F5FF;
   }
 
-  /* Section headings (h2) get the pigment gradient by default */
-  h2,
+  /* Page titles (h1) + section headings (h2) get the pigment gradient by default */
+  body h1,
+  body h2,
   .ast-gradient-heading,
   .gradient-title {
-    background: linear-gradient(90deg, #00E6FF 0%, #7C3CFF 45%, #FF2DAA 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    -webkit-text-fill-color: transparent;
+    background: linear-gradient(90deg, #00E6FF 0%, #7C3CFF 45%, #FF2DAA 100%) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    color: transparent !important;
+    -webkit-text-fill-color: transparent !important;
   }
 
-  /* Opt-out: keep an h2 solid near-white */
-  h2.ast-heading-solid {
-    background: none;
-    -webkit-text-fill-color: #F8F5FF;
-    color: #F8F5FF;
+  /* Opt-out: keep a heading solid near-white */
+  body h1.ast-heading-solid,
+  body h2.ast-heading-solid {
+    background: none !important;
+    -webkit-text-fill-color: #F8F5FF !important;
+    color: #F8F5FF !important;
   }
+
 
 
 
