@@ -6,57 +6,58 @@
 
 @layer base {
   :root {
-    /* Deep dark charcoal background (#1A1C1E) */
-    --background: 210 9% 11%;
+    /* Near black violet background (#05040F = ast-bg-0) */
+    --background: 247 60% 4%;
     /* Off-white body text (#E1E2E5) */
     --foreground: 220 6% 89%;
 
-    /* Slightly lifted charcoal for cards */
-    --card: 210 9% 14%;
+    /* Raised section background (#14103A = ast-bg-3) */
+    --card: 249 57% 15%;
     --card-foreground: 220 6% 89%;
 
-    --popover: 210 9% 12%;
+    /* Rich violet night (#0D0826 = ast-bg-2) */
+    --popover: 252 66% 9%;
     --popover-foreground: 220 6% 89%;
 
     /* Soft pink-coral primary */
     --primary: 350 85% 72%;
-    --primary-foreground: 210 9% 11%;
+    --primary-foreground: 247 60% 4%;
 
     /* Vibrant cobalt violet secondary (#9E66AB) */
     --secondary: 290 27% 54%;
-    --secondary-foreground: 210 9% 11%;
+    --secondary-foreground: 247 60% 4%;
 
     /* Periwinkle blue for primary titles (#A6B1E1) */
     --periwinkle: 230 50% 77%;
     /* Light cobalt violet for hero tagline (#C8A2D1) */
     --violet-light: 290 35% 73%;
 
-    /* Muted charcoal tones */
-    --muted: 210 9% 18%;
+    /* Deep indigo-violet muted (#09061A = ast-bg-1) */
+    --muted: 249 63% 6%;
     --muted-foreground: 220 6% 65%;
 
     /* Pink-coral accent */
     --accent: 350 85% 72%;
-    --accent-foreground: 210 9% 11%;
+    --accent-foreground: 247 60% 4%;
 
     --destructive: 0 75% 55%;
     --destructive-foreground: 220 6% 95%;
 
-    /* Subtle borders against charcoal */
-    --border: 210 9% 22%;
-    --input: 210 9% 18%;
+    /* Subtle borders against deep violet */
+    --border: 249 50% 20%;
+    --input: 249 57% 15%;
     --ring: 350 85% 72%;
 
     --radius: 0.75rem;
 
-    /* Updated gradients - charcoal with coral warmth */
-    --gradient-wine-plum: linear-gradient(135deg, hsl(210 9% 11%) 0%, hsl(210 9% 9%) 50%, hsl(210 9% 7%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(210 9% 14%) 0%, hsl(210 9% 12%) 100%);
+    /* Updated gradients - violet night palette */
+    --gradient-wine-plum: linear-gradient(135deg, hsl(247 60% 4%) 0%, hsl(249 63% 6%) 50%, hsl(252 66% 9%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(249 57% 15%) 0%, hsl(252 66% 9%) 100%);
     --gradient-magenta: linear-gradient(135deg, hsl(350 85% 72%) 0%, hsl(350 75% 62%) 100%);
-    
+
     /* Photo box shadows */
-    --shadow-photo-box: 0 8px 25px -5px hsl(210 9% 4% / 0.5), 0 0 0 1px hsl(210 9% 22% / 0.3);
-    --shadow-photo-box-hover: 0 12px 35px -5px hsl(210 9% 4% / 0.7), 0 0 0 1px hsl(350 85% 72% / 0.3);
+    --shadow-photo-box: 0 8px 25px -5px hsl(247 60% 2% / 0.6), 0 0 0 1px hsl(249 50% 20% / 0.4);
+    --shadow-photo-box-hover: 0 12px 35px -5px hsl(247 60% 2% / 0.8), 0 0 0 1px hsl(350 85% 72% / 0.3);
     
     /* Smooth transitions */
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -80,49 +81,49 @@
   }
 
   .dark {
-    /* Dark mode mirrors root: charcoal + amber + soft blue */
-    --background: 210 9% 9%;
+    /* Dark mode mirrors root: violet night palette */
+    --background: 247 60% 4%;
     --foreground: 220 6% 91%;
 
-    --card: 210 9% 13%;
+    --card: 249 57% 15%;
     --card-foreground: 220 6% 90%;
 
-    --popover: 210 9% 11%;
+    --popover: 252 66% 9%;
     --popover-foreground: 220 6% 91%;
 
     --primary: 350 85% 74%;
-    --primary-foreground: 210 9% 9%;
+    --primary-foreground: 247 60% 4%;
 
     --secondary: 290 35% 62%;
-    --secondary-foreground: 210 9% 9%;
+    --secondary-foreground: 247 60% 4%;
 
     --periwinkle: 230 55% 80%;
     --violet-light: 290 40% 76%;
 
-    --muted: 210 9% 16%;
+    --muted: 249 63% 6%;
     --muted-foreground: 220 6% 70%;
 
     --accent: 350 85% 74%;
-    --accent-foreground: 210 9% 9%;
+    --accent-foreground: 247 60% 4%;
 
     --destructive: 0 80% 50%;
     --destructive-foreground: 220 6% 95%;
 
-    --border: 210 9% 20%;
-    --input: 210 9% 16%;
+    --border: 249 50% 20%;
+    --input: 249 57% 15%;
     --ring: 350 85% 74%;
 
-    --sidebar-background: 210 9% 11%;
+    --sidebar-background: 252 66% 9%;
     --sidebar-foreground: 220 6% 90%;
     --sidebar-primary: 350 85% 72%;
-    --sidebar-primary-foreground: 210 9% 9%;
-    --sidebar-accent: 210 9% 16%;
+    --sidebar-primary-foreground: 247 60% 4%;
+    --sidebar-accent: 249 57% 15%;
     --sidebar-accent-foreground: 220 6% 90%;
-    --sidebar-border: 210 9% 20%;
+    --sidebar-border: 249 50% 20%;
     --sidebar-ring: 350 85% 74%;
 
-    --gradient-wine-plum: linear-gradient(135deg, hsl(210 9% 9%) 0%, hsl(210 9% 7%) 50%, hsl(210 9% 6%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(210 9% 13%) 0%, hsl(210 9% 11%) 100%);
+    --gradient-wine-plum: linear-gradient(135deg, hsl(247 60% 4%) 0%, hsl(249 63% 6%) 50%, hsl(252 66% 9%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(249 57% 15%) 0%, hsl(252 66% 9%) 100%);
     --gradient-magenta: linear-gradient(135deg, hsl(350 85% 74%) 0%, hsl(350 75% 64%) 100%);
   }
 }
