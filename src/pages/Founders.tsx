@@ -54,30 +54,12 @@ export default function FoundersPage() {
       {/* Mission and values */}
       <section className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-          <ValueCard
-            title="Privacy by design"
-            body="Your art and data stay yours. We never train AI on creative work or IP."
-          />
-          <ValueCard
-            title="Hands free creativity"
-            body="Voice control for busy hands. Alexa. Google Nest. Siri."
-          />
-          <ValueCard
-            title="Community driven"
-            body="Built with artist feedback from day one. Beta users shape the roadmap."
-          />
-          <ValueCard
-            title="Ethical AI"
-            body="Clear rules. Third party audits. Anonymized insights only."
-          />
-          <ValueCard
-            title="Emotional Safety Shield"
-            body="Supportive interactions. Sensible pacing. Opt outs when you need a break."
-          />
-          <ValueCard
-            title="Security first"
-            body="Voiceprint ID and 2FA options to protect your studio and records."
-          />
+          <ValueCard index={0} title="Privacy by design"        body="Your art and data stay yours. We never train AI on creative work or IP." />
+          <ValueCard index={1} title="Hands free creativity"    body="Voice control for busy hands. Alexa. Google Nest. Siri." />
+          <ValueCard index={2} title="Community driven"         body="Built with artist feedback from day one. Beta users shape the roadmap." />
+          <ValueCard index={3} title="Ethical AI"               body="Clear rules. Third party audits. Anonymized insights only." />
+          <ValueCard index={4} title="Emotional Safety Shield"  body="Supportive interactions. Sensible pacing. Opt outs when you need a break." />
+          <ValueCard index={5} title="Security first"           body="Voiceprint ID and 2FA options to protect your studio and records." />
         </div>
       </section>
 
