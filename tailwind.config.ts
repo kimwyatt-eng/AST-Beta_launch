@@ -38,6 +38,10 @@ export default {
         "border-magenta": "hsl(var(--border-magenta))",
         "border-cyan": "hsl(var(--border-cyan))",
         "border-yellow": "hsl(var(--border-yellow))",
+        "text-primary": "hsl(var(--text-primary))",
+        "text-secondary": "hsl(var(--text-secondary))",
+        "text-muted-violet": "hsl(var(--text-muted-violet))",
+        "text-dim": "hsl(var(--text-dim))",
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
