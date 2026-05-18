@@ -29,6 +29,15 @@ export default {
         },
         periwinkle: "hsl(var(--periwinkle))",
         "violet-light": "hsl(var(--violet-light))",
+        panel: {
+          DEFAULT: "hsl(var(--panel))",
+          2: "hsl(var(--panel-2))",
+          soft: "hsl(var(--panel-soft) / 0.82)",
+        },
+        "border-violet": "hsl(var(--border-violet))",
+        "border-magenta": "hsl(var(--border-magenta))",
+        "border-cyan": "hsl(var(--border-cyan))",
+        "border-yellow": "hsl(var(--border-yellow))",
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
