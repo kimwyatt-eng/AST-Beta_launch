@@ -50,6 +50,17 @@
 
     --radius: 0.75rem;
 
+    /* Panels */
+    --panel: 252 62% 11%;          /* #100B2E */
+    --panel-2: 251 62% 17%;        /* #171044 */
+    --panel-soft: 249 57% 15%;     /* rgba of #14103A @ 0.82 — used via panel-soft util */
+
+    /* Accent borders */
+    --border-violet: 259 100% 62%;   /* #7C3CFF */
+    --border-magenta: 323 100% 59%;  /* #FF2DAA */
+    --border-cyan: 186 100% 50%;     /* #00E6FF */
+    --border-yellow: 54 100% 50%;    /* #FFE600 */
+
     /* Updated gradients - violet night palette */
     --gradient-wine-plum: linear-gradient(135deg, hsl(247 60% 4%) 0%, hsl(249 63% 6%) 50%, hsl(252 66% 9%) 100%);
     --gradient-card: linear-gradient(145deg, hsl(249 57% 15%) 0%, hsl(252 66% 9%) 100%);
