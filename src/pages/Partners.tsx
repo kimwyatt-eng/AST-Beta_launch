@@ -2,8 +2,13 @@ import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import ContactForm from "@/components/ContactForm";
 import trustBadges from "@/assets/trust-badges.png";
-import coppertonePony from "@/assets/coppertone-pony.jpg";
+import partnersHeroAd from "@/assets/partners-hero-ad.png";
 import { panelClass, titleClass } from "@/lib/cardAccent";
+
+const scrollToContactForm = (e: React.MouseEvent) => {
+  e.preventDefault();
+  document.getElementById("partner-contact-form")?.scrollIntoView({ behavior: "smooth", block: "start" });
+};
 
 const Partners = () => {
   return (
