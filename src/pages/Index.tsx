@@ -240,10 +240,10 @@ export default function ArtistsHome() {
   );
 }
 
-function Card({ title, body }: { title: string; body: string }) {
+function Card({ title, body, index = 0 }: { title: string; body: string; index?: number }) {
   return (
-    <div className="ast-panel p-6">
-      <h3 className="text-xl font-semibold">{title}</h3>
+    <div className={`${panelClass(index)} p-6`}>
+      <h3 className={`text-xl font-semibold ${titleClass(index)}`}>{title}</h3>
       <p className="mt-2 text-foreground/80">{body}</p>
     </div>
   );
