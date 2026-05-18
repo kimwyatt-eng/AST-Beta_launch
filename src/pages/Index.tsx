@@ -136,8 +136,8 @@ export default function ArtistsHome() {
               body:
                 "Voiceprint ID and 2FA protect your studio and personal data.",
             },
-          ].map((f) => (
-            <Card key={f.title} title={f.title} body={f.body} />
+          ].map((f, i) => (
+            <Card key={f.title} title={f.title} body={f.body} index={i} />
           ))}
         </div>
       </section>
