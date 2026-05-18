@@ -178,13 +178,26 @@
 @layer components {
   /* Logo wordmark — single smooth horizontal gradient */
   .logo {
-    background: linear-gradient(90deg, #F8F5FF 0%, #9B4DFF 45%, #00E6FF 100%);
+    background: linear-gradient(90deg, #00E6FF 0%, #9B4DFF 55%, #FF2DAA 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
   }
 
-  /* Hero typography — gradient headline, no white */
+  /* Universal page-title gradient — applies to all h1/h2 + .gradient-title */
+  .gradient-title,
+  main h1,
+  main h2,
+  header h1,
+  header h2 {
+    background: linear-gradient(90deg, #00E6FF 0%, #9B4DFF 55%, #FF2DAA 100%) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    color: transparent !important;
+    -webkit-text-fill-color: transparent !important;
+  }
+
+  /* Hero typography */
   .hero-kicker { color: #00E6FF; }
   .hero-title {
     background: linear-gradient(90deg, #00E6FF 0%, #9B4DFF 55%, #FF2DAA 100%);
@@ -192,8 +205,8 @@
     background-clip: text;
     color: transparent;
   }
-  .hero-title .accent      { -webkit-text-fill-color: #FF2DAA; color: #FF2DAA; }
-  .hero-title .accent-cyan { -webkit-text-fill-color: #00E6FF; color: #00E6FF; }
+  .hero-title .accent      { -webkit-text-fill-color: #FF2DAA !important; color: #FF2DAA !important; background: none !important; }
+  .hero-title .accent-cyan { -webkit-text-fill-color: #00E6FF !important; color: #00E6FF !important; background: none !important; }
   .hero-body   { color: #B7AFD8; }
 
   /* Card/section title accents — pick by panel color */
