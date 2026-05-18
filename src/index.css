@@ -165,7 +165,7 @@
   }
 
   body {
-    @apply text-foreground;
+    color: #DCD6FF;
     background:
       radial-gradient(circle at top right, rgba(124, 60, 255, 0.22), transparent 34%),
       radial-gradient(circle at top left, rgba(255, 45, 170, 0.12), transparent 28%),
@@ -176,6 +176,34 @@
 }
 
 @layer components {
+  /* Logo wordmark — single smooth horizontal gradient */
+  .logo {
+    background: linear-gradient(90deg, #F8F5FF 0%, #9B4DFF 45%, #00E6FF 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* Hero typography */
+  .hero-kicker { color: #00E6FF; }
+  .hero-title  { color: #F8F5FF; }
+  .hero-title .accent { color: #FF2DAA; }
+  .hero-title .accent-cyan { color: #00E6FF; }
+  .hero-body   { color: #DCD6FF; }
+
+  /* Hero media frame — violet by default, magenta only on hover */
+  .hero-media {
+    border: 1.5px solid rgba(124, 60, 255, 0.62);
+    box-shadow: 0 0 0 1px rgba(124, 60, 255, 0.16);
+    border-radius: 24px;
+    background: rgba(16, 11, 46, 0.7);
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  }
+  .hero-media:hover {
+    border-color: rgba(255, 45, 170, 0.68);
+    box-shadow: 0 0 0 1px rgba(255, 45, 170, 0.22);
+  }
+
   .ast-text-gradient {
     background: linear-gradient(
       90deg,
