@@ -1,17 +1,25 @@
 import { useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import mockupDashboard from "@/assets/mockup-dashboard-dark.png";
-import mockupInventory from "@/assets/mockup-inventory.jpg";
-import mockupProject from "@/assets/mockup-project.jpg";
-import mockupPaletteCreator from "@/assets/mockup-palette-creator.png";
-import mockupMercurialHarvest from "@/assets/mockup-mercurial-harvest.png";
+import mvpOverview from "@/assets/mvp-01-overview.png";
+import mvpProjects from "@/assets/mvp-02-projects.png";
+import mvpWorkspace from "@/assets/mvp-03-workspace.png";
+import mvpProjectsGrid from "@/assets/mvp-04-projects-grid.png";
+import mvpProjectDetail from "@/assets/mvp-05-project-detail.png";
+import mvpEditProject from "@/assets/mvp-06-edit-project.png";
+import mvpStatus from "@/assets/mvp-07-status.png";
+import mvpNewProject from "@/assets/mvp-08-new-project.png";
+import mvpDemoNote from "@/assets/mvp-09-demo-note.png";
 
 const slides = [
-  { src: mockupDashboard, alt: "Concept mockup of the ArtSupplyTracker studio dashboard with palettes and supply jars" },
-  { src: mockupInventory, alt: "Concept mockup of the ArtSupplyTracker inventory overview with stock levels and storage map" },
-  { src: mockupProject, alt: "Concept mockup of the ArtSupplyTracker project view showing a Mountain Sunset painting with task list" },
-  { src: mockupPaletteCreator, alt: "Concept mockup of the ArtSupplyTracker digital palette creator with paint tubes, brushes, and pencils" },
-  { src: mockupMercurialHarvest, alt: "Concept mockup of the ArtSupplyTracker project view for Mercurial Harvest showing supplies used and a timeline" },
+  { src: mvpOverview, alt: "ArtSupplyTracker Studio MVP — Today in the Studio overview with partner spotlight, art history, and community chat" },
+  { src: mvpProjects, alt: "ArtSupplyTracker Studio MVP — Projects dashboard showing series, groups, and status counts" },
+  { src: mvpWorkspace, alt: "ArtSupplyTracker Studio MVP — Creative workspace with project list and inspiration palettes" },
+  { src: mvpProjectsGrid, alt: "ArtSupplyTracker Studio MVP — Projects grid with status badges and color palette inspiration" },
+  { src: mvpProjectDetail, alt: "ArtSupplyTracker Studio MVP — Project detail view for Christmas In San Diego with notes and supplies" },
+  { src: mvpEditProject, alt: "ArtSupplyTracker Studio MVP — Edit Project form with title, status, notes, and estimated budget" },
+  { src: mvpStatus, alt: "ArtSupplyTracker Studio MVP — Project status selector showing Planned, In Progress, On Hold, Completed" },
+  { src: mvpNewProject, alt: "ArtSupplyTracker Studio MVP — New Project creation form" },
+  { src: mvpDemoNote, alt: "ArtSupplyTracker Studio MVP — Demo notes explaining that the demo saves locally until the beta launches" },
 ];
 
 const HeroSlideshow = () => {
