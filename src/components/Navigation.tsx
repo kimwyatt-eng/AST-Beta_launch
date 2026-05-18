@@ -21,7 +21,7 @@ const Navigation = () => {
             className="text-xl sm:text-2xl font-bold cursor-pointer transition-opacity hover:opacity-80"
             onClick={() => navigate("/")}
           >
-            <span className="logo-art">Art</span><span className="logo-supply">Supply</span><span className="logo-tracker">Tracker</span>
+            <span className="logo">ArtSupplyTracker</span>
           </h1>
 
           <div className="flex flex-wrap gap-1 sm:gap-2">
@@ -35,8 +35,8 @@ const Navigation = () => {
                   size="sm"
                   className={`text-xs sm:text-sm ${
                     isActive
-                      ? "bg-secondary text-secondary-foreground hover:bg-secondary/90 hover:text-secondary-foreground"
-                      : "text-periwinkle hover:text-periwinkle"
+                      ? "text-white bg-white/5 hover:bg-white/10 hover:text-white"
+                      : "text-[#DCD6FF] hover:text-white"
                   }`}
                 >
                   {item.label}
