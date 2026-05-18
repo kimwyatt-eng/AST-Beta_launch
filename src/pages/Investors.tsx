@@ -24,20 +24,37 @@ const Investors = () => {
               <h1 className="text-5xl font-bold text-foreground mb-6 tracking-tight">
                 <span className="text-accent">Investment</span> Opportunity
               </h1>
-              <p className="text-xl text-muted-foreground mb-12 leading-relaxed">
+              <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
                 ArtSupplyTracker is the first ethical AI platform designed for creative communities, with a modular foundation that expands into multiple billion-dollar verticals.
               </p>
+              <a
+                href="#investor-contact-form"
+                onClick={scrollToContactForm}
+                className="inline-flex items-center justify-center rounded-md px-8 h-12 text-base font-semibold text-white transition-transform hover:-translate-y-0.5"
+                style={{
+                  background: "linear-gradient(135deg, #7C3CFF 0%, #00E6FF 100%)",
+                  boxShadow: "0 0 0 1px rgba(124,60,255,0.35), 0 8px 24px -10px rgba(0,230,255,0.5)",
+                }}
+              >
+                Contact Our Investor Team →
+              </a>
             </div>
-            
-            {/* Right Image - Still Life With Horse */}
+
+            {/* Right Image */}
             <div className="flex justify-center lg:justify-end">
-              <div className="hero-media p-4">
-                <img 
-                  src={stillLifeHorse} 
-                  alt="Still Life With Horse – Vibrant watercolor painting by Kim Wyatt capturing expressive florals and subtle equine presence in a warm, layered composition" 
+              <a
+                href={investorsHeroAd}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hero-media p-4 block transition-transform hover:-translate-y-0.5"
+                aria-label="Open full investor overview image in a new tab"
+              >
+                <img
+                  src={investorsHeroAd}
+                  alt="Empowering Artists – Investor overview highlighting ArtSupplyTracker's scalable creative platform, market size, defensibility, and revenue streams"
                   className="w-full h-auto rounded-lg"
                 />
-              </div>
+              </a>
             </div>
           </div>
         </div>
