@@ -22,7 +22,7 @@ export default function FoundersPage() {
           </div>
 
           {/* Hero Image - Gossip Painting */}
-          <div className="relative rounded-2xl border-4 border-primary/50 bg-primary/5 p-4 shadow-[0_10px_30px_rgba(0,0,0,0.35)] overflow-hidden">
+          <div className="hero-media relative p-4 overflow-hidden">
             <img
               src={gossipHorses}
               alt="Gossip – Acrylic painting of three stylized horse heads in bold red, blue, and pink tones on dark background by Kim Wyatt"

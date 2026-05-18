@@ -14,7 +14,7 @@ const Partners = () => {
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left Image */}
-            <div className="relative rounded-2xl border-4 border-primary/50 bg-primary/5 p-4 overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
+            <div className="hero-media relative p-4 overflow-hidden">
               <img
                 src={coppertonePony}
                 alt="Coppertone Pony – Stylized acrylic painting of a bowed horse with patterned mane in warm tones on blue background by Kim Wyatt"
