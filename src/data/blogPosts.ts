@@ -14,6 +14,175 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "why-im-building-art-supply-tracker",
+    title: "Why I'm Building Art Supply Tracker: An Art Studio Management App for Artists",
+    description:
+      "Art Supply Tracker is a new art studio management app for artists who need to track supplies, manage projects, make shopping lists, and protect creative work.",
+    keyword: "art studio management app",
+    publishedAt: "2026-05-19",
+    readingMinutes: 6,
+    content: `My art studio should be a beacon of inspiration.
+
+Some days, it is.
+
+Other days, it looks like it is quietly heralding the apocalypse.
+
+Most artists know this feeling. You walk into your studio ready to make something, then spend the next hour looking for the paint, brush, canvas, brayer, sketchbook, ink, medium, or tool you know you own.
+
+Nothing kills creative momentum faster than hunting for the one supply you need right now.
+
+That frustration is exactly why I started building Art Supply Tracker, an art studio management app designed specifically for artists.
+
+## The problem: artists need better studio tools
+
+I wanted something simple.
+
+I needed a way to:
+
+- Track my art supplies
+- Know where my materials were stored
+- Make shopping lists
+- Connect supplies to specific art projects
+- Track what I used, what I needed, and what kept disappearing into the void
+- Keep better records for artwork, costs, and planning
+
+I looked through apps in the Google Play Store. I searched online. I found inventory apps, project management apps, notes apps, and studio-adjacent tools.
+
+But I could not find the thing I actually wanted.
+
+I did not want three separate apps cobbled together with digital duct tape. I wanted one art studio management system made for the way artists actually work.
+
+So I decided to build it.
+
+## Why art supply inventory matters
+
+Art supplies are not just "stuff."
+
+They are tools, materials, investments, experiments, unfinished ideas, future projects, and sometimes tiny expensive gremlins hiding in drawers.
+
+When artists cannot find what they already own, we lose time, money, and creative energy. We rebuy supplies. We forget what we have. We lose track of what went into a project.
+
+That matters.
+
+An artist should be able to know:
+
+- Which supplies they own
+- Where those supplies are stored
+- What supplies were used in a project
+- How much a project cost to make
+- Which supplies need to be replaced
+- Which tools and materials are used most
+- What should be packed, insured, archived, or documented
+
+Other industries have software that tracks everything.
+
+Artists deserve that too.
+
+## The move that made this urgent
+
+Last May, I had to move everything into storage.
+
+That brought back a very specific kind of dread because the last time I moved, I lost a moving box full of finished paintings and works in progress. I also lost both of my easels and more supplies than I want to think about.
+
+That was not just inconvenient.
+
+It was heartbreaking.
+
+Artists need better ways to document and protect their supplies, tools, projects, and finished work. Not because we are all trying to turn our studios into corporate warehouses, but because our work matters.
+
+Our materials matter.
+
+Our time matters.
+
+## The first prototype
+
+I started vibe coding my own little app.
+
+And it worked.
+
+Sort of.
+
+I built a rough prototype, then kept adjusting it. The more I worked on it, the more I realized this was not just a quick personal tool. It could become something much bigger.
+
+Building Art Supply Tracker started to feel like working on a long-term artwork. I kept refining the shape, the structure, the features, and the purpose.
+
+Then my laptop's hard drive died.
+
+And it took the code with it.
+
+That was not my favorite plot twist.
+
+## The comeback plan
+
+I could have given up.
+
+Instead, I decided to rebuild Art Supply Tracker into a stronger art studio management system for artists, students, hobbyists, classrooms, studios, and working professionals.
+
+The core features I'm building include:
+
+- Art supply inventory
+- Art project management
+- Shopping lists
+- Supply-to-project linking
+- Cost tracking
+- Time tracking
+- Studio organization tools
+- Inspiration panels
+- Artist-friendly community features
+- Privacy-first design for creative work
+
+The goal is not to make artists use rigid business software.
+
+The goal is to give artists practical tools that respect how creative work actually happens.
+
+## Built for artists, not to exploit artists
+
+Artists have been burned by technology over and over again.
+
+That is why privacy matters here.
+
+Art Supply Tracker is being built with a clear promise: the app is not here to steal artwork, train AI on artists' creative work, or turn artists into raw material for someone else's product.
+
+The goal is to help artists organize supplies, plan projects, understand costs, and protect their creative records.
+
+Artists should be able to use modern tools without feeling like the tool is quietly picking their pockets.
+
+## What the demo can do now
+
+The current demo is live for laptops and desktop computers.
+
+Right now, you can:
+
+- Add art supplies
+- Add projects
+- Link supplies to projects
+- Delete supplies and projects
+
+It is still a demo, so please do not add your entire studio inventory yet.
+
+The beta version will include saved accounts and memory. When beta launches, anything beta testers add will carry forward into the full app.
+
+## Why this matters
+
+Artists are doers.
+
+We solve problems with whatever is in reach. We build, repair, reuse, invent, patch, paint, sculpt, stitch, sand, print, glue, and occasionally mutter at the universe until it cooperates.
+
+Art Supply Tracker comes from that same place.
+
+I needed this tool. I could not find it. So I started building it.
+
+If the business world will not make room for artists, we will sculpt, assemble, and paint the room ourselves.
+
+## Try the demo and join the beta
+
+You can try the working desktop demo now, and if you want to help shape the future of artist tools, sign up to be a beta tester.
+
+Your voice, like your art, matters here.
+
+[Join the Beta](/#signup).`,
+  },
+  {
     slug: "how-to-organize-art-supplies",
     title: "How to Organize Art Supplies: A Studio System That Actually Sticks",
     description:
