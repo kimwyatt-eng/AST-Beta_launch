@@ -34,8 +34,8 @@ const Investors = () => {
                 Art Supply Tracker starts with artists: inventory, projects, studio organization, and hands-free creative workflow tools. The same modular system can expand into adjacent maker, workshop, and seasonal decor markets.
               </p>
               <a
-                href="#investor-contact-form"
-                onClick={scrollToContactForm}
+                href="#investor-cta"
+                onClick={scrollToCta}
                 className="inline-flex items-center justify-center rounded-md px-8 h-12 text-base font-semibold text-white transition-transform hover:-translate-y-0.5"
                 style={{
                   background: "linear-gradient(135deg, #7C3CFF 0%, #00E6FF 100%)",
