@@ -187,8 +187,17 @@ export default function ArtistsHome() {
       </section>
 
       {/* Signup */}
-      <section id="signup" className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-14">
-        <SignupForm />
+      <section id="signup" className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-14 text-center">
+        <button
+          type="button"
+          data-tally-open="1Ap5E4"
+          data-tally-layout="modal"
+          data-tally-emoji-text="🎨"
+          data-tally-emoji-animation="bounce"
+          className="inline-flex items-center justify-center rounded-xl bg-teal-400 text-[#2B0F22] px-8 py-4 text-lg font-semibold shadow-lg hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-teal-300"
+        >
+          Join the Waitlist
+        </button>
       </section>
 
       {/* Trusty App Promise */}
