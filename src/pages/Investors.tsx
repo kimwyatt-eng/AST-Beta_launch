@@ -115,42 +115,28 @@ const Investors = () => {
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-foreground mb-12 flex items-center justify-center gap-3">
             <Target className="w-8 h-8 text-accent" />
-            Why Invest
+            Why invest
           </h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Card className="ast-panel card-violet p-6">
               <CardContent className="p-8">
-                <h3 className="text-xl font-semibold title-violet mb-4">Mass Market Reach</h3>
-                <p className="text-muted-foreground">Millions of creators worldwide face the same challenges — our solution addresses a universal need.</p>
+                <h3 className="text-xl font-semibold title-violet mb-4">Large creative user base</h3>
+                <p className="text-muted-foreground">Artists, students, educators, studios, hobbyists, and creative businesses all face the same daily organization problem: knowing what they have, where it is, how it is used, and when it needs to be replaced.</p>
               </CardContent>
             </Card>
 
             <Card className="ast-panel card-cyan p-6">
               <CardContent className="p-8">
-                <h3 className="text-xl font-semibold title-cyan mb-4">Unique Ethical AI Advantage</h3>
-                <p className="text-muted-foreground">We never train on user creative IP and only share anonymized insights. This trust-first model is a durable competitive moat in a privacy-conscious era.</p>
+                <h3 className="text-xl font-semibold title-cyan mb-4">Trust-first AI and data model</h3>
+                <p className="text-muted-foreground">Art Supply Tracker is built around a clear promise: we do not train AI on user artwork or creative IP, and we do not sell personally identifiable information. Any future insight products must be anonymized and privacy-protective.</p>
               </CardContent>
             </Card>
 
             <Card className="ast-panel card-magenta p-6">
               <CardContent className="p-8">
-                <h3 className="text-xl font-semibold title-violet mb-4">Multiple Revenue Streams</h3>
-                <p className="text-muted-foreground">Affiliate sales, advertising, premium features, and anonymized market insights — all diversified for resilience.</p>
-              </CardContent>
-            </Card>
-
-            <Card className="ast-panel card-violet p-6">
-              <CardContent className="p-8">
-                <h3 className="text-xl font-semibold title-magenta mb-4">Defensible Modular Platform</h3>
-                <p className="text-muted-foreground">Our core tech scales across adjacent industries (garage/workshops, holiday decorators, musicians, etc.), multiplying market size without rebuilding infrastructure.</p>
-              </CardContent>
-            </Card>
-
-            <Card className="ast-panel card-cyan p-6">
-              <CardContent className="p-8">
-                <h3 className="text-xl font-semibold title-violet mb-4">Early Community Traction</h3>
-                <p className="text-muted-foreground">Artists are already signing up as beta users and partners, positioning us for rapid adoption at launch.</p>
+                <h3 className="text-xl font-semibold title-violet mb-4">Multiple revenue paths</h3>
+                <p className="text-muted-foreground">Potential revenue includes affiliate sales, artist-friendly advertising, partner showcases, premium features, education partnerships, and anonymized market insights.</p>
               </CardContent>
             </Card>
           </div>
