@@ -54,20 +54,24 @@ const Partners = () => {
         </div>
       </header>
 
-      {/* Form placeholder */}
+      {/* Partner form CTA */}
       <section className="px-8 -mt-8 mb-12">
         <div className="text-center">
-          <a
-            href="#partner-contact-form"
-            onClick={scrollToContactForm}
-            className="inline-flex items-center justify-center rounded-xl px-6 py-3 text-lg font-semibold text-white focus:outline-none focus:ring-2 focus:ring-ring transition-transform hover:-translate-y-0.5"
+          <button
+            type="button"
+            data-tally-open="1Ap5E4"
+            data-tally-layout="modal"
+            data-tally-emoji-text="🤝"
+            data-tally-emoji-animation="head-shake"
+            className="partner-cta inline-flex items-center justify-center rounded-xl px-6 py-3 text-lg font-semibold text-white focus:outline-none focus:ring-2 focus:ring-ring transition-transform hover:-translate-y-0.5"
             style={{
-              background: "#8466EE",
-              boxShadow: "0 8px 24px -10px rgba(132,102,238,0.6)",
+              background: "#2D2DB8",
+              border: "2px solid #3B3BE0",
+              boxShadow: "0 0 12px rgba(59,59,224,0.55), 0 0 30px rgba(59,59,224,0.35)",
             }}
           >
-            Partner form coming soon
-          </a>
+            Partner With Us
+          </button>
         </div>
       </section>
 
