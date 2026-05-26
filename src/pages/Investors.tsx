@@ -147,44 +147,45 @@ const Investors = () => {
       <section className="px-8 py-20">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-center text-foreground mb-4">
-            Next Modular Application: <span className="text-accent">Garage Helper</span>
+            Next modular application: <span className="text-accent">Art Supply Tracker — Garage &amp; Artisan Workshop</span>
           </h2>
           <p className="text-lg text-muted-foreground text-center mb-12">
-            The first expansion beyond artists targets a larger, higher-spending market.
+            The same inventory, project, cost, and documentation system can expand beyond art studios into garages, workshops, small shops, and maker spaces.
           </p>
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <Card className="ast-panel card-violet p-6">
               <CardHeader>
                 <CardTitle className="flex items-center gap-3 text-xl">
                   <Target className="w-6 h-6 text-accent" />
-                  Target Segments
+                  Target segments
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <ul className="text-muted-foreground space-y-3">
                   <li>• Home mechanics</li>
+                  <li>• DIYers and makers</li>
                   <li>• Small auto shops</li>
-                  <li>• Contractors & handymen</li>
-                  <li>• Landscapers & gardeners</li>
+                  <li>• Contractors and handymen</li>
+                  <li>• Gardeners and outdoor tool users</li>
                 </ul>
               </CardContent>
             </Card>
-            
+
             <Card className="ast-panel card-magenta p-6">
               <CardHeader>
                 <CardTitle className="flex items-center gap-3 text-xl">
                   <Wrench className="w-6 h-6 text-accent" />
-                  Core Features
+                  Core features
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <ul className="text-muted-foreground space-y-3">
-                  <li>• Voice-controlled AI assistant</li>
-                  <li>• Tool & supply inventory management</li>
+                  <li>• Tool and supply inventory</li>
                   <li>• Project cost tracking</li>
+                  <li>• Maintenance and replacement reminders</li>
+                  <li>• Storage location tracking</li>
                   <li>• Insurance-ready documentation</li>
-                  <li>• Event support (car shows, workshops)</li>
                 </ul>
               </CardContent>
             </Card>
@@ -192,7 +193,7 @@ const Investors = () => {
 
           <div className="text-center mt-12">
             <p className="text-lg text-muted-foreground">
-              Garage Helper becomes the primary revenue driver with a broader user base and more monetizable data.
+              This expansion gives Art Supply Tracker a path into broader, higher-spending maker and workshop markets while reusing the same core platform architecture.
             </p>
           </div>
         </div>
