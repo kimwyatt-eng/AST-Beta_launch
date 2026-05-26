@@ -43,7 +43,7 @@ export default function ArtistsHome() {
                 href="#signup"
                 className="ast-btn-primary inline-flex items-center justify-center rounded-xl px-6 py-3 text-lg font-semibold focus:outline-none focus:ring-2 focus:ring-ring"
               >
-                Join the Beta
+                Join the Waitlist
               </a>
               <a
                 href="https://artsupplytrackerstudio.netlify.app/"
