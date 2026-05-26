@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Seo from "@/components/Seo";
 import trustBadges from "@/assets/trust-badges.png";
+import whyItMatters from "@/assets/why-it-matters.png";
 import { panelClass, titleClass } from "@/lib/cardAccent";
 import { Link } from "react-router-dom";
 
