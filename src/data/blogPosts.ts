@@ -180,6 +180,8 @@ You can try the working desktop demo now, and if you want to help shape the futu
 
 Your voice, like your art, matters here.
 
+Want the bigger picture? Read [the full story behind ArtSupplyTracker](/about), see [how we protect your studio data](/privacy), or browse [more studio guides on the blog](/blog).
+
 [Join the Beta](/#signup).`,
   },
   {
