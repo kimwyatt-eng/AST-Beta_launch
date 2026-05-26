@@ -72,37 +72,40 @@ const Investors = () => {
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-foreground mb-8 flex items-center gap-3">
             <TrendingUp className="w-8 h-8 text-accent" />
-            Market Opportunity
+            Market opportunity
           </h2>
-          <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-            The global art supply market is worth billions annually and is highly fragmented. Artists and studios worldwide struggle with:
+          <p className="text-lg text-muted-foreground mb-4 leading-relaxed">
+            Artists, studios, classrooms, and creative businesses manage supplies, projects, costs, storage, and documentation across scattered tools, spreadsheets, receipts, photos, and memory.
           </p>
-          
+          <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+            They need better ways to:
+          </p>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
             <Card className="ast-panel card-violet p-6">
               <CardContent className="p-6 text-center">
-                <p className="text-muted-foreground">Tracking and replacing supplies</p>
+                <p className="text-muted-foreground">Track and replace supplies</p>
               </CardContent>
             </Card>
             <Card className="ast-panel card-cyan p-6">
               <CardContent className="p-6 text-center">
-                <p className="text-muted-foreground">Managing project costs</p>
+                <p className="text-muted-foreground">Manage project costs</p>
               </CardContent>
             </Card>
             <Card className="ast-panel card-violet p-6">
               <CardContent className="p-6 text-center">
-                <p className="text-muted-foreground">Navigating insurance claims</p>
+                <p className="text-muted-foreground">Document inventory for insurance</p>
               </CardContent>
             </Card>
             <Card className="ast-panel card-magenta p-6">
               <CardContent className="p-6 text-center">
-                <p className="text-muted-foreground">Making informed purchasing decisions</p>
+                <p className="text-muted-foreground">Make smarter purchasing decisions</p>
               </CardContent>
             </Card>
           </div>
 
           <p className="text-lg text-muted-foreground text-center">
-            ArtSupplyTracker solves these pain points with an AI-powered studio assistant built on trust, privacy, and usability.
+            Art Supply Tracker brings supply tracking, project management, cost awareness, and hands-free studio organization into one artist-centered platform.
           </p>
         </div>
       </section>
