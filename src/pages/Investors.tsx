@@ -206,42 +206,25 @@ const Investors = () => {
             Planned and <span className="text-accent">future features</span>
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <Card className="ast-panel card-violet p-6">
-              <CardContent className="p-6">
-                <p className="text-muted-foreground">Partner and product education showcases</p>
-              </CardContent>
-            </Card>
-
-            <Card className="ast-panel card-cyan p-6">
-              <CardContent className="p-6">
-                <p className="text-muted-foreground">Supply replacement relief fund</p>
-              </CardContent>
-            </Card>
-
-            <Card className="ast-panel card-magenta p-6">
-              <CardContent className="p-6">
-                <p className="text-muted-foreground">Client and commission workflow tools</p>
-              </CardContent>
-            </Card>
-
-            <Card className="ast-panel card-violet p-6">
-              <CardContent className="p-6">
-                <p className="text-muted-foreground">Voice assistant and smart home integrations</p>
-              </CardContent>
-            </Card>
-
-            <Card className="ast-panel card-cyan p-6">
-              <CardContent className="p-6">
-                <p className="text-muted-foreground">Accessibility features including ASL support</p>
-              </CardContent>
-            </Card>
-
-            <Card className="ast-panel card-violet p-6">
-              <CardContent className="p-6">
-                <p className="text-muted-foreground">Creative community and studio collaboration tools</p>
-              </CardContent>
-            </Card>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { text: "Partner and product education showcases", accent: "card-violet", dot: "bg-ast-violet" },
+              { text: "Supply replacement relief fund", accent: "card-cyan", dot: "bg-ast-cyan" },
+              { text: "Client and commission workflow tools", accent: "card-magenta", dot: "bg-ast-magenta" },
+              { text: "Voice assistant and smart home integrations", accent: "card-violet", dot: "bg-ast-violet" },
+              { text: "Accessibility features including ASL support", accent: "card-cyan", dot: "bg-ast-cyan" },
+              { text: "Creative community and studio collaboration tools", accent: "card-violet", dot: "bg-ast-violet" },
+            ].map((item) => (
+              <Card
+                key={item.text}
+                className={`ast-panel ${item.accent} flex items-center min-h-[110px] max-h-[130px]`}
+              >
+                <CardContent className="flex items-center gap-3 p-6 text-left w-full">
+                  <span className={`inline-block w-2 h-2 rounded-full ${item.dot} shrink-0`} aria-hidden="true" />
+                  <p className="text-muted-foreground text-sm leading-snug">{item.text}</p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
