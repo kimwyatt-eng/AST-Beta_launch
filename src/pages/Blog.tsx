@@ -34,7 +34,7 @@ export default function Blog() {
             Guides for <span className="accent">working artists</span>
           </h1>
           <p className="hero-body mt-4 text-lg max-w-2xl">
-            Practical, no-fluff guides on organizing supplies, setting up a studio, and protecting your art.
+            Practical, no-fluff guides on organizing supplies, setting up a studio, and protecting your art. New here? Read <Link to="/about" className="text-secondary underline underline-offset-4 hover:opacity-80">about ArtSupplyTracker</Link>.
           </p>
         </header>
 
