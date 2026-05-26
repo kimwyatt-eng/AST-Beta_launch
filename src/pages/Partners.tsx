@@ -45,8 +45,11 @@ const Partners = () => {
               <h1 className="text-5xl font-bold text-foreground mb-6 tracking-tight">
                 Partner <span className="text-accent">Opportunities</span>
               </h1>
-              <p className="ast-gradient-heading text-xl font-semibold mb-8 leading-relaxed">
-                Join our ecosystem and grow your business alongside passionate artists who trust our platform.
+              <p
+                className="text-xl font-bold mb-8 leading-relaxed bg-clip-text text-transparent"
+                style={{ backgroundImage: "linear-gradient(90deg, #2563eb 0%, #6366f1 50%, #a855f7 100%)" }}
+              >
+                Art Supply Tracker helps creative brands, retailers, educators, and makers connect with artists through practical tools, product education, and studio-centered resources.
               </p>
 
             </div>
