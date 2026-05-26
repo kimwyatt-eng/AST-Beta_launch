@@ -112,12 +112,26 @@ export default function FoundersPage() {
         <div className="ast-panel p-8 md:p-10 text-center">
           <h3 className="text-2xl md:text-3xl font-bold">Join us in shaping better tools for creators</h3>
           <p className="mt-2 text-foreground/80">Questions or press. Email the founder.</p>
-          <a
-            href="/#signup"
-            className="ast-btn-primary mt-4 inline-flex items-center justify-center rounded-xl px-6 py-3 text-lg font-semibold focus:outline-none focus:ring-2 focus:ring-ring"
-          >
-            Join the waitlist
-          </a>
+          <div className="mt-4 flex flex-wrap items-center justify-center gap-3">
+            <a
+              href="/partners"
+              className="ast-btn-secondary inline-flex items-center justify-center rounded-xl px-6 py-3 text-lg font-semibold focus:outline-none focus:ring-2 focus:ring-ring"
+            >
+              Art Industry Partners
+            </a>
+            <a
+              href="/#signup"
+              className="ast-btn-primary inline-flex items-center justify-center rounded-xl px-6 py-3 text-lg font-semibold focus:outline-none focus:ring-2 focus:ring-ring"
+            >
+              Join the waitlist
+            </a>
+            <a
+              href="/investors"
+              className="ast-btn-secondary inline-flex items-center justify-center rounded-xl px-6 py-3 text-lg font-semibold focus:outline-none focus:ring-2 focus:ring-ring"
+            >
+              Investor Inquiries
+            </a>
+          </div>
         </div>
       </section>
 
