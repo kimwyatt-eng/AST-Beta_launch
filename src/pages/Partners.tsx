@@ -42,8 +42,11 @@ const Partners = () => {
             
             {/* Right Content */}
             <div>
-              <h1 className="text-5xl font-bold text-foreground mb-6 tracking-tight">
-                Partner <span className="text-accent">Opportunities</span>
+              <h1
+                className="text-5xl font-bold mb-6 tracking-tight bg-clip-text text-transparent"
+                style={{ backgroundImage: "linear-gradient(90deg, #2563eb 0%, #6366f1 50%, #a855f7 100%)" }}
+              >
+                Partner Opportunities
               </h1>
               <p
                 className="text-xl font-bold mb-8 leading-relaxed bg-clip-text text-transparent"
