@@ -250,28 +250,28 @@ const Investors = () => {
       <section className="px-8 py-20">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-center text-foreground mb-12">
-            Future <span className="text-accent">Expansions</span>
+            Future <span className="text-accent">expansion opportunities</span>
           </h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card className="ast-panel card-magenta p-6 transition-all duration-300 hover:-translate-y-0.5">
               <CardContent className="p-8 text-center">
-                <h3 className="text-xl font-semibold title-cyan mb-4">Home Holiday Decorators</h3>
-                <p className="text-muted-foreground">Seasonal inventory & project management</p>
+                <h3 className="text-xl font-semibold title-cyan mb-4">Art Supply Tracker — Home, Holiday &amp; Seasonal Decor</h3>
+                <p className="text-muted-foreground">Seasonal decor inventory, storage tracking, room planning, and setup support.</p>
               </CardContent>
             </Card>
 
             <Card className="ast-panel card-violet p-6 transition-all duration-300 hover:-translate-y-0.5">
               <CardContent className="p-8 text-center">
-                <h3 className="text-xl font-semibold title-magenta mb-4">Musicians</h3>
-                <p className="text-muted-foreground">Gear tracking, maintenance, gig scheduling</p>
+                <h3 className="text-xl font-semibold title-magenta mb-4">Musicians and performers</h3>
+                <p className="text-muted-foreground">Gear tracking, maintenance reminders, gig supplies, and setup checklists.</p>
               </CardContent>
             </Card>
 
             <Card className="ast-panel card-cyan p-6 transition-all duration-300 hover:-translate-y-0.5">
               <CardContent className="p-8 text-center">
-                <h3 className="text-xl font-semibold title-violet mb-4">Makeup Artists</h3>
-                <p className="text-muted-foreground">Product inventory, client management, hygiene compliance</p>
+                <h3 className="text-xl font-semibold title-violet mb-4">Makeup artists and beauty professionals</h3>
+                <p className="text-muted-foreground">Product inventory, kit organization, client notes, hygiene tracking, and replacement reminders.</p>
               </CardContent>
             </Card>
           </div>
