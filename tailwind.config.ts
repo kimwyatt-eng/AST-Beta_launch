@@ -50,6 +50,7 @@ export default {
           magenta: "hsl(var(--ast-magenta))",
           pink: "hsl(var(--ast-pink))",
           yellow: "hsl(var(--ast-yellow))",
+          coral: "hsl(var(--ast-coral))",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
