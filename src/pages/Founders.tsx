@@ -1,6 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Seo from "@/components/Seo";
-import trustBadges from "@/assets/trust-badges.png";
+import TrustFooter from "@/components/TrustFooter";
 import foundersHero from "@/assets/founders-hero.png";
 import { panelClass, titleClass } from "@/lib/cardAccent";
 
@@ -143,17 +143,10 @@ export default function FoundersPage() {
         </div>
       </section>
 
+      <TrustFooter />
+
       <footer className="border-t border-border bg-card">
-        {/* Trust Badges */}
-        <div className="flex justify-center py-8">
-          <div className="ast-panel p-8">
-            <img 
-              src={trustBadges} 
-              alt="A Trusty App & Emotional Safety Shield – Modular trust and protection featuring shield emblems protected by a stylized owl symbolizing wisdom and vigilance" 
-              className="h-48 opacity-80"
-            />
-          </div>
-        </div>
+        
         
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-8 text-sm text-muted-foreground flex flex-col md:flex-row items-center justify-between gap-3">
           <p>© 2025 ArtSupplyTracker. Software for artists. Made by an artist.</p>

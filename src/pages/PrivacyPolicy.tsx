@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Seo from "@/components/Seo";
 import trustBadges from "@/assets/trust-badges.png";
+import TrustFooter from "@/components/TrustFooter";
 import { panelClass, titleClass } from "@/lib/cardAccent";
 
 export default function PrivacyPolicy() {
@@ -161,18 +162,11 @@ export default function PrivacyPolicy() {
         </div>
       </section>
 
+      <TrustFooter />
+
       {/* Footer */}
       <footer className="border-t border-border bg-card">
-        {/* Trust Badges */}
-        <div className="flex justify-center py-8">
-          <div className="ast-panel p-8">
-            <img 
-              src={trustBadges} 
-              alt="A Trusty App & Emotional Safety Shield – Modular trust and protection featuring shield emblems protected by a stylized owl symbolizing wisdom and vigilance" 
-              className="h-48 opacity-80"
-            />
-          </div>
-        </div>
+        
         
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 text-sm text-muted-foreground flex flex-col md:flex-row items-center justify-between gap-3">
           <p>© 2025 ArtSupplyTracker. Software for artists, made by an artist.</p>

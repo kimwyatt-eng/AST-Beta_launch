@@ -1,6 +1,7 @@
 import { useLocation, Link } from "react-router-dom";
 import { useEffect } from "react";
 import Navigation from "@/components/Navigation";
+import TrustFooter from "@/components/TrustFooter";
 import notFoundImage from "@/assets/404-something-broke.png";
 
 const NotFound = () => {
@@ -26,6 +27,7 @@ const NotFound = () => {
           Return to Home
         </Link>
       </section>
+      <TrustFooter />
     </main>
   );
 };
