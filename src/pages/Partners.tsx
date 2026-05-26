@@ -71,9 +71,8 @@ const Partners = () => {
             data-tally-emoji-animation="head-shake"
             className="partner-cta inline-flex items-center justify-center rounded-xl px-6 py-3 text-lg font-semibold text-white focus:outline-none focus:ring-2 focus:ring-ring transition-transform hover:-translate-y-0.5"
             style={{
-              background: "#2D2DB8",
-              border: "2px solid #3B3BE0",
-              boxShadow: "0 0 12px rgba(59,59,224,0.55), 0 0 30px rgba(59,59,224,0.35)",
+              background: "linear-gradient(135deg, #7C3CFF 0%, #E91E8C 100%)",
+              boxShadow: "0 0 0 1px rgba(124,60,255,0.35), 0 8px 24px -10px rgba(233,30,140,0.5)",
             }}
           >
             Partner With Us
