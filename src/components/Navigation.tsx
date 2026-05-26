@@ -19,12 +19,13 @@ const Navigation = () => {
     <nav className="bg-background/80 backdrop-blur-sm border-b border-border/50 sticky top-0 z-50">
       <div className="max-w-6xl mx-auto px-4 py-4">
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-0">
-          <h1
-            className="text-xl sm:text-2xl font-bold cursor-pointer transition-opacity hover:opacity-80"
+          <button
             onClick={() => navigate("/")}
+            className="cursor-pointer transition-opacity hover:opacity-80"
+            aria-label="ArtSupplyTracker home"
           >
-            <span className="logo">ArtSupplyTracker</span>
-          </h1>
+            <img src={logo} alt="ArtSupplyTracker" className="h-10 sm:h-12 w-auto" />
+          </button>
 
           <div className="flex flex-wrap gap-1 sm:gap-2">
             {navItems.map((item) => {
