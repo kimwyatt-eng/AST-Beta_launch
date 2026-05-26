@@ -30,15 +30,40 @@ function generateToken(): string {
     .join('')
 }
 
-// Auth note: this function uses verify_jwt = true in config.toml, so Supabase's
-// gateway validates the caller's JWT (anon or service_role) before the request
-// reaches this code. No in-function auth check is needed.
+// Auth: this function is restricted to service-role callers only. The anon key
+// is publicly embedded in client code, so gateway JWT validation alone would
+// allow anyone to use this as an open email relay. We parse the JWT and reject
+// any caller whose role claim is not 'service_role'. All client-triggered
+// emails must go through a dedicated server-side edge function (e.g. signup,
+// submit-contact) which then invokes this function with the service-role key.
+function isServiceRoleRequest(req: Request): boolean {
+  const auth = req.headers.get('Authorization') || ''
+  const token = auth.replace(/^Bearer\s+/i, '')
+  if (!token) return false
+  try {
+    const payload = token.split('.')[1]
+    if (!payload) return false
+    const padded = payload + '='.repeat((4 - payload.length % 4) % 4)
+    const decoded = JSON.parse(atob(padded.replace(/-/g, '+').replace(/_/g, '/')))
+    return decoded.role === 'service_role'
+  } catch {
+    return false
+  }
+}
 
 Deno.serve(async (req) => {
   // Handle CORS preflight
   if (req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders })
   }
+
+  if (!isServiceRoleRequest(req)) {
+    return new Response(
+      JSON.stringify({ error: 'Unauthorized' }),
+      { status: 401, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+    )
+  }
+
 
   const supabaseUrl = Deno.env.get('SUPABASE_URL')
   const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')
@@ -95,10 +120,9 @@ Deno.serve(async (req) => {
   if (!template) {
     console.error('Template not found in registry', { templateName })
     return new Response(
-      JSON.stringify({
-        error: `Template '${templateName}' not found. Available: ${Object.keys(TEMPLATES).join(', ')}`,
-      }),
+      JSON.stringify({ error: 'Template not found' }),
       {
+
         status: 404,
         headers: { ...corsHeaders, 'Content-Type': 'application/json' },
       }
