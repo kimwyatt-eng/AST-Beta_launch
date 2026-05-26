@@ -22,6 +22,7 @@ export default function BlogPost() {
             Back to all articles
           </Link>
         </section>
+        <TrustFooter />
       </main>
     );
   }
@@ -95,6 +96,7 @@ export default function BlogPost() {
           </p>
         </div>
       </article>
+      <TrustFooter />
     </main>
   );
 }
