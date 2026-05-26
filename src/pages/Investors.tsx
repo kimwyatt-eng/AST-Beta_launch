@@ -283,34 +283,40 @@ const Investors = () => {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-center text-foreground mb-8 flex items-center justify-center gap-3">
             <Shield className="w-8 h-8 text-accent" />
-            The <span className="text-accent">Trusty App</span> Promise
+            The <span className="text-accent">Trusty App</span> promise
           </h2>
           <p className="text-lg text-muted-foreground text-center mb-12">
-            We operate on a privacy-first, artist-friendly ethical framework:
+            Art Supply Tracker is built around a privacy-first, artist-friendly trust model.
           </p>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <Card className="ast-panel card-magenta p-6">
               <CardContent className="p-6">
-                <p className="text-muted-foreground">Never train AI on creative work or IP</p>
+                <p className="text-muted-foreground">We do not train AI on user artwork or creative IP.</p>
               </CardContent>
             </Card>
 
             <Card className="ast-panel card-violet p-6">
               <CardContent className="p-6">
-                <p className="text-muted-foreground">Never sell personally identifiable info</p>
+                <p className="text-muted-foreground">We do not sell personally identifiable information.</p>
               </CardContent>
             </Card>
 
             <Card className="ast-panel card-cyan p-6">
               <CardContent className="p-6">
-                <p className="text-muted-foreground">Share only anonymized, regional insights</p>
+                <p className="text-muted-foreground">User research, notes, references, prompts, and creative direction belong to the user.</p>
               </CardContent>
             </Card>
 
             <Card className="ast-panel card-violet p-6">
               <CardContent className="p-6">
-                <p className="text-muted-foreground">Regular third-party audits for ethical compliance</p>
+                <p className="text-muted-foreground">Future market insights must be anonymized, aggregated, and privacy-protective.</p>
+              </CardContent>
+            </Card>
+
+            <Card className="ast-panel card-magenta p-6 md:col-span-2">
+              <CardContent className="p-6">
+                <p className="text-muted-foreground">Third-party audits and public transparency reporting are planned as the platform scales.</p>
               </CardContent>
             </Card>
           </div>
