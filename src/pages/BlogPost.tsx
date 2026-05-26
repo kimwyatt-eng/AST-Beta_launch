@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { Link, useParams } from "react-router-dom";
 import Navigation from "@/components/Navigation";
+import TrustFooter from "@/components/TrustFooter";
 import { getPostBySlug } from "@/data/blogPosts";
 import { renderPostContent } from "@/lib/renderPostContent";
 
