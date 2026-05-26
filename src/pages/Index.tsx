@@ -194,7 +194,7 @@ export default function ArtistsHome() {
           data-tally-layout="modal"
           data-tally-emoji-text="🎨"
           data-tally-emoji-animation="bounce"
-          className="inline-flex items-center justify-center rounded-xl bg-teal-400 text-[#2B0F22] px-8 py-4 text-lg font-semibold shadow-lg hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-teal-300"
+          className="ast-btn-primary inline-flex items-center justify-center rounded-xl px-6 py-3 text-lg font-semibold focus:outline-none focus:ring-2 focus:ring-ring"
         >
           Join the Waitlist
         </button>
