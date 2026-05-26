@@ -123,8 +123,8 @@ export default function PrivacyPolicy() {
         <PolicyBlock index={6} title="Contact & Updates">
           <p className="text-foreground/85">
             Questions about this policy? Email us at{" "}
-            <a href="mailto:info@notify.artsupplytracker.com" className="text-secondary underline underline-offset-4">
-              info@notify.artsupplytracker.com
+            <a href="mailto:Hello@artsupplytracker.com" className="text-secondary underline underline-offset-4">
+              Hello@artsupplytracker.com
             </a>
             . We'll notify users of material policy changes via email and app notifications.
           </p>
@@ -177,7 +177,7 @@ export default function PrivacyPolicy() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 text-sm text-muted-foreground flex flex-col md:flex-row items-center justify-between gap-3">
           <p>© 2025 ArtSupplyTracker. Software for artists, made by an artist.</p>
           <p>
-            Contact: <a href="mailto:info@notify.artsupplytracker.com" className="text-secondary underline underline-offset-4">info@notify.artsupplytracker.com</a>
+            Contact: <a href="mailto:Hello@artsupplytracker.com" className="text-secondary underline underline-offset-4">Hello@artsupplytracker.com</a>
           </p>
         </div>
       </footer>
