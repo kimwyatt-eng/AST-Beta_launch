@@ -256,7 +256,7 @@ Run extra outlets if you can. Add a small fan or open a window for solvent-based
 
 The day you set up a new studio is the easiest day to log what you own. Every supply gets photographed once, tagged with a location, and you'll never wonder "did I already buy that?" again.
 
-ArtSupplyTracker is built for exactly this moment. [Join the Beta](/#signup) and start your new studio with a clean, searchable inventory from day one.`,
+ArtSupplyTracker is built for exactly this moment. [Join the Beta](/#signup) and start your new studio with a clean, searchable inventory from day one. Need a system for what's already on your shelves? See [how to organize art supplies](/blog/how-to-organize-art-supplies), or read [why we're building this](/about).`,
   },
   {
     slug: "how-to-catalog-artwork",
