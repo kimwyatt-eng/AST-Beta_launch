@@ -169,6 +169,36 @@ const Partners = () => {
         </div>
       </section>
 
+      {/* Final CTA */}
+      <section className="px-8 py-20">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2
+            className="text-4xl md:text-5xl font-bold mb-6 tracking-tight bg-clip-text text-transparent"
+            style={{ backgroundImage: "linear-gradient(90deg, #2563eb 0%, #6366f1 50%, #a855f7 100%)" }}
+          >
+            Let's Build Something Together
+          </h2>
+          <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+            Join us in supporting working artists with tools, education, and resources that make a real difference.
+          </p>
+          <button
+            type="button"
+            data-tally-open="1Ap5E4"
+            data-tally-layout="modal"
+            data-tally-emoji-text="🤝"
+            data-tally-emoji-animation="head-shake"
+            className="partner-cta inline-flex items-center justify-center rounded-xl px-6 py-3 text-lg font-semibold text-white focus:outline-none focus:ring-2 focus:ring-ring transition-transform hover:-translate-y-0.5"
+            style={{
+              background: "#2D2DB8",
+              border: "2px solid #3B3BE0",
+              boxShadow: "0 0 12px rgba(59,59,224,0.55), 0 0 30px rgba(59,59,224,0.35)",
+            }}
+          >
+            Partner With Us
+          </button>
+        </div>
+      </section>
+
 
       {/* Trust Badges */}
       <div className="flex justify-center py-8">
