@@ -235,6 +235,10 @@ export default function About() {
           products, smarter stocking decisions, useful tutorials, and partnerships that match how
           artists actually work.
         </p>
+        <p>
+          Learn more on the <Link to="/partners" className={linkCls}>Partners page</Link> or the{" "}
+          <Link to="/investors" className={linkCls}>Investors page</Link>.
+        </p>
       </Section>
 
       <Section index={7} title="Founder note">
@@ -252,7 +256,28 @@ export default function About() {
         <p className="text-lg sm:text-xl font-semibold text-foreground">
           Art was always practical. We just needed better systems for the people making it.
         </p>
+        <p>
+          Read more on the <Link to="/founders" className={linkCls}>Founders page</Link>.
+        </p>
       </Section>
+
+      {/* Join the beta CTA */}
+      <section className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-6">
+        <div className="ast-panel card-violet p-6 sm:p-8 text-center">
+          <h2 className="title-violet text-2xl sm:text-3xl font-bold tracking-tight">
+            Join the Beta
+          </h2>
+          <p className="mt-3 text-foreground/85 max-w-2xl mx-auto">
+            Get early access and help shape a studio tool built around artists — not around your data.
+          </p>
+          <a
+            href="/#signup"
+            className="ast-btn-primary mt-5 inline-flex items-center justify-center rounded-xl px-6 py-3 text-lg font-semibold focus:outline-none focus:ring-2 focus:ring-ring"
+          >
+            Join the Beta
+          </a>
+        </div>
+      </section>
 
       {/* Sources */}
       <section className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-8">
