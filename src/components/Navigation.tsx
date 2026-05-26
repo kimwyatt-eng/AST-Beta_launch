@@ -24,7 +24,7 @@ const Navigation = () => {
             className="cursor-pointer transition-opacity hover:opacity-80"
             aria-label="ArtSupplyTracker home"
           >
-            <img src={logo} alt="ArtSupplyTracker" className="h-10 sm:h-12 w-auto" />
+            <img src={logo} alt="ArtSupplyTracker" className="h-16 sm:h-12 w-auto" />
           </button>
 
           <div className="flex flex-wrap gap-1 sm:gap-2">
