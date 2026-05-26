@@ -296,7 +296,7 @@ A loss claim without a catalog is a negotiation. A loss claim with photographs, 
 
 The trick is catching each piece as it finishes, not letting them pile up. A finished work that sits uncatalogued for six months will probably never be cataloged properly.
 
-ArtSupplyTracker handles artwork records, supply links, and photo storage in one private place — no spreadsheets, no AI training on your art. [Join the Beta](/#signup).`,
+ArtSupplyTracker handles artwork records, supply links, and photo storage in one private place — no spreadsheets, no AI training on your art. Read our [privacy promise](/privacy), see [why we're building this](/about), or learn [how to organize the supplies behind every piece](/blog/how-to-organize-art-supplies). [Join the Beta](/#signup).`,
   },
 ];
 
