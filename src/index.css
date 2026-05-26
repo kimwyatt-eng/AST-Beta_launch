@@ -357,3 +357,9 @@ iframe[src*="tally.so"] {
   border: 2px solid #FF2DAA !important;
   box-shadow: 0 0 12px rgba(255, 45, 170, 0.38), 0 0 30px rgba(255, 45, 170, 0.25) !important;
 }
+
+/* Partner Tally form — indigo glow override */
+iframe[src*="1Ap5E4"] {
+  border: 2px solid #3B3BE0 !important;
+  box-shadow: 0 0 12px rgba(59, 59, 224, 0.55), 0 0 30px rgba(59, 59, 224, 0.35) !important;
+}
