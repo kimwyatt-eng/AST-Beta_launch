@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useLocation, useNavigate } from "react-router-dom";
+import logo from "@/assets/logo.png";
 
 const Navigation = () => {
   const location = useLocation();
