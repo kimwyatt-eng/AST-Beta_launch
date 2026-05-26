@@ -75,6 +75,7 @@
     --ast-magenta: 323 100% 59%;     /* #FF2DAA */
     --ast-pink: 332 100% 65%;        /* #FF4DA6 */
     --ast-yellow: 54 100% 50%;       /* #FFE600 */
+    --ast-coral: 28 95% 62%;         /* #F59E4D - coral orange-yellow */
 
     /* Re-skin shadcn primary to magenta-violet (no more salmon) */
     --primary: 323 100% 59%;

@@ -246,7 +246,7 @@ const Investors = () => {
               {
                 Icon: Users,
                 accent: "card-violet",
-                color: "text-ast-yellow",
+                color: "text-ast-coral",
                 lead: "Studio community",
                 rest: " tools",
               },
