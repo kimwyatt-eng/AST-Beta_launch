@@ -191,7 +191,8 @@ export default function ArtistsHome() {
       <section id="signup" className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-14 text-center">
         <button
           type="button"
-          data-tally-open="1Ap5E4"
+          data-tally-open="A7j5a0"
+          data-tally-auto-close="5000"
           data-tally-layout="modal"
           data-tally-emoji-text="🎨"
           data-tally-emoji-animation="bounce"
