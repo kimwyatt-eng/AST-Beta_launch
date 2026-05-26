@@ -293,16 +293,16 @@ export default function About() {
 
       {/* Owl privacy emblem */}
       <section className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-10 flex flex-col items-center text-center">
-        <div className="ast-panel p-6 sm:p-8 inline-flex flex-col items-center">
+        <Link to="/privacy" className="ast-panel p-6 sm:p-8 inline-flex flex-col items-center transition-opacity hover:opacity-90">
           <img
             src={trustBadges}
             alt="A Trusty App & Emotional Safety Shield – Modular trust and protection featuring shield emblems protected by a stylized owl symbolizing wisdom and vigilance"
             className="h-40 sm:h-48 w-auto opacity-90"
           />
           <p className="mt-4 text-sm text-foreground/70 max-w-sm">
-            Your art, your data, your trust. Privacy first — always.
+            Your art, your data, your trust. Privacy first — always. Read the full privacy policy →
           </p>
-        </div>
+        </Link>
       </section>
     </main>
   );
