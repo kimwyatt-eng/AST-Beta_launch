@@ -62,8 +62,8 @@ const Partners = () => {
             onClick={scrollToContactForm}
             className="inline-flex items-center justify-center rounded-xl px-6 py-3 text-lg font-semibold text-white focus:outline-none focus:ring-2 focus:ring-ring transition-transform hover:-translate-y-0.5"
             style={{
-              background: "linear-gradient(135deg, #0a0a3a 0%, #141464 50%, #1e1e8a 100%)",
-              boxShadow: "0 8px 24px -10px rgba(30,30,138,0.6)",
+              background: "#8466EE",
+              boxShadow: "0 8px 24px -10px rgba(132,102,238,0.6)",
             }}
           >
             Partner form coming soon
