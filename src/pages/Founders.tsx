@@ -127,7 +127,11 @@ export default function FoundersPage() {
             </a>
             <a
               href="/investors"
-              className="ast-btn-secondary inline-flex items-center justify-center rounded-xl px-6 py-3 text-lg font-semibold focus:outline-none focus:ring-2 focus:ring-ring"
+              className="inline-flex items-center justify-center rounded-xl px-6 py-3 text-lg font-semibold text-white transition-transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-ring"
+              style={{
+                background: "linear-gradient(135deg, #7C3CFF 0%, #00E6FF 100%)",
+                boxShadow: "0 0 0 1px rgba(124,60,255,0.35), 0 8px 24px -10px rgba(0,230,255,0.5)",
+              }}
             >
               Investor Inquiries
             </a>
