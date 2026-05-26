@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Seo from "@/components/Seo";
 import trustBadges from "@/assets/trust-badges.png";
+import whyItMatters from "@/assets/why-it-matters.png";
 import { panelClass, titleClass } from "@/lib/cardAccent";
 import { Link } from "react-router-dom";
 
@@ -157,6 +158,15 @@ export default function About() {
           read <Link to="/blog" className={linkCls}>practical studio guides on the blog</Link>.
         </p>
       </Section>
+
+      {/* Why it matters to artists graphic */}
+      <section className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-4 sm:py-6">
+        <img
+          src={whyItMatters}
+          alt="Why it matters to artists — Spend more time making art and less time searching for supplies. Built for the studio, not just the sale."
+          className="w-full h-auto rounded-2xl border border-border/40 shadow-2xl"
+        />
+      </section>
 
       <Section index={3} title="Who it is for">
         <p>
