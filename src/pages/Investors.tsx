@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Seo from "@/components/Seo";
-import trustBadges from "@/assets/trust-badges.png";
+import TrustFooter from "@/components/TrustFooter";
 import investorsHeroAd from "@/assets/investors-hero-ad.png";
 import { TrendingUp, Target, Wrench, Shield, Handshake, LifeBuoy, Briefcase, Mic, Accessibility, Users } from "lucide-react";
 
@@ -373,16 +373,7 @@ const Investors = () => {
         </div>
       </section>
 
-      {/* Trust Badges */}
-      <div className="flex justify-center py-8">
-        <div className="ast-panel card-magenta p-8">
-          <img 
-            src={trustBadges} 
-            alt="A Trusty App & Emotional Safety Shield – Modular trust and protection featuring shield emblems protected by a stylized owl symbolizing wisdom and vigilance" 
-            className="h-48 opacity-80"
-          />
-        </div>
-      </div>
+      <TrustFooter />
     </div>
   );
 };

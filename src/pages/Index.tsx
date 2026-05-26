@@ -2,7 +2,7 @@ import React from "react";
 import Navigation from "@/components/Navigation";
 import Seo from "@/components/Seo";
 import HeroSlideshow from "@/components/HeroSlideshow";
-import trustBadges from "@/assets/trust-badges.png";
+import TrustFooter from "@/components/TrustFooter";
 import SignupForm from "@/components/SignupForm";
 import mockupDashboard from "@/assets/mockup-dashboard-dark.png";
 import mockupInventory from "@/assets/mockup-inventory.jpg";
