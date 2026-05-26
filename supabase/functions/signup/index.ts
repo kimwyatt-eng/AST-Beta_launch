@@ -21,6 +21,18 @@ Deno.serve(async (req) => {
       );
     }
 
+    const trimmedNameRaw = String(name).trim();
+    const trimmedEmailRaw = String(email).trim();
+
+    if (trimmedNameRaw.length === 0 || trimmedNameRaw.length > 100 ||
+        trimmedEmailRaw.length === 0 || trimmedEmailRaw.length > 255) {
+      return new Response(
+        JSON.stringify({ error: "Name or email exceeds allowed length" }),
+        { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
+    }
+
+
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
       return new Response(
