@@ -4,7 +4,7 @@ import Seo from "@/components/Seo";
 import ContactForm from "@/components/ContactForm";
 import trustBadges from "@/assets/trust-badges.png";
 import investorsHeroAd from "@/assets/investors-hero-ad.png";
-import { TrendingUp, Target, Wrench, Shield } from "lucide-react";
+import { TrendingUp, Target, Wrench, Shield, Handshake, LifeBuoy, Briefcase, Mic, Accessibility, Users } from "lucide-react";
 
 const scrollToContactForm = (e: React.MouseEvent) => {
   e.preventDefault();
@@ -208,20 +208,59 @@ const Investors = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
-              { text: "Partner and product education", accent: "card-violet", dot: "bg-ast-violet" },
-              { text: "Supply replacement relief fund", accent: "card-cyan", dot: "bg-ast-cyan" },
-              { text: "Client and commission workflows", accent: "card-magenta", dot: "bg-ast-magenta" },
-              { text: "Voice assistant integrations", accent: "card-violet", dot: "bg-ast-violet" },
-              { text: "Accessibility and ASL support", accent: "card-cyan", dot: "bg-ast-cyan" },
-              { text: "Studio community tools", accent: "card-violet", dot: "bg-ast-violet" },
-            ].map((item) => (
+              {
+                Icon: Handshake,
+                accent: "card-cyan",
+                color: "text-ast-cyan",
+                lead: "Partner",
+                rest: " and product education",
+              },
+              {
+                Icon: LifeBuoy,
+                accent: "card-magenta",
+                color: "text-ast-magenta",
+                lead: "Supply replacement",
+                rest: " relief fund",
+              },
+              {
+                Icon: Briefcase,
+                accent: "card-violet",
+                color: "text-ast-violet",
+                lead: "Client and commission",
+                rest: " workflows",
+              },
+              {
+                Icon: Mic,
+                accent: "card-cyan",
+                color: "text-ast-blue",
+                lead: "Voice assistant",
+                rest: " integrations",
+              },
+              {
+                Icon: Accessibility,
+                accent: "card-magenta",
+                color: "text-ast-pink",
+                lead: "Accessibility",
+                rest: " and ASL support",
+              },
+              {
+                Icon: Users,
+                accent: "card-violet",
+                color: "text-ast-yellow",
+                lead: "Studio community",
+                rest: " tools",
+              },
+            ].map(({ Icon, accent, color, lead, rest }) => (
               <Card
-                key={item.text}
-                className={`ast-panel ${item.accent} flex items-center min-h-[110px] max-h-[130px]`}
+                key={lead}
+                className={`ast-panel ${accent} flex items-center min-h-[110px] max-h-[130px]`}
               >
                 <CardContent className="flex items-center gap-3 p-6 text-left w-full">
-                  <span className={`inline-block w-2 h-2 rounded-full ${item.dot} shrink-0`} aria-hidden="true" />
-                  <p className="text-muted-foreground text-sm leading-snug">{item.text}</p>
+                  <Icon className={`w-5 h-5 ${color} shrink-0`} aria-hidden="true" />
+                  <p className="text-periwinkle text-sm leading-snug">
+                    <span className={`font-semibold ${color}`}>{lead}</span>
+                    {rest}
+                  </p>
                 </CardContent>
               </Card>
             ))}
