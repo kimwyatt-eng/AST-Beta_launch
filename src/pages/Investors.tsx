@@ -1,14 +1,13 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Seo from "@/components/Seo";
-import ContactForm from "@/components/ContactForm";
 import trustBadges from "@/assets/trust-badges.png";
 import investorsHeroAd from "@/assets/investors-hero-ad.png";
 import { TrendingUp, Target, Wrench, Shield, Handshake, LifeBuoy, Briefcase, Mic, Accessibility, Users } from "lucide-react";
 
-const scrollToContactForm = (e: React.MouseEvent) => {
+const scrollToCta = (e: React.MouseEvent) => {
   e.preventDefault();
-  document.getElementById("investor-contact-form")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  document.getElementById("investor-cta")?.scrollIntoView({ behavior: "smooth", block: "start" });
 };
 
 const Investors = () => {
@@ -35,8 +34,8 @@ const Investors = () => {
                 Art Supply Tracker starts with artists: inventory, projects, studio organization, and hands-free creative workflow tools. The same modular system can expand into adjacent maker, workshop, and seasonal decor markets.
               </p>
               <a
-                href="#investor-contact-form"
-                onClick={scrollToContactForm}
+                href="#investor-cta"
+                onClick={scrollToCta}
                 className="inline-flex items-center justify-center rounded-md px-8 h-12 text-base font-semibold text-white transition-transform hover:-translate-y-0.5"
                 style={{
                   background: "linear-gradient(135deg, #7C3CFF 0%, #00E6FF 100%)",
@@ -345,17 +344,25 @@ const Investors = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section id="investor-contact-form" className="px-8 py-20 scroll-mt-24">
-
-        <div className="max-w-xl mx-auto">
-          <h2 className="text-3xl font-bold text-foreground mb-6 text-center">
-            Join the growth story
+      {/* Final CTA Section */}
+      <section id="investor-cta" className="px-8 py-20 scroll-mt-24">
+        <div className="max-w-2xl mx-auto text-center">
+          <h2 className="text-4xl font-bold text-foreground mb-6">
+            <span className="text-accent">Join</span> the growth story
           </h2>
-          <p className="text-xl text-muted-foreground mb-8 text-center">
+          <p className="text-xl text-muted-foreground mb-10 leading-relaxed">
             Art Supply Tracker is building practical creative infrastructure for artists first, with a modular path into adjacent maker and workshop markets.
           </p>
-          <ContactForm inquiryType="investor" />
+          <a
+            href="#"
+            className="inline-flex items-center justify-center rounded-md px-8 h-12 text-base font-semibold text-white transition-transform hover:-translate-y-0.5"
+            style={{
+              background: "linear-gradient(135deg, #7C3CFF 0%, #00E6FF 100%)",
+              boxShadow: "0 0 0 1px rgba(124,60,255,0.35), 0 8px 24px -10px rgba(0,230,255,0.5)",
+            }}
+          >
+            Contact Our Investor Team →
+          </a>
         </div>
       </section>
 
