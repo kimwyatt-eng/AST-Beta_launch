@@ -180,6 +180,8 @@ You can try the working desktop demo now, and if you want to help shape the futu
 
 Your voice, like your art, matters here.
 
+Want the bigger picture? Read [the full story behind ArtSupplyTracker](/about), see [how we protect your studio data](/privacy), or browse [more studio guides on the blog](/blog).
+
 [Join the Beta](/#signup).`,
   },
   {
@@ -216,7 +218,7 @@ Knowing where your titanium white lives is half the battle. Knowing you have *on
 
 Five minutes at the end of each studio week to note what's running low saves the panic order later. Better yet, let an app do it for you.
 
-Ready to stop losing supplies in the chaos? [Join the Beta](/#signup) — ArtSupplyTracker keeps your inventory, locations, and reorder list in one private place.`,
+Ready to stop losing supplies in the chaos? [Join the Beta](/#signup) — ArtSupplyTracker keeps your inventory, locations, and reorder list in one private place. Read more [about our approach](/about) or check the [studio setup checklist](/blog/art-studio-setup-checklist).`,
   },
   {
     slug: "art-studio-setup-checklist",
@@ -254,7 +256,7 @@ Run extra outlets if you can. Add a small fan or open a window for solvent-based
 
 The day you set up a new studio is the easiest day to log what you own. Every supply gets photographed once, tagged with a location, and you'll never wonder "did I already buy that?" again.
 
-ArtSupplyTracker is built for exactly this moment. [Join the Beta](/#signup) and start your new studio with a clean, searchable inventory from day one.`,
+ArtSupplyTracker is built for exactly this moment. [Join the Beta](/#signup) and start your new studio with a clean, searchable inventory from day one. Need a system for what's already on your shelves? See [how to organize art supplies](/blog/how-to-organize-art-supplies), or read [why we're building this](/about).`,
   },
   {
     slug: "how-to-catalog-artwork",
@@ -294,7 +296,7 @@ A loss claim without a catalog is a negotiation. A loss claim with photographs, 
 
 The trick is catching each piece as it finishes, not letting them pile up. A finished work that sits uncatalogued for six months will probably never be cataloged properly.
 
-ArtSupplyTracker handles artwork records, supply links, and photo storage in one private place — no spreadsheets, no AI training on your art. [Join the Beta](/#signup).`,
+ArtSupplyTracker handles artwork records, supply links, and photo storage in one private place — no spreadsheets, no AI training on your art. Read our [privacy promise](/privacy), see [why we're building this](/about), or learn [how to organize the supplies behind every piece](/blog/how-to-organize-art-supplies). [Join the Beta](/#signup).`,
   },
 ];
 

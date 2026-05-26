@@ -2,6 +2,10 @@ import Navigation from "@/components/Navigation";
 import Seo from "@/components/Seo";
 import trustBadges from "@/assets/trust-badges.png";
 import { panelClass, titleClass } from "@/lib/cardAccent";
+import { Link } from "react-router-dom";
+
+const linkCls =
+  "text-secondary underline underline-offset-4 hover:opacity-80";
 
 const stats = [
   { value: "$1.2T", label: "U.S. arts & cultural industries added to the economy in 2023" },
@@ -148,6 +152,10 @@ export default function About() {
           workspace, half archaeology dig. It is not just for selling finished work. It is for the
           whole studio life around making it.
         </p>
+        <p>
+          You can <Link to="/" className={linkCls}>try the live demo on the home page</Link> or
+          read <Link to="/blog" className={linkCls}>practical studio guides on the blog</Link>.
+        </p>
       </Section>
 
       <Section index={3} title="Who it is for">
@@ -178,7 +186,8 @@ export default function About() {
         <p>
           ArtSupplyTracker is being built with a trust-first privacy model because your artwork is
           yours. Your research is yours. Your creative process is yours.{" "}
-          <strong>Your private studio data is not the product.</strong>
+          <strong>Your private studio data is not the product.</strong>{" "}
+          Read the full <Link to="/privacy" className={linkCls}>privacy policy</Link>.
         </p>
       </Section>
 
@@ -226,6 +235,10 @@ export default function About() {
           products, smarter stocking decisions, useful tutorials, and partnerships that match how
           artists actually work.
         </p>
+        <p>
+          Learn more on the <Link to="/partners" className={linkCls}>Partners page</Link> or the{" "}
+          <Link to="/investors" className={linkCls}>Investors page</Link>.
+        </p>
       </Section>
 
       <Section index={7} title="Founder note">
@@ -243,7 +256,28 @@ export default function About() {
         <p className="text-lg sm:text-xl font-semibold text-foreground">
           Art was always practical. We just needed better systems for the people making it.
         </p>
+        <p>
+          Read more on the <Link to="/founders" className={linkCls}>Founders page</Link>.
+        </p>
       </Section>
+
+      {/* Join the beta CTA */}
+      <section className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-6">
+        <div className="ast-panel card-violet p-6 sm:p-8 text-center">
+          <h2 className="title-violet text-2xl sm:text-3xl font-bold tracking-tight">
+            Join the Beta
+          </h2>
+          <p className="mt-3 text-foreground/85 max-w-2xl mx-auto">
+            Get early access and help shape a studio tool built around artists — not around your data.
+          </p>
+          <a
+            href="/#signup"
+            className="ast-btn-primary mt-5 inline-flex items-center justify-center rounded-xl px-6 py-3 text-lg font-semibold focus:outline-none focus:ring-2 focus:ring-ring"
+          >
+            Join the Beta
+          </a>
+        </div>
+      </section>
 
       {/* Sources */}
       <section className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-8">
@@ -259,16 +293,16 @@ export default function About() {
 
       {/* Owl privacy emblem */}
       <section className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-10 flex flex-col items-center text-center">
-        <div className="ast-panel p-6 sm:p-8 inline-flex flex-col items-center">
+        <Link to="/privacy" className="ast-panel p-6 sm:p-8 inline-flex flex-col items-center transition-opacity hover:opacity-90">
           <img
             src={trustBadges}
             alt="A Trusty App & Emotional Safety Shield – Modular trust and protection featuring shield emblems protected by a stylized owl symbolizing wisdom and vigilance"
             className="h-40 sm:h-48 w-auto opacity-90"
           />
           <p className="mt-4 text-sm text-foreground/70 max-w-sm">
-            Your art, your data, your trust. Privacy first — always.
+            Your art, your data, your trust. Privacy first — always. Read the full privacy policy →
           </p>
-        </div>
+        </Link>
       </section>
     </main>
   );

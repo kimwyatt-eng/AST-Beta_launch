@@ -87,6 +87,11 @@ export default function BlogPost() {
           >
             Join the Beta
           </a>
+          <p className="mt-5 text-sm text-foreground/70">
+            Keep reading: <Link to="/about" className="text-secondary underline underline-offset-4 hover:opacity-80">About ArtSupplyTracker</Link>{" · "}
+            <Link to="/privacy" className="text-secondary underline underline-offset-4 hover:opacity-80">Privacy</Link>{" · "}
+            <Link to="/blog" className="text-secondary underline underline-offset-4 hover:opacity-80">More studio guides</Link>
+          </p>
         </div>
       </article>
     </main>
