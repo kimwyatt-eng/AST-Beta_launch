@@ -345,17 +345,25 @@ const Investors = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section id="investor-contact-form" className="px-8 py-20 scroll-mt-24">
-
-        <div className="max-w-xl mx-auto">
-          <h2 className="text-3xl font-bold text-foreground mb-6 text-center">
-            Join the growth story
+      {/* Final CTA Section */}
+      <section id="investor-cta" className="px-8 py-20 scroll-mt-24">
+        <div className="max-w-2xl mx-auto text-center">
+          <h2 className="text-4xl font-bold text-foreground mb-6">
+            <span className="text-accent">Join</span> the growth story
           </h2>
-          <p className="text-xl text-muted-foreground mb-8 text-center">
+          <p className="text-xl text-muted-foreground mb-10 leading-relaxed">
             Art Supply Tracker is building practical creative infrastructure for artists first, with a modular path into adjacent maker and workshop markets.
           </p>
-          <ContactForm inquiryType="investor" />
+          <a
+            href="#"
+            className="inline-flex items-center justify-center rounded-md px-8 h-12 text-base font-semibold text-white transition-transform hover:-translate-y-0.5"
+            style={{
+              background: "linear-gradient(135deg, #7C3CFF 0%, #00E6FF 100%)",
+              boxShadow: "0 0 0 1px rgba(124,60,255,0.35), 0 8px 24px -10px rgba(0,230,255,0.5)",
+            }}
+          >
+            Contact Our Investor Team →
+          </a>
         </div>
       </section>
 
