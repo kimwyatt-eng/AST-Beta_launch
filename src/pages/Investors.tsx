@@ -1,14 +1,13 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Seo from "@/components/Seo";
-import ContactForm from "@/components/ContactForm";
 import trustBadges from "@/assets/trust-badges.png";
 import investorsHeroAd from "@/assets/investors-hero-ad.png";
 import { TrendingUp, Target, Wrench, Shield, Handshake, LifeBuoy, Briefcase, Mic, Accessibility, Users } from "lucide-react";
 
-const scrollToContactForm = (e: React.MouseEvent) => {
+const scrollToCta = (e: React.MouseEvent) => {
   e.preventDefault();
-  document.getElementById("investor-contact-form")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  document.getElementById("investor-cta")?.scrollIntoView({ behavior: "smooth", block: "start" });
 };
 
 const Investors = () => {
