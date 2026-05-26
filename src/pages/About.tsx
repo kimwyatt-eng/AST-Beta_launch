@@ -152,36 +152,6 @@ export default function About() {
           workspace, half archaeology dig. It is not just for selling finished work. It is for the
           whole studio life around making it.
         </p>
-      </Section>
-
-      <Section index={3} title="Who it is for">
-        <p>
-          ArtSupplyTracker is designed to grow with different kinds of artists and creative spaces:
-          kids who color, hobby artists, students, working artists, teachers, classrooms, studios,
-          art fair sellers, online shop owners, commission artists, artists preparing for shows, and
-          artists who make for joy and never want to sell a thing.
-        </p>
-        <p>
-          The point is not to force every artist into the same workflow. The point is to give artists
-          a flexible system that can grow with them.
-        </p>
-      </Section>
-
-      <Section index={2} title="What ArtSupplyTracker is">
-        <p>
-          ArtSupplyTracker is a studio management app for artists. It helps artists track supplies,
-          organize projects, understand costs, manage storage, plan creative work, and keep studio
-          information in one place.
-        </p>
-        <p className="text-lg sm:text-xl font-semibold text-foreground">
-          Know what you have. Use more of it. Waste less. Create with less friction.
-        </p>
-        <p>
-          It is built for the actual middle of art-making — where supplies get opened, tools get
-          borrowed, receipts get lost, colors run out, projects evolve, and the studio becomes half
-          workspace, half archaeology dig. It is not just for selling finished work. It is for the
-          whole studio life around making it.
-        </p>
         <p>
           You can <Link to="/" className={linkCls}>try the live demo on the home page</Link> or
           read <Link to="/blog" className={linkCls}>practical studio guides on the blog</Link>.
