@@ -203,43 +203,43 @@ const Investors = () => {
       <section className="px-8 py-20 bg-card/20">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-center text-foreground mb-12">
-            Planned & <span className="text-accent">Future Features</span>
+            Planned and <span className="text-accent">future features</span>
           </h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <Card className="ast-panel card-violet p-6">
               <CardContent className="p-6">
-                <p className="text-muted-foreground">Paid featured artist & partner showcases</p>
+                <p className="text-muted-foreground">Partner and product education showcases</p>
               </CardContent>
             </Card>
-            
+
             <Card className="ast-panel card-cyan p-6">
               <CardContent className="p-6">
-                <p className="text-muted-foreground">Artist & tool relief funds (insurance-like support)</p>
+                <p className="text-muted-foreground">Supply replacement relief fund</p>
               </CardContent>
             </Card>
-            
+
             <Card className="ast-panel card-magenta p-6">
               <CardContent className="p-6">
-                <p className="text-muted-foreground">CRM tools for art & project sales</p>
+                <p className="text-muted-foreground">Client and commission workflow tools</p>
               </CardContent>
             </Card>
-            
+
             <Card className="ast-panel card-violet p-6">
               <CardContent className="p-6">
-                <p className="text-muted-foreground">Music & smart home integration</p>
+                <p className="text-muted-foreground">Voice assistant and smart home integrations</p>
               </CardContent>
             </Card>
-            
+
             <Card className="ast-panel card-cyan p-6">
               <CardContent className="p-6">
-                <p className="text-muted-foreground">Accessibility & wellness features (stress detection, ASL support)</p>
+                <p className="text-muted-foreground">Accessibility features including ASL support</p>
               </CardContent>
             </Card>
-            
+
             <Card className="ast-panel card-violet p-6">
               <CardContent className="p-6">
-                <p className="text-muted-foreground">Modern community platform for creatives</p>
+                <p className="text-muted-foreground">Creative community and studio collaboration tools</p>
               </CardContent>
             </Card>
           </div>
