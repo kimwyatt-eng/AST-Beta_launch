@@ -2,6 +2,7 @@ import Navigation from "@/components/Navigation";
 import Seo from "@/components/Seo";
 import trustBadges from "@/assets/trust-badges.png";
 import whyItMatters from "@/assets/why-it-matters.png";
+import partnersInsight from "@/assets/partners-investors-insight.png";
 import { panelClass, titleClass } from "@/lib/cardAccent";
 import { Link } from "react-router-dom";
 
@@ -250,6 +251,17 @@ export default function About() {
           <Link to="/investors" className={linkCls}>Investors page</Link>.
         </p>
       </Section>
+
+      {/* Partners & investors insight graphic */}
+      <section className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-4 sm:py-6">
+        <img
+          src={partnersInsight}
+          alt="Why it matters to partners and investors — Understanding how creative work actually happens. Art Supply Tracker reveals how artists use, replace, combine, and search for materials."
+          className="w-full h-auto rounded-2xl border border-border/40 shadow-2xl"
+        />
+      </section>
+
+
 
       <Section index={7} title="Founder note">
         <p>I started ArtSupplyTracker because I needed it.</p>
