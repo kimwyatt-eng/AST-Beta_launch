@@ -328,10 +328,10 @@ const Investors = () => {
 
         <div className="max-w-xl mx-auto">
           <h2 className="text-3xl font-bold text-foreground mb-6 text-center">
-            Join Our Growth Story
+            Join the growth story
           </h2>
           <p className="text-xl text-muted-foreground mb-8 text-center">
-            Be part of building ethical AI solutions for creative communities worldwide.
+            Art Supply Tracker is building practical creative infrastructure for artists first, with a modular path into adjacent maker and workshop markets.
           </p>
           <ContactForm inquiryType="investor" />
         </div>
