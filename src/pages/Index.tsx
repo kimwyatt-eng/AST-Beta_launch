@@ -22,7 +22,7 @@ export default function ArtistsHome() {
       <Navigation />
 
       {/* Hero */}
-      <section className="mx-auto max-w-7xl 2xl:max-w-[110rem] px-4 sm:px-6 lg:px-8 py-16">
+      <section className="mx-auto max-w-7xl 2xl:max-w-[110rem] px-4 sm:px-6 lg:px-8 pt-4 pb-12 sm:py-16">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
           <div className="text-center lg:text-left lg:col-span-2">
             <p className="hero-kicker text-sm font-semibold uppercase tracking-[0.18em] mb-3">
