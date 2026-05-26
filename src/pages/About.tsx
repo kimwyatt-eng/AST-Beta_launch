@@ -167,6 +167,40 @@ export default function About() {
         </p>
       </Section>
 
+      <Section index={2} title="What ArtSupplyTracker is">
+        <p>
+          ArtSupplyTracker is a studio management app for artists. It helps artists track supplies,
+          organize projects, understand costs, manage storage, plan creative work, and keep studio
+          information in one place.
+        </p>
+        <p className="text-lg sm:text-xl font-semibold text-foreground">
+          Know what you have. Use more of it. Waste less. Create with less friction.
+        </p>
+        <p>
+          It is built for the actual middle of art-making — where supplies get opened, tools get
+          borrowed, receipts get lost, colors run out, projects evolve, and the studio becomes half
+          workspace, half archaeology dig. It is not just for selling finished work. It is for the
+          whole studio life around making it.
+        </p>
+        <p>
+          You can <Link to="/" className={linkCls}>try the live demo on the home page</Link> or
+          read <Link to="/blog" className={linkCls}>practical studio guides on the blog</Link>.
+        </p>
+      </Section>
+
+      <Section index={3} title="Who it is for">
+        <p>
+          ArtSupplyTracker is designed to grow with different kinds of artists and creative spaces:
+          kids who color, hobby artists, students, working artists, teachers, classrooms, studios,
+          art fair sellers, online shop owners, commission artists, artists preparing for shows, and
+          artists who make for joy and never want to sell a thing.
+        </p>
+        <p>
+          The point is not to force every artist into the same workflow. The point is to give artists
+          a flexible system that can grow with them.
+        </p>
+      </Section>
+
       <Section index={4} title="What makes it different">
         <p>
           ArtSupplyTracker is built around the studio, not just the sale. Inventory connects to
@@ -182,7 +216,8 @@ export default function About() {
         <p>
           ArtSupplyTracker is being built with a trust-first privacy model because your artwork is
           yours. Your research is yours. Your creative process is yours.{" "}
-          <strong>Your private studio data is not the product.</strong>
+          <strong>Your private studio data is not the product.</strong>{" "}
+          Read the full <Link to="/privacy" className={linkCls}>privacy policy</Link>.
         </p>
       </Section>
 
