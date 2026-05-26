@@ -208,12 +208,12 @@ const Investors = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
-              { text: "Partner and product education showcases", accent: "card-violet", dot: "bg-ast-violet" },
+              { text: "Partner and product education", accent: "card-violet", dot: "bg-ast-violet" },
               { text: "Supply replacement relief fund", accent: "card-cyan", dot: "bg-ast-cyan" },
-              { text: "Client and commission workflow tools", accent: "card-magenta", dot: "bg-ast-magenta" },
-              { text: "Voice assistant and smart home integrations", accent: "card-violet", dot: "bg-ast-violet" },
-              { text: "Accessibility features including ASL support", accent: "card-cyan", dot: "bg-ast-cyan" },
-              { text: "Creative community and studio collaboration tools", accent: "card-violet", dot: "bg-ast-violet" },
+              { text: "Client and commission workflows", accent: "card-magenta", dot: "bg-ast-magenta" },
+              { text: "Voice assistant integrations", accent: "card-violet", dot: "bg-ast-violet" },
+              { text: "Accessibility and ASL support", accent: "card-cyan", dot: "bg-ast-cyan" },
+              { text: "Studio community tools", accent: "card-violet", dot: "bg-ast-violet" },
             ].map((item) => (
               <Card
                 key={item.text}
