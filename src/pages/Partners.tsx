@@ -1,7 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Seo from "@/components/Seo";
-import ContactForm from "@/components/ContactForm";
+
 import trustBadges from "@/assets/trust-badges.png";
 import partnersHeroAd from "@/assets/partners-hero-ad.png";
 import { panelClass, titleClass } from "@/lib/cardAccent";
@@ -163,19 +163,6 @@ const Partners = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section id="partner-contact-form" className="px-8 py-20 scroll-mt-24">
-
-        <div className="max-w-xl mx-auto">
-          <h2 className="text-3xl font-bold text-foreground mb-6 text-center">
-            Ready to Partner with Us?
-          </h2>
-          <p className="text-xl text-muted-foreground mb-8 text-center">
-            Let's discuss how we can grow together in the creative community.
-          </p>
-          <ContactForm inquiryType="partner" />
-        </div>
-      </section>
 
       {/* Trust Badges */}
       <div className="flex justify-center py-8">
