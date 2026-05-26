@@ -4,7 +4,7 @@ import Seo from "@/components/Seo";
 import ContactForm from "@/components/ContactForm";
 import trustBadges from "@/assets/trust-badges.png";
 import investorsHeroAd from "@/assets/investors-hero-ad.png";
-import { TrendingUp, Target, Wrench, Shield } from "lucide-react";
+import { TrendingUp, Target, Wrench, Shield, Handshake, LifeBuoy, Briefcase, Mic, Accessibility, Users } from "lucide-react";
 
 const scrollToContactForm = (e: React.MouseEvent) => {
   e.preventDefault();
