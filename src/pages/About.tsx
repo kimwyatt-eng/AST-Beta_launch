@@ -2,6 +2,10 @@ import Navigation from "@/components/Navigation";
 import Seo from "@/components/Seo";
 import trustBadges from "@/assets/trust-badges.png";
 import { panelClass, titleClass } from "@/lib/cardAccent";
+import { Link } from "react-router-dom";
+
+const linkCls =
+  "text-secondary underline underline-offset-4 hover:opacity-80";
 
 const stats = [
   { value: "$1.2T", label: "U.S. arts & cultural industries added to the economy in 2023" },
