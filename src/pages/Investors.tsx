@@ -32,7 +32,7 @@ const Investors = () => {
                 <span className="text-accent">Investment</span> Opportunity
               </h1>
               <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                ArtSupplyTracker is the first ethical AI platform designed for creative communities, with a modular foundation that expands into multiple billion-dollar verticals.
+                Art Supply Tracker starts with artists: inventory, projects, studio organization, and hands-free creative workflow tools. The same modular system can expand into adjacent maker, workshop, and seasonal decor markets.
               </p>
               <a
                 href="#investor-contact-form"
