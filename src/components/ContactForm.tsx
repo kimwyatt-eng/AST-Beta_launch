@@ -42,40 +42,18 @@ const ContactForm = ({ inquiryType }: ContactFormProps) => {
     setIsSubmitting(true);
 
     try {
-      const id = crypto.randomUUID();
-
-      const { error: insertError } = await supabase
-        .from("contact_submissions")
-        .insert({ id, name: trimmedName, email: trimmedEmail, message: trimmedMessage, inquiry_type: inquiryType });
-
-      if (insertError) throw insertError;
-
-      const templateName = inquiryType === "partner"
-        ? "partner-inquiry-confirmation"
-        : "investor-inquiry-confirmation";
-
-      await supabase.functions.invoke("send-transactional-email", {
+      const { data, error } = await supabase.functions.invoke("submit-contact", {
         body: {
-          templateName,
-          recipientEmail: trimmedEmail,
-          idempotencyKey: `${templateName}-${id}`,
-          templateData: { name: trimmedName },
+          name: trimmedName,
+          email: trimmedEmail,
+          message: trimmedMessage,
+          inquiryType,
         },
       });
 
-      await supabase.functions.invoke("send-transactional-email", {
-        body: {
-          templateName: "inquiry-owner-notification",
-          recipientEmail: "Kim.wyatt@artsupplytracker.com",
-          idempotencyKey: `inquiry-owner-notification-${id}`,
-          templateData: {
-            inquiryType,
-            senderName: trimmedName,
-            senderEmail: trimmedEmail,
-            senderMessage: trimmedMessage,
-          },
-        },
-      });
+      if (error) throw error;
+      if (data?.error) throw new Error(data.error);
+
 
       setIsSubmitted(true);
       toast({ title: "Message sent!", description: "We'll be in touch soon." });
