@@ -348,8 +348,12 @@
 }
 
 /* Tally modal pink glow */
-iframe.tally-popup {
+.tally-popup,
+div[data-tally-popup],
+.tally-popup iframe,
+iframe.tally-popup,
+iframe[src*="tally.so"] {
   border-radius: 16px !important;
   border: 2px solid #FF2DAA !important;
-  box-shadow: 0 0 24px rgba(255, 45, 170, 0.7), 0 0 60px rgba(255, 45, 170, 0.45) !important;
+  box-shadow: 0 0 24px rgba(255, 45, 170, 0.75), 0 0 60px rgba(255, 45, 170, 0.5) !important;
 }
