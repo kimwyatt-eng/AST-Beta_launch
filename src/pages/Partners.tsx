@@ -1,7 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Seo from "@/components/Seo";
-import ContactForm from "@/components/ContactForm";
+
 import trustBadges from "@/assets/trust-badges.png";
 import partnersHeroAd from "@/assets/partners-hero-ad.png";
 import { panelClass, titleClass } from "@/lib/cardAccent";
