@@ -72,37 +72,40 @@ const Investors = () => {
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-foreground mb-8 flex items-center gap-3">
             <TrendingUp className="w-8 h-8 text-accent" />
-            Market Opportunity
+            Market opportunity
           </h2>
-          <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-            The global art supply market is worth billions annually and is highly fragmented. Artists and studios worldwide struggle with:
+          <p className="text-lg text-muted-foreground mb-4 leading-relaxed">
+            Artists, studios, classrooms, and creative businesses manage supplies, projects, costs, storage, and documentation across scattered tools, spreadsheets, receipts, photos, and memory.
           </p>
-          
+          <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+            They need better ways to:
+          </p>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
             <Card className="ast-panel card-violet p-6">
               <CardContent className="p-6 text-center">
-                <p className="text-muted-foreground">Tracking and replacing supplies</p>
+                <p className="text-muted-foreground">Track and replace supplies</p>
               </CardContent>
             </Card>
             <Card className="ast-panel card-cyan p-6">
               <CardContent className="p-6 text-center">
-                <p className="text-muted-foreground">Managing project costs</p>
+                <p className="text-muted-foreground">Manage project costs</p>
               </CardContent>
             </Card>
             <Card className="ast-panel card-violet p-6">
               <CardContent className="p-6 text-center">
-                <p className="text-muted-foreground">Navigating insurance claims</p>
+                <p className="text-muted-foreground">Document inventory for insurance</p>
               </CardContent>
             </Card>
             <Card className="ast-panel card-magenta p-6">
               <CardContent className="p-6 text-center">
-                <p className="text-muted-foreground">Making informed purchasing decisions</p>
+                <p className="text-muted-foreground">Make smarter purchasing decisions</p>
               </CardContent>
             </Card>
           </div>
 
           <p className="text-lg text-muted-foreground text-center">
-            ArtSupplyTracker solves these pain points with an AI-powered studio assistant built on trust, privacy, and usability.
+            Art Supply Tracker brings supply tracking, project management, cost awareness, and hands-free studio organization into one artist-centered platform.
           </p>
         </div>
       </section>
@@ -112,42 +115,28 @@ const Investors = () => {
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-foreground mb-12 flex items-center justify-center gap-3">
             <Target className="w-8 h-8 text-accent" />
-            Why Invest
+            Why invest
           </h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Card className="ast-panel card-violet p-6">
               <CardContent className="p-8">
-                <h3 className="text-xl font-semibold title-violet mb-4">Mass Market Reach</h3>
-                <p className="text-muted-foreground">Millions of creators worldwide face the same challenges — our solution addresses a universal need.</p>
+                <h3 className="text-xl font-semibold title-violet mb-4">Large creative user base</h3>
+                <p className="text-muted-foreground">Artists, students, educators, studios, hobbyists, and creative businesses all face the same daily organization problem: knowing what they have, where it is, how it is used, and when it needs to be replaced.</p>
               </CardContent>
             </Card>
 
             <Card className="ast-panel card-cyan p-6">
               <CardContent className="p-8">
-                <h3 className="text-xl font-semibold title-cyan mb-4">Unique Ethical AI Advantage</h3>
-                <p className="text-muted-foreground">We never train on user creative IP and only share anonymized insights. This trust-first model is a durable competitive moat in a privacy-conscious era.</p>
+                <h3 className="text-xl font-semibold title-cyan mb-4">Trust-first AI and data model</h3>
+                <p className="text-muted-foreground">Art Supply Tracker is built around a clear promise: we do not train AI on user artwork or creative IP, and we do not sell personally identifiable information. Any future insight products must be anonymized and privacy-protective.</p>
               </CardContent>
             </Card>
 
             <Card className="ast-panel card-magenta p-6">
               <CardContent className="p-8">
-                <h3 className="text-xl font-semibold title-violet mb-4">Multiple Revenue Streams</h3>
-                <p className="text-muted-foreground">Affiliate sales, advertising, premium features, and anonymized market insights — all diversified for resilience.</p>
-              </CardContent>
-            </Card>
-
-            <Card className="ast-panel card-violet p-6">
-              <CardContent className="p-8">
-                <h3 className="text-xl font-semibold title-magenta mb-4">Defensible Modular Platform</h3>
-                <p className="text-muted-foreground">Our core tech scales across adjacent industries (garage/workshops, holiday decorators, musicians, etc.), multiplying market size without rebuilding infrastructure.</p>
-              </CardContent>
-            </Card>
-
-            <Card className="ast-panel card-cyan p-6">
-              <CardContent className="p-8">
-                <h3 className="text-xl font-semibold title-violet mb-4">Early Community Traction</h3>
-                <p className="text-muted-foreground">Artists are already signing up as beta users and partners, positioning us for rapid adoption at launch.</p>
+                <h3 className="text-xl font-semibold title-violet mb-4">Multiple revenue paths</h3>
+                <p className="text-muted-foreground">Potential revenue includes affiliate sales, artist-friendly advertising, partner showcases, premium features, education partnerships, and anonymized market insights.</p>
               </CardContent>
             </Card>
           </div>
@@ -158,44 +147,45 @@ const Investors = () => {
       <section className="px-8 py-20">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-center text-foreground mb-4">
-            Next Modular Application: <span className="text-accent">Garage Helper</span>
+            Next modular application: <span className="text-accent">Art Supply Tracker — Garage &amp; Artisan Workshop</span>
           </h2>
           <p className="text-lg text-muted-foreground text-center mb-12">
-            The first expansion beyond artists targets a larger, higher-spending market.
+            The same inventory, project, cost, and documentation system can expand beyond art studios into garages, workshops, small shops, and maker spaces.
           </p>
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <Card className="ast-panel card-violet p-6">
               <CardHeader>
                 <CardTitle className="flex items-center gap-3 text-xl">
                   <Target className="w-6 h-6 text-accent" />
-                  Target Segments
+                  Target segments
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <ul className="text-muted-foreground space-y-3">
                   <li>• Home mechanics</li>
+                  <li>• DIYers and makers</li>
                   <li>• Small auto shops</li>
-                  <li>• Contractors & handymen</li>
-                  <li>• Landscapers & gardeners</li>
+                  <li>• Contractors and handymen</li>
+                  <li>• Gardeners and outdoor tool users</li>
                 </ul>
               </CardContent>
             </Card>
-            
+
             <Card className="ast-panel card-magenta p-6">
               <CardHeader>
                 <CardTitle className="flex items-center gap-3 text-xl">
                   <Wrench className="w-6 h-6 text-accent" />
-                  Core Features
+                  Core features
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <ul className="text-muted-foreground space-y-3">
-                  <li>• Voice-controlled AI assistant</li>
-                  <li>• Tool & supply inventory management</li>
+                  <li>• Tool and supply inventory</li>
                   <li>• Project cost tracking</li>
+                  <li>• Maintenance and replacement reminders</li>
+                  <li>• Storage location tracking</li>
                   <li>• Insurance-ready documentation</li>
-                  <li>• Event support (car shows, workshops)</li>
                 </ul>
               </CardContent>
             </Card>
@@ -203,7 +193,7 @@ const Investors = () => {
 
           <div className="text-center mt-12">
             <p className="text-lg text-muted-foreground">
-              Garage Helper becomes the primary revenue driver with a broader user base and more monetizable data.
+              This expansion gives Art Supply Tracker a path into broader, higher-spending maker and workshop markets while reusing the same core platform architecture.
             </p>
           </div>
         </div>
@@ -213,43 +203,43 @@ const Investors = () => {
       <section className="px-8 py-20 bg-card/20">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-center text-foreground mb-12">
-            Planned & <span className="text-accent">Future Features</span>
+            Planned and <span className="text-accent">future features</span>
           </h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <Card className="ast-panel card-violet p-6">
               <CardContent className="p-6">
-                <p className="text-muted-foreground">Paid featured artist & partner showcases</p>
+                <p className="text-muted-foreground">Partner and product education showcases</p>
               </CardContent>
             </Card>
-            
+
             <Card className="ast-panel card-cyan p-6">
               <CardContent className="p-6">
-                <p className="text-muted-foreground">Artist & tool relief funds (insurance-like support)</p>
+                <p className="text-muted-foreground">Supply replacement relief fund</p>
               </CardContent>
             </Card>
-            
+
             <Card className="ast-panel card-magenta p-6">
               <CardContent className="p-6">
-                <p className="text-muted-foreground">CRM tools for art & project sales</p>
+                <p className="text-muted-foreground">Client and commission workflow tools</p>
               </CardContent>
             </Card>
-            
+
             <Card className="ast-panel card-violet p-6">
               <CardContent className="p-6">
-                <p className="text-muted-foreground">Music & smart home integration</p>
+                <p className="text-muted-foreground">Voice assistant and smart home integrations</p>
               </CardContent>
             </Card>
-            
+
             <Card className="ast-panel card-cyan p-6">
               <CardContent className="p-6">
-                <p className="text-muted-foreground">Accessibility & wellness features (stress detection, ASL support)</p>
+                <p className="text-muted-foreground">Accessibility features including ASL support</p>
               </CardContent>
             </Card>
-            
+
             <Card className="ast-panel card-violet p-6">
               <CardContent className="p-6">
-                <p className="text-muted-foreground">Modern community platform for creatives</p>
+                <p className="text-muted-foreground">Creative community and studio collaboration tools</p>
               </CardContent>
             </Card>
           </div>
@@ -260,28 +250,28 @@ const Investors = () => {
       <section className="px-8 py-20">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-center text-foreground mb-12">
-            Future <span className="text-accent">Expansions</span>
+            Future <span className="text-accent">expansion opportunities</span>
           </h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card className="ast-panel card-magenta p-6 transition-all duration-300 hover:-translate-y-0.5">
               <CardContent className="p-8 text-center">
-                <h3 className="text-xl font-semibold title-cyan mb-4">Home Holiday Decorators</h3>
-                <p className="text-muted-foreground">Seasonal inventory & project management</p>
+                <h3 className="text-xl font-semibold title-cyan mb-4">Art Supply Tracker — Home, Holiday &amp; Seasonal Decor</h3>
+                <p className="text-muted-foreground">Seasonal decor inventory, storage tracking, room planning, and setup support.</p>
               </CardContent>
             </Card>
 
             <Card className="ast-panel card-violet p-6 transition-all duration-300 hover:-translate-y-0.5">
               <CardContent className="p-8 text-center">
-                <h3 className="text-xl font-semibold title-magenta mb-4">Musicians</h3>
-                <p className="text-muted-foreground">Gear tracking, maintenance, gig scheduling</p>
+                <h3 className="text-xl font-semibold title-magenta mb-4">Musicians and performers</h3>
+                <p className="text-muted-foreground">Gear tracking, maintenance reminders, gig supplies, and setup checklists.</p>
               </CardContent>
             </Card>
 
             <Card className="ast-panel card-cyan p-6 transition-all duration-300 hover:-translate-y-0.5">
               <CardContent className="p-8 text-center">
-                <h3 className="text-xl font-semibold title-violet mb-4">Makeup Artists</h3>
-                <p className="text-muted-foreground">Product inventory, client management, hygiene compliance</p>
+                <h3 className="text-xl font-semibold title-violet mb-4">Makeup artists and beauty professionals</h3>
+                <p className="text-muted-foreground">Product inventory, kit organization, client notes, hygiene tracking, and replacement reminders.</p>
               </CardContent>
             </Card>
           </div>
@@ -293,34 +283,40 @@ const Investors = () => {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-center text-foreground mb-8 flex items-center justify-center gap-3">
             <Shield className="w-8 h-8 text-accent" />
-            The <span className="text-accent">Trusty App</span> Promise
+            The <span className="text-accent">Trusty App</span> promise
           </h2>
           <p className="text-lg text-muted-foreground text-center mb-12">
-            We operate on a privacy-first, artist-friendly ethical framework:
+            Art Supply Tracker is built around a privacy-first, artist-friendly trust model.
           </p>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <Card className="ast-panel card-magenta p-6">
               <CardContent className="p-6">
-                <p className="text-muted-foreground">Never train AI on creative work or IP</p>
+                <p className="text-muted-foreground">We do not train AI on user artwork or creative IP.</p>
               </CardContent>
             </Card>
 
             <Card className="ast-panel card-violet p-6">
               <CardContent className="p-6">
-                <p className="text-muted-foreground">Never sell personally identifiable info</p>
+                <p className="text-muted-foreground">We do not sell personally identifiable information.</p>
               </CardContent>
             </Card>
 
             <Card className="ast-panel card-cyan p-6">
               <CardContent className="p-6">
-                <p className="text-muted-foreground">Share only anonymized, regional insights</p>
+                <p className="text-muted-foreground">User research, notes, references, prompts, and creative direction belong to the user.</p>
               </CardContent>
             </Card>
 
             <Card className="ast-panel card-violet p-6">
               <CardContent className="p-6">
-                <p className="text-muted-foreground">Regular third-party audits for ethical compliance</p>
+                <p className="text-muted-foreground">Future market insights must be anonymized, aggregated, and privacy-protective.</p>
+              </CardContent>
+            </Card>
+
+            <Card className="ast-panel card-magenta p-6 md:col-span-2">
+              <CardContent className="p-6">
+                <p className="text-muted-foreground">Third-party audits and public transparency reporting are planned as the platform scales.</p>
               </CardContent>
             </Card>
           </div>
@@ -332,10 +328,10 @@ const Investors = () => {
 
         <div className="max-w-xl mx-auto">
           <h2 className="text-3xl font-bold text-foreground mb-6 text-center">
-            Join Our Growth Story
+            Join the growth story
           </h2>
           <p className="text-xl text-muted-foreground mb-8 text-center">
-            Be part of building ethical AI solutions for creative communities worldwide.
+            Art Supply Tracker is building practical creative infrastructure for artists first, with a modular path into adjacent maker and workshop markets.
           </p>
           <ContactForm inquiryType="investor" />
         </div>
