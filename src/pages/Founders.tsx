@@ -116,7 +116,7 @@ export default function FoundersPage() {
             href="/#signup"
             className="ast-btn-primary mt-4 inline-flex items-center justify-center rounded-xl px-6 py-3 text-lg font-semibold focus:outline-none focus:ring-2 focus:ring-ring"
           >
-            Join the waitlist or beta
+            Join the waitlist
           </a>
         </div>
       </section>
