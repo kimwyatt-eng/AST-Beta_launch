@@ -218,7 +218,7 @@ Knowing where your titanium white lives is half the battle. Knowing you have *on
 
 Five minutes at the end of each studio week to note what's running low saves the panic order later. Better yet, let an app do it for you.
 
-Ready to stop losing supplies in the chaos? [Join the Beta](/#signup) — ArtSupplyTracker keeps your inventory, locations, and reorder list in one private place.`,
+Ready to stop losing supplies in the chaos? [Join the Beta](/#signup) — ArtSupplyTracker keeps your inventory, locations, and reorder list in one private place. Read more [about our approach](/about) or check the [studio setup checklist](/blog/art-studio-setup-checklist).`,
   },
   {
     slug: "art-studio-setup-checklist",
