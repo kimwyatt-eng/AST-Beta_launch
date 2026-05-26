@@ -54,6 +54,18 @@ const Partners = () => {
         </div>
       </header>
 
+      {/* Form placeholder */}
+      <section className="px-8 -mt-8 mb-12">
+        <div
+          className="max-w-3xl mx-auto rounded-2xl p-10 text-center text-white shadow-[0_10px_40px_-10px_rgba(10,20,80,0.6)]"
+          style={{
+            background: "linear-gradient(135deg, #0a0a3a 0%, #141464 50%, #1e1e8a 100%)",
+          }}
+        >
+          <p className="text-lg font-medium opacity-90">Partner form coming soon — check back shortly.</p>
+        </div>
+      </section>
+
       {/* Partner Types */}
       <section className="px-8 py-20">
         <div className="max-w-6xl mx-auto">
