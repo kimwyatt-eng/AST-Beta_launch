@@ -300,6 +300,40 @@ ArtSupplyTracker handles artwork records, supply links, and photo storage in one
   },
 ];
 
+  {
+    slug: "the-real-reason-your-studio-feels-chaotic",
+    title: "The Real Reason Your Studio Feels Chaotic",
+    description:
+      "If your studio always feels on the edge of chaos, the problem isn't you — it's that most tools were never designed for how artists actually work.",
+    keyword: "art studio organization",
+    publishedAt: "2026-06-15",
+    readingMinutes: 4,
+    content: `If you feel like your studio is always on the edge of chaos, you're not alone. Being an artist today means juggling so much more than making art.
+
+There are supplies to keep track of, works in progress to manage, receipts to save, ideas that arrive at midnight, deadlines to meet, and reference materials scattered across notebooks, folders, and devices. Add in daily life, and things get overwhelming quickly.
+
+The real reason your studio feels chaotic isn't because you're disorganized or messy by nature. It's because most tools were never designed for the creative flow of an artist. Most digital options are made for accountants, offices, warehouses, or sales teams. As a result, artists end up trying to squeeze their creative process into systems that simply do not fit.
+
+## What artists actually need
+
+Artists need tools that are flexible, visual, and intuitive. Tools built around the realities of actual studio life.
+
+That realization is what inspired me to create Art Supply Tracker.
+
+I wanted something that acts as a studio assistant, not just another spreadsheet or boring database. Artists deserve support for organizing supplies, tracking projects, capturing notes and research, and keeping creative ideas together, all in one place.
+
+The goal is not to control your creativity, but to support it.
+
+## More time for what matters
+
+When you spend less time hunting for supplies you already own, replacing materials you can't find, or digging through note piles to remember where you left off, you gain something truly valuable: more time and energy to make your art.
+
+A cluttered studio does not mean you are a cluttered person. It means you deserve better tools that work with your creative life, not against it.
+
+Ready to experience the difference? [Join the Beta](/#signup). Your art, ideas, and research are yours. Read more about [why we're building this](/about) and [how we protect your data](/privacy).`,
+  },
+];
+
 export function getPostBySlug(slug: string): BlogPost | undefined {
   return blogPosts.find((p) => p.slug === slug);
 }
