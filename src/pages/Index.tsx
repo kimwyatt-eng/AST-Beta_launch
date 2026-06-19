@@ -15,8 +15,8 @@ export default function ArtistsHome() {
   return (
     <main className="min-h-screen w-full bg-background text-foreground">
       <Seo
-        title="ArtSupplyTracker — Track supplies, projects & protect your art"
-        description="Private studio software for artists. Track supplies, manage projects, and protect your art. No AI training on your work. Join the Beta."
+        title="ArtSupplyTracker — Your AI-Powered Studio Assistant"
+        description="An AI-powered studio assistant built for artists. Track supplies, manage projects, capture ideas, organize research, and get intelligent creative help — all while keeping your artwork and ideas private."
         path="/"
       />
       <Navigation />
@@ -29,12 +29,11 @@ export default function ArtistsHome() {
               ArtSupplyTracker
             </p>
             <h1 className="hero-title text-4xl md:text-5xl font-extrabold tracking-tight leading-[1.1]">
-              Know what you have.<br />
-              <span className="accent">Create more.</span><br />
-              Waste less.
+              Your AI-Powered<br />
+              <span className="accent">Studio Assistant</span>
             </h1>
             <p className="hero-body mt-5 text-lg max-w-xl lg:mx-0 mx-auto">
-              A private studio hub for tracking supplies, managing projects, and protecting your art.
+              Art Supply Tracker combines inventory management, project tracking, research tools, and hands-free assistance in one artist-focused platform. Use AI to organize supplies, document works in progress, find materials, answer creative questions, and keep your studio running smoothly — all while maintaining control of your artwork, ideas, and research.
             </p>
 
             {/* CTAs */}
