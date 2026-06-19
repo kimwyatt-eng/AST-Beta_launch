@@ -1,0 +1,22 @@
+# ArtSupplyTracker
+
+> Private studio software for artists. Track supplies, manage projects, protect your art. No AI training on your work.
+
+ArtSupplyTracker helps artists organize their creative lives. It is built specifically for how artists actually work: tracking supplies across multiple storage locations, connecting materials to works in progress, capturing ideas before they disappear, and keeping creative work private by design.
+
+## Pages
+
+- [Home](/): Private studio software for artists. Track supplies, manage projects & protect your art.
+- [About](/about): What ArtSupplyTracker does and why it was built.
+- [Founders](/founders): The story behind the product and the mission to build better tools for artists.
+- [Partners](/partners): Partnership and collaboration opportunities.
+- [Investors](/investors): Investment and backing information.
+- [Privacy](/privacy): Privacy policy. Your art, ideas, and research are yours.
+
+## Blog
+
+- [Why I'm Building Art Supply Tracker](/blog/why-im-building-art-supply-tracker): An art studio management app for artists who need to track supplies, manage projects, make shopping lists, and protect creative work.
+- [How to Organize Art Supplies](/blog/how-to-organize-art-supplies): A studio system that actually sticks for artists who want to stop searching and start making.
+- [Art Studio Setup Checklist](/blog/art-studio-setup-checklist): A no-nonsense checklist for working artists setting up or reorganizing a studio.
+- [How to Catalog Artwork](/blog/how-to-catalog-artwork): A simple system for artists who hate spreadsheets.
+- [The Real Reason Your Studio Feels Chaotic](/blog/the-real-reason-your-studio-feels-chaotic): Why studio chaos is not a personal failing — and what artists actually need from their tools.
