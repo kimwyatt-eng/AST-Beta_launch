@@ -29,12 +29,11 @@ export default function ArtistsHome() {
               ArtSupplyTracker
             </p>
             <h1 className="hero-title text-4xl md:text-5xl font-extrabold tracking-tight leading-[1.1]">
-              Know what you have.<br />
-              <span className="accent">Create more.</span><br />
-              Waste less.
+              Your AI-Powered<br />
+              <span className="accent">Studio Assistant</span>
             </h1>
             <p className="hero-body mt-5 text-lg max-w-xl lg:mx-0 mx-auto">
-              A private studio hub for tracking supplies, managing projects, and protecting your art.
+              Art Supply Tracker combines inventory management, project tracking, research tools, and hands-free assistance in one artist-focused platform. Use AI to organize supplies, document works in progress, find materials, answer creative questions, and keep your studio running smoothly — all while maintaining control of your artwork, ideas, and research.
             </p>
 
             {/* CTAs */}
