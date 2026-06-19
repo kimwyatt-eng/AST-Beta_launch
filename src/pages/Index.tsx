@@ -15,8 +15,8 @@ export default function ArtistsHome() {
   return (
     <main className="min-h-screen w-full bg-background text-foreground">
       <Seo
-        title="ArtSupplyTracker — Track supplies, projects & protect your art"
-        description="Private studio software for artists. Track supplies, manage projects, and protect your art. No AI training on your work. Join the Beta."
+        title="ArtSupplyTracker — Your AI-Powered Studio Assistant"
+        description="An AI-powered studio assistant built for artists. Track supplies, manage projects, capture ideas, organize research, and get intelligent creative help — all while keeping your artwork and ideas private."
         path="/"
       />
       <Navigation />
