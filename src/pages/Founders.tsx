@@ -3,6 +3,7 @@ import Seo from "@/components/Seo";
 import TrustFooter from "@/components/TrustFooter";
 import foundersHero from "@/assets/founders-hero.png";
 import { panelClass, titleClass } from "@/lib/cardAccent";
+import Footer from "@/components/Footer";
 
 export default function FoundersPage() {
   return (
