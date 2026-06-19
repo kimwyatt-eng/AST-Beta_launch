@@ -294,10 +294,10 @@ export default function About() {
             Get early access and help shape a studio tool built around artists — not around your data.
           </p>
           <a
-            href="/#signup"
+            href="https://studiobeta.artsupplytracker.com/dashboard"
             className="ast-btn-primary mt-5 inline-flex items-center justify-center rounded-xl px-6 py-3 text-lg font-semibold focus:outline-none focus:ring-2 focus:ring-ring"
           >
-            Join the Beta
+            Enter Studio Beta
           </a>
         </div>
       </section>
