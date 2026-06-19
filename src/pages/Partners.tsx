@@ -200,6 +200,7 @@ const Partners = () => {
 
 
       <TrustFooter />
+      <Footer />
     </div>
   );
 };

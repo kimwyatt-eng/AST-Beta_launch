@@ -68,6 +68,7 @@ export default function Blog() {
       </section>
 
       <TrustFooter />
+      <Footer />
     </main>
   );
 }

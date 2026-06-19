@@ -375,6 +375,7 @@ const Investors = () => {
       </section>
 
       <TrustFooter />
+      <Footer />
     </div>
   );
 };

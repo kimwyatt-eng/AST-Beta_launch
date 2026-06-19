@@ -29,6 +29,7 @@ const NotFound = () => {
         </Link>
       </section>
       <TrustFooter />
+      <Footer />
     </main>
   );
 };

@@ -24,6 +24,7 @@ export default function BlogPost() {
           </Link>
         </section>
         <TrustFooter />
+        <Footer />
       </main>
     );
   }
@@ -98,6 +99,7 @@ export default function BlogPost() {
         </div>
       </article>
       <TrustFooter />
+      <Footer />
     </main>
   );
 }
