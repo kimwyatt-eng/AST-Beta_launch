@@ -39,17 +39,12 @@ export default function ArtistsHome() {
 
             {/* CTAs */}
             <div className="mt-6 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
-              <button
-                type="button"
-                data-tally-open="A7j5a0"
-                data-tally-auto-close="5000"
-                data-tally-layout="modal"
-                data-tally-emoji-text="🎨"
-                data-tally-emoji-animation="bounce"
+              <a
+                href="https://studiobeta.artsupplytracker.com/dashboard"
                 className="ast-btn-primary inline-flex items-center justify-center rounded-xl px-6 py-3 text-lg font-semibold focus:outline-none focus:ring-2 focus:ring-ring"
               >
-                Join the Waitlist
-              </button>
+                Enter Studio Beta
+              </a>
               <a
                 href="https://artsupplytrackerstudio.netlify.app/"
                 target="_blank"
@@ -187,19 +182,14 @@ export default function ArtistsHome() {
         </div>
       </section>
 
-      {/* Signup */}
+      {/* CTA */}
       <section id="signup" className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-14 text-center">
-        <button
-          type="button"
-          data-tally-open="A7j5a0"
-          data-tally-auto-close="5000"
-          data-tally-layout="modal"
-          data-tally-emoji-text="🎨"
-          data-tally-emoji-animation="bounce"
+        <a
+          href="https://studiobeta.artsupplytracker.com/dashboard"
           className="ast-btn-primary inline-flex items-center justify-center rounded-xl px-6 py-3 text-lg font-semibold focus:outline-none focus:ring-2 focus:ring-ring"
         >
-          Join the Waitlist
-        </button>
+          Enter Studio Beta
+        </a>
       </section>
 
       {/* Trusty App Promise */}

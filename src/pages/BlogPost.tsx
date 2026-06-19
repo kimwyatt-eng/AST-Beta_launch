@@ -86,10 +86,10 @@ export default function BlogPost() {
             ArtSupplyTracker keeps your supplies, projects, and artwork records in one private place. Your art is yours — we never train AI on it.
           </p>
           <a
-            href="/#signup"
+            href="https://studiobeta.artsupplytracker.com/dashboard"
             className="ast-btn-primary mt-5 inline-flex items-center justify-center rounded-xl px-6 py-3 text-lg font-semibold focus:outline-none focus:ring-2 focus:ring-ring"
           >
-            Join the Beta
+            Enter Studio Beta
           </a>
           <p className="mt-5 text-sm text-foreground/70">
             Keep reading: <Link to="/about" className="text-secondary underline underline-offset-4 hover:opacity-80">About ArtSupplyTracker</Link>{" · "}
