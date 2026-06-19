@@ -4,6 +4,7 @@ import TrustFooter from "@/components/TrustFooter";
 import whyItMatters from "@/assets/why-it-matters.png";
 import partnersInsight from "@/assets/partners-investors-insight.png";
 import { panelClass, titleClass } from "@/lib/cardAccent";
+import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
 
 const linkCls =
@@ -314,6 +315,7 @@ export default function About() {
       </section>
 
       <TrustFooter />
+      <Footer />
     </main>
   );
 }

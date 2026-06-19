@@ -2,6 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Seo from "@/components/Seo";
 import TrustFooter from "@/components/TrustFooter";
+import Footer from "@/components/Footer";
 import investorsHeroAd from "@/assets/investors-hero-ad.png";
 import { TrendingUp, Target, Wrench, Shield, Handshake, LifeBuoy, Briefcase, Mic, Accessibility, Users } from "lucide-react";
 
@@ -374,6 +375,7 @@ const Investors = () => {
       </section>
 
       <TrustFooter />
+      <Footer />
     </div>
   );
 };

@@ -3,6 +3,7 @@ import Navigation from "@/components/Navigation";
 import Seo from "@/components/Seo";
 
 import TrustFooter from "@/components/TrustFooter";
+import Footer from "@/components/Footer";
 import partnersHeroAd from "@/assets/partners-hero-ad.png";
 import { panelClass, titleClass } from "@/lib/cardAccent";
 
@@ -199,6 +200,7 @@ const Partners = () => {
 
 
       <TrustFooter />
+      <Footer />
     </div>
   );
 };

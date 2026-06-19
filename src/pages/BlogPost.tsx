@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import { Link, useParams } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import TrustFooter from "@/components/TrustFooter";
+import Footer from "@/components/Footer";
 import { getPostBySlug } from "@/data/blogPosts";
 import { renderPostContent } from "@/lib/renderPostContent";
 
@@ -23,6 +24,7 @@ export default function BlogPost() {
           </Link>
         </section>
         <TrustFooter />
+        <Footer />
       </main>
     );
   }
@@ -97,6 +99,7 @@ export default function BlogPost() {
         </div>
       </article>
       <TrustFooter />
+      <Footer />
     </main>
   );
 }

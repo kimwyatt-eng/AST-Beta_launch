@@ -3,6 +3,7 @@ import Seo from "@/components/Seo";
 import TrustFooter from "@/components/TrustFooter";
 import foundersHero from "@/assets/founders-hero.png";
 import { panelClass, titleClass } from "@/lib/cardAccent";
+import Footer from "@/components/Footer";
 
 export default function FoundersPage() {
   return (
@@ -145,16 +146,7 @@ export default function FoundersPage() {
 
       <TrustFooter />
 
-      <footer className="border-t border-border bg-card">
-        
-        
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-8 text-sm text-muted-foreground flex flex-col md:flex-row items-center justify-between gap-3">
-          <p>© 2025 ArtSupplyTracker. Software for artists. Made by an artist.</p>
-          <p>
-            Contact: <a href="mailto:Hello@artsupplytracker.com" className="text-secondary underline underline-offset-4">Hello@artsupplytracker.com</a>
-          </p>
-        </div>
-      </footer>
+      <Footer />
     </main>
   );
 }
