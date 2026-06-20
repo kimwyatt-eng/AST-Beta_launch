@@ -45,18 +45,6 @@ export default function ArtistsHome() {
               >
                 Enter Studio Beta
               </a>
-              <a
-                href="https://artsupplytrackerstudio.netlify.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center rounded-xl px-6 py-3 text-lg font-medium text-white focus:outline-none focus:ring-2 focus:ring-ring transition-transform hover:-translate-y-0.5"
-                style={{
-                  background: "linear-gradient(135deg, #7C3CFF 0%, #00E6FF 100%)",
-                  boxShadow: "0 0 0 1px rgba(124,60,255,0.35), 0 8px 24px -10px rgba(0,230,255,0.5)",
-                }}
-              >
-                See how it works
-              </a>
             </div>
 
             <div className="mt-4 space-y-1 text-[#B7AFD8] text-sm">
