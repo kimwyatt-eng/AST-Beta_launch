@@ -1,7 +1,7 @@
 import React from "react";
 import Navigation from "@/components/Navigation";
 import Seo from "@/components/Seo";
-import HeroSlideshow from "@/components/HeroSlideshow";
+import heroImageAsset from "@/assets/ast-homescreen.png.asset.json";
 import TrustFooter from "@/components/TrustFooter";
 import SignupForm from "@/components/SignupForm";
 import mockupDashboard from "@/assets/mockup-dashboard-dark.png";
@@ -65,9 +65,14 @@ export default function ArtistsHome() {
             </div>
           </div>
 
-          {/* Hero Slideshow */}
+          {/* Hero Image */}
           <div className="lg:col-span-3">
-            <HeroSlideshow />
+            <img
+              src={heroImageAsset.url}
+              alt="ArtSupplyTracker — Organized to Create. The fantasy studio vs. the real studio, with the ArtSupplyTracker app on a phone in between."
+              className="w-full h-auto rounded-2xl shadow-2xl"
+              loading="eager"
+            />
           </div>
         </div>
       </section>
