@@ -65,7 +65,7 @@ export default function ArtistsHome() {
       </section>
 
       {/* How it works */}
-      <section id="how" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
         <h2 className="text-3xl md:text-4xl font-bold tracking-tight">How it works</h2>
         <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           {[
