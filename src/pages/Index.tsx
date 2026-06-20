@@ -175,7 +175,7 @@ export default function ArtistsHome() {
       </section>
 
       {/* CTA */}
-      <section id="signup" className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-14 text-center">
+      <section className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-14 text-center">
         <a
           href="https://studiobeta.artsupplytracker.com/dashboard"
           className="ast-btn-primary inline-flex items-center justify-center rounded-xl px-6 py-3 text-lg font-semibold focus:outline-none focus:ring-2 focus:ring-ring"
