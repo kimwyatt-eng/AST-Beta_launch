@@ -3,12 +3,6 @@ import Navigation from "@/components/Navigation";
 import Seo from "@/components/Seo";
 import heroImageAsset from "@/assets/ast-homescreen.png.asset.json";
 import TrustFooter from "@/components/TrustFooter";
-import SignupForm from "@/components/SignupForm";
-import mockupDashboard from "@/assets/mockup-dashboard-dark.png";
-import mockupInventory from "@/assets/mockup-inventory.jpg";
-import mockupProject from "@/assets/mockup-project.jpg";
-import mockupPaletteCreator from "@/assets/mockup-palette-creator.png";
-import mockupMercurialHarvest from "@/assets/mockup-mercurial-harvest.png";
 import { panelClass, titleClass } from "@/lib/cardAccent";
 import Footer from "@/components/Footer";
 
