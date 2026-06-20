@@ -3,12 +3,6 @@ import Navigation from "@/components/Navigation";
 import Seo from "@/components/Seo";
 import heroImageAsset from "@/assets/ast-homescreen.png.asset.json";
 import TrustFooter from "@/components/TrustFooter";
-import SignupForm from "@/components/SignupForm";
-import mockupDashboard from "@/assets/mockup-dashboard-dark.png";
-import mockupInventory from "@/assets/mockup-inventory.jpg";
-import mockupProject from "@/assets/mockup-project.jpg";
-import mockupPaletteCreator from "@/assets/mockup-palette-creator.png";
-import mockupMercurialHarvest from "@/assets/mockup-mercurial-harvest.png";
 import { panelClass, titleClass } from "@/lib/cardAccent";
 import Footer from "@/components/Footer";
 
@@ -71,7 +65,7 @@ export default function ArtistsHome() {
       </section>
 
       {/* How it works */}
-      <section id="how" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
         <h2 className="text-3xl md:text-4xl font-bold tracking-tight">How it works</h2>
         <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           {[
@@ -181,7 +175,7 @@ export default function ArtistsHome() {
       </section>
 
       {/* CTA */}
-      <section id="signup" className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-14 text-center">
+      <section className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-14 text-center">
         <a
           href="https://studiobeta.artsupplytracker.com/dashboard"
           className="ast-btn-primary inline-flex items-center justify-center rounded-xl px-6 py-3 text-lg font-semibold focus:outline-none focus:ring-2 focus:ring-ring"
