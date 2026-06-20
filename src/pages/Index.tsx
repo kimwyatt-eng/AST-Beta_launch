@@ -55,12 +55,17 @@ export default function ArtistsHome() {
 
           {/* Hero Image */}
           <div className="lg:col-span-3">
-            <img
-              src={heroImageAsset.url}
-              alt="ArtSupplyTracker — Organized to Create. The fantasy studio vs. the real studio, with the ArtSupplyTracker app on a phone in between."
-              className="w-full h-auto rounded-2xl shadow-2xl"
-              loading="eager"
-            />
+            <a
+              href="https://studiobeta.artsupplytracker.com/dashboard"
+              className="block"
+            >
+              <img
+                src={heroImageAsset.url}
+                alt="ArtSupplyTracker — Organized to Create. The fantasy studio vs. the real studio, with the ArtSupplyTracker app on a phone in between."
+                className="w-full h-auto rounded-2xl shadow-2xl"
+                loading="eager"
+              />
+            </a>
           </div>
         </div>
       </section>
