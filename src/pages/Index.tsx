@@ -10,8 +10,8 @@ export default function ArtistsHome() {
   return (
     <main className="min-h-screen w-full bg-background text-foreground">
       <Seo
-        title="ArtSupplyTracker — Your AI-Powered Studio Assistant"
-        description="An AI-powered studio assistant built for artists. Track supplies, manage projects, capture ideas, organize research, and get intelligent creative help — all while keeping your artwork and ideas private."
+        title="ArtSupplyTracker — Your Studio Assistant for Artists"
+        description="description="A studio assistant built for artists. Track supplies, manage projects, capture notes, organize materials, and keep your artwork and ideas private."
         path="/"
       />
       <Navigation />
@@ -21,7 +21,7 @@ export default function ArtistsHome() {
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
           <div className="text-center lg:text-left lg:col-span-2">
             <p className="hero-kicker text-sm font-semibold uppercase tracking-[0.18em] mb-3">
-              ArtSupplyTracker
+              Art Supply Tracker
             </p>
             <h1 className="hero-title text-4xl md:text-5xl font-extrabold tracking-tight leading-[1.1]">
               Your Studio Time<br />
@@ -53,11 +53,7 @@ export default function ArtistsHome() {
                 src={heroImageAsset.url}
                 alt="ArtSupplyTracker — Organized to Create. The fantasy studio vs. the real studio, with the ArtSupplyTracker app on a phone in between."
                 className="w-full h-auto rounded-2xl shadow-2xl"
-                width={1536}
-                height={1024}
                 loading="eager"
-                fetchPriority="high"
-                decoding="async"
               />
             </a>
           </div>
@@ -108,7 +104,7 @@ export default function ArtistsHome() {
       </section>
 
 
-      {/* How it works */}
+     <h2 className="text-3xl md:text-4xl font-bold tracking-tight">What it does now — and what’s coming</h2>
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
         <h2 className="text-3xl md:text-4xl font-bold tracking-tight">How it works</h2>
         <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
@@ -116,19 +112,27 @@ export default function ArtistsHome() {
             {
               title: "Scan & add",
               body:
-                "Import receipts or snap a photo; smart tags organize everything automatically.",
+                "title: "Scan & add",
+body:
+  "title: "Planned: Scan & add",
+body:
+  "Planned features include receipt import, supply photos, and smart tags to make adding materials faster.",
               num: 1,
             },
             {
               title: "Create & track",
               body:
-                "Attach supplies to projects; see costs and progress in one place.",
+                "title: "Planned: Scan & add",
+body:
+  "Planned features include receipt import, supply photos, and smart tags to make adding materials faster.",
               num: 2,
             },
             {
               title: "Relax",
               body:
-                "Low-stock alerts, price drops, and insurance-ready records—handled.",
+                "title: "Planned: Snap & add",
+body:
+  "Low-stock alerts, price drops, and insurance-ready records—handled.",
               num: 3,
             },
           ].map((s, i) => (
@@ -252,7 +256,7 @@ export default function ArtistsHome() {
   );
 }
 
-function Card({ title, body, index = 0 }: { title: string; body: string; index?: number }) {
+function Card({ title, body, index = 0 }) {
   return (
     <div className={`${panelClass(index)} p-6`}>
       <h3 className={`text-xl font-semibold ${titleClass(index)}`}>{title}</h3>
