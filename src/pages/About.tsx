@@ -82,13 +82,13 @@ export default function About() {
               <div className={`text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight ${titleClass(i)}`}>
                 {s.value}
               </div>
-              <div className="mt-2 text-xs sm:text-sm text-foreground/75 leading-snug">
+              <div className="mt-2 text-xs sm:text-sm text-foreground/85 leading-snug">
                 {s.label}
               </div>
             </div>
           ))}
         </div>
-        <p className="mt-3 text-xs text-foreground/55 text-center">
+        <p className="mt-3 text-xs text-foreground/80 text-center">
           Sources listed at the bottom of this page.
         </p>
       </section>
@@ -306,7 +306,7 @@ export default function About() {
       <section className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-8">
         <div className="ast-panel p-6 sm:p-8">
           <h2 className="ast-heading-solid text-xl sm:text-2xl font-bold tracking-tight">Sources</h2>
-          <ul className="mt-4 space-y-2 text-sm text-foreground/70 list-disc list-inside">
+          <ul className="mt-4 space-y-2 text-sm text-foreground/85 list-disc list-inside">
             {sources.map((s) => (
               <li key={s}>{s}</li>
             ))}
