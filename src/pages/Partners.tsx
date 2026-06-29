@@ -16,8 +16,8 @@ const Partners = () => {
   return (
     <div className="min-h-screen bg-wine-plum">
       <Seo
-        title="Partners — Reach working artists | ArtSupplyTracker"
-        description="Partner with ArtSupplyTracker to reach engaged working artists. Brand collaborations, supplier integrations, and community programs."
+        title="Partners — Reach working artists | Art Supply Tracker"
+        description="Partner with Art Supply Tracker to support working artists through practical tools, product education, supplier resources, and community programs."
         path="/partners"
       />
       <Navigation />
