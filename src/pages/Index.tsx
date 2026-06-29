@@ -11,7 +11,7 @@ export default function ArtistsHome() {
     <main className="min-h-screen w-full bg-background text-foreground">
       <Seo
         title="ArtSupplyTracker — Your Studio Assistant for Artists"
-        description="A studio assistant built for artists. Track supplies, manage projects, capture notes, organize materials, and keep your artwork and ideas private."
+        description="description="A studio assistant built for artists. Track supplies, manage projects, capture notes, organize materials, and keep your artwork and ideas private."
         path="/"
       />
       <Navigation />
@@ -61,7 +61,7 @@ export default function ArtistsHome() {
       </section>
 
       {/* Where's My Thingamajig */}
-      <section className="w-full bg-card/40 border-y border-border/40">
+      <section className="w-full bg-background">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-16">
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight accent">
             Where's My Thingamajig?
@@ -110,21 +110,29 @@ export default function ArtistsHome() {
         <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           {[
             {
-              title: "Planned: Scan & add",
+              title: "Scan & add",
               body:
-                "Planned features include receipt import, supply photos, and smart tags to make adding materials faster.",
+                "title: "Scan & add",
+body:
+  "title: "Planned: Scan & add",
+body:
+  "Planned features include receipt import, supply photos, and smart tags to make adding materials faster.",
               num: 1,
             },
             {
               title: "Create & track",
               body:
-                "Build projects, link supplies, and track progress from sketch to finished piece.",
+                "title: "Planned: Scan & add",
+body:
+  "Planned features include receipt import, supply photos, and smart tags to make adding materials faster.",
               num: 2,
             },
             {
               title: "Relax",
               body:
-                "Low-stock alerts, price drops, and insurance-ready records—handled.",
+                "title: "Planned: Snap & add",
+body:
+  "Low-stock alerts, price drops, and insurance-ready records—handled.",
               num: 3,
             },
           ].map((s, i) => (
