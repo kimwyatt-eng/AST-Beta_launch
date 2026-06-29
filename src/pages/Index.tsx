@@ -11,7 +11,7 @@ export default function ArtistsHome() {
     <main className="min-h-screen w-full bg-background text-foreground">
       <Seo
         title="ArtSupplyTracker — Your Studio Assistant for Artists"
-        description="description="A studio assistant built for artists. Track supplies, manage projects, capture notes, organize materials, and keep your artwork and ideas private."
+        description="A studio assistant built for artists. Track supplies, manage projects, capture notes, organize materials, and keep your artwork and ideas private."
         path="/"
       />
       <Navigation />
@@ -110,29 +110,21 @@ export default function ArtistsHome() {
         <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           {[
             {
-              title: "Scan & add",
+              title: "Planned: Scan & add",
               body:
-                "title: "Scan & add",
-body:
-  "title: "Planned: Scan & add",
-body:
-  "Planned features include receipt import, supply photos, and smart tags to make adding materials faster.",
+                "Planned features include receipt import, supply photos, and smart tags to make adding materials faster.",
               num: 1,
             },
             {
               title: "Create & track",
               body:
-                "title: "Planned: Scan & add",
-body:
-  "Planned features include receipt import, supply photos, and smart tags to make adding materials faster.",
+                "Build projects, link supplies, and track progress from sketch to finished piece.",
               num: 2,
             },
             {
               title: "Relax",
               body:
-                "title: "Planned: Snap & add",
-body:
-  "Low-stock alerts, price drops, and insurance-ready records—handled.",
+                "Low-stock alerts, price drops, and insurance-ready records—handled.",
               num: 3,
             },
           ].map((s, i) => (
