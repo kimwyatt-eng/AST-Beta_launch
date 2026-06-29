@@ -87,12 +87,12 @@ const Partners = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <Card className={`${panelClass(0)} p-6 transition-all duration-300 hover:-translate-y-0.5`}>
               <CardContent className="p-8 text-center">
-                <h2 className={`text-xl font-semibold ${titleClass(0)} mb-4`}>Advertising</h2>
-                <p className="text-muted-foreground mb-6">Promote your products directly to artists actively seeking supplies.</p>
+                <h2 className={`text-xl font-semibold ${titleClass(0)} mb-4`}>Artist-Friendly Placements</h2>
+                <p className="text-muted-foreground mb-6">Share useful products, tools, and resources with artists in a studio-centered environment.</p>
                 <ul className="text-sm text-muted-foreground text-left space-y-2">
-                  <li>• Targeted demographics</li>
-                  <li>• Native ad placements</li>
-                  <li>• Performance analytics</li>
+                  <li>• Relevant product placements</li>
+                  <li>• Clear sponsor labeling</li>
+                  <li>• Artist-respectful promotion</li>
                 </ul>
               </CardContent>
             </Card>
