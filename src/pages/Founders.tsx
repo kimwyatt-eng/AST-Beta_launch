@@ -99,7 +99,7 @@ export default function FoundersPage() {
           <ValueCard
             index={1}
             title="Hands free creativity"
-            body="Voice control for busy hands. Alexa. Google Nest. Siri."
+            body="Voice-friendly studio use because artists' hands are usually full."
           />
           <ValueCard
             index={2}
@@ -115,7 +115,7 @@ export default function FoundersPage() {
           <ValueCard
             index={5}
             title="Security first"
-            body="Voiceprint ID and 2FA options to protect your studio and records."
+            body="Built around account security, artist ownership, and respect for your private studio records."
           />
         </div>
       </section>
