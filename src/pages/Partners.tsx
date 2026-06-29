@@ -16,8 +16,8 @@ const Partners = () => {
   return (
     <div className="min-h-screen bg-wine-plum">
       <Seo
-        title="Partners — Reach working artists | ArtSupplyTracker"
-        description="Partner with ArtSupplyTracker to reach engaged working artists. Brand collaborations, supplier integrations, and community programs."
+        title="Partners — Reach working artists | Art Supply Tracker"
+        description="Partner with Art Supply Tracker to support working artists through practical tools, product education, supplier resources, and community programs."
         path="/partners"
       />
       <Navigation />
@@ -36,7 +36,7 @@ const Partners = () => {
             >
               <img
                 src={partnersHeroAd}
-                alt="Advertise in our app — reach thousands of artists in their creative workflow with relevant, non-intrusive placements"
+                alt="Partner with Art Supply Tracker — reach artists in their creative workflow with relevant, non-intrusive placements"
                 className="w-full h-auto rounded-lg"
               />
             </a>
@@ -87,12 +87,12 @@ const Partners = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <Card className={`${panelClass(0)} p-6 transition-all duration-300 hover:-translate-y-0.5`}>
               <CardContent className="p-8 text-center">
-                <h2 className={`text-xl font-semibold ${titleClass(0)} mb-4`}>Advertising</h2>
-                <p className="text-muted-foreground mb-6">Promote your products directly to artists actively seeking supplies.</p>
+                <h2 className={`text-xl font-semibold ${titleClass(0)} mb-4`}>Artist-Friendly Placements</h2>
+                <p className="text-muted-foreground mb-6">Share useful products, tools, and resources with artists in a studio-centered environment.</p>
                 <ul className="text-sm text-muted-foreground text-left space-y-2">
-                  <li>• Targeted demographics</li>
-                  <li>• Native ad placements</li>
-                  <li>• Performance analytics</li>
+                  <li>• Relevant product placements</li>
+                  <li>• Clear sponsor labeling</li>
+                  <li>• Artist-respectful promotion</li>
                 </ul>
               </CardContent>
             </Card>
@@ -111,12 +111,12 @@ const Partners = () => {
 
             <Card className={`${panelClass(2)} p-6 transition-all duration-300 hover:-translate-y-0.5`}>
               <CardContent className="p-8 text-center">
-                <h2 className={`text-xl font-semibold ${titleClass(2)} mb-4`}>Data Partnerships</h2>
-                <p className="text-muted-foreground mb-6">Access ethical, anonymized insights into art supply trends and market demand.</p>
+                <h2 className={`text-xl font-semibold ${titleClass(2)} mb-4`}>Anonymized Studio Insights</h2>
+                <p className="text-muted-foreground mb-6">Future insight products may help partners understand supply trends without exposing personal artist data.</p>
                 <ul className="text-sm text-muted-foreground text-left space-y-2">
-                  <li>• Market trend reports</li>
-                  <li>• Regional insights</li>
-                  <li>• Demand forecasting</li>
+                  <li>• Aggregated trend reports</li>
+                  <li>• Region-level insights</li>
+                  <li>• Privacy-protective analysis</li>
                 </ul>
               </CardContent>
             </Card>
@@ -141,14 +141,14 @@ const Partners = () => {
       <section className="px-8 py-20 bg-card/20">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-center text-foreground mb-12">
-            Why Partner with <span className="text-accent">ArtSupplyTracker</span>
+            Why Partner with <span className="text-accent">Art Supply Tracker</span>
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card className={`${panelClass(4)} p-6`}>
               <CardContent className="p-6">
-                <h3 className={`text-xl font-semibold ${titleClass(4)} mb-4`}>Engaged Community</h3>
-                <p className="text-muted-foreground">Our users are passionate artists who actively purchase supplies and trust our recommendations.</p>
+                <h3 className={`text-xl font-semibold ${titleClass(4)} mb-4`}>Artist-Centered Audience</h3>
+                <p className="text-muted-foreground">Art Supply Tracker is being built for artists who care about supplies, projects, materials, and better studio organization.</p>
               </CardContent>
             </Card>
 
