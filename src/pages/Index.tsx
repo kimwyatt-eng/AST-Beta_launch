@@ -53,7 +53,11 @@ export default function ArtistsHome() {
                 src={heroImageAsset.url}
                 alt="ArtSupplyTracker — Organized to Create. The fantasy studio vs. the real studio, with the ArtSupplyTracker app on a phone in between."
                 className="w-full h-auto rounded-2xl shadow-2xl"
+                width={1536}
+                height={1024}
                 loading="eager"
+                fetchPriority="high"
+                decoding="async"
               />
             </a>
           </div>
