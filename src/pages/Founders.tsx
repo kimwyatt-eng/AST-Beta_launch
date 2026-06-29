@@ -20,9 +20,8 @@ export default function FoundersPage() {
           <div>
             <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight">Built by artists. For artists.</h1>
             <p className="mt-4 text-lg text-foreground/80 max-w-xl">
-              Art Supply Tracker began in a real studio. I was tired of lost supplies, messy spreadsheets, and tools
-              that did not respect creative privacy. I built the app I needed. Then I realized thousands of artists need
-              it too.
+              Art Supply Tracker began in a my studio. I was tired of lost supplies, messy spreadsheets, and tools that
+              did not respect creative privacy. I built the app I needed. Then I realized other artists need it too.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <a
@@ -69,9 +68,16 @@ export default function FoundersPage() {
               vulnerable artists are when our tools and artwork aren't tracked or protected.
             </p>
             <p>
-              I created ArtSupplyTracker so artists could always know what they own, where it is, and what it's worth.
-              Insurance paperwork should take minutes, not days. And creative privacy should be a given — no scraping,
-              no training on your art.
+              <p>
+                I created Art Supply Tracker so artists could know what they own, where it is, and what it belongs to.
+                Studio records should not take days to pull together. Creative privacy should be a given — no scraping,
+                no training on your art.
+              </p>
+              <p>
+                What began as a weekend project is becoming a studio hub that organizes supplies, connects them to
+                projects, and keeps creators focused on making art. My mission is simple: help artists create more and
+                waste less, while keeping ownership and privacy intact.
+              </p>
             </p>
             <p>
               What began as a weekend project is now a studio hub that organizes supplies, connects them to projects,
