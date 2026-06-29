@@ -76,7 +76,6 @@ export default function Unsubscribe() {
         )}
         {status === "valid" && (
           <>
-            <h1 className="text-2xl font-bold text-foreground mb-2">Unsubscribe</h1>
             <p className="text-muted-foreground mb-6">
               Are you sure you want to unsubscribe from ArtSupplyTracker emails?
             </p>
@@ -91,16 +90,17 @@ export default function Unsubscribe() {
         )}
         {status === "success" && (
           <>
-            <h1 className="text-2xl font-bold text-foreground mb-2">Unsubscribed</h1>
+            <h2 className="text-2xl font-bold text-foreground mb-2">Unsubscribed</h2>
             <p className="text-muted-foreground">You've been successfully unsubscribed. You won't receive any more emails from us.</p>
           </>
         )}
         {status === "error" && (
           <>
-            <h1 className="text-2xl font-bold text-foreground mb-2">Something Went Wrong</h1>
+            <h2 className="text-2xl font-bold text-foreground mb-2">Something Went Wrong</h2>
             <p className="text-muted-foreground">We couldn't process your request. Please try again later.</p>
           </>
         )}
+
       </div>
     </div>
   );
