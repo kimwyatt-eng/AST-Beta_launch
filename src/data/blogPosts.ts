@@ -332,7 +332,119 @@ A cluttered studio does not mean you are a cluttered person. It means you deserv
 
 Ready to experience the difference? [Join the Beta](/#signup). Your art, ideas, and research are yours. Read more about [why we're building this](/about) and [how we protect your data](/privacy).`,
   },
+  {
+    slug: "2026-artist-grants-guide",
+    title: "2026 Artist Grants, Residencies, and Fellowships: A Working Artist's Guide",
+    description:
+      "A curated 2026 guide to artist grants, residencies, and fellowships — funding to cover supplies, studio time, and new projects, plus tips on applying.",
+    keyword: "artist grants 2026",
+    publishedAt: "2026-06-29",
+    readingMinutes: 9,
+    content: `Funding shouldn't be the reason a good project stays on the shelf.
+
+If 2026 is the year you want to buy better materials, take time off the day job, or finally finish that body of work, an artist grant, residency, or fellowship can be the difference between "someday" and "this year."
+
+This is a working artist's guide to the 2026 opportunities worth knowing about — what they fund, who they fund, and how to give your application a real shot.
+
+> Most of these programs run on annual cycles. Deadlines shift each year, so always confirm dates and eligibility on the official site before applying.
+
+## How to use this guide
+
+Grants, residencies, and fellowships sound similar but fund different things:
+
+- **Grants** — money. Sometimes restricted to a project, sometimes unrestricted.
+- **Residencies** — time, space, and often a stipend. You leave home to focus on the work.
+- **Fellowships** — a mix of money, mentorship, and recognition, usually awarded for a body of work.
+
+Pick the format that fits where you are in 2026, not just the biggest dollar amount.
+
+## Unrestricted grants for working artists
+
+These programs give cash that you can spend on supplies, studio rent, childcare, or anything else that keeps you making.
+
+- **Pollock-Krasner Foundation Grants** — unrestricted grants to visual artists in painting, sculpture, and works on paper. Rolling applications.
+- **Adolph and Esther Gottlieb Foundation Individual Support Grant** — for mature painters, sculptors, and printmakers with at least 20 years of dedicated practice.
+- **Joan Mitchell Foundation Painters & Sculptors Grant** — unrestricted awards for US-based painters and sculptors. Nomination-based; keep your public presence strong.
+- **Artist Relief / Artist Trust emergency grants** — when something breaks (a roof, a body, a budget), regional artist trusts often have small emergency funds.
+
+## Project grants
+
+If you have a specific 2026 project — a series, an exhibition, a public installation — these are the lanes:
+
+- **NYFA City Artist Corps and project grants** — for New York artists working on community-facing projects.
+- **Creative Capital Awards** — multi-year project funding plus advisory support. Highly competitive; the application is itself a useful exercise.
+- **Foundation for Contemporary Arts Grants to Artists** — recognizes innovative work across disciplines.
+- **Regional arts council project grants** — most US states and Canadian provinces fund individual artist projects. Search "[your state] arts council individual artist grant 2026."
+
+## Fellowships
+
+Fellowships tend to come with prestige, money, and a community.
+
+- **Guggenheim Fellowships** — mid-career artists with a strong body of work. Annual cycle, fall deadline.
+- **United States Artists Fellowships** — $50,000 unrestricted, nomination-based, across disciplines.
+- **Smithsonian Artist Research Fellowship (SARF)** — for artists whose practice involves research in Smithsonian collections.
+- **Harpo Foundation Grants for Visual Artists** — supports under-recognized artists over 21.
+
+## Residencies worth applying to in 2026
+
+A few residencies that consistently support working artists rather than only emerging stars:
+
+- **MacDowell** — fully funded, no fee to apply, all disciplines.
+- **Yaddo** — long-running, fully funded residency in Saratoga Springs.
+- **Vermont Studio Center** — large international community, generous fellowship pool.
+- **Skowhegan School of Painting & Sculpture** — intense 9-week summer residency for emerging artists.
+- **Headlands Center for the Arts** — fully funded artist-in-residence program in California.
+- **Wassaic Project** — accessible residency program in upstate New York with a strong community.
+
+Outside the US, look at **Banff Centre (Canada)**, **Cité Internationale des Arts (Paris)**, and **Künstlerhaus Bethanien (Berlin)**.
+
+## Grants for specific groups
+
+Many of the strongest 2026 opportunities are targeted:
+
+- **Anonymous Was A Woman Award** — for women-identifying artists over 40.
+- **Leeway Foundation** — for women and trans artists in the Philadelphia region.
+- **Native Arts and Cultures Foundation Fellowships** — for Native American, Alaska Native, and Native Hawaiian artists.
+- **Wave Farm Grants** — for transmission and radio artists.
+- **Queer\\|Art\\|Prize and Queer\\|Art mentorship** — for LGBTQ+ artists.
+
+If you belong to a specific community, search "[community] artist grant 2026" — there are far more programs than any single list can capture.
+
+## How to actually win one
+
+The strongest applications share a few habits. None of them are secret:
+
+1. **Apply to fewer, better-fit programs.** Five thoughtful applications beat twenty rushed ones.
+2. **Keep your work samples updated.** Most grants ask for 8–10 recent images with titles, year, medium, and dimensions. Have a current set ready in one folder so you're not scrambling the night before a deadline.
+3. **Write the project description like a human.** Plain language, specific details, what you'll actually do with the money.
+4. **Show that you'll finish.** Panels fund artists who follow through. Past exhibitions, completed projects, and clear timelines matter.
+5. **Track everything in one place.** Deadlines, requirements, image lists, recommendation letters, budgets — losing track of one detail can sink an otherwise strong application.
+
+That last one is where most artists quietly lose opportunities. Studio life is already a lot to hold in your head.
+
+## How Art Supply Tracker fits in
+
+[Art Supply Tracker](/) is built to be your studio's second brain — so when a grant asks for a materials budget, a project plan, or an inventory of recent work, you're not starting from scratch.
+
+You can use it to:
+
+- Track project costs and materials so a grant budget takes minutes, not hours.
+- Keep a running record of works in progress and finished pieces with images, dimensions, and dates — the exact info most applications ask for.
+- Store research, notes, and references for the projects you're proposing.
+- Keep all of this private. Your art, your data, your ideas — never used to train AI. See our [privacy policy](/privacy).
+
+If you want help getting your studio organized before the next application deadline, [join the early access beta](https://studiobeta.artsupplytracker.com/dashboard).
+
+## Keep going
+
+The artists who keep getting funded aren't the ones with the flashiest CVs. They're the ones who keep applying, keep refining their work, and keep showing up prepared.
+
+Pick two opportunities from this list. Put the deadlines on your calendar this week. That's the first step.
+
+Want more practical studio resources? Read [why we're building Art Supply Tracker](/about) or browse the rest of the [blog](/blog).`,
+  },
 ];
+
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
   return blogPosts.find((p) => p.slug === slug);
