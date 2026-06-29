@@ -111,12 +111,12 @@ const Partners = () => {
 
             <Card className={`${panelClass(2)} p-6 transition-all duration-300 hover:-translate-y-0.5`}>
               <CardContent className="p-8 text-center">
-                <h2 className={`text-xl font-semibold ${titleClass(2)} mb-4`}>Data Partnerships</h2>
-                <p className="text-muted-foreground mb-6">Access ethical, anonymized insights into art supply trends and market demand.</p>
+                <h2 className={`text-xl font-semibold ${titleClass(2)} mb-4`}>Anonymized Studio Insights</h2>
+                <p className="text-muted-foreground mb-6">Future insight products may help partners understand supply trends without exposing personal artist data.</p>
                 <ul className="text-sm text-muted-foreground text-left space-y-2">
-                  <li>• Market trend reports</li>
-                  <li>• Regional insights</li>
-                  <li>• Demand forecasting</li>
+                  <li>• Aggregated trend reports</li>
+                  <li>• Region-level insights</li>
+                  <li>• Privacy-protective analysis</li>
                 </ul>
               </CardContent>
             </Card>
