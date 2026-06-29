@@ -65,7 +65,7 @@ export default function About() {
           About ArtSupplyTracker
         </p>
         <h1 className="mt-3 text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight">
-          Art was never the impractical choice
+          The Question Was Always Wrong
         </h1>
         <p className="mt-5 text-base sm:text-lg md:text-xl text-foreground/80 max-w-2xl mx-auto">
           Artists have been asked some version of the same tired question forever:{" "}
