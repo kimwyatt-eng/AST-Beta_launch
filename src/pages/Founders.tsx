@@ -18,9 +18,9 @@ export default function FoundersPage() {
       <section className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight">Built by artists. For artists.</h1>
+            <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight">Built By An Artist For Artists.</h1>
             <p className="mt-4 text-lg text-foreground/80 max-w-xl">
-              Art Supply Tracker began in a my studio. I was tired of lost supplies, messy spreadsheets, and tools that
+              Art Supply Tracker began in my studio. I was tired of lost supplies, messy spreadsheets, and tools that
               did not respect creative privacy. I built the app I needed. Then I realized other artists need it too.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
