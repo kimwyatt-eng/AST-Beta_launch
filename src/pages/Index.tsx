@@ -24,11 +24,11 @@ export default function ArtistsHome() {
               ArtSupplyTracker
             </p>
             <h1 className="hero-title text-4xl md:text-5xl font-extrabold tracking-tight leading-[1.1]">
-              Your AI-Powered<br />
-              <span className="accent">Studio Assistant</span>
+              Your Studio Time<br />
+              <span className="accent">Is For Making Art</span>
             </h1>
             <p className="hero-body mt-5 text-lg max-w-xl lg:mx-0 mx-auto">
-              Art Supply Tracker combines inventory management, project tracking, research tools, and hands-free assistance in one artist-focused platform. Use AI to organize supplies, document works in progress, find materials, answer creative questions, and keep your studio running smoothly — all while maintaining control of your artwork, ideas, and research.
+              Track supplies, projects, notes, and materials without breaking your creative flow.
             </p>
 
             {/* CTAs */}
@@ -37,7 +37,7 @@ export default function ArtistsHome() {
                 href="https://studiobeta.artsupplytracker.com/dashboard"
                 className="ast-btn-primary inline-flex items-center justify-center rounded-xl px-6 py-3 text-lg font-semibold focus:outline-none focus:ring-2 focus:ring-ring"
               >
-                Enter Studio Beta
+                Join Early Access
               </a>
             </div>
 
