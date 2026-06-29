@@ -53,8 +53,8 @@ export default function About() {
   return (
     <main className="min-h-screen w-full bg-background text-foreground">
       <Seo
-        title="About — Studio software built for artists | ArtSupplyTracker"
-        description="Why ArtSupplyTracker exists: a studio management app that respects creative privacy and treats artists as serious users."
+        title="About — Studio software built for artists | Art Supply Tracker"
+        description="Why Art Supply Tracker exists: a studio management app that respects creative privacy and treats artists as serious users."
         path="/about"
       />
       <Navigation />
