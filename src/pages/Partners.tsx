@@ -87,7 +87,7 @@ const Partners = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <Card className={`${panelClass(0)} p-6 transition-all duration-300 hover:-translate-y-0.5`}>
               <CardContent className="p-8 text-center">
-                <h3 className={`text-xl font-semibold ${titleClass(0)} mb-4`}>Advertising</h3>
+                <h2 className={`text-xl font-semibold ${titleClass(0)} mb-4`}>Advertising</h2>
                 <p className="text-muted-foreground mb-6">Promote your products directly to artists actively seeking supplies.</p>
                 <ul className="text-sm text-muted-foreground text-left space-y-2">
                   <li>• Targeted demographics</li>
@@ -99,7 +99,7 @@ const Partners = () => {
 
             <Card className={`${panelClass(1)} p-6 transition-all duration-300 hover:-translate-y-0.5`}>
               <CardContent className="p-8 text-center">
-                <h3 className={`text-xl font-semibold ${titleClass(1)} mb-4`}>Featured Content</h3>
+                <h2 className={`text-xl font-semibold ${titleClass(1)} mb-4`}>Featured Content</h2>
                 <p className="text-muted-foreground mb-6">Showcase your brand on our Inspiration Page with video demos and tutorials.</p>
                 <ul className="text-sm text-muted-foreground text-left space-y-2">
                   <li>• Video demonstrations</li>
@@ -111,7 +111,7 @@ const Partners = () => {
 
             <Card className={`${panelClass(2)} p-6 transition-all duration-300 hover:-translate-y-0.5`}>
               <CardContent className="p-8 text-center">
-                <h3 className={`text-xl font-semibold ${titleClass(2)} mb-4`}>Data Partnerships</h3>
+                <h2 className={`text-xl font-semibold ${titleClass(2)} mb-4`}>Data Partnerships</h2>
                 <p className="text-muted-foreground mb-6">Access ethical, anonymized insights into art supply trends and market demand.</p>
                 <ul className="text-sm text-muted-foreground text-left space-y-2">
                   <li>• Market trend reports</li>
@@ -123,7 +123,7 @@ const Partners = () => {
 
             <Card className={`${panelClass(3)} p-6 transition-all duration-300 hover:-translate-y-0.5`}>
               <CardContent className="p-8 text-center">
-                <h3 className={`text-xl font-semibold ${titleClass(3)} mb-4`}>Early Product Testing & Feedback</h3>
+                <h2 className={`text-xl font-semibold ${titleClass(3)} mb-4`}>Early Product Testing &amp; Feedback</h2>
                 <p className="text-muted-foreground mb-6">Connect directly with artists as early testers and get authentic insights to guide product decisions.</p>
                 <ul className="text-sm text-muted-foreground text-left space-y-2">
                   <li>• Beta testing with engaged creators</li>
