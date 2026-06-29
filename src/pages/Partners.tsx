@@ -141,7 +141,7 @@ const Partners = () => {
       <section className="px-8 py-20 bg-card/20">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-center text-foreground mb-12">
-            Why Partner with <span className="text-accent">ArtSupplyTracker</span>
+            Why Partner with <span className="text-accent">Art Supply Tracker</span>
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
