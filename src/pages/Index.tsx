@@ -112,27 +112,19 @@ export default function ArtistsHome() {
             {
               title: "Scan & add",
               body:
-                "title: "Scan & add",
-body:
-  "title: "Planned: Scan & add",
-body:
-  "Planned features include receipt import, supply photos, and smart tags to make adding materials faster.",
+                "Planned features include receipt import, supply photos, and smart tags to make adding materials faster.",
               num: 1,
             },
             {
               title: "Create & track",
               body:
-                "title: "Planned: Scan & add",
-body:
-  "Planned features include receipt import, supply photos, and smart tags to make adding materials faster.",
+                "Build supply lists per project, track progress, and keep notes connected to the artwork they belong to.",
               num: 2,
             },
             {
               title: "Relax",
               body:
-                "title: "Planned: Snap & add",
-body:
-  "Low-stock alerts, price drops, and insurance-ready records—handled.",
+                "Low-stock alerts, price drops, and insurance-ready records—handled.",
               num: 3,
             },
           ].map((s, i) => (
