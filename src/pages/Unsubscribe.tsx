@@ -70,7 +70,7 @@ export default function Unsubscribe() {
 
         {status === "already" && (
           <>
-            <h1 className="text-2xl font-bold text-foreground mb-2">Already Unsubscribed</h1>
+            <h2 className="text-2xl font-bold text-foreground mb-2">Already Unsubscribed</h2>
             <p className="text-muted-foreground">You've already been unsubscribed from these emails.</p>
           </>
         )}
