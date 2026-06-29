@@ -60,6 +60,50 @@ export default function ArtistsHome() {
         </div>
       </section>
 
+      {/* Where's My Thingamajig */}
+      <section className="w-full bg-card/40 border-y border-border/40">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-16">
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight accent">
+            Where's My Thingamajig?
+          </h2>
+          <div className="mt-6 space-y-5 text-lg text-foreground/85 leading-relaxed">
+            <p>
+              It never fails: you're ready to paint, you know exactly what you want to work on, and then one crucial tube of paint, bullnose clip, brush, pen, or mystery doohickey has vanished.
+            </p>
+            <p>
+              When you only have an afternoon to make art, a scavenger hunt can ruin your day — and your creative flow.
+            </p>
+            <p className="font-semibold text-foreground">
+              So I made the app I wished already existed.
+            </p>
+            <p>
+              Art Supply Tracker is a hands-free, voice-controlled studio assistant that helps artists log supplies, track where things are stored, and connect materials to the projects they belong to. Whether your studio is a full room, a garage, the corner of the dining table, or a tub of supplies in the closet, this app is built for real artists in real spaces.
+            </p>
+            <p>
+              Art Supply Tracker is currently accepting early access beta testers. Your feedback can directly shape how the app grows into a better studio tool for artists.
+            </p>
+            <p>
+              Everything you enter into your beta inventory is your data. You can upload, update, and download your own information.
+            </p>
+            <p>
+              Save time, save money, and spend less of your precious studio time wondering, "Where did I put that thing?"
+            </p>
+            <p className="font-semibold text-foreground">
+              Sign up to be one of the first artists to try Art Supply Tracker.
+            </p>
+          </div>
+          <div className="mt-8">
+            <a
+              href="https://studiobeta.artsupplytracker.com/dashboard"
+              className="ast-btn-primary inline-flex items-center justify-center rounded-xl px-6 py-3 text-lg font-semibold focus:outline-none focus:ring-2 focus:ring-ring"
+            >
+              Join Early Access
+            </a>
+          </div>
+        </div>
+      </section>
+
+
       {/* How it works */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
         <h2 className="text-3xl md:text-4xl font-bold tracking-tight">How it works</h2>
