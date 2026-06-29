@@ -36,7 +36,7 @@ const Partners = () => {
             >
               <img
                 src={partnersHeroAd}
-                alt="Advertise in our app — reach thousands of artists in their creative workflow with relevant, non-intrusive placements"
+                alt="Partner with Art Supply Tracker — reach artists in their creative workflow with relevant, non-intrusive placements"
                 className="w-full h-auto rounded-lg"
               />
             </a>
