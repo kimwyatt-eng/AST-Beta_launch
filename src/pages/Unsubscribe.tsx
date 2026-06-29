@@ -62,13 +62,12 @@ export default function Unsubscribe() {
         noindex
       />
       <div className="max-w-md w-full ast-panel p-8 text-center shadow-lg">
+        <h1 className="text-2xl font-bold text-foreground mb-2">Unsubscribe</h1>
         {status === "loading" && <p className="text-muted-foreground">Loading…</p>}
         {status === "invalid" && (
-          <>
-            <h1 className="text-2xl font-bold text-foreground mb-2">Invalid Link</h1>
-            <p className="text-muted-foreground">This unsubscribe link is invalid or has expired.</p>
-          </>
+          <p className="text-muted-foreground">This unsubscribe link is invalid or has expired.</p>
         )}
+
         {status === "already" && (
           <>
             <h1 className="text-2xl font-bold text-foreground mb-2">Already Unsubscribed</h1>
