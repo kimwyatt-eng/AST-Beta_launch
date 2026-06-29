@@ -46,7 +46,7 @@ const Investors = () => {
                   boxShadow: "0 0 0 1px rgba(124,60,255,0.35), 0 8px 24px -10px rgba(0,230,255,0.5)",
                 }}
               >
-                Contact Our Investor Team →
+                Contact the Art Supply Tracker Team →
               </button>
             </div>
 
@@ -369,7 +369,7 @@ const Investors = () => {
               boxShadow: "0 0 0 1px rgba(124,60,255,0.35), 0 8px 24px -10px rgba(0,230,255,0.5)",
             }}
           >
-            Contact Our Investor Team →
+            Contact the Art Supply Tracker Team →
           </button>
         </div>
       </section>
