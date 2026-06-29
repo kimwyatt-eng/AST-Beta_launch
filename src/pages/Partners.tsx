@@ -147,8 +147,8 @@ const Partners = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card className={`${panelClass(4)} p-6`}>
               <CardContent className="p-6">
-                <h3 className={`text-xl font-semibold ${titleClass(4)} mb-4`}>Engaged Community</h3>
-                <p className="text-muted-foreground">Our users are passionate artists who actively purchase supplies and trust our recommendations.</p>
+                <h3 className={`text-xl font-semibold ${titleClass(4)} mb-4`}>Artist-Centered Audience</h3>
+                <p className="text-muted-foreground">Art Supply Tracker is being built for artists who care about supplies, projects, materials, and better studio organization.</p>
               </CardContent>
             </Card>
 
