@@ -14,7 +14,7 @@ const stats = [
   { value: "$1.2T", label: "U.S. arts & cultural industries added to the economy in 2023" },
   { value: "4.2%", label: "Share of U.S. GDP from arts & cultural industries in 2023" },
   { value: "$57.5B", label: "Estimated global art market sales in 2024" },
-  { value: "10s of B", label: "Estimated global art & craft materials market" },
+  { value: "$10B+", label: "Estimated global art & craft materials market" },
 ];
 
 const sources = [
@@ -72,6 +72,14 @@ export default function About() {
           <span className="italic">"What are you going to do with art?"</span>
           {" "}A better question is: what does the world do without it?
         </p>
+        <div className="mt-7">
+          <a
+            href="https://studiobeta.artsupplytracker.com/dashboard"
+            className="ast-btn-primary inline-flex items-center justify-center rounded-xl px-6 py-3 text-lg font-semibold focus:outline-none focus:ring-2 focus:ring-ring"
+          >
+            Join Early Access
+          </a>
+        </div>
       </section>
 
       {/* Stat cards */}
@@ -288,7 +296,7 @@ export default function About() {
       <section className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-6">
         <div className="ast-panel card-violet p-6 sm:p-8 text-center">
           <h2 className="title-violet text-2xl sm:text-3xl font-bold tracking-tight">
-            Join the Beta
+            Join Early Access
           </h2>
           <p className="mt-3 text-foreground/85 max-w-2xl mx-auto">
             Get early access and help shape a studio tool built around artists — not around your data.
@@ -297,7 +305,7 @@ export default function About() {
             href="https://studiobeta.artsupplytracker.com/dashboard"
             className="ast-btn-primary mt-5 inline-flex items-center justify-center rounded-xl px-6 py-3 text-lg font-semibold focus:outline-none focus:ring-2 focus:ring-ring"
           >
-            Enter Studio Beta
+            Join Early Access
           </a>
         </div>
       </section>
