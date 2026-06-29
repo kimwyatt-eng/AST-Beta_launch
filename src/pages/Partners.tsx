@@ -64,20 +64,30 @@ const Partners = () => {
       {/* Partner form CTA */}
       <section className="px-8 -mt-8 mb-12">
         <div className="text-center">
-          <button
-            type="button"
-            data-tally-open="1Ap5E4"
-            data-tally-layout="modal"
-            data-tally-emoji-text="🤝"
-            data-tally-emoji-animation="head-shake"
-            className="partner-cta inline-flex items-center justify-center rounded-xl px-6 py-3 text-lg font-semibold text-white focus:outline-none focus:ring-2 focus:ring-ring transition-transform hover:-translate-y-0.5"
-            style={{
-              background: "linear-gradient(135deg, #7C3CFF 0%, #E91E8C 100%)",
-              boxShadow: "0 0 0 1px rgba(124,60,255,0.35), 0 8px 24px -10px rgba(233,30,140,0.5)",
-            }}
-          >
-            Partner With Us
-          </button>
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            <button
+              type="button"
+              data-tally-open="1Ap5E4"
+              data-tally-layout="modal"
+              data-tally-emoji-text="🤝"
+              data-tally-emoji-animation="head-shake"
+              className="partner-cta inline-flex items-center justify-center rounded-xl px-6 py-3 text-lg font-semibold text-white focus:outline-none focus:ring-2 focus:ring-ring transition-transform hover:-translate-y-0.5"
+              style={{
+                background: "linear-gradient(135deg, #7C3CFF 0%, #E91E8C 100%)",
+                boxShadow: "0 0 0 1px rgba(124,60,255,0.35), 0 8px 24px -10px rgba(233,30,140,0.5)",
+              }}
+            >
+              Partner With Us
+            </button>
+            <a
+              href="https://studiobeta.artsupplytracker.com/dashboard/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center rounded-xl px-6 py-3 text-lg font-semibold text-white focus:outline-none focus:ring-2 focus:ring-ring transition-transform hover:-translate-y-0.5 border border-white/20 bg-white/10 hover:bg-white/15"
+            >
+              Try The App
+            </a>
+          </div>
         </div>
       </section>
 
@@ -181,20 +191,30 @@ const Partners = () => {
           <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
             Join us in supporting working artists with tools, education, and resources that make a real difference.
           </p>
-          <button
-            type="button"
-            data-tally-open="1Ap5E4"
-            data-tally-layout="modal"
-            data-tally-emoji-text="🤝"
-            data-tally-emoji-animation="head-shake"
-            className="partner-cta inline-flex items-center justify-center rounded-xl px-6 py-3 text-lg font-semibold text-white focus:outline-none focus:ring-2 focus:ring-ring transition-transform hover:-translate-y-0.5"
-            style={{
-              background: "linear-gradient(135deg, #7C3CFF 0%, #E91E8C 100%)",
-              boxShadow: "0 0 0 1px rgba(124,60,255,0.35), 0 8px 24px -10px rgba(233,30,140,0.5)",
-            }}
-          >
-            Partner With Us
-          </button>
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            <button
+              type="button"
+              data-tally-open="1Ap5E4"
+              data-tally-layout="modal"
+              data-tally-emoji-text="🤝"
+              data-tally-emoji-animation="head-shake"
+              className="partner-cta inline-flex items-center justify-center rounded-xl px-6 py-3 text-lg font-semibold text-white focus:outline-none focus:ring-2 focus:ring-ring transition-transform hover:-translate-y-0.5"
+              style={{
+                background: "linear-gradient(135deg, #7C3CFF 0%, #E91E8C 100%)",
+                boxShadow: "0 0 0 1px rgba(124,60,255,0.35), 0 8px 24px -10px rgba(233,30,140,0.5)",
+              }}
+            >
+              Partner With Us
+            </button>
+            <a
+              href="https://studiobeta.artsupplytracker.com/dashboard/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center rounded-xl px-6 py-3 text-lg font-semibold text-white focus:outline-none focus:ring-2 focus:ring-ring transition-transform hover:-translate-y-0.5 border border-white/20 bg-white/10 hover:bg-white/15"
+            >
+              Try The App
+            </a>
+          </div>
         </div>
       </section>
 
