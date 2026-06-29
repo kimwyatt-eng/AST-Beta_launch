@@ -41,10 +41,6 @@ export default function ArtistsHome() {
               </a>
             </div>
 
-            <div className="mt-4 space-y-1 text-[#B7AFD8] text-sm">
-              <p>"Hands-free because artists' hands are full."</p>
-              <p>"Secure because your art deserves protection."</p>
-            </div>
           </div>
 
           {/* Hero Image */}
