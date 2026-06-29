@@ -83,7 +83,11 @@ const Partners = () => {
               href="https://studiobeta.artsupplytracker.com/dashboard/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-xl px-6 py-3 text-lg font-semibold text-white focus:outline-none focus:ring-2 focus:ring-ring transition-transform hover:-translate-y-0.5 border border-white/20 bg-white/10 hover:bg-white/15"
+              className="partner-cta inline-flex items-center justify-center rounded-xl px-6 py-3 text-lg font-semibold text-white focus:outline-none focus:ring-2 focus:ring-ring transition-transform hover:-translate-y-0.5"
+              style={{
+                background: "linear-gradient(135deg, #7C3CFF 0%, #E91E8C 100%)",
+                boxShadow: "0 0 0 1px rgba(124,60,255,0.35), 0 8px 24px -10px rgba(233,30,140,0.5)",
+              }}
             >
               Try The App
             </a>
@@ -210,7 +214,11 @@ const Partners = () => {
               href="https://studiobeta.artsupplytracker.com/dashboard/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-xl px-6 py-3 text-lg font-semibold text-white focus:outline-none focus:ring-2 focus:ring-ring transition-transform hover:-translate-y-0.5 border border-white/20 bg-white/10 hover:bg-white/15"
+              className="partner-cta inline-flex items-center justify-center rounded-xl px-6 py-3 text-lg font-semibold text-white focus:outline-none focus:ring-2 focus:ring-ring transition-transform hover:-translate-y-0.5"
+              style={{
+                background: "linear-gradient(135deg, #7C3CFF 0%, #E91E8C 100%)",
+                boxShadow: "0 0 0 1px rgba(124,60,255,0.35), 0 8px 24px -10px rgba(233,30,140,0.5)",
+              }}
             >
               Try The App
             </a>
