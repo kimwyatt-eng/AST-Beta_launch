@@ -110,9 +110,45 @@ export default function BlogPost() {
             <Link to="/blog" className="text-secondary underline underline-offset-4 hover:opacity-80">More studio guides</Link>
           </p>
         </div>
+        {(() => {
+          const related = getRelatedPosts(post, 3);
+          if (related.length === 0) return null;
+          return (
+            <section aria-labelledby="related-posts" className="mt-12">
+              <h2 id="related-posts" className="text-2xl md:text-3xl font-bold tracking-tight title-violet mb-6">
+                Related reading
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+                {related.map((r, i) => (
+                  <Link
+                    key={r.slug}
+                    to={`/blog/${r.slug}`}
+                    className={`${panelClass(i)} p-5 block transition-transform hover:-translate-y-0.5`}
+                  >
+                    {r.category && (
+                      <p className="text-xs uppercase tracking-wider text-[#B7AFD8]">
+                        {r.category}
+                      </p>
+                    )}
+                    <h3 className={`mt-2 text-lg font-semibold ${titleClass(i)}`}>
+                      {r.title}
+                    </h3>
+                    <p className="mt-2 text-sm text-foreground/80 line-clamp-3">
+                      {r.description}
+                    </p>
+                    <span className="mt-3 inline-block text-secondary text-sm font-medium">
+                      Read article →
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </section>
+          );
+        })()}
       </article>
       <TrustFooter />
       <Footer />
+
     </main>
   );
 }
