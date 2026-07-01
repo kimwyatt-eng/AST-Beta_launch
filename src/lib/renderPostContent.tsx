@@ -42,6 +42,51 @@ function renderInline(text: string, keyBase: string): React.ReactNode[] {
   return nodes;
 }
 
+function splitRow(line: string): string[] {
+  let s = line.trim();
+  if (s.startsWith("|")) s = s.slice(1);
+  if (s.endsWith("|")) s = s.slice(0, -1);
+  return s.split("|").map((c) => c.trim());
+}
+
+function isTableBlock(block: string): boolean {
+  const lines = block.split(/\n/);
+  if (lines.length < 2) return false;
+  return lines[0].includes("|") && /^\s*\|?\s*:?-{2,}:?\s*(\|\s*:?-{2,}:?\s*)+\|?\s*$/.test(lines[1]);
+}
+
+function renderTable(block: string, key: string): React.ReactNode {
+  const lines = block.split(/\n/).filter((l) => l.trim().length > 0);
+  const header = splitRow(lines[0]);
+  const bodyRows = lines.slice(2).map(splitRow);
+  return (
+    <div key={key} className="mt-6 mb-6 overflow-x-auto rounded-lg border border-border/60">
+      <table className="w-full text-sm text-left text-foreground/85 border-collapse">
+        <thead className="bg-foreground/5 text-foreground">
+          <tr>
+            {header.map((cell, i) => (
+              <th key={i} className="px-3 py-2 font-semibold border-b border-border/60 align-top">
+                {renderInline(cell, `${key}-h-${i}`)}
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {bodyRows.map((row, ri) => (
+            <tr key={ri} className="odd:bg-foreground/[0.02]">
+              {row.map((cell, ci) => (
+                <td key={ci} className="px-3 py-2 border-b border-border/40 align-top">
+                  {renderInline(cell, `${key}-${ri}-${ci}`)}
+                </td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
 export function renderPostContent(markdown: string): React.ReactNode {
   const blocks = markdown.split(/\n\n+/);
   const out: React.ReactNode[] = [];
@@ -63,6 +108,22 @@ export function renderPostContent(markdown: string): React.ReactNode {
     const trimmed = block.trim();
     if (!trimmed) return;
 
+    if (isTableBlock(trimmed)) {
+      flushList(`list-${bi}`);
+      out.push(renderTable(trimmed, `t-${bi}`));
+      return;
+    }
+
+    if (trimmed.startsWith("### ")) {
+      flushList(`list-${bi}`);
+      out.push(
+        <h3 key={`h3-${bi}`} className="mt-8 mb-2 text-xl md:text-2xl font-semibold tracking-tight text-foreground">
+          {trimmed.slice(4)}
+        </h3>,
+      );
+      return;
+    }
+
     if (trimmed.startsWith("## ")) {
       flushList(`list-${bi}`);
       out.push(
@@ -73,9 +134,9 @@ export function renderPostContent(markdown: string): React.ReactNode {
       return;
     }
 
-    // Numbered or bulleted list block
-    if (/^(\d+\.\s|-\s)/.test(trimmed)) {
-      const lines = trimmed.split(/\n/).map((l) => l.replace(/^(\d+\.\s|-\s)/, "").trim());
+    // Numbered or bulleted list block (-, * bullets)
+    if (/^(\d+\.\s|[-*]\s)/.test(trimmed)) {
+      const lines = trimmed.split(/\n/).map((l) => l.replace(/^(\d+\.\s|[-*]\s)/, "").trim());
       listBuffer.push(...lines);
       flushList(`list-${bi}`);
       return;
