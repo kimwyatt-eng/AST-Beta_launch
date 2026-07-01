@@ -10,8 +10,8 @@ export default function ArtistsHome() {
   return (
     <main className="min-h-screen w-full bg-background text-foreground">
       <Seo
-        title="ArtSupplyTracker — Your Art Studio Assistant"
-        description="A studio assistant built for artists. Track supplies, manage projects, capture notes, organize materials, and keep your artwork and ideas private."
+        title="Your Studio Time Is For Making Art"
+        description="Track supplies, projects, notes, and materials without breaking your creative flow."
         path="/"
       />
       <Navigation />
