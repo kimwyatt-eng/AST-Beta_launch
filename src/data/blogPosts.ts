@@ -10,7 +10,12 @@ export interface BlogPost {
   publishedAt: string; // ISO date
   readingMinutes: number;
   content: string; // markdown-lite (paragraphs + ## headings + - lists)
+  // Optional SEO overrides — fall back to title/description when omitted.
+  seoTitle?: string;
+  seoDescription?: string;
+  ogImage?: string; // absolute https URL for social previews
 }
+
 
 export const blogPosts: BlogPost[] = [
   {
