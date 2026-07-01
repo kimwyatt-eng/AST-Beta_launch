@@ -504,3 +504,29 @@ Keep exploring: read [about Art Supply Tracker](/about) or browse more [studio g
 export function getPostBySlug(slug: string): BlogPost | undefined {
   return blogPosts.find((p) => p.slug === slug);
 }
+
+// Score other posts against `post` by shared tags (2 pts) and shared category (1 pt).
+// Returns up to `limit` posts sorted by score, then most recent.
+export function getRelatedPosts(post: BlogPost, limit = 3): BlogPost[] {
+  const tags = new Set((post.tags ?? []).map((t) => t.toLowerCase()));
+  const category = post.category?.toLowerCase();
+
+  const scored = blogPosts
+    .filter((p) => p.slug !== post.slug)
+    .map((p) => {
+      const otherTags = (p.tags ?? []).map((t) => t.toLowerCase());
+      const shared = otherTags.filter((t) => tags.has(t)).length;
+      const catMatch = category && p.category?.toLowerCase() === category ? 1 : 0;
+      return { post: p, score: shared * 2 + catMatch };
+    })
+    .sort((a, b) => {
+      if (b.score !== a.score) return b.score - a.score;
+      return b.post.publishedAt.localeCompare(a.post.publishedAt);
+    });
+
+  // If nothing shares a tag/category, fall back to most recent posts.
+  const withMatches = scored.filter((s) => s.score > 0);
+  const chosen = withMatches.length > 0 ? withMatches : scored;
+  return chosen.slice(0, limit).map((s) => s.post);
+}
+
