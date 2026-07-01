@@ -53,3 +53,55 @@ function generateSitemap(entries: SitemapEntry[]) {
 
 writeFileSync(resolve("public/sitemap.xml"), generateSitemap(entries));
 console.log(`sitemap.xml written (${entries.length} entries)`);
+
+// -------- RSS feed --------
+function escapeXml(s: string) {
+  return s
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&apos;");
+}
+
+const feedUpdated = blogPosts
+  .map((p) => p.publishedAt)
+  .sort()
+  .reverse()[0] ?? new Date().toISOString().slice(0, 10);
+
+const rssItems = [...blogPosts]
+  .sort((a, b) => (a.publishedAt < b.publishedAt ? 1 : -1))
+  .map((post) => {
+    const url = `${BASE_URL}/blog/${post.slug}`;
+    return [
+      `    <item>`,
+      `      <title>${escapeXml(post.title)}</title>`,
+      `      <link>${url}</link>`,
+      `      <guid isPermaLink="true">${url}</guid>`,
+      `      <pubDate>${new Date(post.publishedAt).toUTCString()}</pubDate>`,
+      `      <description>${escapeXml(post.description)}</description>`,
+      post.category ? `      <category>${escapeXml(post.category)}</category>` : null,
+      `    </item>`,
+    ]
+      .filter(Boolean)
+      .join("\n");
+  })
+  .join("\n");
+
+const rss = [
+  `<?xml version="1.0" encoding="UTF-8"?>`,
+  `<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">`,
+  `  <channel>`,
+  `    <title>Art Supply Tracker Blog</title>`,
+  `    <link>${BASE_URL}/blog</link>`,
+  `    <atom:link href="${BASE_URL}/rss.xml" rel="self" type="application/rss+xml" />`,
+  `    <description>Studio management, art history, and creative practice guides from Art Supply Tracker.</description>`,
+  `    <language>en-us</language>`,
+  `    <lastBuildDate>${new Date(feedUpdated).toUTCString()}</lastBuildDate>`,
+  rssItems,
+  `  </channel>`,
+  `</rss>`,
+].join("\n");
+
+writeFileSync(resolve("public/rss.xml"), rss);
+console.log(`rss.xml written (${blogPosts.length} items)`);
