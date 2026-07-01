@@ -14,7 +14,10 @@ export interface BlogPost {
   seoTitle?: string;
   seoDescription?: string;
   ogImage?: string; // absolute https URL for social previews
+  category?: string; // e.g. "Studio Management", "Art History"
+  tags?: string[]; // e.g. ["pigments", "history", "materials"]
 }
+
 
 
 export const blogPosts: BlogPost[] = [
@@ -26,6 +29,8 @@ export const blogPosts: BlogPost[] = [
     keyword: "art studio management app",
     publishedAt: "2026-05-19",
     readingMinutes: 6,
+    category: "Studio Management",
+    tags: ["app", "founder", "studio", "supplies"],
     content: `My art studio should be a beacon of inspiration.
 
 Some days, it is.
@@ -197,6 +202,8 @@ Want the bigger picture? Read [the full story behind ArtSupplyTracker](/about), 
     keyword: "how to organize art supplies",
     publishedAt: "2026-05-01",
     readingMinutes: 7,
+    category: "Studio Management",
+    tags: ["organization", "supplies", "studio", "workflow"],
     content: `Every artist hits the same wall: you start a piece, reach for a tube of cadmium red, and ten minutes later you're elbow-deep in a drawer of dried-out markers. Organizing art supplies isn't about being tidy — it's about protecting your creative momentum.
 
 ## Start with what you actually use
@@ -233,6 +240,8 @@ Ready to stop losing supplies in the chaos? [Join the Beta](/#signup) — ArtSup
     keyword: "art studio setup",
     publishedAt: "2026-05-05",
     readingMinutes: 8,
+    category: "Studio Management",
+    tags: ["studio", "setup", "workflow", "organization"],
     content: `A great studio doesn't need a huge budget or a converted warehouse. It needs three things working together: **good light, defined zones, and a system for what's inside it.**
 
 ## Lighting comes first
@@ -271,6 +280,8 @@ ArtSupplyTracker is built for exactly this moment. [Join the Beta](/#signup) and
     keyword: "how to catalog artwork",
     publishedAt: "2026-05-10",
     readingMinutes: 6,
+    category: "Career",
+    tags: ["catalog", "artwork", "records", "business"],
     content: `Cataloging your artwork sounds like paperwork. It's actually one of the highest-leverage things an artist can do — for insurance, for gallery submissions, for estate planning, and for simply knowing what you've made.
 
 ## What to record for every piece
@@ -313,6 +324,8 @@ ArtSupplyTracker handles artwork records, supply links, and photo storage in one
     keyword: "art studio organization",
     publishedAt: "2026-06-15",
     readingMinutes: 4,
+    category: "Studio Management",
+    tags: ["organization", "studio", "workflow"],
     content: `If you feel like your studio is always on the edge of chaos, you're not alone. Being an artist today means juggling so much more than making art.
 
 There are supplies to keep track of, works in progress to manage, receipts to save, ideas that arrive at midnight, deadlines to meet, and reference materials scattered across notebooks, folders, and devices. Add in daily life, and things get overwhelming quickly.
@@ -345,6 +358,8 @@ Ready to experience the difference? [Join the Beta](/#signup). Your art, ideas, 
     keyword: "artist grants 2026",
     publishedAt: "2026-06-29",
     readingMinutes: 9,
+    category: "Career",
+    tags: ["grants", "funding", "business", "residencies"],
     content: `Funding shouldn't be the reason a good project stays on the shelf.
 
 If 2026 is the year you want to buy better materials, take time off the day job, or finally finish that body of work, an artist grant, residency, or fellowship can be the difference between "someday" and "this year."
@@ -456,6 +471,8 @@ Want more practical studio resources? Read [why we're building Art Supply Tracke
     keyword: "paint pigment history",
     publishedAt: "2026-07-01",
     readingMinutes: 6,
+    category: "Art History",
+    tags: ["pigments", "history", "materials", "painting"],
     content: `Tracing European art traditions straight back to Paleolithic archeological sites reveals that the "classic" oil palette used by the Old Masters is structurally identical to the mineral toolkit used by humans 100,000 years ago.
 
 When prehistoric humans walked into places like Lascaux Cave or Altamira, they weren't just smudging dirt on walls — they were operating the world's first specialized chemical and geological processing labs.
@@ -501,3 +518,29 @@ Keep exploring: read [about Art Supply Tracker](/about) or browse more [studio g
 export function getPostBySlug(slug: string): BlogPost | undefined {
   return blogPosts.find((p) => p.slug === slug);
 }
+
+// Score other posts against `post` by shared tags (2 pts) and shared category (1 pt).
+// Returns up to `limit` posts sorted by score, then most recent.
+export function getRelatedPosts(post: BlogPost, limit = 3): BlogPost[] {
+  const tags = new Set((post.tags ?? []).map((t) => t.toLowerCase()));
+  const category = post.category?.toLowerCase();
+
+  const scored = blogPosts
+    .filter((p) => p.slug !== post.slug)
+    .map((p) => {
+      const otherTags = (p.tags ?? []).map((t) => t.toLowerCase());
+      const shared = otherTags.filter((t) => tags.has(t)).length;
+      const catMatch = category && p.category?.toLowerCase() === category ? 1 : 0;
+      return { post: p, score: shared * 2 + catMatch };
+    })
+    .sort((a, b) => {
+      if (b.score !== a.score) return b.score - a.score;
+      return b.post.publishedAt.localeCompare(a.post.publishedAt);
+    });
+
+  // If nothing shares a tag/category, fall back to most recent posts.
+  const withMatches = scored.filter((s) => s.score > 0);
+  const chosen = withMatches.length > 0 ? withMatches : scored;
+  return chosen.slice(0, limit).map((s) => s.post);
+}
+
