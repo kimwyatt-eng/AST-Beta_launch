@@ -203,7 +203,7 @@ Want the bigger picture? Read [the full story behind ArtSupplyTracker](/about), 
     publishedAt: "2026-05-01",
     readingMinutes: 7,
     category: "Studio Management",
-    tags: ["organization", "supplies", "studio", "workflow"],
+    tags: ["organization", "supplies", "studio", "workflow", "materials"],
     content: `Every artist hits the same wall: you start a piece, reach for a tube of cadmium red, and ten minutes later you're elbow-deep in a drawer of dried-out markers. Organizing art supplies isn't about being tidy — it's about protecting your creative momentum.
 
 ## Start with what you actually use
@@ -230,7 +230,7 @@ Knowing where your titanium white lives is half the battle. Knowing you have *on
 
 Five minutes at the end of each studio week to note what's running low saves the panic order later. Better yet, let an app do it for you.
 
-Ready to stop losing supplies in the chaos? [Join the Beta](/#signup) — ArtSupplyTracker keeps your inventory, locations, and reorder list in one private place. Read more [about our approach](/about) or check the [studio setup checklist](/blog/art-studio-setup-checklist).`,
+Ready to stop losing supplies in the chaos? [Join the Beta](/#signup) — ArtSupplyTracker keeps your inventory, locations, and reorder list in one private place. Read more [about our approach](/about), check the [studio setup checklist](/blog/art-studio-setup-checklist), or dig into the [history of the pigments on your palette](/blog/paint-pigment-history-cave-to-canvas).`,
   },
   {
     slug: "art-studio-setup-checklist",
@@ -241,7 +241,7 @@ Ready to stop losing supplies in the chaos? [Join the Beta](/#signup) — ArtSup
     publishedAt: "2026-05-05",
     readingMinutes: 8,
     category: "Studio Management",
-    tags: ["studio", "setup", "workflow", "organization"],
+    tags: ["studio", "setup", "workflow", "organization", "materials"],
     content: `A great studio doesn't need a huge budget or a converted warehouse. It needs three things working together: **good light, defined zones, and a system for what's inside it.**
 
 ## Lighting comes first
@@ -270,7 +270,7 @@ Run extra outlets if you can. Add a small fan or open a window for solvent-based
 
 The day you set up a new studio is the easiest day to log what you own. Every supply gets photographed once, tagged with a location, and you'll never wonder "did I already buy that?" again.
 
-ArtSupplyTracker is built for exactly this moment. [Join the Beta](/#signup) and start your new studio with a clean, searchable inventory from day one. Need a system for what's already on your shelves? See [how to organize art supplies](/blog/how-to-organize-art-supplies), or read [why we're building this](/about).`,
+ArtSupplyTracker is built for exactly this moment. [Join the Beta](/#signup) and start your new studio with a clean, searchable inventory from day one. Need a system for what's already on your shelves? See [how to organize art supplies](/blog/how-to-organize-art-supplies), read [why we're building this](/about), or learn [where your pigments actually come from](/blog/paint-pigment-history-cave-to-canvas).`,
   },
   {
     slug: "how-to-catalog-artwork",
@@ -509,7 +509,7 @@ Fast forward to the European workshop traditions: this is the exact chemical rec
 
 When John Goffe Rand squeezed the first metal tube in 1841, or when you pick up a tube of professional artist-grade acrylic today, you are utilizing a highly evolved, industrially packaged version of a geological color wheel that humans cracked open in the dark corners of the earth before recorded history even began.
 
-Keep exploring: read [about Art Supply Tracker](/about) or browse more [studio guides](/blog).`,
+Keep exploring: read [about Art Supply Tracker](/about), learn [how to organize art supplies](/blog/how-to-organize-art-supplies) that trace back to these same minerals, or set up a materials-aware studio with the [art studio setup checklist](/blog/art-studio-setup-checklist).`,
   },
 ];
 
