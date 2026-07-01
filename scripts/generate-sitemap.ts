@@ -4,7 +4,16 @@ import { writeFileSync } from "fs";
 import { resolve } from "path";
 import { blogPosts } from "../src/data/blogPosts";
 
-const BASE_URL = "https://artsupplytracker.com";
+// Production base URL — override with SITE_URL env var if needed.
+// Must be an absolute https:// origin with no trailing slash so the RSS
+// self-link matches the canonical document location and passes W3C validation.
+const RAW_BASE_URL = process.env.SITE_URL?.trim() || "https://artsupplytracker.com";
+const BASE_URL = RAW_BASE_URL.replace(/\/+$/, "");
+if (!/^https:\/\/[^/]+$/.test(BASE_URL)) {
+  throw new Error(
+    `Invalid SITE_URL "${RAW_BASE_URL}". Expected an absolute https:// origin (e.g. https://artsupplytracker.com).`,
+  );
+}
 
 interface SitemapEntry {
   path: string;
