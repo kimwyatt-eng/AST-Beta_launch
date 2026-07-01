@@ -30,16 +30,21 @@ export default function BlogPost() {
   }
 
   const canonical = `https://artsupplytracker.com/blog/${post.slug}`;
+  const seoTitle = post.seoTitle ?? post.title;
+  const seoDescription = post.seoDescription ?? post.description;
+  const ogImage = post.ogImage ?? "https://artsupplytracker.com/og-image.jpg";
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: post.title,
-    description: post.description,
+    description: seoDescription,
+    image: ogImage,
     datePublished: post.publishedAt,
     author: { "@type": "Organization", name: "ArtSupplyTracker" },
     publisher: { "@type": "Organization", name: "ArtSupplyTracker" },
     mainEntityOfPage: canonical,
   };
+
 
   return (
     <main className="min-h-screen w-full bg-background text-foreground">
