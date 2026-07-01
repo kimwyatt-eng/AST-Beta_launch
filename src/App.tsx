@@ -14,6 +14,7 @@ import Blog from "./pages/Blog";
 import About from "./pages/About";
 import BlogPost from "./pages/BlogPost";
 import NotFound from "./pages/NotFound";
+import RssRedirect from "./pages/RssRedirect";
 
 const queryClient = new QueryClient();
 
