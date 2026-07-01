@@ -80,9 +80,21 @@ export default function BlogPost() {
       <Navigation />
 
       <article className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-16">
-        <Link to="/blog" className="text-sm text-secondary hover:underline">
-          ← All articles
-        </Link>
+        <nav aria-label="Breadcrumb" className="text-sm">
+          <ol className="flex flex-wrap items-center gap-x-2 gap-y-1 text-foreground/80">
+            <li>
+              <Link to="/" className="hover:text-secondary hover:underline">Home</Link>
+            </li>
+            <li aria-hidden="true" className="text-foreground/50">/</li>
+            <li>
+              <Link to="/blog" className="hover:text-secondary hover:underline">Blog</Link>
+            </li>
+            <li aria-hidden="true" className="text-foreground/50">/</li>
+            <li aria-current="page" className="text-foreground/90 line-clamp-1 max-w-[60ch]">
+              {post.title}
+            </li>
+          </ol>
+        </nav>
 
         <header className="mt-6 mb-8">
           <p className="text-xs uppercase tracking-wider text-[#B7AFD8]">
