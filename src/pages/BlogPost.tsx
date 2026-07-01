@@ -46,6 +46,15 @@ export default function BlogPost() {
     publisher: { "@type": "Organization", name: "ArtSupplyTracker" },
     mainEntityOfPage: canonical,
   };
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://artsupplytracker.com/" },
+      { "@type": "ListItem", position: 2, name: "Blog", item: "https://artsupplytracker.com/blog" },
+      { "@type": "ListItem", position: 3, name: post.title, item: canonical },
+    ],
+  };
 
 
   return (
