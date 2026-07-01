@@ -544,3 +544,20 @@ export function getRelatedPosts(post: BlogPost, limit = 3): BlogPost[] {
   return chosen.slice(0, limit).map((s) => s.post);
 }
 
+// Chronological neighbors by publishedAt. `previous` = older post, `next` = newer.
+export function getAdjacentPosts(post: BlogPost): {
+  previous: BlogPost | null;
+  next: BlogPost | null;
+} {
+  const sorted = [...blogPosts].sort((a, b) =>
+    a.publishedAt.localeCompare(b.publishedAt),
+  );
+  const idx = sorted.findIndex((p) => p.slug === post.slug);
+  if (idx === -1) return { previous: null, next: null };
+  return {
+    previous: idx > 0 ? sorted[idx - 1] : null,
+    next: idx < sorted.length - 1 ? sorted[idx + 1] : null,
+  };
+}
+
+
