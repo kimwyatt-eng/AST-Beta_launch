@@ -241,7 +241,7 @@ Ready to stop losing supplies in the chaos? [Join the Beta](/#signup) — ArtSup
     publishedAt: "2026-05-05",
     readingMinutes: 8,
     category: "Studio Management",
-    tags: ["studio", "setup", "workflow", "organization"],
+    tags: ["studio", "setup", "workflow", "organization", "materials"],
     content: `A great studio doesn't need a huge budget or a converted warehouse. It needs three things working together: **good light, defined zones, and a system for what's inside it.**
 
 ## Lighting comes first
