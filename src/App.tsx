@@ -14,6 +14,7 @@ import Blog from "./pages/Blog";
 import About from "./pages/About";
 import BlogPost from "./pages/BlogPost";
 import NotFound from "./pages/NotFound";
+import RssRedirect from "./pages/RssRedirect";
 
 const queryClient = new QueryClient();
 
@@ -34,6 +35,10 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
+          <Route path="/rss" element={<RssRedirect />} />
+          <Route path="/feed" element={<RssRedirect />} />
+          <Route path="/feed.xml" element={<RssRedirect />} />
+          <Route path="/atom.xml" element={<RssRedirect />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
