@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import TrustFooter from "@/components/TrustFooter";
 import Footer from "@/components/Footer";
+import ShareButtons from "@/components/ShareButtons";
 import { getPostBySlug, getRelatedPosts, getAdjacentPosts } from "@/data/blogPosts";
 import { renderPostContent } from "@/lib/renderPostContent";
 import { panelClass, titleClass } from "@/lib/cardAccent";
@@ -112,6 +113,8 @@ export default function BlogPost() {
         </header>
 
         <div className="ast-panel p-6 md:p-8">{renderPostContent(post.content)}</div>
+
+        <ShareButtons url={canonical} title={post.title} description={seoDescription} image={ogImage} />
 
         <div className="mt-10 ast-panel card-violet p-6 md:p-8">
           <h2 className="text-xl md:text-2xl font-semibold title-violet">
