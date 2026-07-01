@@ -7,7 +7,8 @@ export interface BlogPost {
   title: string;
   description: string;
   keyword: string;
-  publishedAt: string; // ISO date
+  publishedAt: string; // ISO date (YYYY-MM-DD or full ISO 8601 with time+offset)
+  updatedAt?: string; // ISO date of last meaningful edit; falls back to publishedAt
   readingMinutes: number;
   content: string; // markdown-lite (paragraphs + ## headings + - lists)
   // Optional SEO overrides — fall back to title/description when omitted.
@@ -16,6 +17,7 @@ export interface BlogPost {
   ogImage?: string; // absolute https URL for social previews
   category?: string; // e.g. "Studio Management", "Art History"
   tags?: string[]; // e.g. ["pigments", "history", "materials"]
+  author?: string; // display name; falls back to site default in feeds
 }
 
 
