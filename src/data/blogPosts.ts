@@ -509,7 +509,7 @@ Fast forward to the European workshop traditions: this is the exact chemical rec
 
 When John Goffe Rand squeezed the first metal tube in 1841, or when you pick up a tube of professional artist-grade acrylic today, you are utilizing a highly evolved, industrially packaged version of a geological color wheel that humans cracked open in the dark corners of the earth before recorded history even began.
 
-Keep exploring: read [about Art Supply Tracker](/about) or browse more [studio guides](/blog).`,
+Keep exploring: read [about Art Supply Tracker](/about), learn [how to organize art supplies](/blog/how-to-organize-art-supplies) that trace back to these same minerals, or set up a materials-aware studio with the [art studio setup checklist](/blog/art-studio-setup-checklist).`,
   },
 ];
 
