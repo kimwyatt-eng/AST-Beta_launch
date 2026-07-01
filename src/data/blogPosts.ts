@@ -14,7 +14,10 @@ export interface BlogPost {
   seoTitle?: string;
   seoDescription?: string;
   ogImage?: string; // absolute https URL for social previews
+  category?: string; // e.g. "Studio Management", "Art History"
+  tags?: string[]; // e.g. ["pigments", "history", "materials"]
 }
+
 
 
 export const blogPosts: BlogPost[] = [
