@@ -73,6 +73,7 @@ export default function BlogPost() {
         <meta name="twitter:description" content={seoDescription} />
         <meta name="twitter:image" content={ogImage} />
         <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
       </Helmet>
 
 
