@@ -203,7 +203,7 @@ Want the bigger picture? Read [the full story behind ArtSupplyTracker](/about), 
     publishedAt: "2026-05-01",
     readingMinutes: 7,
     category: "Studio Management",
-    tags: ["organization", "supplies", "studio", "workflow"],
+    tags: ["organization", "supplies", "studio", "workflow", "materials"],
     content: `Every artist hits the same wall: you start a piece, reach for a tube of cadmium red, and ten minutes later you're elbow-deep in a drawer of dried-out markers. Organizing art supplies isn't about being tidy — it's about protecting your creative momentum.
 
 ## Start with what you actually use
