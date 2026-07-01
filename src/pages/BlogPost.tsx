@@ -3,7 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import TrustFooter from "@/components/TrustFooter";
 import Footer from "@/components/Footer";
-import { getPostBySlug, getRelatedPosts } from "@/data/blogPosts";
+import { getPostBySlug, getRelatedPosts, getAdjacentPosts } from "@/data/blogPosts";
 import { renderPostContent } from "@/lib/renderPostContent";
 import { panelClass, titleClass } from "@/lib/cardAccent";
 
