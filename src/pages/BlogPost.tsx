@@ -3,7 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import TrustFooter from "@/components/TrustFooter";
 import Footer from "@/components/Footer";
-import { getPostBySlug, getRelatedPosts } from "@/data/blogPosts";
+import { getPostBySlug, getRelatedPosts, getAdjacentPosts } from "@/data/blogPosts";
 import { renderPostContent } from "@/lib/renderPostContent";
 import { panelClass, titleClass } from "@/lib/cardAccent";
 
@@ -143,6 +143,49 @@ export default function BlogPost() {
                 ))}
               </div>
             </section>
+          );
+        })()}
+        {(() => {
+          const { previous, next } = getAdjacentPosts(post);
+          if (!previous && !next) return null;
+          return (
+            <nav
+              aria-label="Blog post navigation"
+              className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-4"
+            >
+              {previous ? (
+                <Link
+                  to={`/blog/${previous.slug}`}
+                  rel="prev"
+                  className="ast-panel p-5 block transition-transform hover:-translate-y-0.5 sm:text-left"
+                >
+                  <p className="text-xs uppercase tracking-wider text-[#B7AFD8]">
+                    ← Previous post
+                  </p>
+                  <h3 className="mt-2 text-base md:text-lg font-semibold title-violet">
+                    {previous.title}
+                  </h3>
+                </Link>
+              ) : (
+                <span aria-hidden="true" className="hidden sm:block" />
+              )}
+              {next ? (
+                <Link
+                  to={`/blog/${next.slug}`}
+                  rel="next"
+                  className="ast-panel p-5 block transition-transform hover:-translate-y-0.5 sm:text-right"
+                >
+                  <p className="text-xs uppercase tracking-wider text-[#B7AFD8]">
+                    Next post →
+                  </p>
+                  <h3 className="mt-2 text-base md:text-lg font-semibold title-violet">
+                    {next.title}
+                  </h3>
+                </Link>
+              ) : (
+                <span aria-hidden="true" className="hidden sm:block" />
+              )}
+            </nav>
           );
         })()}
       </article>
