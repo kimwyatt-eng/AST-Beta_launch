@@ -1,67 +1,121 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
     <title>Art Supply Tracker Blog</title>
     <link>https://artsupplytracker.com/blog</link>
     <atom:link href="https://artsupplytracker.com/rss.xml" rel="self" type="application/rss+xml" />
     <description>Studio management, art history, and creative practice guides from Art Supply Tracker.</description>
     <language>en-us</language>
+    <copyright>© 2026 Art Supply Tracker. All rights reserved.</copyright>
+    <managingEditor>hello@artsupplytracker.com (Art Supply Tracker)</managingEditor>
+    <webMaster>hello@artsupplytracker.com (Art Supply Tracker)</webMaster>
     <lastBuildDate>Wed, 01 Jul 2026 00:00:00 GMT</lastBuildDate>
+    <atom:updated>2026-07-01T00:00:00.000Z</atom:updated>
     <item>
       <title>A Sampling of Paint Pigment History: From Cave Walls to Canvas</title>
       <link>https://artsupplytracker.com/blog/paint-pigment-history-cave-to-canvas</link>
       <guid isPermaLink="true">https://artsupplytracker.com/blog/paint-pigment-history-cave-to-canvas</guid>
       <pubDate>Wed, 01 Jul 2026 00:00:00 GMT</pubDate>
+      <atom:updated>2026-07-01T00:00:00.000Z</atom:updated>
+      <dc:date>2026-07-01T00:00:00.000Z</dc:date>
+      <dc:creator>Art Supply Tracker</dc:creator>
       <description>Tracing the Old Masters&apos; oil palette back 100,000 years to Blombos Cave — the mineral chemistry behind Burnt Sienna, Yellow Ochre, and Bone Black.</description>
       <category>Art History</category>
+      <category>pigments</category>
+      <category>history</category>
+      <category>materials</category>
+      <category>painting</category>
     </item>
     <item>
       <title>2026 Artist Grants, Residencies, and Fellowships: A Working Artist&apos;s Guide</title>
       <link>https://artsupplytracker.com/blog/2026-artist-grants-guide</link>
       <guid isPermaLink="true">https://artsupplytracker.com/blog/2026-artist-grants-guide</guid>
       <pubDate>Mon, 29 Jun 2026 00:00:00 GMT</pubDate>
+      <atom:updated>2026-06-29T00:00:00.000Z</atom:updated>
+      <dc:date>2026-06-29T00:00:00.000Z</dc:date>
+      <dc:creator>Art Supply Tracker</dc:creator>
       <description>A curated 2026 guide to artist grants, residencies, and fellowships — funding to cover supplies, studio time, and new projects, plus tips on applying.</description>
       <category>Career</category>
+      <category>grants</category>
+      <category>funding</category>
+      <category>business</category>
+      <category>residencies</category>
     </item>
     <item>
       <title>The Real Reason Your Studio Feels Chaotic</title>
       <link>https://artsupplytracker.com/blog/the-real-reason-your-studio-feels-chaotic</link>
       <guid isPermaLink="true">https://artsupplytracker.com/blog/the-real-reason-your-studio-feels-chaotic</guid>
       <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+      <atom:updated>2026-06-15T00:00:00.000Z</atom:updated>
+      <dc:date>2026-06-15T00:00:00.000Z</dc:date>
+      <dc:creator>Art Supply Tracker</dc:creator>
       <description>If your studio always feels on the edge of chaos, the problem isn&apos;t you — it&apos;s that most tools were never designed for how artists actually work.</description>
       <category>Studio Management</category>
+      <category>organization</category>
+      <category>studio</category>
+      <category>workflow</category>
     </item>
     <item>
       <title>Why I&apos;m Building Art Supply Tracker: An Art Studio Management App for Artists</title>
       <link>https://artsupplytracker.com/blog/why-im-building-art-supply-tracker</link>
       <guid isPermaLink="true">https://artsupplytracker.com/blog/why-im-building-art-supply-tracker</guid>
       <pubDate>Tue, 19 May 2026 00:00:00 GMT</pubDate>
+      <atom:updated>2026-05-19T00:00:00.000Z</atom:updated>
+      <dc:date>2026-05-19T00:00:00.000Z</dc:date>
+      <dc:creator>Art Supply Tracker</dc:creator>
       <description>Art Supply Tracker is a new art studio management app for artists who need to track supplies, manage projects, make shopping lists, and protect creative work.</description>
       <category>Studio Management</category>
+      <category>app</category>
+      <category>founder</category>
+      <category>studio</category>
+      <category>supplies</category>
     </item>
     <item>
       <title>How to Catalog Artwork: A Simple System for Artists Who Hate Spreadsheets</title>
       <link>https://artsupplytracker.com/blog/how-to-catalog-artwork</link>
       <guid isPermaLink="true">https://artsupplytracker.com/blog/how-to-catalog-artwork</guid>
       <pubDate>Sun, 10 May 2026 00:00:00 GMT</pubDate>
+      <atom:updated>2026-05-10T00:00:00.000Z</atom:updated>
+      <dc:date>2026-05-10T00:00:00.000Z</dc:date>
+      <dc:creator>Art Supply Tracker</dc:creator>
       <description>A clear, low-effort method for cataloging your artwork — what to record, how to photograph it, and why a good catalog protects your career, your insurance claims, and your sanity.</description>
       <category>Career</category>
+      <category>catalog</category>
+      <category>artwork</category>
+      <category>records</category>
+      <category>business</category>
     </item>
     <item>
       <title>Art Studio Setup: A No-Nonsense Checklist for Working Artists</title>
       <link>https://artsupplytracker.com/blog/art-studio-setup-checklist</link>
       <guid isPermaLink="true">https://artsupplytracker.com/blog/art-studio-setup-checklist</guid>
       <pubDate>Tue, 05 May 2026 00:00:00 GMT</pubDate>
+      <atom:updated>2026-05-05T00:00:00.000Z</atom:updated>
+      <dc:date>2026-05-05T00:00:00.000Z</dc:date>
+      <dc:creator>Art Supply Tracker</dc:creator>
       <description>Setting up an art studio? Here&apos;s a complete checklist covering lighting, storage, workflow zones, and the small details that separate a functional studio from a frustrating one.</description>
       <category>Studio Management</category>
+      <category>studio</category>
+      <category>setup</category>
+      <category>workflow</category>
+      <category>organization</category>
+      <category>materials</category>
     </item>
     <item>
       <title>How to Organize Art Supplies: A Studio System That Actually Sticks</title>
       <link>https://artsupplytracker.com/blog/how-to-organize-art-supplies</link>
       <guid isPermaLink="true">https://artsupplytracker.com/blog/how-to-organize-art-supplies</guid>
       <pubDate>Fri, 01 May 2026 00:00:00 GMT</pubDate>
+      <atom:updated>2026-05-01T00:00:00.000Z</atom:updated>
+      <dc:date>2026-05-01T00:00:00.000Z</dc:date>
+      <dc:creator>Art Supply Tracker</dc:creator>
       <description>A practical, repeatable system for organizing art supplies — by medium, by project, and by frequency of use — so you spend less time hunting and more time making.</description>
       <category>Studio Management</category>
+      <category>organization</category>
+      <category>supplies</category>
+      <category>studio</category>
+      <category>workflow</category>
+      <category>materials</category>
     </item>
   </channel>
 </rss>
