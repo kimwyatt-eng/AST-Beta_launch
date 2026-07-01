@@ -1,0 +1,44 @@
+name: Validate RSS feed
+
+on:
+  # Run after a push to main so we catch mismatches introduced by a deploy.
+  push:
+    branches: [main]
+    paths:
+      - "scripts/generate-sitemap.ts"
+      - "scripts/validate-rss.ts"
+      - "src/data/blogPosts.ts"
+      - ".github/workflows/validate-rss.yml"
+  # Daily safety net in case an infra change breaks the feed URL or content-type.
+  schedule:
+    - cron: "0 12 * * *"
+  # Manual trigger with optional feed URL override.
+  workflow_dispatch:
+    inputs:
+      feed_url:
+        description: "RSS feed URL to validate (defaults to production)."
+        required: false
+        default: "https://artsupplytracker.com/rss.xml"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install tsx
+        run: npm install -g tsx@4
+
+      - name: Wait for deploy propagation
+        if: github.event_name == 'push'
+        run: sleep 60
+
+      - name: Validate feed
+        env:
+          RSS_URL: ${{ github.event.inputs.feed_url || 'https://artsupplytracker.com/rss.xml' }}
+        run: tsx scripts/validate-rss.ts
