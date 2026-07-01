@@ -46,6 +46,15 @@ export default function BlogPost() {
     publisher: { "@type": "Organization", name: "ArtSupplyTracker" },
     mainEntityOfPage: canonical,
   };
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://artsupplytracker.com/" },
+      { "@type": "ListItem", position: 2, name: "Blog", item: "https://artsupplytracker.com/blog" },
+      { "@type": "ListItem", position: 3, name: post.title, item: canonical },
+    ],
+  };
 
 
   return (
@@ -64,15 +73,28 @@ export default function BlogPost() {
         <meta name="twitter:description" content={seoDescription} />
         <meta name="twitter:image" content={ogImage} />
         <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
       </Helmet>
 
 
       <Navigation />
 
       <article className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-16">
-        <Link to="/blog" className="text-sm text-secondary hover:underline">
-          ← All articles
-        </Link>
+        <nav aria-label="Breadcrumb" className="text-sm">
+          <ol className="flex flex-wrap items-center gap-x-2 gap-y-1 text-foreground/80">
+            <li>
+              <Link to="/" className="hover:text-secondary hover:underline">Home</Link>
+            </li>
+            <li aria-hidden="true" className="text-foreground/50">/</li>
+            <li>
+              <Link to="/blog" className="hover:text-secondary hover:underline">Blog</Link>
+            </li>
+            <li aria-hidden="true" className="text-foreground/50">/</li>
+            <li aria-current="page" className="text-foreground/90 line-clamp-1 max-w-[60ch]">
+              {post.title}
+            </li>
+          </ol>
+        </nav>
 
         <header className="mt-6 mb-8">
           <p className="text-xs uppercase tracking-wider text-[#B7AFD8]">
