@@ -17,6 +17,7 @@ export interface BlogPost {
   ogImage?: string; // absolute https URL for social previews
   category?: string; // e.g. "Studio Management", "Art History"
   tags?: string[]; // e.g. ["pigments", "history", "materials"]
+  seoKeywords?: string[]; // meta keywords for this post
   author?: string; // display name; falls back to site default in feeds
 }
 
