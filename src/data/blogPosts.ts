@@ -515,7 +515,7 @@ Keep exploring: read [about Art Supply Tracker](/about), learn [how to organize 
   },
   {
     slug: "heavy-body-acrylics-3d-texture-paste-sculptural-depth",
-    title: "Heavy-Body Acrylics & 3D Paste: Sculptural Art in 2026",
+    title: "The Ultimate Guide 2026: 3D Texture & Sculptural Art",
     description:
       "How heavy-body acrylic paints and 3D texture paste let artists build real sculptural depth on canvas — properties, techniques, tools, and 2026 trends.",
     keyword: "heavy body acrylics 3d texture paste",
@@ -530,7 +530,7 @@ Keep exploring: read [about Art Supply Tracker](/about), learn [how to organize 
 
 ## Understanding Heavy-Body Acrylic Paints
 
-Heavy-body acrylics are known for their thick, buttery consistency, similar to traditional oil paints. This viscosity allows them to retain brushstrokes and palette knife marks, adding an inherent textural quality even before introducing additional mediums.
+Heavy-body acrylics are known for their thick, buttery consistency, similar to traditional oil paints. This viscosity allows them to retain brushstrokes and palette knife marks, adding an inherent textural quality even before introducing additional mediums. I've been enthralled watching artists work with these mediums online, so I did some research to find out what I'd need and how to use them. Here's my ultimate guide to 3D texture paste and sculptural paintings.
 
 ### Key Characteristics
 
