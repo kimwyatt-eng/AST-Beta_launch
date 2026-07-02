@@ -523,7 +523,7 @@ Keep exploring: read [about Art Supply Tracker](/about), learn [how to organize 
     readingMinutes: 9,
     category: "Materials",
     tags: ["acrylics", "materials", "techniques", "studio"],
-    seoTitle: "Heavy-Body Acrylics & 3D Paste: Sculptural Art 2026",
+    seoTitle: "The Ultimate Guide 2026: 3D Texture & Sculptural Art",
     seoDescription:
       "Explore the 2026 art supply trend: heavy-body acrylic paints and 3D texture paste for creating sculptural depth on canvas. Techniques, tools, and tips.",
     content: `**Heavy-body acrylic paints** and **3D texture paste** are revolutionizing how artists create, offering unparalleled opportunities for **sculptural depth on canvas**. In 2026, these innovative art mediums empower artists and studios to move beyond flat surfaces and explore three-dimensional expression. This guide delves into the properties, applications, and techniques shaping contemporary textured acrylic art.
