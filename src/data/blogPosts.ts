@@ -514,7 +514,7 @@ When John Goffe Rand squeezed the first metal tube in 1841, or when you pick up 
 Keep exploring: read [about Art Supply Tracker](/about), learn [how to organize art supplies](/blog/how-to-organize-art-supplies) that trace back to these same minerals, or set up a materials-aware studio with the [art studio setup checklist](/blog/art-studio-setup-checklist).`,
   },
   {
-    slug: "heavy-body-acrylics-3d-texture-paste-sculptural-depth",
+    slug: "art-supply-trend-heavy-body-acrylic-paints-3d-texture-paste-acrylic-mediums-sculptural-depth-on-canvas-artists-studio",
     title: "The Ultimate Guide 2026: 3D Texture & Sculptural Art",
     description:
       "How heavy-body acrylic paints and 3D texture paste let artists build real sculptural depth on canvas — properties, techniques, tools, and 2026 trends.",
