@@ -63,6 +63,9 @@ export default function BlogPost() {
       <Helmet>
         <title>{seoTitle}</title>
         <meta name="description" content={seoDescription} />
+        {post.seoKeywords && post.seoKeywords.length > 0 && (
+          <meta name="keywords" content={post.seoKeywords.join(", ")} />
+        )}
         <link rel="canonical" href={canonical} />
         <meta property="og:title" content={seoTitle} />
         <meta property="og:description" content={seoDescription} />
