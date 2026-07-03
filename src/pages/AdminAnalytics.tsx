@@ -64,6 +64,24 @@ const rangeToDates = (r: Range): { start: string; end: string } => {
 
 const PIE_COLORS = ["hsl(var(--primary))", "#a78bfa", "#f472b6", "#fbbf24", "#34d399", "#60a5fa"];
 
+interface Diagnostics {
+  mountedAt: string;
+  fetchState: "idle" | "loading" | "ok" | "error";
+  lastUrl?: string;
+  lastStatus?: number;
+  durationMs?: number;
+  payloadBytes?: number;
+  rowCounts?: {
+    timeseries: number;
+    topPages: number;
+    topQueries: number;
+    devices: number;
+    countries: number;
+  };
+  lastError?: string;
+  lastRunAt?: string;
+}
+
 const AdminAnalytics = () => {
   const navigate = useNavigate();
   const [password, setPassword] = useState("");
@@ -72,6 +90,10 @@ const AdminAnalytics = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [data, setData] = useState<AnalyticsPayload | null>(null);
+  const [diag, setDiag] = useState<Diagnostics>({
+    mountedAt: new Date().toISOString(),
+    fetchState: "idle",
+  });
 
   const [range, setRange] = useState<Range>("28d");
   const [customStart, setCustomStart] = useState("");
@@ -96,6 +118,8 @@ const AdminAnalytics = () => {
     const url = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/admin-analytics?start=${dates.start}&end=${dates.end}`;
     setLoading(true);
     setError("");
+    setDiag((d) => ({ ...d, fetchState: "loading", lastUrl: url, lastError: undefined }));
+    const t0 = performance.now();
     try {
       const res = await fetch(url, {
         headers: {
@@ -103,12 +127,37 @@ const AdminAnalytics = () => {
           apikey: import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY,
         },
       });
+      const text = await res.text();
+      const bytes = new Blob([text]).size;
       if (res.status === 401) throw new Error("Unauthorized");
-      if (!res.ok) throw new Error(`Request failed (${res.status})`);
-      const json = (await res.json()) as AnalyticsPayload;
+      if (!res.ok) throw new Error(`Request failed (${res.status}): ${text.slice(0, 200)}`);
+      const json = JSON.parse(text) as AnalyticsPayload;
       setData(json);
+      setDiag((d) => ({
+        ...d,
+        fetchState: "ok",
+        lastStatus: res.status,
+        durationMs: Math.round(performance.now() - t0),
+        payloadBytes: bytes,
+        lastRunAt: new Date().toISOString(),
+        rowCounts: {
+          timeseries: json.timeseries?.length ?? 0,
+          topPages: json.topPages?.length ?? 0,
+          topQueries: json.topQueries?.length ?? 0,
+          devices: json.devices?.length ?? 0,
+          countries: json.countries?.length ?? 0,
+        },
+      }));
     } catch (err) {
-      setError((err as Error).message);
+      const msg = (err as Error).message;
+      setError(msg);
+      setDiag((d) => ({
+        ...d,
+        fetchState: "error",
+        durationMs: Math.round(performance.now() - t0),
+        lastError: msg,
+        lastRunAt: new Date().toISOString(),
+      }));
     } finally {
       setLoading(false);
     }
@@ -117,6 +166,8 @@ const AdminAnalytics = () => {
   useEffect(() => {
     if (authed) fetchData();
   }, [authed, fetchData]);
+
+
 
   const handleLogin = async () => {
     setAuthError("");
