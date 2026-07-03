@@ -500,7 +500,92 @@ const AdminAnalytics = () => {
   );
 };
 
+const stateBadge = (s: Diagnostics["fetchState"]) => {
+  const map: Record<Diagnostics["fetchState"], string> = {
+    idle: "bg-muted text-muted-foreground",
+    loading: "bg-blue-600/20 text-blue-400 border-blue-600/30",
+    ok: "bg-emerald-600/20 text-emerald-400 border-emerald-600/30",
+    error: "bg-red-600/20 text-red-400 border-red-600/30",
+  };
+  return <span className={`text-xs px-2 py-0.5 rounded border border-transparent ${map[s]}`}>{s}</span>;
+};
+
+const DiagnosticsPanel = ({
+  diag,
+  hasData,
+  chartRows,
+}: {
+  diag: Diagnostics;
+  hasData: boolean;
+  chartRows: number;
+}) => {
+  const rc = diag.rowCounts;
+  return (
+    <Card className="bg-card/60 border-border">
+      <CardHeader className="pb-2">
+        <CardTitle className="text-sm text-muted-foreground">Diagnostics</CardTitle>
+      </CardHeader>
+      <CardContent className="text-xs font-mono grid gap-1 md:grid-cols-2">
+        <div className="flex justify-between gap-4">
+          <span className="text-muted-foreground">Route loaded</span>
+          <span className="text-emerald-400">✓ /admin/analytics @ {diag.mountedAt.slice(11, 19)}</span>
+        </div>
+        <div className="flex justify-between gap-4">
+          <span className="text-muted-foreground">Fetch state</span>
+          {stateBadge(diag.fetchState)}
+        </div>
+        <div className="flex justify-between gap-4">
+          <span className="text-muted-foreground">HTTP status</span>
+          <span>{diag.lastStatus ?? "—"}</span>
+        </div>
+        <div className="flex justify-between gap-4">
+          <span className="text-muted-foreground">Duration</span>
+          <span>{diag.durationMs != null ? `${diag.durationMs} ms` : "—"}</span>
+        </div>
+        <div className="flex justify-between gap-4">
+          <span className="text-muted-foreground">Payload size</span>
+          <span>{diag.payloadBytes != null ? `${(diag.payloadBytes / 1024).toFixed(1)} KB` : "—"}</span>
+        </div>
+        <div className="flex justify-between gap-4">
+          <span className="text-muted-foreground">Last run</span>
+          <span>{diag.lastRunAt ? diag.lastRunAt.slice(11, 19) : "—"}</span>
+        </div>
+        <div className="flex justify-between gap-4 md:col-span-2">
+          <span className="text-muted-foreground">Endpoint</span>
+          <span className="truncate max-w-[70%]" title={diag.lastUrl}>{diag.lastUrl ?? "—"}</span>
+        </div>
+        <div className="flex justify-between gap-4 md:col-span-2">
+          <span className="text-muted-foreground">Rows returned</span>
+          <span>
+            {rc
+              ? `timeseries:${rc.timeseries} · pages:${rc.topPages} · queries:${rc.topQueries} · devices:${rc.devices} · countries:${rc.countries}`
+              : "—"}
+          </span>
+        </div>
+        <div className="flex justify-between gap-4">
+          <span className="text-muted-foreground">Data in state</span>
+          <span className={hasData ? "text-emerald-400" : "text-amber-400"}>
+            {hasData ? "✓ loaded" : "∅ empty"}
+          </span>
+        </div>
+        <div className="flex justify-between gap-4">
+          <span className="text-muted-foreground">Charts ready</span>
+          <span className={chartRows > 0 ? "text-emerald-400" : "text-amber-400"}>
+            {chartRows > 0 ? `✓ ${chartRows} points` : "waiting for data"}
+          </span>
+        </div>
+        {diag.lastError && (
+          <div className="md:col-span-2 text-destructive break-all">
+            <span className="text-muted-foreground">Error: </span>{diag.lastError}
+          </div>
+        )}
+      </CardContent>
+    </Card>
+  );
+};
+
 const KpiCard = ({
+
   icon,
   label,
   value,
