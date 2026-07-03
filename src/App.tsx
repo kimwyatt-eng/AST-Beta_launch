@@ -10,6 +10,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import FoundersPage from "./pages/Founders";
 import Unsubscribe from "./pages/Unsubscribe";
 import AdminEmails from "./pages/AdminEmails";
+import AdminAnalytics from "./pages/AdminAnalytics";
 import Blog from "./pages/Blog";
 import About from "./pages/About";
 import BlogPost from "./pages/BlogPost";
@@ -32,6 +33,7 @@ const App = () => (
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/unsubscribe" element={<Unsubscribe />} />
           <Route path="/admin/emails" element={<AdminEmails />} />
+          <Route path="/admin/analytics" element={<AdminAnalytics />} />
           <Route path="/about" element={<About />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
