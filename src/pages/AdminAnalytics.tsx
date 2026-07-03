@@ -298,11 +298,14 @@ const AdminAnalytics = () => {
           Data from Google Search Console for {data?.range.startDate} → {data?.range.endDate}.
         </p>
 
+        <DiagnosticsPanel diag={diag} hasData={!!data} chartRows={data?.timeseries.length ?? 0} />
+
         {error && (
           <Card className="border-destructive/40 bg-destructive/10">
             <CardContent className="pt-4 text-sm text-destructive">{error}</CardContent>
           </Card>
         )}
+
 
         {/* KPI cards */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
