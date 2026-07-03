@@ -64,6 +64,24 @@ const rangeToDates = (r: Range): { start: string; end: string } => {
 
 const PIE_COLORS = ["hsl(var(--primary))", "#a78bfa", "#f472b6", "#fbbf24", "#34d399", "#60a5fa"];
 
+interface Diagnostics {
+  mountedAt: string;
+  fetchState: "idle" | "loading" | "ok" | "error";
+  lastUrl?: string;
+  lastStatus?: number;
+  durationMs?: number;
+  payloadBytes?: number;
+  rowCounts?: {
+    timeseries: number;
+    topPages: number;
+    topQueries: number;
+    devices: number;
+    countries: number;
+  };
+  lastError?: string;
+  lastRunAt?: string;
+}
+
 const AdminAnalytics = () => {
   const navigate = useNavigate();
   const [password, setPassword] = useState("");
@@ -72,6 +90,10 @@ const AdminAnalytics = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [data, setData] = useState<AnalyticsPayload | null>(null);
+  const [diag, setDiag] = useState<Diagnostics>({
+    mountedAt: new Date().toISOString(),
+    fetchState: "idle",
+  });
 
   const [range, setRange] = useState<Range>("28d");
   const [customStart, setCustomStart] = useState("");
@@ -96,6 +118,8 @@ const AdminAnalytics = () => {
     const url = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/admin-analytics?start=${dates.start}&end=${dates.end}`;
     setLoading(true);
     setError("");
+    setDiag((d) => ({ ...d, fetchState: "loading", lastUrl: url, lastError: undefined }));
+    const t0 = performance.now();
     try {
       const res = await fetch(url, {
         headers: {
@@ -103,12 +127,37 @@ const AdminAnalytics = () => {
           apikey: import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY,
         },
       });
+      const text = await res.text();
+      const bytes = new Blob([text]).size;
       if (res.status === 401) throw new Error("Unauthorized");
-      if (!res.ok) throw new Error(`Request failed (${res.status})`);
-      const json = (await res.json()) as AnalyticsPayload;
+      if (!res.ok) throw new Error(`Request failed (${res.status}): ${text.slice(0, 200)}`);
+      const json = JSON.parse(text) as AnalyticsPayload;
       setData(json);
+      setDiag((d) => ({
+        ...d,
+        fetchState: "ok",
+        lastStatus: res.status,
+        durationMs: Math.round(performance.now() - t0),
+        payloadBytes: bytes,
+        lastRunAt: new Date().toISOString(),
+        rowCounts: {
+          timeseries: json.timeseries?.length ?? 0,
+          topPages: json.topPages?.length ?? 0,
+          topQueries: json.topQueries?.length ?? 0,
+          devices: json.devices?.length ?? 0,
+          countries: json.countries?.length ?? 0,
+        },
+      }));
     } catch (err) {
-      setError((err as Error).message);
+      const msg = (err as Error).message;
+      setError(msg);
+      setDiag((d) => ({
+        ...d,
+        fetchState: "error",
+        durationMs: Math.round(performance.now() - t0),
+        lastError: msg,
+        lastRunAt: new Date().toISOString(),
+      }));
     } finally {
       setLoading(false);
     }
@@ -117,6 +166,8 @@ const AdminAnalytics = () => {
   useEffect(() => {
     if (authed) fetchData();
   }, [authed, fetchData]);
+
+
 
   const handleLogin = async () => {
     setAuthError("");
@@ -247,11 +298,14 @@ const AdminAnalytics = () => {
           Data from Google Search Console for {data?.range.startDate} → {data?.range.endDate}.
         </p>
 
+        <DiagnosticsPanel diag={diag} hasData={!!data} chartRows={data?.timeseries.length ?? 0} />
+
         {error && (
           <Card className="border-destructive/40 bg-destructive/10">
             <CardContent className="pt-4 text-sm text-destructive">{error}</CardContent>
           </Card>
         )}
+
 
         {/* KPI cards */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -446,7 +500,92 @@ const AdminAnalytics = () => {
   );
 };
 
+const stateBadge = (s: Diagnostics["fetchState"]) => {
+  const map: Record<Diagnostics["fetchState"], string> = {
+    idle: "bg-muted text-muted-foreground",
+    loading: "bg-blue-600/20 text-blue-400 border-blue-600/30",
+    ok: "bg-emerald-600/20 text-emerald-400 border-emerald-600/30",
+    error: "bg-red-600/20 text-red-400 border-red-600/30",
+  };
+  return <span className={`text-xs px-2 py-0.5 rounded border border-transparent ${map[s]}`}>{s}</span>;
+};
+
+const DiagnosticsPanel = ({
+  diag,
+  hasData,
+  chartRows,
+}: {
+  diag: Diagnostics;
+  hasData: boolean;
+  chartRows: number;
+}) => {
+  const rc = diag.rowCounts;
+  return (
+    <Card className="bg-card/60 border-border">
+      <CardHeader className="pb-2">
+        <CardTitle className="text-sm text-muted-foreground">Diagnostics</CardTitle>
+      </CardHeader>
+      <CardContent className="text-xs font-mono grid gap-1 md:grid-cols-2">
+        <div className="flex justify-between gap-4">
+          <span className="text-muted-foreground">Route loaded</span>
+          <span className="text-emerald-400">✓ /admin/analytics @ {diag.mountedAt.slice(11, 19)}</span>
+        </div>
+        <div className="flex justify-between gap-4">
+          <span className="text-muted-foreground">Fetch state</span>
+          {stateBadge(diag.fetchState)}
+        </div>
+        <div className="flex justify-between gap-4">
+          <span className="text-muted-foreground">HTTP status</span>
+          <span>{diag.lastStatus ?? "—"}</span>
+        </div>
+        <div className="flex justify-between gap-4">
+          <span className="text-muted-foreground">Duration</span>
+          <span>{diag.durationMs != null ? `${diag.durationMs} ms` : "—"}</span>
+        </div>
+        <div className="flex justify-between gap-4">
+          <span className="text-muted-foreground">Payload size</span>
+          <span>{diag.payloadBytes != null ? `${(diag.payloadBytes / 1024).toFixed(1)} KB` : "—"}</span>
+        </div>
+        <div className="flex justify-between gap-4">
+          <span className="text-muted-foreground">Last run</span>
+          <span>{diag.lastRunAt ? diag.lastRunAt.slice(11, 19) : "—"}</span>
+        </div>
+        <div className="flex justify-between gap-4 md:col-span-2">
+          <span className="text-muted-foreground">Endpoint</span>
+          <span className="truncate max-w-[70%]" title={diag.lastUrl}>{diag.lastUrl ?? "—"}</span>
+        </div>
+        <div className="flex justify-between gap-4 md:col-span-2">
+          <span className="text-muted-foreground">Rows returned</span>
+          <span>
+            {rc
+              ? `timeseries:${rc.timeseries} · pages:${rc.topPages} · queries:${rc.topQueries} · devices:${rc.devices} · countries:${rc.countries}`
+              : "—"}
+          </span>
+        </div>
+        <div className="flex justify-between gap-4">
+          <span className="text-muted-foreground">Data in state</span>
+          <span className={hasData ? "text-emerald-400" : "text-amber-400"}>
+            {hasData ? "✓ loaded" : "∅ empty"}
+          </span>
+        </div>
+        <div className="flex justify-between gap-4">
+          <span className="text-muted-foreground">Charts ready</span>
+          <span className={chartRows > 0 ? "text-emerald-400" : "text-amber-400"}>
+            {chartRows > 0 ? `✓ ${chartRows} points` : "waiting for data"}
+          </span>
+        </div>
+        {diag.lastError && (
+          <div className="md:col-span-2 text-destructive break-all">
+            <span className="text-muted-foreground">Error: </span>{diag.lastError}
+          </div>
+        )}
+      </CardContent>
+    </Card>
+  );
+};
+
 const KpiCard = ({
+
   icon,
   label,
   value,
