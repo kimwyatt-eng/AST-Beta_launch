@@ -686,6 +686,7 @@ If you're a founder shipping something of your own, go leave your mark. And if y
     keyword: "DIY modeling paste",
     publishedAt: "2026-07-06",
     readingMinutes: 6,
+    draft: true,
     category: "Materials",
     tags: ["materials", "acrylic", "texture", "budget", "palette knife"],
     seoKeywords: [
