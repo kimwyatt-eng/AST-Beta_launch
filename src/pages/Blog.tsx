@@ -53,7 +53,7 @@ export default function Blog() {
         </header>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-          {blogPosts.map((post, i) => (
+          {publishedPosts.map((post, i) => (
             <Link
               key={post.slug}
               to={`/blog/${post.slug}`}

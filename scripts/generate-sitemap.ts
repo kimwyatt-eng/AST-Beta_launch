@@ -2,7 +2,7 @@
 
 import { writeFileSync } from "fs";
 import { resolve } from "path";
-import { blogPosts } from "../src/data/blogPosts";
+import { publishedPosts as blogPosts } from "../src/data/blogPosts";
 
 // Production base URL — override with SITE_URL env var if needed.
 // Must be an absolute https:// origin with no trailing slash so the RSS
