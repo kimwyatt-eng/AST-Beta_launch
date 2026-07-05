@@ -108,21 +108,24 @@ export function renderPostContent(markdown: string): React.ReactNode {
     const trimmed = block.trim();
     if (!trimmed) return;
 
-    // Standalone image block: ![alt](url)
+    // Standalone image block: ![alt](url) or ![alt|caption](url)
     const imgMatch = /^!\[([^\]]*)\]\(([^)]+)\)$/.exec(trimmed);
     if (imgMatch) {
       flushList(`list-${bi}`);
+      const [altRaw, captionRaw] = imgMatch[1].split("|");
+      const alt = altRaw?.trim() ?? "";
+      const caption = captionRaw?.trim();
       out.push(
         <figure key={`img-${bi}`} className="my-6">
           <img
             src={imgMatch[2]}
-            alt={imgMatch[1]}
+            alt={alt}
             loading="lazy"
             className="w-full h-auto rounded-lg border border-border/60"
           />
-          {imgMatch[1] && (
+          {caption && (
             <figcaption className="mt-2 text-sm text-foreground/70 text-center">
-              {imgMatch[1]}
+              {caption}
             </figcaption>
           )}
         </figure>,
