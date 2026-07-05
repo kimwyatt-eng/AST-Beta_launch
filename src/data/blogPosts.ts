@@ -674,6 +674,87 @@ I've linked to Art Supply Tracker from iwashere.page, and this is our permanent 
 
 If you're a founder shipping something of your own, go leave your mark. And if you want to follow along with what we're building for artists, [join the beta](/#signup) — we'd love to have you in the studio.`,
   },
+  {
+    slug: "diy-modeling-paste-alternatives",
+    title: "Palette Knife Texture Without the Price Tag: DIY Modeling Paste That Actually Works",
+    description:
+      "Skip the $30 tub. Four DIY modeling paste recipes from joint compound, spackle, and pantry staples that hold real palette knife texture for a fraction of the cost.",
+    keyword: "DIY modeling paste",
+    publishedAt: "2026-07-06",
+    readingMinutes: 6,
+    category: "Materials",
+    tags: ["materials", "acrylic", "texture", "budget", "palette knife"],
+    seoKeywords: [
+      "modeling paste alternatives",
+      "DIY modeling paste",
+      "budget art supplies",
+      "palette knife techniques",
+      "joint compound art",
+      "spackle for texture art",
+      "cheap impasto medium",
+      "textured acrylic painting",
+      "budget-friendly acrylic medium",
+      "homemade texture paste",
+      "acrylic gel medium substitute",
+      "affordable art supplies for beginners",
+    ],
+    content: `Real modeling paste is not cheap. A single tub from a name brand can run you $20 to $50, and if you're the kind of artist who works big or just likes to mess around and see what happens, that tub disappears fast. Good news: you don't need it. Some of the best texture work happens with stuff from the hardware store.
+
+## What Modeling Paste Is Actually Doing For You
+
+Modeling paste is a thick acrylic medium, heavier than a gel, that dries hard and opaque. Painters use it under a palette knife to build up raised, sculptural texture instead of laying paint flat. That's the whole job: give your paint something to stand on.
+
+## Why Bother With a Substitute
+
+Cost is the obvious one, but it's not the only reason artists go the DIY route:
+
+- You can test a technique without worrying about wasting a $30 tub
+- Big canvases stop being a budget problem
+- Beginners can try impasto work before they know if they even like it
+- Cheap materials mean you can actually practice as often as skill-building requires
+
+## Four Ways to Build Your Own Paste
+
+**Joint compound (drywall mud).** This is the workhorse option. Mix it roughly equal parts with an acrylic gel medium, add a bit of white acrylic if you want more opacity, and stir until smooth. It's cheap, holds texture well, and dries hard. Just make sure you're using a water-based compound that plays nice with acrylics, and do a small test patch first since some brands shrink a little as they cure.
+
+**Spackle.** Finer-grained than joint compound, so it's a better pick when you want smoother texture rather than something coarse. A rough starting ratio is two parts spackle to one part acrylic medium. It dries fast and sands easily, but it's more brittle, so save it for lighter texture work or blend it with something else for strength.
+
+**Talcum powder or cornstarch.** Add either gradually into a clear or white gel medium until you hit the thickness you want. This gives you the most control over consistency of any option here, but it's also the least sturdy if you go too thick, so keep it to thinner applications.
+
+**Baking soda.** Mixed straight into acrylic paint or medium, roughly one to one as a starting point, this gives a matte, moderately opaque texture. It won't give you the dramatic ridges the others can, but it's dead simple and thickens paint nicely.
+
+All four of these take color well. Mix paint straight into the batch while you're prepping it, or let the paste dry and paint over it. Just don't overload the mixture with wet paint or you'll throw off the texture you were trying to build.
+
+## Palette Knife Moves Worth Knowing
+
+- **Scrape** — drag the edge across the surface for thin textured lines
+- **Spread** — apply like frosting for smooth, raised areas
+- **Dab** — small taps with the tip or flat for a stippled look
+- **Ridge** — pull the edge through a thick layer to leave sharp peaks and valleys
+- **Layer** — thin coats, letting each set before the next, for real dimension
+
+## DIY vs. Store-Bought, Honestly
+
+| | Commercial Paste | DIY Paste |
+|---|---|---|
+| Cost | $20–$50+ | $5–$15 |
+| Where to get it | Art supply stores | Hardware or craft stores |
+| Texture | Consistent | Variable, needs testing |
+| Durability | Archival-grade | Generally solid, depends on mix |
+| Cracking risk | Low if applied right | Somewhat higher, especially thick coats |
+
+## A Few Things to Keep in Mind
+
+Test everything on scrap first. Work thin, especially with spackle or powder mixes, since thick layers are where cracking happens. If you care about the piece lasting, seal the dried paste with varnish or gesso. And ventilate your space when you're mixing or sanding dry compound or spackle, since both throw dust.
+
+Also worth trying: gesso thickened with cornstarch or marble dust, or PVA glue mixed with chalk powder or flour for a lower-durability but very cheap paste option.
+
+## The Bottom Line
+
+You don't need the expensive tub to get real texture in your work. Joint compound, spackle, and a few pantry staples will get you most of the way there for a fraction of the price. Test small, work in thin layers, and let yourself experiment. That's how you actually get good at this.
+
+Keep building your studio system: [organize your acrylics and mediums](/blog/how-to-organize-art-supplies), plan a workspace that supports thick, wet work with the [art studio setup checklist](/blog/art-studio-setup-checklist), or read more on [3D texture paste techniques](/blog/3d-texture-paste-acrylic-painting). [Join the Beta](/#signup) to track every tube, tool, and homemade batch in one private place.`,
+  },
 ];
 
 
