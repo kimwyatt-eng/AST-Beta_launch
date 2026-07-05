@@ -23,7 +23,7 @@ const Navigation = () => {
             className="cursor-pointer transition-opacity hover:opacity-80 flex justify-center w-full sm:w-auto"
             aria-label="ArtSupplyTracker home"
           >
-            <img src={logo} alt="ArtSupplyTracker" className="block w-[92vw] max-w-[420px] sm:w-auto sm:max-w-none sm:h-12 h-auto" />
+            <img src={logo} alt="Art Supply Tracker home" className="block w-[92vw] max-w-[420px] sm:w-auto sm:max-w-none sm:h-12 h-auto" />
           </Link>
 
           <div className="flex flex-wrap gap-1 sm:gap-2">
