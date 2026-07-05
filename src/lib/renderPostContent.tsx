@@ -108,6 +108,46 @@ export function renderPostContent(markdown: string): React.ReactNode {
     const trimmed = block.trim();
     if (!trimmed) return;
 
+    // Standalone image block: ![alt](url)
+    const imgMatch = /^!\[([^\]]*)\]\(([^)]+)\)$/.exec(trimmed);
+    if (imgMatch) {
+      flushList(`list-${bi}`);
+      out.push(
+        <figure key={`img-${bi}`} className="my-6">
+          <img
+            src={imgMatch[2]}
+            alt={imgMatch[1]}
+            loading="lazy"
+            className="w-full h-auto rounded-lg border border-border/60"
+          />
+          {imgMatch[1] && (
+            <figcaption className="mt-2 text-sm text-foreground/70 text-center">
+              {imgMatch[1]}
+            </figcaption>
+          )}
+        </figure>,
+      );
+      return;
+    }
+
+    // Blockquote: lines starting with >
+    if (trimmed.startsWith("> ")) {
+      flushList(`list-${bi}`);
+      const text = trimmed
+        .split(/\n/)
+        .map((l) => l.replace(/^>\s?/, ""))
+        .join(" ");
+      out.push(
+        <blockquote
+          key={`q-${bi}`}
+          className="mt-6 mb-6 border-l-4 border-secondary/60 pl-4 italic text-foreground/85"
+        >
+          {renderInline(text, `q-${bi}`)}
+        </blockquote>,
+      );
+      return;
+    }
+
     if (isTableBlock(trimmed)) {
       flushList(`list-${bi}`);
       out.push(renderTable(trimmed, `t-${bi}`));
