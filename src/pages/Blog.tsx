@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import TrustFooter from "@/components/TrustFooter";
 import Footer from "@/components/Footer";
-import { blogPosts } from "@/data/blogPosts";
+import { publishedPosts } from "@/data/blogPosts";
 import { panelClass, titleClass } from "@/lib/cardAccent";
 
 export default function Blog() {
