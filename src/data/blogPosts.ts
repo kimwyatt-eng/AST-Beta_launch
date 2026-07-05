@@ -19,6 +19,10 @@ export interface BlogPost {
   tags?: string[]; // e.g. ["pigments", "history", "materials"]
   seoKeywords?: string[]; // meta keywords for this post
   author?: string; // display name; falls back to site default in feeds
+  // Draft mode: post is reachable at /blog/:slug for preview but hidden from
+  // the blog index, related/adjacent nav, sitemap, and RSS. BlogPost.tsx also
+  // sets robots to noindex,nofollow and shows a "Draft preview" banner.
+  draft?: boolean;
 }
 
 
