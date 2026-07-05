@@ -656,7 +656,7 @@ Keep building your studio system: [organize your acrylics and mediums](/blog/how
     seoKeywords: ["iwashere.page", "founder wall", "Art Supply Tracker"],
     content: `There's a cool new website for startup founders to paste their website logo and link to a growing wall of website logos and links.
 
-![Art Supply Tracker on the iwashere.page founder wall — a dark grid of founder logos with the "I was here." claim your spot panel in the center.](/__l5e/assets-v1/522cfc7c-32ff-4afb-9083-0b6d97eb0807/iwashere-page-founders-wall.png)
+![Screenshot of the iwashere.page founder wall: a dark grid of small square logos surrounding a central "I was here. Claim one of the first permanent spots on the internet." panel with a "Claim my spot" button, and a "Founder Layer — 60/112 available" panel in the top-left corner.|This is how the page looked right after I signed up — the oldest links sit in the middle and the newer links spread out from there.](/__l5e/assets-v1/522cfc7c-32ff-4afb-9083-0b6d97eb0807/iwashere-page-founders-wall.png)
 
 I'm number 52 on the wall.
 
