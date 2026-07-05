@@ -62,10 +62,10 @@ export default function About() {
       {/* Hero */}
       <section className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 pt-10 pb-6 sm:pt-16 sm:pb-10 text-center">
         <p className="hero-kicker text-xs sm:text-sm font-semibold uppercase tracking-[0.2em]">
-          About Art Supply Tracker
+          The Question Was Always Wrong
         </p>
         <h1 className="mt-3 text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight">
-          The Question Was Always Wrong
+          About Art Supply Tracker
         </h1>
         <p className="mt-5 text-base sm:text-lg md:text-xl text-foreground/80 max-w-2xl mx-auto">
           Artists have been asked some version of the same tired question forever:{" "}

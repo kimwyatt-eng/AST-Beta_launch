@@ -1,8 +1,20 @@
 User-agent: Googlebot
 Allow: /
+Disallow: /admin/
+Disallow: /unsubscribe
+Disallow: /rss
+Disallow: /feed
+Disallow: /feed.xml
+Disallow: /atom.xml
 
 User-agent: Bingbot
 Allow: /
+Disallow: /admin/
+Disallow: /unsubscribe
+Disallow: /rss
+Disallow: /feed
+Disallow: /feed.xml
+Disallow: /atom.xml
 
 User-agent: Twitterbot
 Allow: /
@@ -12,5 +24,11 @@ Allow: /
 
 User-agent: *
 Allow: /
+Disallow: /admin/
+Disallow: /unsubscribe
+Disallow: /rss
+Disallow: /feed
+Disallow: /feed.xml
+Disallow: /atom.xml
 
 Sitemap: https://artsupplytracker.com/sitemap.xml
