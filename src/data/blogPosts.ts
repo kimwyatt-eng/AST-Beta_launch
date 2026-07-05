@@ -643,7 +643,37 @@ Artist-grade texture pastes from reputable manufacturers are formulated to be ar
 
 Keep building your studio system: [organize your acrylics and mediums](/blog/how-to-organize-art-supplies), plan a workspace that supports thick, wet work with the [art studio setup checklist](/blog/art-studio-setup-checklist), or [catalog every textured piece you finish](/blog/how-to-catalog-artwork). [Join the Beta](/#signup) to track every tube, tool, and paste in one private place.`,
   },
+  {
+    slug: "art-supply-tracker-was-here",
+    title: "Art Supply Tracker Was Here",
+    description:
+      "Art Supply Tracker is number 52 on iwashere.page, a growing wall of founder logos and links celebrating internet history.",
+    keyword: "iwashere.page founders wall",
+    publishedAt: "2026-07-05",
+    readingMinutes: 2,
+    category: "Studio Notes",
+    tags: ["founder", "community", "internet"],
+    seoKeywords: ["iwashere.page", "founder wall", "Art Supply Tracker"],
+    content: `There's a cool new website for startup founders to paste their website logo and link to a growing wall of website logos and links.
+
+I'm number 52 on the wall.
+
+The creator of the site, [@dominikhofer](https://iwashere.page), says:
+
+> "Hey everyone 👋 iwashere.page started after I saw an online art project where people could permanently place images onto a public canvas. I loved the idea, but wanted to rebuild it around founders, projects and internet history."
+
+I love the spirit of it — a public canvas for the people building small corners of the internet, stitched together one logo at a time. It's part scrapbook, part time capsule, part quiet nod to everyone who shipped something.
+
+## Our permanent spot
+
+I've linked to Art Supply Tracker from iwashere.page, and this is our permanent link:
+
+[https://iwashere.page/p/9c693639a21f](https://iwashere.page/p/9c693639a21f)
+
+If you're a founder shipping something of your own, go leave your mark. And if you want to follow along with what we're building for artists, [join the beta](/#signup) — we'd love to have you in the studio.`,
+  },
 ];
+
 
 
 
