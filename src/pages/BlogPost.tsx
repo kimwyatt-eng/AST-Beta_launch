@@ -61,13 +61,17 @@ export default function BlogPost() {
   return (
     <main className="min-h-screen w-full bg-background text-foreground">
       <Helmet>
-        <title>{seoTitle}</title>
+        <title>{post.draft ? `[Draft] ${seoTitle}` : seoTitle}</title>
         <meta name="description" content={seoDescription} />
         {post.seoKeywords && post.seoKeywords.length > 0 && (
           <meta name="keywords" content={post.seoKeywords.join(", ")} />
         )}
         <meta name="author" content="ArtSupplyTracker" />
-        <meta name="robots" content="index, follow, max-image-preview:large" />
+        {post.draft ? (
+          <meta name="robots" content="noindex, nofollow" />
+        ) : (
+          <meta name="robots" content="index, follow, max-image-preview:large" />
+        )}
         <link rel="canonical" href={canonical} />
 
         {/* Open Graph */}
