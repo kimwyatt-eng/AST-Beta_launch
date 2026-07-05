@@ -109,17 +109,33 @@ export function renderPostContent(markdown: string): React.ReactNode {
     if (!trimmed) return;
 
     // Standalone image block: ![alt](url) or ![alt|caption](url)
+    // Alt text is required for accessibility. In dev, warn when it's missing
+    // and fall back to the caption (or a generic label) so the <img> is never
+    // shipped without an alt attribute.
     const imgMatch = /^!\[([^\]]*)\]\(([^)]+)\)$/.exec(trimmed);
     if (imgMatch) {
       flushList(`list-${bi}`);
       const [altRaw, captionRaw] = imgMatch[1].split("|");
       const alt = altRaw?.trim() ?? "";
       const caption = captionRaw?.trim();
+      const src = imgMatch[2];
+      let resolvedAlt = alt;
+      if (!resolvedAlt) {
+        resolvedAlt = caption ?? "";
+        if (import.meta.env.DEV) {
+          // eslint-disable-next-line no-console
+          console.warn(
+            `[renderPostContent] Image is missing alt text: ${src}. ` +
+              `Use the syntax ![descriptive alt|optional caption](url) ` +
+              `so screen readers can describe the image.`,
+          );
+        }
+      }
       out.push(
         <figure key={`img-${bi}`} className="my-6">
           <img
-            src={imgMatch[2]}
-            alt={alt}
+            src={src}
+            alt={resolvedAlt}
             loading="lazy"
             className="w-full h-auto rounded-lg border border-border/60"
           />
