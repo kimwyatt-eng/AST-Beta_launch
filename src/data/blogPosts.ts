@@ -19,6 +19,10 @@ export interface BlogPost {
   tags?: string[]; // e.g. ["pigments", "history", "materials"]
   seoKeywords?: string[]; // meta keywords for this post
   author?: string; // display name; falls back to site default in feeds
+  // Draft mode: post is reachable at /blog/:slug for preview but hidden from
+  // the blog index, related/adjacent nav, sitemap, and RSS. BlogPost.tsx also
+  // sets robots to noindex,nofollow and shows a "Draft preview" banner.
+  draft?: boolean;
 }
 
 
@@ -682,6 +686,7 @@ If you're a founder shipping something of your own, go leave your mark. And if y
     keyword: "DIY modeling paste",
     publishedAt: "2026-07-06",
     readingMinutes: 6,
+    draft: true,
     category: "Materials",
     tags: ["materials", "acrylic", "texture", "budget", "palette knife"],
     seoKeywords: [
@@ -760,6 +765,10 @@ Keep building your studio system: [organize your acrylics and mediums](/blog/how
 
 
 
+// Posts that should appear in listings, sitemap, RSS, and cross-links.
+// Drafts are excluded here but remain reachable via getPostBySlug for preview.
+export const publishedPosts: BlogPost[] = blogPosts.filter((p) => !p.draft);
+
 export function getPostBySlug(slug: string): BlogPost | undefined {
   return blogPosts.find((p) => p.slug === slug);
 }
@@ -770,7 +779,7 @@ export function getRelatedPosts(post: BlogPost, limit = 3): BlogPost[] {
   const tags = new Set((post.tags ?? []).map((t) => t.toLowerCase()));
   const category = post.category?.toLowerCase();
 
-  const scored = blogPosts
+  const scored = publishedPosts
     .filter((p) => p.slug !== post.slug)
     .map((p) => {
       const otherTags = (p.tags ?? []).map((t) => t.toLowerCase());
@@ -790,11 +799,13 @@ export function getRelatedPosts(post: BlogPost, limit = 3): BlogPost[] {
 }
 
 // Chronological neighbors by publishedAt. `previous` = older post, `next` = newer.
+// Drafts are skipped so preview posts don't appear in prev/next navigation.
 export function getAdjacentPosts(post: BlogPost): {
   previous: BlogPost | null;
   next: BlogPost | null;
 } {
-  const sorted = [...blogPosts].sort((a, b) =>
+  const pool = post.draft ? publishedPosts : publishedPosts;
+  const sorted = [...pool].sort((a, b) =>
     a.publishedAt.localeCompare(b.publishedAt),
   );
   const idx = sorted.findIndex((p) => p.slug === post.slug);
@@ -804,5 +815,6 @@ export function getAdjacentPosts(post: BlogPost): {
     next: idx < sorted.length - 1 ? sorted[idx + 1] : null,
   };
 }
+
 
 
