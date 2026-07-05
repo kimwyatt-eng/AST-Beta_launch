@@ -66,16 +66,38 @@ export default function BlogPost() {
         {post.seoKeywords && post.seoKeywords.length > 0 && (
           <meta name="keywords" content={post.seoKeywords.join(", ")} />
         )}
+        <meta name="author" content="ArtSupplyTracker" />
+        <meta name="robots" content="index, follow, max-image-preview:large" />
         <link rel="canonical" href={canonical} />
+
+        {/* Open Graph */}
+        <meta property="og:site_name" content="ArtSupplyTracker" />
         <meta property="og:title" content={seoTitle} />
         <meta property="og:description" content={seoDescription} />
         <meta property="og:url" content={canonical} />
         <meta property="og:type" content="article" />
+        <meta property="og:locale" content="en_US" />
         <meta property="og:image" content={ogImage} />
+        <meta property="og:image:alt" content={seoTitle} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+
+        {/* Article-specific Open Graph */}
+        <meta property="article:published_time" content={post.publishedAt} />
+        <meta property="article:author" content="ArtSupplyTracker" />
+        {post.category && <meta property="article:section" content={post.category} />}
+        {(post.tags ?? []).map((tag) => (
+          <meta key={`atag-${tag}`} property="article:tag" content={tag} />
+        ))}
+
+        {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@artsupplytracker" />
         <meta name="twitter:title" content={seoTitle} />
         <meta name="twitter:description" content={seoDescription} />
         <meta name="twitter:image" content={ogImage} />
+        <meta name="twitter:image:alt" content={seoTitle} />
+
         <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
       </Helmet>
