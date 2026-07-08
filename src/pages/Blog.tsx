@@ -18,10 +18,10 @@ export default function Blog() {
   const previewMode = useMemo(() => {
     if (previewParam === "1") return true;
     if (previewParam === "0") return false;
-    if (typeof window === "undefined") return true;
+    if (typeof window === "undefined") return false;
     const stored = window.localStorage.getItem(PREVIEW_STORAGE_KEY);
-    // Default to review mode ON so drafts are visible while editing.
-    return stored === null ? true : stored === "1";
+    // Default OFF so public visitors never see the draft/review UI.
+    return stored === "1";
   }, [previewParam]);
 
   useEffect(() => {
