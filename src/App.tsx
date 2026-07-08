@@ -12,6 +12,7 @@ import Unsubscribe from "./pages/Unsubscribe";
 import AdminEmails from "./pages/AdminEmails";
 import AdminAnalytics from "./pages/AdminAnalytics";
 import Blog from "./pages/Blog";
+import BlogStatus from "./pages/BlogStatus";
 import About from "./pages/About";
 import BlogPost from "./pages/BlogPost";
 import NotFound from "./pages/NotFound";
@@ -36,6 +37,7 @@ const App = () => (
           <Route path="/admin/analytics" element={<AdminAnalytics />} />
           <Route path="/about" element={<About />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/status" element={<BlogStatus />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/rss" element={<RssRedirect />} />
           <Route path="/feed" element={<RssRedirect />} />
