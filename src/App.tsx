@@ -12,6 +12,7 @@ import Unsubscribe from "./pages/Unsubscribe";
 import AdminEmails from "./pages/AdminEmails";
 import AdminAnalytics from "./pages/AdminAnalytics";
 import Blog from "./pages/Blog";
+import BlogStatus from "./pages/BlogStatus";
 import About from "./pages/About";
 import BlogPost from "./pages/BlogPost";
 import NotFound from "./pages/NotFound";
