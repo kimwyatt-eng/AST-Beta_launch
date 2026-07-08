@@ -18,10 +18,10 @@ export default function Blog() {
   const previewMode = useMemo(() => {
     if (previewParam === "1") return true;
     if (previewParam === "0") return false;
-    if (typeof window === "undefined") return true;
+    if (typeof window === "undefined") return false;
     const stored = window.localStorage.getItem(PREVIEW_STORAGE_KEY);
-    // Default to review mode ON so drafts are visible while editing.
-    return stored === null ? true : stored === "1";
+    // Default OFF so public visitors never see the draft/review UI.
+    return stored === "1";
   }, [previewParam]);
 
   useEffect(() => {
@@ -87,41 +87,24 @@ export default function Blog() {
           </a>
         </header>
 
-        <div className="mb-6 flex flex-wrap items-center justify-between gap-3 rounded-lg border border-border/60 bg-foreground/[0.03] px-4 py-3">
-          <div className="text-sm text-foreground/80">
-            <span className="font-semibold text-foreground">Review mode</span>{" "}
-            {previewMode ? (
-              <>
-                on — showing {visiblePosts.length} posts including {draftCount} draft
-                {draftCount === 1 ? "" : "s"}.
-              </>
-            ) : (
-              <>
-                off — showing {publishedPosts.length} published post
-                {publishedPosts.length === 1 ? "" : "s"}
-                {draftCount > 0 && <> ({draftCount} draft{draftCount === 1 ? "" : "s"} hidden)</>}.
-              </>
-            )}
+        {previewMode && (
+          <div className="mb-6 flex flex-wrap items-center justify-between gap-3 rounded-lg border border-border/60 bg-foreground/[0.03] px-4 py-3">
+            <div className="text-sm text-foreground/80">
+              <span className="font-semibold text-foreground">Review mode</span>{" "}
+              on — showing {visiblePosts.length} posts including {draftCount} draft
+              {draftCount === 1 ? "" : "s"}.
+            </div>
+            <button
+              type="button"
+              onClick={togglePreview}
+              aria-pressed={previewMode}
+              className="inline-flex items-center gap-2 rounded-full border border-secondary bg-secondary/15 px-4 py-1.5 text-sm font-semibold text-secondary transition-colors"
+            >
+              <span aria-hidden="true" className="inline-block h-2 w-2 rounded-full bg-secondary" />
+              Hide drafts
+            </button>
           </div>
-          <button
-            type="button"
-            onClick={togglePreview}
-            aria-pressed={previewMode}
-            className={`inline-flex items-center gap-2 rounded-full border px-4 py-1.5 text-sm font-semibold transition-colors ${
-              previewMode
-                ? "border-secondary bg-secondary/15 text-secondary"
-                : "border-border/60 text-foreground/80 hover:text-foreground"
-            }`}
-          >
-            <span
-              aria-hidden="true"
-              className={`inline-block h-2 w-2 rounded-full ${
-                previewMode ? "bg-secondary" : "bg-foreground/40"
-              }`}
-            />
-            {previewMode ? "Reviewing drafts" : "Show drafts"}
-          </button>
-        </div>
+        )}
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {visiblePosts.map((post, i) => (
