@@ -37,6 +37,7 @@ const App = () => (
           <Route path="/admin/analytics" element={<AdminAnalytics />} />
           <Route path="/about" element={<About />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/status" element={<BlogStatus />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/rss" element={<RssRedirect />} />
           <Route path="/feed" element={<RssRedirect />} />
