@@ -19,9 +19,8 @@ export interface BlogPost {
   tags?: string[]; // e.g. ["pigments", "history", "materials"]
   seoKeywords?: string[]; // meta keywords for this post
   author?: string; // display name; falls back to site default in feeds
-  // Draft mode: post is reachable at /blog/:slug for preview but hidden from
-  // the blog index, related/adjacent nav, sitemap, and RSS. BlogPost.tsx also
-  // sets robots to noindex,nofollow and shows a "Draft preview" banner.
+  // Draft mode: post is hidden from the blog index, direct article routes,
+  // related/adjacent nav, sitemap, and RSS.
   draft?: boolean;
 }
 
@@ -764,12 +763,11 @@ Keep building your studio system: [organize your acrylics and mediums](/blog/how
 
 
 
-// Posts that should appear in listings, sitemap, RSS, and cross-links.
-// Drafts are excluded here but remain reachable via getPostBySlug for preview.
+// Posts that should appear in listings, direct article routes, sitemap, RSS, and cross-links.
 export const publishedPosts: BlogPost[] = blogPosts.filter((p) => !p.draft);
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
-  return blogPosts.find((p) => p.slug === slug);
+  return publishedPosts.find((p) => p.slug === slug);
 }
 
 // Score other posts against `post` by shared tags (2 pts) and shared category (1 pt).
@@ -803,7 +801,7 @@ export function getAdjacentPosts(post: BlogPost): {
   previous: BlogPost | null;
   next: BlogPost | null;
 } {
-  const pool = post.draft ? publishedPosts : publishedPosts;
+  const pool = publishedPosts;
   const sorted = [...pool].sort((a, b) =>
     a.publishedAt.localeCompare(b.publishedAt),
   );
