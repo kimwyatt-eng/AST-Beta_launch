@@ -61,17 +61,13 @@ export default function BlogPost() {
   return (
     <main className="min-h-screen w-full bg-background text-foreground">
       <Helmet>
-        <title>{post.draft ? `[Draft] ${seoTitle}` : seoTitle}</title>
+        <title>{seoTitle}</title>
         <meta name="description" content={seoDescription} />
         {post.seoKeywords && post.seoKeywords.length > 0 && (
           <meta name="keywords" content={post.seoKeywords.join(", ")} />
         )}
         <meta name="author" content="ArtSupplyTracker" />
-        {post.draft ? (
-          <meta name="robots" content="noindex, nofollow" />
-        ) : (
-          <meta name="robots" content="index, follow, max-image-preview:large" />
-        )}
+        <meta name="robots" content="index, follow, max-image-preview:large" />
         <link rel="canonical" href={canonical} />
 
         {/* Open Graph */}
@@ -110,20 +106,6 @@ export default function BlogPost() {
       <Navigation />
 
       <article className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-16">
-        {post.draft && (
-          <div
-            role="status"
-            aria-label="Draft preview"
-            className="mb-6 rounded-lg border border-secondary/60 bg-secondary/10 px-4 py-3 text-sm"
-          >
-            <p className="font-semibold text-secondary">Draft preview — not published</p>
-            <p className="mt-1 text-foreground/85">
-              This post is hidden from the blog index, related posts, sitemap, and RSS feed, and
-              is marked <code>noindex,nofollow</code>. Remove <code>draft: true</code> in{" "}
-              <code>src/data/blogPosts.ts</code> to publish.
-            </p>
-          </div>
-        )}
         <nav aria-label="Breadcrumb" className="text-sm">
           <ol className="flex flex-wrap items-center gap-x-2 gap-y-1 text-foreground/80">
             <li>

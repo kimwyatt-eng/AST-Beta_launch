@@ -1,46 +1,12 @@
 import { Helmet } from "react-helmet-async";
-import { Link, useSearchParams } from "react-router-dom";
-import { useEffect, useMemo } from "react";
+import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import TrustFooter from "@/components/TrustFooter";
 import Footer from "@/components/Footer";
-import { blogPosts, publishedPosts } from "@/data/blogPosts";
+import { publishedPosts } from "@/data/blogPosts";
 import { panelClass, titleClass } from "@/lib/cardAccent";
 
-const PREVIEW_STORAGE_KEY = "ast-blog-preview-mode";
-
 export default function Blog() {
-  const [searchParams, setSearchParams] = useSearchParams();
-
-  // Preview mode is enabled via ?preview=1 and persisted to localStorage so
-  // review sessions survive navigation. ?preview=0 clears it.
-  const previewParam = searchParams.get("preview");
-  const previewMode = useMemo(() => {
-    if (previewParam === "1") return true;
-    if (previewParam === "0") return false;
-    if (typeof window === "undefined") return false;
-    const stored = window.localStorage.getItem(PREVIEW_STORAGE_KEY);
-    // Default OFF so public visitors never see the draft/review UI.
-    return stored === "1";
-  }, [previewParam]);
-
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-    window.localStorage.setItem(PREVIEW_STORAGE_KEY, previewMode ? "1" : "0");
-  }, [previewMode]);
-
-  const togglePreview = () => {
-    const next = !previewMode;
-    const params = new URLSearchParams(searchParams);
-    params.set("preview", next ? "1" : "0");
-    setSearchParams(params, { replace: true });
-  };
-
-  const visiblePosts = previewMode
-    ? [...blogPosts].sort((a, b) => b.publishedAt.localeCompare(a.publishedAt))
-    : publishedPosts;
-  const draftCount = blogPosts.length - publishedPosts.length;
-
   return (
     <main className="min-h-screen w-full bg-background text-foreground">
       <Helmet>
@@ -57,7 +23,6 @@ export default function Blog() {
         />
         <meta property="og:url" content="https://artsupplytracker.com/blog" />
         <meta property="og:type" content="website" />
-        {previewMode && <meta name="robots" content="noindex, nofollow" />}
       </Helmet>
 
       <Navigation />
@@ -87,37 +52,13 @@ export default function Blog() {
           </a>
         </header>
 
-        {previewMode && (
-          <div className="mb-6 flex flex-wrap items-center justify-between gap-3 rounded-lg border border-border/60 bg-foreground/[0.03] px-4 py-3">
-            <div className="text-sm text-foreground/80">
-              <span className="font-semibold text-foreground">Review mode</span>{" "}
-              on — showing {visiblePosts.length} posts including {draftCount} draft
-              {draftCount === 1 ? "" : "s"}.
-            </div>
-            <button
-              type="button"
-              onClick={togglePreview}
-              aria-pressed={previewMode}
-              className="inline-flex items-center gap-2 rounded-full border border-secondary bg-secondary/15 px-4 py-1.5 text-sm font-semibold text-secondary transition-colors"
-            >
-              <span aria-hidden="true" className="inline-block h-2 w-2 rounded-full bg-secondary" />
-              Hide drafts
-            </button>
-          </div>
-        )}
-
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-          {visiblePosts.map((post, i) => (
+          {publishedPosts.map((post, i) => (
             <Link
               key={post.slug}
               to={`/blog/${post.slug}`}
               className={`${panelClass(i)} p-6 block transition-transform hover:-translate-y-0.5 relative`}
             >
-              {post.draft && (
-                <span className="absolute top-3 right-3 rounded-full border border-secondary/60 bg-secondary/15 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-secondary">
-                  Draft
-                </span>
-              )}
               <p className="text-xs uppercase tracking-wider text-[#B7AFD8]">
                 {new Date(post.publishedAt).toLocaleDateString("en-US", {
                   month: "long",
