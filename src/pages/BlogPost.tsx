@@ -87,9 +87,7 @@ export default function BlogPost() {
         <meta property="article:published_time" content={post.publishedAt} />
         <meta property="article:author" content="ArtSupplyTracker" />
         {post.category && <meta property="article:section" content={post.category} />}
-        {(post.tags ?? []).map((tag) => (
-          <meta key={`atag-${tag}`} property="article:tag" content={tag} />
-        ))}
+        {/* article:tag rendered via useEffect below — Helmet dedupes meta by property */}
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
