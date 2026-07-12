@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import TrustFooter from "@/components/TrustFooter";
