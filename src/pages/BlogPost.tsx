@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import TrustFooter from "@/components/TrustFooter";
@@ -57,6 +58,23 @@ export default function BlogPost() {
     ],
   };
 
+  // Inject article:tag meta tags directly — react-helmet-async dedupes meta by `property`,
+  // which collapses multiple <meta property="article:tag"> into a single one.
+  useEffect(() => {
+    const tags = post.tags ?? [];
+    const nodes: HTMLMetaElement[] = tags.map((tag) => {
+      const el = document.createElement("meta");
+      el.setAttribute("property", "article:tag");
+      el.setAttribute("content", tag);
+      el.setAttribute("data-article-tag", "true");
+      document.head.appendChild(el);
+      return el;
+    });
+    return () => {
+      nodes.forEach((n) => n.parentNode?.removeChild(n));
+    };
+  }, [post.slug, post.tags]);
+
 
   return (
     <main className="min-h-screen w-full bg-background text-foreground">
@@ -86,9 +104,7 @@ export default function BlogPost() {
         <meta property="article:published_time" content={post.publishedAt} />
         <meta property="article:author" content="ArtSupplyTracker" />
         {post.category && <meta property="article:section" content={post.category} />}
-        {(post.tags ?? []).map((tag) => (
-          <meta key={`atag-${tag}`} property="article:tag" content={tag} />
-        ))}
+        {/* article:tag rendered via useEffect below — Helmet dedupes meta by property */}
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
