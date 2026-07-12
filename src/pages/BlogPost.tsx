@@ -58,6 +58,23 @@ export default function BlogPost() {
     ],
   };
 
+  // Inject article:tag meta tags directly — react-helmet-async dedupes meta by `property`,
+  // which collapses multiple <meta property="article:tag"> into a single one.
+  useEffect(() => {
+    const tags = post.tags ?? [];
+    const nodes: HTMLMetaElement[] = tags.map((tag) => {
+      const el = document.createElement("meta");
+      el.setAttribute("property", "article:tag");
+      el.setAttribute("content", tag);
+      el.setAttribute("data-article-tag", "true");
+      document.head.appendChild(el);
+      return el;
+    });
+    return () => {
+      nodes.forEach((n) => n.parentNode?.removeChild(n));
+    };
+  }, [post.slug, post.tags]);
+
 
   return (
     <main className="min-h-screen w-full bg-background text-foreground">
