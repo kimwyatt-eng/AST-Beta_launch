@@ -5,7 +5,7 @@ const siteLinks = [
   { to: "/about", label: "About" },
   { to: "/blog", label: "Blog" },
   { to: "/partners", label: "Partners" },
-  { to: "/investors", label: "Investors" },
+  
   { to: "/founders", label: "Founders" },
   { to: "/privacy", label: "Privacy" },
 ];

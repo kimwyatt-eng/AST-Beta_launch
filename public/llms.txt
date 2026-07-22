@@ -10,7 +10,7 @@ ArtSupplyTracker helps artists organize their creative lives. It is built specif
 - [About](/about): What ArtSupplyTracker does and why it was built.
 - [Founders](/founders): The story behind the product and the mission to build better tools for artists.
 - [Partners](/partners): Partnership and collaboration opportunities.
-- [Investors](/investors): Investment and backing information.
+
 - [Privacy](/privacy): Privacy policy. Your art, ideas, and research are yours.
 
 ## Blog

@@ -18,6 +18,7 @@ const Investors = () => {
         title="Investors — Private studio software for artists | ArtSupplyTracker"
         description="ArtSupplyTracker is building privacy-first studio software for the global artist market. Learn about our vision, traction, and how to get in touch."
         path="/investors"
+        noindex
       />
       <Navigation />
 
