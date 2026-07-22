@@ -8,7 +8,7 @@ const Navigation = () => {
     { path: "/", label: "Artists" },
     { path: "/about", label: "About" },
     { path: "/partners", label: "Partners" },
-    { path: "/investors", label: "Investors" },
+    
     { path: "/founders", label: "Founders" },
     { path: "/blog", label: "Blog" },
     { path: "/privacy", label: "Privacy" },
