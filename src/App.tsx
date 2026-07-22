@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Partners from "./pages/Partners";
 import Investors from "./pages/Investors";
+import InvestorsGate from "./components/InvestorsGate";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import FoundersPage from "./pages/Founders";
 import Unsubscribe from "./pages/Unsubscribe";
