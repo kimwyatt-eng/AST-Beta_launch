@@ -1,6 +1,7 @@
 User-agent: Googlebot
 Allow: /
 Disallow: /admin/
+Disallow: /investors
 Disallow: /unsubscribe
 Disallow: /rss
 Disallow: /feed
@@ -10,6 +11,7 @@ Disallow: /atom.xml
 User-agent: Bingbot
 Allow: /
 Disallow: /admin/
+Disallow: /investors
 Disallow: /unsubscribe
 Disallow: /rss
 Disallow: /feed
@@ -25,6 +27,7 @@ Allow: /
 User-agent: *
 Allow: /
 Disallow: /admin/
+Disallow: /investors
 Disallow: /unsubscribe
 Disallow: /rss
 Disallow: /feed
